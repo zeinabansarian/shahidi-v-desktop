@@ -1,1 +1,69 @@
-/*# sourceMappingURL=m-style.css.map */
+.productList .section1 img {
+  width: 100%;
+}
+.productList .section2 {
+  direction: rtl;
+  padding: 80px;
+}
+.productList .section2 nav {
+  margin-bottom: 30px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid #949494;
+}
+.productList .section2 nav ul {
+  display: flex;
+  align-items: baseline;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+}
+.productList .section2 nav ul li {
+  font-family: IRANYekan;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 31.09px;
+  text-align: right;
+  color: #d30e15;
+}
+.productList .section2 nav ul li a {
+  color: #d30e15;
+  text-decoration: none;
+}
+.productList .section2 nav ul li:last-child {
+  display: none;
+}
+.productList .section2 .productContainer .proGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+.productList .section2 .productContainer .proGrid .proBox {
+  width: 100%;
+}
+.productList .section2 .productContainer .proGrid .proBox .imgS {
+  overflow: hidden;
+}
+.productList .section2 .productContainer .proGrid .proBox .imgS img {
+  width: 100%;
+  transition: 0.5s ease;
+}
+.productList .section2 .productContainer .proGrid .proBox a {
+  text-decoration: none;
+}
+.productList .section2 .productContainer .proGrid .proBox .title {
+  display: flex;
+  align-items: baseline;
+  margin-top: 12px;
+  -moz-column-gap: 6px;
+       column-gap: 6px;
+}
+.productList .section2 .productContainer .proGrid .proBox .title p {
+  color: black;
+  font-family: IRANYekan;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 31.09px;
+  text-align: right;
+}
+.productList .section2 .productContainer .proGrid .proBox:hover img {
+  scale: 1.1;
+}/*# sourceMappingURL=m-style.css.map */

@@ -66,4 +66,51 @@
 }
 .productList .section2 .productContainer .proGrid .proBox:hover img {
   scale: 1.1;
+}
+
+.contactUs .section1 {
+  direction: rtl;
+  padding: 182px 80px 120px;
+}
+.contactUs .section1 .mainTitle {
+  padding-bottom: 14px;
+  border-bottom: 1px solid #949494;
+  margin-bottom: 56px;
+}
+.contactUs .section1 .mainTitle h1 {
+  font-family: IRANYekan;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 41.45px;
+  text-align: right;
+}
+.contactUs .section1 .info ul li {
+  margin-bottom: 24px;
+  display: flex;
+  -moz-column-gap: 5px;
+       column-gap: 5px;
+}
+.contactUs .section1 .info ul li p,
+.contactUs .section1 .info ul li a {
+  text-decoration: none;
+  font-family: IRANYekan;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 31.09px;
+  text-align: right;
+  color: #d30e15;
+}
+.contactUs .section2 {
+  display: flex;
+  padding: 0 80px 94px;
+  -moz-column-gap: 80px;
+       column-gap: 80px;
+  direction: rtl;
+}
+.contactUs .section2 .mapSection {
+  width: 50.9375vw;
+}
+.contactUs .section2 .mapSection .map {
+  width: 100%;
+  height: 85vh;
 }/*# sourceMappingURL=m-style.css.map */

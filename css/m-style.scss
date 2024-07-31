@@ -170,16 +170,146 @@ $gray: #949494;
   }
   .section2 {
     .filters {
+      margin: 40px 0;
       ul {
         display: flex;
         align-items: baseline;
         column-gap: 20px;
+        justify-content: center;
+        direction: rtl;
         li {
-          font-family: Josefin Sans;
-          font-size: 12px;
+          opacity: 0.5;
+          cursor: pointer;
+          transition: 0.5s ease;
+          span {
+            font-family: Josefin Sans;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 12px;
+            color: black;
+            text-align: right;
+          }
+        }
+        .activeFilter {
+          opacity: 1 !important;
+        }
+      }
+    }
+    .lastNews {
+      display: flex;
+      //   align-items: center;
+      direction: rtl;
+      column-gap: 80px;
+        .imgS{
+            overflow: hidden;
+            img{
+transition: 0.5s ease;
+width: 100%;
+            }
+        }
+        .imgS:hover{
+            img{
+                scale: 1.1;
+            }
+        }
+      .lastDet {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        a {
+          text-decoration: none;
+          font-family: IRANYekan;
+          font-size: 18px;
           font-weight: 400;
-          line-height: 12px;
+          line-height: 31.09px;
           text-align: right;
+          color: black;
+        }
+        .catTitle {
+          font-family: IRANYekan;
+          font-size: 12px;
+          font-weight: 300;
+          line-height: 18px;
+          text-align: right;
+          color: #00000080;
+        }
+        .para {
+          max-width: 417px;
+          p {
+            font-family: IRANYekan;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 20.73px;
+            text-align: right;
+          }
+        }
+        .date {
+          p {
+            font-family: Josefin Sans;
+            font-size: 12px;
+            font-weight: 300;
+            line-height: 18px;
+            text-align: right;
+            color: #00000080;
+          }
+        }
+      }
+    }
+  }
+  .section3 {
+    margin-top: 50px;
+    padding-bottom: 61px;
+    .gridBlog {
+      direction: rtl;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 40px;
+      .blogBox {
+        width: 100%;
+        .imgS {
+            overflow: hidden;
+          img {
+            width: 100%;
+            transition: 0.5s ease;
+          }
+        }
+        .catName {
+          span {
+            font-family: IRANYekan;
+            font-size: 12px;
+            font-weight: 300;
+            line-height: 18px;
+            text-align: right;
+            color: #00000080;
+          }
+        }
+        .title {
+          margin: 4px 0;
+          p,
+          a {
+            text-decoration: none;
+            font-family: IRANYekan;
+            font-size: 16px;
+            color: black;
+            font-weight: 400;
+            line-height: 27.64px;
+            text-align: right;
+          }
+        }
+        .para {
+          p {
+            font-family: IRANYekan;
+            font-size: 10px;
+            font-weight: 300;
+            line-height: 17.27px;
+            text-align: right;
+            color: #272727;
+          }
+        }
+      }
+      .blogBox:hover{
+        img{
+            scale: 1.1;
         }
       }
     }

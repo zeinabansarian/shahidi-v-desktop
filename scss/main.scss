@@ -649,3 +649,25 @@ header.DesktopHeader{
       }
   }
 }
+.Title-1{
+  width:90%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  h2{
+    width: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    span{
+      font-size: 24px;
+      font-weight: 900;
+      color: $color-1;
+      line-height: 41.45px;
+      &.color{
+        color: $color-primary;
+      }
+    }
+  }
+}

@@ -662,4 +662,40 @@ body {
 }
 .productShow .tabSection .tab-content .section4 .infoContainer .imgS img {
   width: 100%;
+}
+.productShow .tabSection .tab-content .section5 .proGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+.productShow .tabSection .tab-content .section5 .proGrid .proBox {
+  width: 100%;
+}
+.productShow .tabSection .tab-content .section5 .proGrid .proBox .imgS {
+  overflow: hidden;
+}
+.productShow .tabSection .tab-content .section5 .proGrid .proBox .imgS img {
+  width: 100%;
+  transition: 0.5s ease;
+}
+.productShow .tabSection .tab-content .section5 .proGrid .proBox a {
+  text-decoration: none;
+}
+.productShow .tabSection .tab-content .section5 .proGrid .proBox .title {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+  -moz-column-gap: 6px;
+       column-gap: 6px;
+}
+.productShow .tabSection .tab-content .section5 .proGrid .proBox .title p {
+  color: black;
+  font-family: IRANYekan;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 31.09px;
+  text-align: right;
+}
+.productShow .tabSection .tab-content .section5 .proGrid .proBox:hover img {
+  scale: 1.1;
 }/*# sourceMappingURL=m-style.css.map */

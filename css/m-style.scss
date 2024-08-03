@@ -704,14 +704,13 @@ body {
                   text-align: right;
                   color: #00000099;
                 }
-                span{
+                span {
                   //styleName: fa/16-reg;
-font-family: Estedad;
-font-size: 16px;
-font-weight: 400;
-line-height: 28.13px;
-text-align: left;
-
+                  font-family: Estedad;
+                  font-size: 16px;
+                  font-weight: 400;
+                  line-height: 28.13px;
+                  text-align: left;
                 }
               }
             }
@@ -719,6 +718,45 @@ text-align: left;
           .imgS {
             img {
               width: 100%;
+            }
+          }
+        }
+      }
+      .section5{
+        .proGrid {
+          display: grid;
+          grid-template-columns: repeat(4, 1fr);
+          gap: 40px;
+          .proBox {
+            width: 100%;
+            .imgS {
+              overflow: hidden;
+              img {
+                width: 100%;
+                transition: 0.5s ease;
+              }
+            }
+            a {
+              text-decoration: none;
+            }
+            .title {
+              display: flex;
+              align-items: center;
+              margin-top: 12px;
+              column-gap: 6px;
+              p {
+                color: black;
+                font-family: IRANYekan;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 31.09px;
+                text-align: right;
+              }
+            }
+          }
+          .proBox:hover {
+            img {
+              scale: 1.1;
             }
           }
         }

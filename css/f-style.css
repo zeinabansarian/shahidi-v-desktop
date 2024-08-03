@@ -161,311 +161,53 @@ main.Home .ProductCategories .swiper-wrapper .swiper-slide {
   justify-content: center;
   align-items: center;
 }
-main.Home .About-Clr {
+main.Home .Cataloge-Container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+main.Home .Cataloge-Container .CatalogeS {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  height: 512px;
-  position: relative;
+  grid-template-columns: 2fr 1fr;
 }
-main.Home .About-Clr::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(148, 148, 148, 0.4666666667);
-  z-index: 0;
-}
-main.Home .About-Clr .Left {
+main.Home .Cataloge-Container .Right {
   width: 100%;
   display: flex;
-  justify-content: center;
-  align-content: center;
-}
-main.Home .About-Clr .Left .PopUp {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  transition: all 800ms ease 0s;
-  background-color: transparent;
-  display: flex;
-  flex-direction: column;
-  opacity: 0;
-  z-index: 99999;
   justify-content: center;
   align-items: center;
-  gap: 5vh;
-  pointer-events: none;
 }
-main.Home .About-Clr .Left .PopUp .Close {
-  width: 45px;
-  height: 45px;
+main.Home .Cataloge-Container .Right .Icon {
   display: flex;
-  flex-direction: column;
-  margin-left: auto;
-  gap: 0.3vh;
   justify-content: center;
   align-items: center;
-  position: absolute;
-  right: 10vh;
-  top: 10vh;
-  border: 1px solid #fff;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
 }
-main.Home .About-Clr .Left .PopUp .Close svg {
-  width: 15px;
-}
-main.Home .About-Clr .Left .PopUp video {
-  width: 70vw;
-  height: auto;
-  -o-object-fit: contain;
-     object-fit: contain;
-  opacity: 0;
-  transform: translateY(30%);
-  -webkit-transform: translateY(30%);
-  -moz-transform: translateY(30%);
-  -ms-transform: translateY(30%);
-  -o-transform: translateY(30%);
-  transition: all 800ms ease 0.5s;
-  -webkit-transition: all 800ms ease 0.5s;
-  -moz-transition: all 800ms ease 0.5s;
-  -ms-transition: all 800ms ease 0.5s;
-  -o-transition: all 800ms ease 0.5s;
-}
-main.Home .About-Clr .Left .PopUp video.show {
-  transition: all 800ms ease 0.5s;
-  opacity: 1;
-  transform: unset;
-  -webkit-transform: unset;
-  -moz-transform: unset;
-  -ms-transform: unset;
-  -o-transform: unset;
-  -webkit-transition: all 800ms ease 0.5s;
-  -moz-transition: all 800ms ease 0.5s;
-  -ms-transition: all 800ms ease 0.5s;
-  -o-transition: all 800ms ease 0.5s;
-}
-main.Home .About-Clr .Left .PopUp.Open {
-  transition: all 800ms ease 0s;
-  opacity: 1;
-  pointer-events: fill;
-  background-color: rgba(0, 0, 0, 0.584);
-  -webkit-transition: all 800ms ease 0s;
-  -moz-transition: all 800ms ease 0s;
-  -ms-transition: all 800ms ease 0s;
-  -o-transition: all 800ms ease 0s;
-}
-main.Home .About-Clr .Left .Video-C {
-  width: 91%;
-  display: flex;
-  justify-content: flex-end;
-  align-content: center;
-  place-items: center;
-  margin-left: auto;
-}
-main.Home .About-Clr .Left .Video {
-  width: 526px;
-  height: 310px;
-  position: relative;
-  overflow: hidden;
+main.Home .Cataloge-Container .Left {
+  width: 100%;
   display: flex;
   justify-content: center;
-  align-content: center;
-}
-main.Home .About-Clr .Left .Video > video {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-main.Home .About-Clr .Left .Video .Video-Overlay {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 3;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-}
-main.Home .About-Clr .Left .Video .Video-Overlay .w-circle {
-  position: relative;
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  border: 1px solid #949494;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-}
-main.Home .About-Clr .Left .Video .Video-Overlay .w-circle:hover {
-  cursor: pointer;
-}
-main.Home .About-Clr .Left .Video .Video-Overlay .w-circle .Cricle {
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  width: 100%;
-  place-content: center;
-  place-items: center;
-}
-main.Home .About-Clr .Left .Video .Video-Overlay .w-circle::before {
-  content: "";
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  position: absolute;
-  width: 100%;
-  height: 50%;
-  border-top-left-radius: 90px;
-  border-top-right-radius: 90px;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-  z-index: 4;
-  border-top: 1px solid #fff;
-  border-left: 1px solid #fff;
-  border-right: 1px solid #fff;
-  transform: rotate(196deg) translateX(8px);
-  bottom: 0;
-}
-main.Home .About-Clr .Right {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  position: relative;
-  z-index: 5;
-}
-main.Home .About-Clr .Right .Box {
-  width: 91%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  margin-right: auto;
-}
-main.Home .About-Clr .Right .Box > .Title {
-  width: 100%;
-  margin-bottom: 2.5em;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-main.Home .About-Clr .Right .Box > .Title h3 {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-}
-main.Home .About-Clr .Right .Box > .Title h3 span {
-  font-size: 24px;
-  font-weight: 500;
-  line-height: 41.45px;
-  color: #fff;
-}
-main.Home .About-Clr .Right .Box > .Title h3 span.color {
-  font-size: 24px;
-  font-weight: 900;
-  line-height: 41.45px;
-  color: #D30E15;
-}
-main.Home .About-Clr .Right .Box > .Text {
-  width: 70%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
   align-items: flex-start;
-  margin-bottom: 2.5em;
-  margin-left: auto;
 }
-main.Home .About-Clr .Right .Box > .Text p {
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 27.64px;
-  color: #fff;
-  text-align: right;
-}
-main.Home .About-Clr .Right .Box .ShowMoreBTN-2 {
-  width: auto;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-left: auto;
-  border: 1px solid #D30E15;
-  border-radius: 30px;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  -ms-border-radius: 30px;
-  -o-border-radius: 30px;
-  padding: 0.5em 2em;
-  position: relative;
-  transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-}
-main.Home .About-Clr .Right .Box .ShowMoreBTN-2:hover::before {
-  width: 100%;
-  opacity: 1;
-}
-main.Home .About-Clr .Right .Box .ShowMoreBTN-2::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  opacity: 0;
-  height: 100%;
-  border-radius: 30px;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  -ms-border-radius: 30px;
-  -o-border-radius: 30px;
-  background-color: #D30E15;
-  z-index: 0;
-  transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-}
-main.Home .About-Clr .Right .Box .ShowMoreBTN-2 a {
-  position: relative;
-  z-index: 1;
+main.Home .Cataloge-Container .Left .Box {
   width: 100%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
-  gap: 0.8em;
 }
-main.Home .About-Clr .Right .Box .ShowMoreBTN-2 a span {
-  font-size: 12px;
-  font-weight: 300;
-  color: #fff;
-  line-height: 20.73px;
+main.Home .Cataloge-Container .Left .Box .Text {
+  width: 94%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-right: auto;
+  margin-top: 3em;
+}
+main.Home .Cataloge-Container .Left .Box .Text p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 31.09px;
+  color: #000000;
 }
 
 .Product {

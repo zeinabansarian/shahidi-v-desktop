@@ -163,321 +163,54 @@ main.Home{
             }
         }
     }
-    .About-Clr{
+   .Cataloge-Container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .CatalogeS{
         width: 100%;
         display: grid;
-        grid-template-columns: repeat(2,1fr);
-      background-repeat: no-repeat;
-      background-position: center;
-      background-size: cover;
-      height: 512px;
-      position: relative;
-      &::before{
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        height: 100%;
-        background-color: #94949477;
-        z-index: 0;
-      }
-      .Left{
+        grid-template-columns: 2fr 1fr;
+    }
+    .Right{
         width: 100%;
         display: flex;
         justify-content: center;
-        align-content: center;
-        .PopUp{
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100vh;
-            transition: all 800ms ease 0s;
-            background-color:transparent;
+        align-items: center;
+        .Icon{
             display: flex;
-            flex-direction: column;
-            opacity: 0;
-            z-index: 99999;
             justify-content: center;
             align-items: center;
-            gap: 5vh;
-            pointer-events: none;
-         
-            .Close
-{
-            width: 45px;
-            height: 45px;
-            display: flex;
-            flex-direction: column;
-            margin-left: auto;
-            gap: 0.3vh;
-            justify-content: center;
-            align-items: center;
-
-            position: absolute;
-            right:10vh;
-            top: 10vh;
-            border: 1px solid $color-3;
-            border-radius: 50%;
-            -webkit-border-radius: 50%;
-            -moz-border-radius: 50%;
-            -ms-border-radius: 50%;
-            -o-border-radius: 50%;
-            svg{
-                width: 15px;
-            }
-        
-            }
-            video{
-                width: 70vw;
-                height: auto;
-                object-fit: contain;
-                opacity: 0;
-                transform: translateY(30%);
-                -webkit-transform: translateY(30%);
-                -moz-transform: translateY(30%);
-                -ms-transform: translateY(30%);
-                -o-transform: translateY(30%);
-                transition: all 800ms ease .5s;
-                -webkit-transition: all 800ms ease .5s;
-                -moz-transition: all 800ms ease .5s;
-                -ms-transition: all 800ms ease .5s;
-                -o-transition: all 800ms ease .5s;
-                &.show
-{
-                    transition: all 800ms ease .5s;
-                    opacity: 1;
-                    transform: unset;
-                    -webkit-transform: unset;
-                    -moz-transform: unset;
-                    -ms-transform: unset;
-                    -o-transform: unset;
-                    -webkit-transition: all 800ms ease .5s;
-                    -moz-transition: all 800ms ease .5s;
-                    -ms-transition: all 800ms ease .5s;
-                    -o-transition: all 800ms ease .5s;
-}
-}
-            &.Open{
-                transition: all 800ms ease 0s;
-               opacity: 1;
-               pointer-events: fill;
-                background-color: rgba(0, 0, 0, 0.584);
-              
-                -webkit-transition: all 800ms ease 0s;
-                -moz-transition: all 800ms ease 0s;
-                -ms-transition: all 800ms ease 0s;
-                -o-transition: all 800ms ease 0s;
-}
         }
-        .Video-C{
-            width: 91%;
-            display: flex;
-            justify-content: flex-end;
-            align-content: center;
-            place-items: center;
-            margin-left: auto;
-        }
-        .Video{
-            width: 526px;
-            height: 310px;
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            justify-content: center;
-            align-content: center;
-            >video{
-                width: 100%;
-                height: 100%;
-                object-fit: cover
-                ;
-            }
-            .Video-Overlay{
-             position: absolute;
-             left: 0;
-             top: 0;
-             width: 100%;
-             height: 100%;
-             z-index: 3;
-             display: flex;
-             justify-content: center;
-             align-content: center;
-             .w-circle{
-                position: relative;
-                width: 100px;
-                height: 100px;
-                border-radius: 50%;
-                -webkit-border-radius: 50%;
-                -moz-border-radius: 50%;
-                -ms-border-radius: 50%;
-                -o-border-radius: 50%;
-                display: flex;
-                justify-content: center;
-                align-content: center;
-                border: 1px solid $color-2;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                margin: auto;
-                &:hover{
-                 cursor: pointer;
-                }
-                .Cricle{
-                    display: flex;
-                    justify-content: center;
-                    align-content: center;
-                    width: 100%;
-                    place-content: center;
-                    place-items: center;
-                }
-                &::before{
-                    content: '';
-                    display: flex;
-                    justify-content: center;
-                    align-content: center;
-                    position: absolute;
-                    width: 100%;
-                    height: 50%;
-                    border-top-left-radius: 90px;
-                    border-top-right-radius: 90px;
-                    display: flex;
-                    justify-content: center;
-                    align-content: center;
-                    z-index: 4;
-                    border-top: 1px solid $color-3;
-                    border-left: 1px solid $color-3;
-                    border-right: 1px solid $color-3;
-                    transform: rotate(196deg) translateX(8px);
-                    bottom: 0;
-
-                }
-}
-            }
-        }
-      }
-      .Right{
+    }
+    .Left{
         width: 100%;
         display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        position: relative;
-         z-index: 5;
-        .Box{
-            width: 91%;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-            margin-right: auto;
-           >.Title{
+        justify-content: center;
+        align-items: flex-start;
+            .Box{
             width: 100%;
-            margin-bottom: 2.5em;
             display: flex;
-            justify-content: flex-start;
+            justify-content: center;
             align-items: center;
-            h3{
-                width: 100%;
+            .Text{
+                width: 94%;
                 display: flex;
-                justify-content: flex-start;
+                justify-content: center;
                 align-items: center;
-                span{
-                    font-size: 24px;
-                    font-weight: 500;
-                    line-height: 41.45px;
-                    color: $color-3;
-                    &.color{
-                        font-size: 24px;
-                        font-weight: 900;
-                        line-height: 41.45px;
-                        color: $color-primary;
-                    }
+                flex-direction: column;
+                margin-right: auto;
+                margin-top: 3em;
+                p{
+                    font-size: 18px;
+                    font-weight: 400;
+                    line-height: 31.09px;
+                    color: $color-1;
                 }
             }
-           }
-           >.Text{
-            width: 70%;
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: flex-start;
-            margin-bottom: 2.5em;
-            margin-left: auto;
-           p{
-            font-size:16px;
-            font-weight: 300;
-            line-height:27.64px;
-            color: $color-3;
-            text-align: right;
-           }
-           }
-           .ShowMoreBTN-2{
-            width: auto;
-            display: flex;
-            justify-content:flex-start;
-            align-items:center;
-            margin-left: auto;
-            border: 1px solid $color-primary;
-            border-radius: 30px;
-            -webkit-border-radius: 30px;
-            -moz-border-radius: 30px;
-            -ms-border-radius: 30px;
-            -o-border-radius: 30px;
-            padding: .5em 2em;
-            position: relative;
-            transition: all .5s ease;
-            -webkit-transition: all .5s ease;
-            -moz-transition: all .5s ease;
-            -ms-transition: all .5s ease;
-            -o-transition: all .5s ease;
-            &:hover{
-                &::before{
-                    width: 100%;
-                    opacity: 1;
-                }
-            }
-            &::before{
-                content: '';
-                position: absolute;
-                left: 0;
-                top: 0;
-                width: 100%;
-                opacity: 0;
-                height: 100%;
-                border-radius: 30px;
-                -webkit-border-radius: 30px;
-                -moz-border-radius: 30px;
-                -ms-border-radius: 30px;
-                -o-border-radius: 30px;
-                background-color: $color-primary;
-                z-index: 0;
-                transition: all .5s ease;
-                -webkit-transition: all .5s ease;
-                -moz-transition: all .5s ease;
-                -ms-transition: all .5s ease;
-                -o-transition: all .5s ease;
-}
-            a {
-                position: relative;
-                 z-index: 1;
-                width: 100%;
-                display: flex;
-                justify-content:flex-start;
-                align-items:center;
-                gap: .8em;    
-                span{
-                    font-size: 12px;
-                    font-weight: 300;
-                    color:$color-3;
-                    line-height: 20.73px;
-                }
-            }
-           }
         }
-      }
-
     }
+   }
 }
 .Product{
     width: 100%;

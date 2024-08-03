@@ -22,10 +22,11 @@ let swiperProject= new Swiper(".swiper-Category", {
 
   });  
 
-  let About = document.querySelector('.About-Clr')
-let ImgSRC =About.getAttribute('data-bg')
-About.style.backgroundImage =`url('${ImgSRC}')`
-
+let Sections = document.querySelectorAll('.BG')
+Sections.forEach(d=>{
+    let ImgSRC =d.getAttribute('data-bg')
+    d.style.backgroundImage =`url('${ImgSRC}')`
+})
 //   PLAY VIDEO
 let video = document.querySelector('video#main')
 let videoC = document.querySelector('.Video-Clr')
@@ -52,4 +53,16 @@ PlayBtn2.addEventListener('click',(e)=>{
         video2.parentElement.classList.remove('show')
         video2.pause()
     })
+})
+
+
+// TAG PRODUCT
+let Tags = document.querySelectorAll('.Tag')
+Tags.forEach(tag=>{
+
+    tag.addEventListener('click',(e)=>{
+        console.log(e.currentTarget.children[1]);
+        let PopUp = e.currentTarget.children[1]
+        PopUp.classList.toggle('expand')
+   } )
 })

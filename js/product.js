@@ -17,3 +17,19 @@ const mainSlider = new Swiper('.mainSlider', {
       e.target.classList.toggle('toggle-button--active');
     });
   });
+
+
+
+
+
+  jQuery(document).ready(function() {
+	
+	jQuery('.tabSection .aboutPara').readmore({
+		speed: 10000,
+		collapsedHeight:96,
+		moreLink: '<button>نمایش بیشتر ></button>',
+		lessLink: '<button>نمایش کمتر <</button>',
+		heightMargin: 16
+	});
+	
+});

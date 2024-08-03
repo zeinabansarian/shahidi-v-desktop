@@ -308,9 +308,9 @@ body {
   border-radius: 8px;
   -moz-column-gap: 80px;
        column-gap: 80px;
-  box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.25);
-  -webkit-box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.25);
-  -moz-box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 60px 1px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 0px 60px 1px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 0px 60px 1px rgba(0, 0, 0, 0.25);
   padding: 40px 80px;
 }
 .productShow .section1 .in1 .rSide {
@@ -558,4 +558,108 @@ body {
   line-height: 20.73px;
   text-align: right;
   color: #949494;
+}
+.productShow .tabSection {
+  padding: 0 80px;
+  margin: 80px 0 120px;
+}
+.productShow .tabSection .nav-tabs {
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.productShow .tabSection .nav {
+  padding: 0 40px;
+}
+.productShow .tabSection .nav .nav-item a {
+  font-family: IRANYekan;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20.73px;
+  text-align: right;
+  color: black;
+  border: none;
+  transition: 0.5s ease;
+  padding: 8px 16.8px;
+}
+.productShow .tabSection .nav .nav-item .nav-link.active {
+  font-family: IRANYekan;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24.18px;
+  text-align: right;
+  color: #d30e15;
+  border-bottom: 2px solid #d30e15;
+}
+.productShow .tabSection .tab-content {
+  margin-top: 40px;
+  border-bottom: 1px solid #949494;
+  padding: 20px 40px;
+}
+.productShow .tabSection .tab-content h2 {
+  font-family: IRANYekan;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 41.45px;
+  text-align: right;
+  margin-bottom: 17px;
+}
+.productShow .tabSection .tab-content .section3 .para p {
+  font-family: IRANYekan;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24.18px;
+  text-align: right;
+}
+.productShow .tabSection .tab-content .section3 .aboutPara {
+  overflow: hidden;
+}
+.productShow .tabSection .tab-content .section3 button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  font-family: IRANYekan;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 20.73px;
+  text-align: right;
+  color: #949494;
+}
+.productShow .tabSection .tab-content .section4 .infoContainer {
+  display: flex;
+  justify-content: space-between;
+  -moz-column-gap: 99px;
+       column-gap: 99px;
+}
+.productShow .tabSection .tab-content .section4 .infoContainer .listSide {
+  width: 16.8125vw;
+}
+.productShow .tabSection .tab-content .section4 .infoContainer .listSide ul {
+  width: 100%;
+}
+.productShow .tabSection .tab-content .section4 .infoContainer .listSide ul li {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2px 0;
+  margin-bottom: 12px;
+  border-bottom: 0.5px solid #d30e15;
+}
+.productShow .tabSection .tab-content .section4 .infoContainer .listSide ul li p {
+  font-family: Estedad;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28.13px;
+  text-align: right;
+  color: rgba(0, 0, 0, 0.6);
+}
+.productShow .tabSection .tab-content .section4 .infoContainer .listSide ul li span {
+  font-family: Estedad;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28.13px;
+  text-align: left;
+}
+.productShow .tabSection .tab-content .section4 .infoContainer .imgS img {
+  width: 100%;
 }/*# sourceMappingURL=m-style.css.map */

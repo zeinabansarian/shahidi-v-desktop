@@ -327,9 +327,9 @@ body {
       display: flex;
       border-radius: 8px;
       column-gap: 80px;
-      box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.25);
-      -webkit-box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.25);
-      -moz-box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.25);
+      box-shadow: 0px 0px 60px 1px rgba(0, 0, 0, 0.25);
+      -webkit-box-shadow: 0px 0px 60px 1px rgba(0, 0, 0, 0.25);
+      -moz-box-shadow: 0px 0px 60px 1px rgba(0, 0, 0, 0.25);
       padding: 40px 80px;
       .rSide {
         width: 50%;
@@ -600,6 +600,125 @@ body {
               line-height: 20.73px;
               text-align: right;
               color: $gray;
+            }
+          }
+        }
+      }
+    }
+  }
+  .tabSection {
+    padding: 0 80px;
+    margin: 80px 0 120px;
+    .nav-tabs {
+      border: none;
+      // padding-bottom: 8px;
+      border-bottom: 1px solid #00000033;
+    }
+    .nav {
+      padding: 0 40px;
+      .nav-item {
+        a {
+          font-family: IRANYekan;
+          font-size: 12px;
+          font-weight: 400;
+          line-height: 20.73px;
+          text-align: right;
+          color: black;
+          border: none;
+          transition: 0.5s ease;
+          padding: 8px 16.8px;
+        }
+        .nav-link.active {
+          font-family: IRANYekan;
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 24.18px;
+          text-align: right;
+          color: $primary;
+          border-bottom: 2px solid $primary;
+        }
+      }
+    }
+    .tab-content {
+      margin-top: 40px;
+      border-bottom: 1px solid $gray;
+      padding: 20px 40px;
+      h2 {
+        //styleName: 24/r;
+        font-family: IRANYekan;
+        font-size: 24px;
+        font-weight: 400;
+        line-height: 41.45px;
+        text-align: right;
+        margin-bottom: 17px;
+      }
+
+      .section3 {
+        .para {
+          p {
+            font-family: IRANYekan;
+            font-size: 14px;
+            font-weight: 300;
+            line-height: 24.18px;
+            text-align: right;
+          }
+        }
+        .aboutPara {
+          overflow: hidden;
+        }
+        button {
+          background-color: transparent;
+          border: none;
+          cursor: pointer;
+          margin-top: 20px;
+          //styleName: 12/L;
+          font-family: IRANYekan;
+          font-size: 12px;
+          font-weight: 300;
+          line-height: 20.73px;
+          text-align: right;
+          color: $gray;
+        }
+      }
+      .section4 {
+        .infoContainer {
+          display: flex;
+          justify-content: space-between;
+          column-gap: 99px;
+          .listSide {
+            width: 16.8125vw;
+            ul {
+              width: 100%;
+              li {
+                display: flex;
+                justify-content: space-between;
+                width: 100%;
+                padding: 2px 0;
+                margin-bottom: 12px;
+                border-bottom: 0.5px solid $primary;
+                p {
+                  font-family: Estedad;
+                  font-size: 16px;
+                  font-weight: 400;
+                  line-height: 28.13px;
+                  text-align: right;
+                  color: #00000099;
+                }
+                span{
+                  //styleName: fa/16-reg;
+font-family: Estedad;
+font-size: 16px;
+font-weight: 400;
+line-height: 28.13px;
+text-align: left;
+
+                }
+              }
+            }
+          }
+          .imgS {
+            img {
+              width: 100%;
             }
           }
         }

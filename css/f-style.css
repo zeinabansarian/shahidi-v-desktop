@@ -1,4 +1,131 @@
 main.Home {
-  width: 100vw;
+  width: 100%;
   overflow: hidden;
+}
+main.Home .Banner-Container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+main.Home .Banner-Container .Banner-Slider {
+  width: 100%;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main.Home .Banner-Container .swiper-Banner {
+  width: 100%;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+}
+main.Home .Banner-Container .swiper-Banner .swiper-wrapper {
+  width: 100%;
+  max-width: 100%;
+  height: inherit;
+}
+main.Home .Banner-Container .swiper-Banner .swiper-wrapper > .swiper-slide {
+  width: 100%;
+  display: flex;
+  height: inherit;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+main.Home .Banner-Container .swiper-Banner .swiper-wrapper > .swiper-slide-active h1, main.Home .Banner-Container .swiper-Banner .swiper-wrapper > .swiper-slide-active p {
+  transition: all 0.8s ease;
+  -webkit-transform: translateY(0) !important;
+  -moz-transform: translateY(0) !important;
+  -ms-transform: translateY(0) !important;
+  -o-transform: translateY(0) !important;
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  -ms-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+  transform: translateY(0) !important;
+  opacity: 1 !important;
+}
+main.Home .Banner-Container .swiper-Banner .swiper-wrapper .IMG {
+  width: 100%;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main.Home .Banner-Container .swiper-Banner .swiper-wrapper .IMG > img {
+  height: inherit;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main.Home .Banner-Container .swiper-Banner .swiper-wrapper .OV {
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-end;
+  gap: 0.5em;
+}
+main.Home .Banner-Container .swiper-Banner .swiper-wrapper .OV > .Title {
+  width: 96%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-right: auto;
+  overflow: hidden;
+}
+main.Home .Banner-Container .swiper-Banner .swiper-wrapper .OV > .Title h1 {
+  transition: all 0.8s ease;
+  -webkit-transform: translateY(100px);
+  -moz-transform: translateY(100px);
+  -ms-transform: translateY(100px);
+  -o-transform: translateY(100px);
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  -ms-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+  transform: translateY(100px);
+  opacity: 0;
+  font-size: 24px;
+  font-weight: 400;
+  color: #fff;
+  line-height: 41.45px;
+}
+main.Home .Banner-Container .swiper-Banner .swiper-wrapper .OV .Desc {
+  margin-right: auto;
+  width: 96%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  overflow: hidden;
+}
+main.Home .Banner-Container .swiper-Banner .swiper-wrapper .OV .Desc p {
+  transition: all 0.8s ease;
+  -webkit-transform: translateY(100px);
+  -moz-transform: translateY(100px);
+  -ms-transform: translateY(100px);
+  -o-transform: translateY(100px);
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  -ms-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+  transform: translateY(100px);
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+  line-height: 31.09px;
+  opacity: 0;
+}
+main.Home .Banner-Container .swiper-Banner .ShowMBTN {
+  margin-right: 4em;
+  margin-left: auto;
+  margin-bottom: 5em;
 }/*# sourceMappingURL=f-style.css.map */

@@ -387,6 +387,8 @@ header.DesktopHeader{
     width: 100vw;
     overflow: hidden;
     display: grid;
+    position: fixed;
+    z-index: 99;
     padding: 50px 0;
     grid-template-columns: 3fr 1fr 3fr;
     >.Left{
@@ -494,23 +496,21 @@ header.DesktopHeader{
             align-items: center;
             overflow: hidden;
           
-            img
-      
-{
-  transform: translateY(200px);
-  -webkit-transform: translateY(200px);
-  -moz-transform: translateY(200px);
-  -ms-transform: translateY(200px);
-  -o-transform: translateY(200px);
-  opacity: 0;
-  transition: all 1.2s .5s ease;
-  -webkit-transition: all 1.2s .5s ease;
-  -moz-transition: all 1.2s .5s ease;
-  -ms-transition: all 1.2s .5s ease;
-  -o-transition: all 1.2s .5s ease;
-  width: 100%;
-  object-fit: cover;
-}
+            img{
+          transform: translateY(200px);
+          -webkit-transform: translateY(200px);
+          -moz-transform: translateY(200px);
+          -ms-transform: translateY(200px);
+          -o-transform: translateY(200px);
+          opacity: 0;
+          transition: all 1.2s .5s ease;
+          -webkit-transition: all 1.2s .5s ease;
+          -moz-transition: all 1.2s .5s ease;
+          -ms-transition: all 1.2s .5s ease;
+          -o-transition: all 1.2s .5s ease;
+          width: 100%;
+          object-fit: cover;
+        }
         }
     }
     >.Middle{
@@ -628,4 +628,24 @@ header.DesktopHeader{
         }
     }
    }
+}
+
+.ShowMBTN{
+  width: auto;
+  display: flex;
+  justify-content:flex-start;
+  align-items:center;
+  a{
+      width: 100%;
+      display: flex;
+      justify-content:flex-start;
+      align-items:center;
+      gap: .8em;    
+      span{
+          font-size: 12px;
+          font-weight: 300;
+          color:$color-1;
+          line-height: 20.73px;
+      }
+  }
 }

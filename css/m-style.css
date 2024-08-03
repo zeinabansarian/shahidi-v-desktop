@@ -702,6 +702,7 @@ body {
 
 .article {
   direction: rtl;
+  background-color: black;
 }
 .article .section1 {
   position: relative;
@@ -719,4 +720,53 @@ body {
   align-items: center;
   -moz-column-gap: 30px;
        column-gap: 30px;
+}
+.article .section2 {
+  padding: 80px;
+}
+.article .section2 .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 40px 0 65px 0;
+}
+.article .section2 .title h1 {
+  font-family: IRANYekan;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 34.55px;
+  text-align: right;
+  color: white;
+}
+.article .section2 .title .date span {
+  font-family: Josefin Sans;
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 16px;
+  text-align: left;
+  color: #fdfdfd;
+}
+.article .section2 .para {
+  margin-bottom: 40px;
+}
+.article .section2 .para p {
+  font-family: IRANYekan;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 18px;
+  text-align: right;
+  color: white;
+}
+.article .section2 .midSection {
+  display: flex;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+  margin-bottom: 34px;
+}
+.article .section2 .midSection .para {
+  width: 53.75vw;
+  margin: 0;
+}
+.article .section2 .midSection img {
+  width: 100%;
 }/*# sourceMappingURL=m-style.css.map */

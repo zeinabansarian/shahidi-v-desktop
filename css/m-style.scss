@@ -741,7 +741,7 @@ body {
             }
             .title {
               display: flex;
-              align-items: center;
+              align-items: baseline;
               margin-top: 12px;
               column-gap: 6px;
               p {
@@ -760,6 +760,28 @@ body {
             }
           }
         }
+      }
+    }
+  }
+}
+
+.article{
+  direction: rtl;
+  .section1{
+    position: relative;
+    .imgS{
+      img{
+        width: 100%;
+      }
+    }
+    .socialShare{
+      position: absolute;
+      bottom: 32px;
+      left: 80px;
+      ul{
+        display: flex;
+        align-items: center;
+        column-gap: 30px;
       }
     }
   }

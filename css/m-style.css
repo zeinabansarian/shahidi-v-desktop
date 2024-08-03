@@ -683,7 +683,7 @@ body {
 }
 .productShow .tabSection .tab-content .section5 .proGrid .proBox .title {
   display: flex;
-  align-items: center;
+  align-items: baseline;
   margin-top: 12px;
   -moz-column-gap: 6px;
        column-gap: 6px;
@@ -698,4 +698,25 @@ body {
 }
 .productShow .tabSection .tab-content .section5 .proGrid .proBox:hover img {
   scale: 1.1;
+}
+
+.article {
+  direction: rtl;
+}
+.article .section1 {
+  position: relative;
+}
+.article .section1 .imgS img {
+  width: 100%;
+}
+.article .section1 .socialShare {
+  position: absolute;
+  bottom: 32px;
+  left: 80px;
+}
+.article .section1 .socialShare ul {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
 }/*# sourceMappingURL=m-style.css.map */

@@ -25,11 +25,18 @@ const mainSlider = new Swiper('.mainSlider', {
   jQuery(document).ready(function() {
 	
 	jQuery('.tabSection .aboutPara').readmore({
-		speed: 10000,
+		speed: 100,
 		collapsedHeight:96,
 		moreLink: '<button>نمایش بیشتر ></button>',
 		lessLink: '<button>نمایش کمتر <</button>',
-		heightMargin: 16
+		heightMargin: 16,
+        afterToggle: function(trigger, element, expanded) {
+            console.log("element");
+            
+            if(! expanded) { // The "Close" link was clicked
+              $('html, body').animate( { scrollTop: element.offset().top }, {duration: 100 } );
+            }
+          },
 	});
 	
 });

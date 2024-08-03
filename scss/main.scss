@@ -1,0 +1,631 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@font-face {
+  font-family: "iranyekanwebblackfanum";
+  src: url("../_fonts/iranyekanwebblackfanum.eot");
+  src: url("../_fonts/iranyekanwebblackfanum.eot?#iefix")
+      format("embedded-opentype"),
+    url("../_fonts/iranyekanwebblackfanum.woff") format("woff"),
+    url("../_fonts/iranyekanwebblackfanum.woff2") format("woff2"),
+    url("../_fonts/iranyekanwebblackfanum.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IRANYekan";
+  src: url("../_fonts/IRANYekanLight.eot");
+  src: url("../_fonts/IRANYekanLight.eot?#iefix") format("embedded-opentype"),
+    url("../_fonts/IRANYekanLight.woff") format("woff"),
+    url("../_fonts/IRANYekanLight.woff2") format("woff2"),
+    url("../_fonts/IRANYekanLight.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IRANYekan";
+  src: url("../_fonts/IRANYekanRegular.eot");
+  src: url("../_fonts/IRANYekanRegular.eot?#iefix") format("embedded-opentype"),
+    url("../_fonts/IRANYekanRegular.woff") format("woff"),
+    url("../_fonts/IRANYekanRegular.woff2") format("woff2"),
+    url("../_fonts/IRANYekanRegular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IRANYekan";
+  src: url("../_fonts/iranyekanwebmediumfanum.eot");
+  src: url("../_fonts/iranyekanwebmediumfanum.eot?#iefix")
+      format("embedded-opentype"),
+    url("../_fonts/iranyekanwebmediumfanum.woff") format("woff"),
+    url("../_fonts/iranyekanwebmediumfanum.woff2") format("woff2"),
+    url("../_fonts/iranyekanwebmediumfanum.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IRANYekan";
+  src: url("../_fonts/IRANYekanExtraMedium.eot");
+  src: url("../_fonts/IRANYekanExtraMedium.eot?#iefix")
+      format("embedded-opentype"),
+    url("../_fonts/IRANYekanExtraMedium.woff") format("woff"),
+    url("../_fonts/IRANYekanExtraMedium.woff2") format("woff2"),
+    url("../_fonts/IRANYekanExtraMedium.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IRANYekan";
+  src: url("../_fonts/IRANYekanBold.eot");
+  src: url("../_fonts/IRANYekanBold.eot?#iefix") format("embedded-opentype"),
+    url("../_fonts/IRANYekanBold.woff") format("woff"),
+    url("../_fonts/IRANYekanBold.woff2") format("woff2"),
+    url("../_fonts/IRANYekanBold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IRANYekan";
+  src: url("../_fonts/IRANYekanExtraBold.eot");
+  src: url("../_fonts/IRANYekanExtraBold.eot?#iefix")
+      format("embedded-opentype"),
+    url("../_fonts/IRANYekanExtraBold.woff") format("woff"),
+    url("../_fonts/IRANYekanExtraBold.woff2") format("woff2"),
+    url("../_fonts/IRANYekanExtraBold.ttf") format("truetype");
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+@font-face {
+  font-family: 'Josefin Sans';
+  src: url('../_fonts/JosefinSans-Light.eot');
+  src: local('../_fonts/Josefin Sans Light'), local('../_fonts/JosefinSans-Light'),
+      url('../_fonts/JosefinSans-Light.eot?#iefix') format('embedded-opentype'),
+      url('../_fonts/JosefinSans-Light.woff2') format('woff2'),
+      url('../_fonts/JosefinSans-Light.woff') format('woff'),
+      url('../_fonts/JosefinSans-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-display: swap;
+
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Josefin Sans';
+  src: url('../_fonts/JosefinSans-Regular.eot');
+  src: local('../_fonts/Josefin Sans Regular'), local('../_fonts/JosefinSans-Regular'),
+      url('../_fonts/JosefinSans-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../_fonts/JosefinSans-Regular.woff2') format('woff2'),
+      url('../_fonts/JosefinSans-Regular.woff') format('woff'),
+      url('../_fonts/JosefinSans-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+
+}
+
+@font-face {
+  font-family: 'Josefin Sans';
+  src: url('../_fonts/JosefinSans-SemiBoldItalic.eot');
+  src: local('../_fonts/Josefin Sans SemiBold Italic'), local('../_fonts/JosefinSans-SemiBoldItalic'),
+      url('../_fonts/JosefinSans-SemiBoldItalic.eot?#iefix') format('embedded-opentype'),
+      url('../_fonts/JosefinSans-SemiBoldItalic.woff2') format('woff2'),
+      url('../_fonts/JosefinSans-SemiBoldItalic.woff') format('woff'),
+      url('../_fonts/JosefinSans-SemiBoldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-display: swap;
+
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Josefin Sans';
+  src: url('../_fonts/JosefinSans-LightItalic.eot');
+  src: local('../_fonts/Josefin Sans Light Italic'), local('../_fonts/JosefinSans-LightItalic'),
+      url('../_fonts/JosefinSans-LightItalic.eot?#iefix') format('embedded-opentype'),
+      url('../_fonts/JosefinSans-LightItalic.woff2') format('woff2'),
+      url('../_fonts/JosefinSans-LightItalic.woff') format('woff'),
+      url('../_fonts/JosefinSans-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-display: swap;
+
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Josefin Sans';
+  src: url('../_fonts/JosefinSans-SemiBold.eot');
+  src: local('../_fonts/Josefin Sans SemiBold'), local('../_fonts/JosefinSans-SemiBold'),
+      url('../_fonts/JosefinSans-SemiBold.eot?#iefix') format('embedded-opentype'),
+      url('../_fonts/JosefinSans-SemiBold.woff2') format('woff2'),
+      url('../_fonts/JosefinSans-SemiBold.woff') format('woff'),
+      url('../_fonts/JosefinSans-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-display: swap;
+
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Josefin Sans';
+  src: url('../_fonts/JosefinSans-BoldItalic.eot');
+  src: local('../_fonts/Josefin Sans Bold Italic'), local('../_fonts/JosefinSans-BoldItalic'),
+      url('../_fonts/JosefinSans-BoldItalic.eot?#iefix') format('embedded-opentype'),
+      url('../_fonts/JosefinSans-BoldItalic.woff2') format('woff2'),
+      url('../_fonts/JosefinSans-BoldItalic.woff') format('woff'),
+      url('../_fonts/JosefinSans-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Josefin Sans';
+  src: url('../_fonts/JosefinSans-ThinItalic.eot');
+  src: local('../_fonts/Josefin Sans Thin Italic'), local('../_fonts/JosefinSans-ThinItalic'),
+      url('../_fonts/JosefinSans-ThinItalic.eot?#iefix') format('embedded-opentype'),
+      url('../_fonts/JosefinSans-ThinItalic.woff2') format('woff2'),
+      url('../_fonts/JosefinSans-ThinItalic.woff') format('woff'),
+      url('../_fonts/JosefinSans-ThinItalic.ttf') format('truetype');
+  font-weight: 100;
+  font-style: italic;
+  font-display: swap;
+
+}
+
+@font-face {
+  font-family: 'Josefin Sans';
+  src: url('../_fonts/JosefinSans-Thin.eot');
+  src: local('../_fonts/Josefin Sans Thin'), local('../_fonts/JosefinSans-Thin'),
+      url('../_fonts/JosefinSans-Thin.eot?#iefix') format('embedded-opentype'),
+      url('../_fonts/JosefinSans-Thin.woff2') format('woff2'),
+      url('../_fonts/JosefinSans-Thin.woff') format('woff'),
+      url('../_fonts/JosefinSans-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-display: swap;
+
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Josefin Sans';
+  src: url('../_fonts/JosefinSans-Bold.eot');
+  src: local('../_fonts/Josefin Sans Bold'), local('../_fonts/JosefinSans-Bold'),
+      url('../_fonts/JosefinSans-Bold.eot?#iefix') format('embedded-opentype'),
+      url('../_fonts/JosefinSans-Bold.woff2') format('woff2'),
+      url('../_fonts/JosefinSans-Bold.woff') format('woff'),
+      url('../_fonts/JosefinSans-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Josefin Sans';
+  src: url('../_fonts/JosefinSans-Italic.eot');
+  src: local('../_fonts/Josefin Sans Italic'), local('../_fonts/JosefinSans-Italic'),
+      url('../_fonts/JosefinSans-Italic.eot?#iefix') format('embedded-opentype'),
+      url('../_fonts/JosefinSans-Italic.woff2') format('woff2'),
+      url('../_fonts/JosefinSans-Italic.woff') format('woff'),
+      url('../_fonts/JosefinSans-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-display: swap;
+  font-style: italic;
+}
+a,ul,li{
+    list-style: none;
+    text-decoration: none;
+}
+
+.faNum {
+  font-family: "iranyekanwebblackfanum" !important;
+}
+
+$primary : #D30E15;
+
+::-webkit-scrollbar-track
+{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius: 10px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar
+{
+	width: 5px;
+	background-color: #F5F5F5;
+}
+
+::-webkit-scrollbar-thumb
+{
+	border-radius: 4px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+	background-color: #555;
+}
+*{
+  font-family: "IRANYekan";
+  direction: rtl;
+}
+$color-1:#000000;
+$color-2:#949494;
+$color-3:#fff;
+$color-primary:#D30E15;
+header.DesktopHeader{
+    width: 100vw;
+    overflow: hidden;
+    display: grid;
+    padding: 50px 0;
+    grid-template-columns: 3fr 1fr 3fr;
+    >.Left{
+        width: 90%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-right: auto;
+        .Toggles{
+            width: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            margin-left: 1.5em;
+        }
+        .ToggleItem{
+            width: 100%;
+            height: 2px;
+            background-color: $color-1;
+        }
+        .Menu{
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            >ul{
+                width: 100%;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 1.8em;
+            }
+            .Menu-Item{
+                width:auto;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                >.Menu-Link{
+                    font-size: 18px;
+                    line-height: 31.09px;
+                    font-weight: 400;
+                    color: $color-1;
+                    font-family: "IRANYekan";
+                }
+            }
+        }
+    }
+    >.Middle{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        >.Logo,a{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+    }
+    >.Right{
+      width: 90%;
+        display: flex;
+        justify-content:flex-end;
+        align-items: center;
+        margin-left: auto;
+        .SearchIcon{
+            width: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+   >.Menu-Container{
+    width: 100vw;
+    display: grid;
+    grid-template-columns:2fr 1fr 2fr;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    left: 0;
+    top: -100vh;
+    height: 100vh;
+    z-index: 999;
+    background-color:$color-2 ;
+    transition: all .8s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    -webkit-transition: all .8s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    -moz-transition: all .8s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    -ms-transition: all .8s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    -o-transition: all .8s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+    &.Open{
+      top: 0;
+    }
+    >.Left{
+        width: 100%;
+        height: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        margin-top: auto;
+        .IMG-C{
+            width: 270px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+          
+            img
+      
+{
+  transform: translateY(200px);
+  -webkit-transform: translateY(200px);
+  -moz-transform: translateY(200px);
+  -ms-transform: translateY(200px);
+  -o-transform: translateY(200px);
+  opacity: 0;
+  transition: all 1.2s .5s ease;
+  -webkit-transition: all 1.2s .5s ease;
+  -moz-transition: all 1.2s .5s ease;
+  -ms-transition: all 1.2s .5s ease;
+  -o-transition: all 1.2s .5s ease;
+  width: 100%;
+  object-fit: cover;
+}
+        }
+    }
+    >.Middle{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: inherit;
+        .CloseIcon{
+            width: 100%;
+            height: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            &:hover{
+                cursor: pointer;
+            }
+            .Close{
+                width: 40px;
+                border: 1px solid $color-1;
+                border-radius: 50%;
+                height: 40px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                -webkit-border-radius: 50%;
+                -moz-border-radius: 50%;
+                -ms-border-radius: 50%;
+                -o-border-radius: 50%;
+                svg{
+                    width: 20px;
+                }
+}
+        }
+        >.OpenMenu{
+            width: 100%;
+            height: 90%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            ul{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 4em;
+                .Menu-Item{
+                    width:auto;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    overflow: hidden;
+                    >.Menu-Link{
+                        font-size: 24px;
+                        line-height: 41.45px;
+                        font-weight: 400;
+                        color: $color-3;
+                        font-family: "IRANYekan";
+                        opacity: 0;
+                        transition: all .8s ease;
+                        -webkit-transition: all .8s ease;
+                        -moz-transition: all .8s ease;
+                        -ms-transition: all .8s ease;
+                        -o-transition: all .8s ease;
+                        transform: translateY(100px);
+                        -webkit-transform: translateY(100px);
+                        -moz-transform: translateY(100px);
+                        -ms-transform: translateY(100px);
+                        -o-transform: translateY(100px);
+}
+                    &:hover{
+                        .Menu-Link{
+                            transition: all .4s ease;
+                            -webkit-transition: all .4s ease;
+                            -moz-transition: all .4s ease;
+                            -ms-transition: all .4s ease;
+                            -o-transition: all .4s ease;
+                            color:$color-primary ;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    >.Right{
+       width: 100%;
+        height: 90%;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        margin-bottom: auto;
+        .IMG-C{
+            width: 384px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            img{
+              transform: translateY(-200px);
+              -webkit-transform: translateY(-200px);
+              -moz-transform: translateY(-200px);
+              -ms-transform: translateY(-200px);
+              -o-transform: translateY(-200px);
+              opacity: 0;
+              transition: all 1.2s .6s ease;
+              -webkit-transition: all 1.2s .6s ease;
+              -moz-transition: all 1.2s .6s ease;
+              -ms-transition: all 1.2s .6s ease;
+              -o-transition: all 1.2s .6s ease;
+              width: 100%;
+              object-fit: cover;
+}
+        }
+    }
+   }
+}

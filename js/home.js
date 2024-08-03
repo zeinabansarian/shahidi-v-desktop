@@ -28,7 +28,10 @@ About.style.backgroundImage =`url('${ImgSRC}')`
 
 //   PLAY VIDEO
 let video = document.querySelector('video#main')
+let videoC = document.querySelector('.Video-Clr')
+let video2 = document.querySelector('video#main-2')
 let PlayBtn = document.querySelector('.PlayBTN')
+let PlayBtn2= document.querySelector('.PlayBTN2')
 let popup = document.querySelector('.PopUp')
 let CloseBtn = document.querySelector('.PopUp .Close')
 PlayBtn.addEventListener('click',()=>{
@@ -41,4 +44,12 @@ CloseBtn.addEventListener('click',()=>{
     video.classList.remove('show')   
     video.pause()
 })
-
+PlayBtn2.addEventListener('click',(e)=>{
+    e.stopPropagation()
+    video2.play()
+    video2.parentElement.classList.add('show')
+    videoC.addEventListener('click',()=>{
+        video2.parentElement.classList.remove('show')
+        video2.pause()
+    })
+})

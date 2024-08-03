@@ -253,6 +253,113 @@ main.Home{
     }
    }
    }
+   .About-Container{
+    width: 92%;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin: 0 auto;
+    >.Left{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 2em;
+        padding-top: 3em;
+        >.Top{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            .Desc{
+                font-size: 12px;
+                line-height: 20.73px;
+                color: $color-1;
+                font-weight: 300;
+            }
+            h4{
+                font-size: 24px;
+                line-height: 41.45px;
+                color: $color-1;
+                font-weight: 700;
+            }
+        }
+        >.Bottom{
+            width: 100%;
+            display: grid;
+            gap: 5.3em;
+            grid-template-columns: repeat(2,1fr);
+            .Col{
+                width: 100%;
+                display: flex;
+                justify-content: flex-start;
+                flex-direction: column;
+                align-items: center;
+                .Text{
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-start;
+                    flex-direction: column;
+                    align-items: center;
+                    gap: .5em;
+                    p{
+                        font-size: 18px;
+                        font-weight: 400;
+                        line-height: 31.09px;
+                        color: $color-1;
+                        text-align: right;
+                    }
+                }
+            }
+        }
+    }
+    >.Right{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .8em;
+        .Title-1{
+            width: 100%;
+        }
+        .IMG{
+
+            width:auto;
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+        }
+    }
+    .ShowMoreBTN-2{
+        width: auto;
+        display: flex;
+        justify-content:flex-start;
+        align-items:center;
+        margin-left: auto;
+        position: relative;
+        margin-top: 3em;
+        transition: all .5s ease;
+        -webkit-transition: all .5s ease;
+        -moz-transition: all .5s ease;
+        -ms-transition: all .5s ease;
+        -o-transition: all .5s ease;
+        a {
+            position: relative;
+             z-index: 1;
+            width: 100%;
+            display: flex;
+            justify-content:flex-start;
+            align-items:center;
+            gap: .8em;    
+            svg,path{
+                fill: $color-primary;
+            }
+            span{
+                font-size: 16px;
+                font-weight: 300;
+                color:$color-primary;
+                line-height: 27.64px;
+            }
+        }
+       }
+   }
 }
 .Product{
     width: 100%;

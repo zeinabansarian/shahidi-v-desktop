@@ -383,6 +383,32 @@ $color-1:#000000;
 $color-2:#949494;
 $color-3:#fff;
 $color-primary:#D30E15;
+
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+} 
+h2{
+  font-size: 24px;
+  font-weight: 600;
+}
+h3 {
+  font-weight: 500;
+  font-size: 18.72px;
+}
+h4 {
+  font-weight: 400;
+  
+  font-size: 16px;
+}
+h5{
+  font-weight: 400;
+  font-size: 14px;
+}
+h6 {
+  font-weight: 300;
+  font-size: 13px;
+}
 header.DesktopHeader{
     width: 100vw;
     overflow: hidden;

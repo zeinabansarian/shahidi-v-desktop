@@ -67,6 +67,13 @@
 .productList .section2 .productContainer .proGrid .proBox:hover img {
   scale: 1.1;
 }
+.productList .section2 .para {
+  font-family: IRANYekan;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 34.55px;
+  text-align: center;
+}
 
 .contactUs .section1 {
   direction: rtl;
@@ -113,6 +120,103 @@
 .contactUs .section2 .mapSection .map {
   width: 100%;
   height: 85vh;
+}
+.contactUs .section2 .formSection h3 {
+  font-family: IRANYekan;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 41.45px;
+  text-align: right;
+  margin-bottom: 20px;
+  color: #05481f;
+}
+.contactUs .section2 .formSection .para {
+  margin-bottom: 40px;
+}
+.contactUs .section2 .formSection .para p {
+  font-family: IRANYekan;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 31.09px;
+  text-align: right;
+}
+.contactUs .section2 .formSection form legend {
+  display: none;
+}
+.contactUs .section2 .formSection form .responsMsg1 {
+  font-family: IRANYekan;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 20.73px;
+  text-align: right;
+  display: none;
+}
+.contactUs .section2 .formSection form fieldset {
+  padding: 0;
+}
+.contactUs .section2 .formSection form [data-bc-answer-container] {
+  width: 100%;
+}
+.contactUs .section2 .formSection form [data-bc-part-container] {
+  width: 100%;
+}
+.contactUs .section2 .formSection form [data-bc-title-container] {
+  display: none;
+}
+.contactUs .section2 .formSection form [data-part-btn-container] {
+  display: none;
+}
+.contactUs .section2 .formSection form [data-bc-part] {
+  width: 100%;
+  margin: 0;
+}
+.contactUs .section2 .formSection form input,
+.contactUs .section2 .formSection form textarea {
+  margin-bottom: 40px;
+  font-family: IRANYekan;
+  font-size: 12px !important;
+  font-weight: 300;
+  line-height: 20.73px;
+  text-align: right;
+  background-color: transparent !important;
+  border: 1px solid #e0e0e0 !important;
+  color: #949494 !important;
+}
+.contactUs .section2 .formSection form .captchaContainerclass {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: flex-start;
+  -moz-column-gap: 14px;
+       column-gap: 14px;
+}
+.contactUs .section2 .formSection form .captchaContainerclass input {
+  margin: 0;
+}
+.contactUs .section2 .formSection form .captchaContainerclass .refressh {
+  width: 35px;
+  cursor: pointer;
+}
+.contactUs .section2 .formSection form button {
+  width: 100%;
+  background-color: #d30e15;
+  height: 50px;
+  font-family: IRANYekan;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24.18px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border: 1px solid #d30e15;
+  transition: 0.5s ease;
+}
+.contactUs .section2 .formSection form button:hover {
+  color: #d30e15;
+  background-color: white;
 }
 
 .blog {
@@ -239,6 +343,13 @@
   text-align: right;
   color: rgba(0, 0, 0, 0.5019607843);
 }
+.blog .notInBlog p {
+  font-family: IRANYekan;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 18px;
+  text-align: right;
+}
 .blog .section3 {
   margin-top: 50px;
   padding-bottom: 61px;
@@ -289,5 +400,571 @@
   color: #272727;
 }
 .blog .section3 .gridBlog .blogBox:hover img {
+  scale: 1.1;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.productShow {
+  direction: rtl;
+  overflow: hidden;
+}
+.productShow .section1 {
+  padding: 141px 80px 80px;
+}
+.productShow .section1 .in1 {
+  display: flex;
+  border-radius: 8px;
+  -moz-column-gap: 80px;
+       column-gap: 80px;
+  box-shadow: 0px 0px 60px 1px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 0px 60px 1px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 0px 60px 1px rgba(0, 0, 0, 0.25);
+  padding: 40px 80px;
+}
+.productShow .section1 .in1 .rSide {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.25);
+  -webkit-box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 0px 20px 1px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+}
+.productShow .section1 .in1 .rSide .imgS img {
+  width: 100%;
+}
+.productShow .section1 .in1 .rSide .mainSlides {
+  margin-bottom: 28px;
+  padding: 0 42px;
+  overflow: hidden;
+  width: 100%;
+  width: -moz-available; /* WebKit-based browsers will ignore this. */
+  width: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
+  width: fill-available;
+  padding: 40px 151px 0 151px;
+}
+.productShow .section1 .in1 .rSide .thumbSlides {
+  width: 100%;
+  padding: 0 80px 40px 80px;
+  width: 100%;
+  width: -moz-available; /* WebKit-based browsers will ignore this. */
+  width: -webkit-fill-available; /* Mozilla-based browsers will ignore this. */
+  width: fill-available;
+}
+.productShow .section1 .in1 .rSide .thumbSlider {
+  width: 100%;
+}
+.productShow .section1 .in1 .rSide .thumbSlider .imgS {
+  cursor: pointer;
+}
+.productShow .section1 .in1 .rSide .thumbSlider img {
+  width: 100%;
+}
+.productShow .section1 .in1 .lSide {
+  width: 50%;
+}
+.productShow .section1 .in1 .lSide .share .share__wrapper {
+  height: 24px;
+  width: 24px;
+  cursor: pointer;
+  position: relative;
+}
+.productShow .section1 .in1 .lSide .share .social-link {
+  height: 24px;
+  width: 24px;
+  position: absolute;
+  cursor: pointer;
+}
+.productShow .section1 .in1 .lSide .share .toggle-button {
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.productShow .section1 .in1 .lSide .share .toggle-button:focus {
+  outline: 0;
+}
+.productShow .section1 .in1 .lSide .share .toggle-button:before,
+.productShow .section1 .in1 .lSide .share .toggle-button:after {
+  content: "";
+  position: absolute;
+}
+.productShow .section1 .in1 .lSide .share .toggle-button:after {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('data:image/svg+xml;charset=US-ASCII,<svg width="23" height="25" viewBox="0 0 23 25" xmlns="http://www.w3.org/2000/svg"><g transform="translate(-11 -11) translate(12 12)" stroke="#fff" stroke-width="2" fill="none"><ellipse id="Oval-5" cx="3.652" cy="11.5" rx="3.652" ry="3.538"/><ellipse id="Oval-5" cx="17.348" cy="3.538" rx="3.652" ry="3.538"/><ellipse cx="17.348" cy="19.462" rx="3.652" ry="3.538"/><path d="M6.592 13.25l7.602 4.585"/><path d="M6.719 9.917l7.657-4.452"/></g></svg>') center/auto no-repeat;
+  transition: all 0.2s ease;
+}
+.productShow .section1 .in1 .lSide .share .toggle-button--active:after {
+  background-image: url('data:image/svg+xml;charset=US-ASCII,<svg width="20" height="20" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><g fill="#fff"><path d="M1.516.102l18.382 18.382-1.414 1.414-18.382-18.382zM19.898 1.516l-18.382 18.382-1.414-1.414 18.382-18.382z"/></g></svg>');
+}
+.productShow .section1 .in1 .lSide .share .social-link {
+  visibility: hidden;
+  transition: all 0.1s ease;
+}
+.productShow .section1 .in1 .lSide .share .social-link:nth-child(1) {
+  left: -132px;
+}
+.productShow .section1 .in1 .lSide .share .social-link:nth-child(2) {
+  left: -66px;
+}
+.productShow .section1 .in1 .lSide .share .share__wrapper--open-left .social-link {
+  animation: 0.1s right forwards;
+  opacity: 0;
+  will-change: animation;
+}
+.productShow .section1 .in1 .lSide .share .share__wrapper--open-left .social-link:nth-child(1) {
+  top: -73px;
+  right: 0;
+}
+.productShow .section1 .in1 .lSide .share .share__wrapper--open-left .social-link:nth-child(2) {
+  top: -38px;
+  right: 0;
+}
+.productShow .section1 .in1 .lSide .share .share__wrapper--open-left .social-link:nth-child(3) {
+  top: -5px;
+  right: 0;
+}
+.productShow .section1 .in1 .lSide .share .share__wrapper--active .social-link {
+  visibility: visible;
+  animation: 0.1s left forwards;
+}
+.productShow .section1 .in1 .lSide .share .share__wrapper--active .social-link:nth-child(1) {
+  animation-delay: 0.075s;
+}
+.productShow .section1 .in1 .lSide .share .share__wrapper--active .social-link:nth-child(2) {
+  animation-delay: 0.05s;
+}
+@keyframes shareClose {
+  0% {
+    opacity: 0;
+    transform: rotateY(0);
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(360deg);
+  }
+}
+@keyframes left {
+  50% {
+    transform: translateY(-170%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-130%);
+  }
+}
+@keyframes right {
+  0% {
+    transform: translateY(-130%);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(0);
+    left: 0;
+  }
+}
+.productShow .section1 .in1 .lSide .share .visually-hidden {
+  position: absolute;
+  left: 9999px;
+  width: 1px;
+  height: 1px;
+}
+.productShow .section1 .in1 .lSide .share ul,
+.productShow .section1 .in1 .lSide .share li {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.productShow .section1 .in1 .lSide .share button {
+  border: none;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  overflow: visible;
+  background: transparent;
+  /* inherit font & color from ancestor */
+  color: inherit;
+  font: inherit;
+  /* Normalize `line-height`. Cannot be changed from `normal` in Firefox 4+. */
+  line-height: normal;
+  /* Corrects font smoothing for webkit */
+  -webkit-font-smoothing: inherit;
+  -moz-osx-font-smoothing: inherit;
+  /* Corrects inability to style clickable `input` types in iOS */
+  -webkit-appearance: none;
+}
+.productShow .section1 .in1 .lSide .breadCrumb {
+  margin-bottom: 16px;
+}
+.productShow .section1 .in1 .lSide .breadCrumb ul {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 4px;
+       column-gap: 4px;
+}
+.productShow .section1 .in1 .lSide .breadCrumb ul li a {
+  font-family: IRANYekan;
+  font-size: 10px;
+  font-weight: 300;
+  line-height: 17.27px;
+  text-align: right;
+  color: black;
+}
+.productShow .section1 .in1 .lSide .breadCrumb ul li span {
+  font-family: IRANYekan;
+  font-size: 10px;
+  font-weight: 300;
+  line-height: 17.27px;
+  text-align: right;
+  color: rgba(0, 0, 0, 0.5019607843);
+}
+.productShow .section1 .in1 .lSide .breadCrumb ul li i {
+  font-family: IRANYekan;
+  font-size: 10px;
+  font-weight: 300;
+  color: #d30e15;
+}
+.productShow .section1 .in1 .lSide .title {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.productShow .section1 .in1 .lSide .title h1 {
+  font-family: IRANYekan;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 41.45px;
+  text-align: right;
+}
+.productShow .section1 .in1 .lSide .list .para {
+  margin-bottom: 24px;
+}
+.productShow .section1 .in1 .lSide .list .para p {
+  display: block;
+  font-family: IRANYekan;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 20.73px;
+  text-align: right;
+  color: #949494;
+}
+.productShow .section1 .in1 .lSide .list .paraS {
+  margin-bottom: 24px;
+}
+.productShow .section1 .in1 .lSide .list .paraS p {
+  display: block;
+  font-family: IRANYekan;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 20.73px;
+  text-align: right;
+  color: #949494;
+}
+.productShow .tabSection {
+  padding: 0 80px;
+  margin: 80px 0 120px;
+}
+.productShow .tabSection .nav-tabs {
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.productShow .tabSection .nav {
+  padding: 0 40px;
+}
+.productShow .tabSection .nav .nav-item a {
+  font-family: IRANYekan;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20.73px;
+  text-align: right;
+  color: black;
+  border: none;
+  transition: 0.5s ease;
+  padding: 8px 16.8px;
+}
+.productShow .tabSection .nav .nav-item .nav-link.active {
+  font-family: IRANYekan;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 24.18px;
+  text-align: right;
+  color: #d30e15;
+  border-bottom: 2px solid #d30e15;
+}
+.productShow .tabSection .tab-content {
+  margin-top: 40px;
+  border-bottom: 1px solid #949494;
+  padding: 20px 40px;
+}
+.productShow .tabSection .tab-content h2 {
+  font-family: IRANYekan;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 41.45px;
+  text-align: right;
+  margin-bottom: 17px;
+}
+.productShow .tabSection .tab-content .section3 .para p {
+  font-family: IRANYekan;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 24.18px;
+  text-align: right;
+}
+.productShow .tabSection .tab-content .section3 .aboutPara {
+  overflow: hidden;
+}
+.productShow .tabSection .tab-content .section3 button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  font-family: IRANYekan;
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 20.73px;
+  text-align: right;
+  color: #949494;
+}
+.productShow .tabSection .tab-content .section4 .infoContainer {
+  display: flex;
+  justify-content: space-between;
+  -moz-column-gap: 99px;
+       column-gap: 99px;
+}
+.productShow .tabSection .tab-content .section4 .infoContainer .listSide {
+  width: 21.8125vw;
+}
+.productShow .tabSection .tab-content .section4 .infoContainer .listSide ul {
+  width: 100%;
+}
+.productShow .tabSection .tab-content .section4 .infoContainer .listSide ul li {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+  padding: 2px 0;
+  margin-bottom: 12px;
+  border-bottom: 0.5px solid #d30e15;
+}
+.productShow .tabSection .tab-content .section4 .infoContainer .listSide ul li p {
+  font-family: Estedad;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28.13px;
+  text-align: right;
+  color: rgba(0, 0, 0, 0.6);
+}
+.productShow .tabSection .tab-content .section4 .infoContainer .listSide ul li span {
+  font-family: Estedad;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 28.13px;
+  text-align: left;
+}
+.productShow .tabSection .tab-content .section4 .infoContainer .listSide ul li .schemas {
+  text-align: left;
+}
+.productShow .tabSection .tab-content .section4 .infoContainer .listSide .divider {
+  display: inline-block;
+}
+.productShow .tabSection .tab-content .section4 .infoContainer .listSide .divider:last-child {
+  display: none;
+}
+.productShow .tabSection .tab-content .section4 .infoContainer .imgS img {
+  width: 100%;
+}
+.productShow .tabSection .tab-content .section5 .proGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+.productShow .tabSection .tab-content .section5 .proGrid .proBox {
+  width: 100%;
+}
+.productShow .tabSection .tab-content .section5 .proGrid .proBox .imgS {
+  overflow: hidden;
+}
+.productShow .tabSection .tab-content .section5 .proGrid .proBox .imgS img {
+  width: 100%;
+  transition: 0.5s ease;
+}
+.productShow .tabSection .tab-content .section5 .proGrid .proBox a {
+  text-decoration: none;
+}
+.productShow .tabSection .tab-content .section5 .proGrid .proBox .title {
+  display: flex;
+  align-items: baseline;
+  margin-top: 12px;
+  -moz-column-gap: 6px;
+       column-gap: 6px;
+}
+.productShow .tabSection .tab-content .section5 .proGrid .proBox .title p {
+  color: black;
+  font-family: IRANYekan;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 31.09px;
+  text-align: right;
+}
+.productShow .tabSection .tab-content .section5 .proGrid .proBox:hover img {
+  scale: 1.1;
+}
+
+.article {
+  direction: rtl;
+  background-color: black;
+}
+.article .section1 {
+  position: relative;
+}
+.article .section1 .imgS img {
+  width: 100%;
+}
+.article .section1 .socialShare {
+  position: absolute;
+  bottom: 32px;
+  left: 80px;
+}
+.article .section1 .socialShare ul {
+  display: flex;
+  align-items: center;
+  -moz-column-gap: 30px;
+       column-gap: 30px;
+}
+.article .section2 {
+  padding: 80px;
+}
+.article .section2 h1, .article .section2 h2, .article .section2 h3, .article .section2 h4, .article .section2 h5, .article .section2 h6 {
+  color: white;
+}
+.article .section2 .title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 40px 0 65px 0;
+}
+.article .section2 .title h1 {
+  font-family: IRANYekan;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 34.55px;
+  text-align: right;
+  color: white;
+}
+.article .section2 .title .date span {
+  font-family: Josefin Sans;
+  font-size: 16px;
+  font-weight: 200;
+  line-height: 16px;
+  text-align: left;
+  color: #fdfdfd;
+}
+.article .section2 .para {
+  margin-bottom: 40px;
+}
+.article .section2 .para p {
+  font-family: IRANYekan;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 18px;
+  text-align: right;
+  color: white;
+}
+.article .section2 .midSection {
+  display: flex;
+  -moz-column-gap: 40px;
+       column-gap: 40px;
+  margin-bottom: 34px;
+}
+.article .section2 .midSection .para {
+  width: 53.75vw;
+  margin: 0;
+}
+.article .section2 .midSection img {
+  width: 100%;
+}
+.article .section2 .imagesSlider .imgS {
+  overflow: hidden;
+}
+.article .section2 .imagesSlider .imgS:hover img {
+  scale: 1.1;
+}
+.article .section2 .imagesSlider img {
+  width: 100%;
+  transition: 0.5s ease;
+}
+.article .section2 h3 {
+  font-family: IRANYekan;
+  font-size: 16px;
+  line-height: 18px;
+  text-align: right;
+  color: white;
+}
+.article .section5 {
+  background-color: white;
+  padding: 40px 80px 20px;
+}
+.article .section5 .tit {
+  direction: rtl;
+  text-align: right;
+  margin-bottom: 40px;
+}
+.article .section5 .tit p {
+  font-family: IRANYekan;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 34.55px;
+}
+.article .section5 .proGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+.article .section5 .proGrid .proBox {
+  width: 100%;
+}
+.article .section5 .proGrid .proBox .imgS {
+  overflow: hidden;
+}
+.article .section5 .proGrid .proBox .imgS img {
+  width: 100%;
+  transition: 0.5s ease;
+}
+.article .section5 .proGrid .proBox a {
+  text-decoration: none;
+}
+.article .section5 .proGrid .proBox .title {
+  display: flex;
+  align-items: baseline;
+  margin-top: 12px;
+  -moz-column-gap: 6px;
+       column-gap: 6px;
+}
+.article .section5 .proGrid .proBox .title p {
+  color: black;
+  font-family: IRANYekan;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 31.09px;
+  text-align: right;
+}
+.article .section5 .proGrid .proBox:hover img {
   scale: 1.1;
 }/*# sourceMappingURL=m-style.css.map */

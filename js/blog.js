@@ -6,3 +6,12 @@ filters.forEach(element => {
         element.classList.add("activeFilter")
     })
 });
+
+
+
+$(document).ready(function () {
+    $(".filterBtn").click(function (e) {
+        var url4 = $(this).attr("data-blog");
+        $(".gridBlog").load(url4);
+    });
+});

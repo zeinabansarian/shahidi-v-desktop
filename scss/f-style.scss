@@ -864,6 +864,164 @@ main.Home{
         }
     }
    }
+   .NewsBlogs-Container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    margin: 5em 0;
+    margin-top: 10em;
+    .Top{
+        width: 90%;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        margin: 0 auto;
+        gap: 6.5em;
+        .Blogs-nav,
+        .News-nav{
+            width: 100%;
+            display: flex;
+            gap: 6em;
+            justify-content: flex-start;
+            align-items: center;
+        }
+    
+        .Title{
+            font-size: 24px;
+            line-height: 41.45px;
+            color: $color-1;
+            font-weight: 400;
+        }
+        .Showl{
+            font-size: 12px;
+            line-height: 16.8px;
+            color: $color-1;
+            font-weight: 400;
+            position: relative;
+            &::before{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 100%;
+                height: 1px;
+                background-color: $color-1;
+                z-index: 1;
+            }
+        }
+    }
+     .ShowMoreBTN-2{
+        width:100%;
+        display: flex;
+        justify-content:center;
+        align-items:center;
+        margin-top: 2.5em;
+        border: 1px solid $color-primary;
+        border-radius: 30px;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        -ms-border-radius: 30px;
+        -o-border-radius: 30px;
+        position: relative;
+        transition: all .5s ease;
+        -webkit-transition: all .5s ease;
+        -moz-transition: all .5s ease;
+        -ms-transition: all .5s ease;
+        -o-transition: all .5s ease;
+        &:hover{
+            &::before{
+                width: 100%;
+                opacity: 1;
+            }
+            span,svg,path{
+                color: $color-3;
+                fill: $color-3;
+            }
+        }
+        &::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            opacity: 0;
+            height: 100%;
+            border-radius: 30px;
+            -webkit-border-radius: 30px;
+            -moz-border-radius: 30px;
+            -ms-border-radius: 30px;
+            -o-border-radius: 30px;
+            background-color: $color-primary;
+            z-index: 0;
+            transition: all .5s ease;
+            -webkit-transition: all .5s ease;
+            -moz-transition: all .5s ease;
+            -ms-transition: all .5s ease;
+            -o-transition: all .5s ease;
+  }
+        a {
+            position: relative;
+             z-index: 1;
+            width: 100%;
+            display: flex;
+            justify-content:center;
+            align-items:center;
+            padding: 1em 0;
+            gap: .8em;    
+            svg,path{
+                fill:$color-1
+            }
+            span{
+                font-size: 18px;
+                font-weight: 400;
+                color:$color-1;
+                line-height: 31.09px;
+            }
+        }
+       }
+    .Bottom{
+        width: 90%;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        margin: 0 auto;
+        gap: 6.5em;
+        position: relative;
+        &::before{
+            content: '';
+            position: absolute;
+            left: 34.5%;
+            top: 0;
+            width: 1px;
+            height: 100%;
+            background-color: $color-1;
+        }
+        .Blogs{
+            width: 100%;
+            display: grid;
+            gap: 1.5em;
+            grid-template-columns:repeat(2,1fr);
+            .Col-left,
+            .Col-right{
+             width: 100%;
+             display: flex;
+             gap: 2em;
+             flex-direction: column;
+            }
+        }
+        .News{
+            width: 100%;
+            display: flex;
+            gap: 2em;
+            flex-direction: column;
+            .Col{
+                width: 100%;
+                display: flex;
+                gap: 3.5em;
+                flex-direction: column;
+            }
+        }
+    }
+   }
 }
 .Product{
     width: 100%;
@@ -927,5 +1085,119 @@ main.Home{
             }
         }
        }
+    }
+}
+.Blog{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .IMG{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        img{
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    .Title{
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        a{
+            width: fit-content;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            p{
+                font-size: 24px;
+                font-weight: 400;
+                line-height: 41.45px;
+                color: $color-1;
+            }
+        }
+    }
+    .Desc{
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        a{
+            width: fit-content;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            p{
+                font-size: 12px;
+                font-weight: 300;
+                line-height: 20.73px;
+                color: $color-1;
+            }
+        }
+    }
+}
+.New{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    .IMG{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        a{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        img{
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    .Title{
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        a{
+            width: fit-content;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            p{
+                font-size: 24px;
+                font-weight: 400;
+                line-height: 41.45px;
+                color: $color-1;
+            }
+        }
+    }
+    .Desc{
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        a{
+            width: fit-content;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            p{
+                font-size: 12px;
+                font-weight: 300;
+                line-height: 20.73px;
+                color: $color-1;
+            }
+        }
     }
 }

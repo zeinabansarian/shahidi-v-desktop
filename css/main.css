@@ -804,19 +804,19 @@ footer.DesktopFooter > .Bottom .CopyRight a span {
   font-weight: 300;
   line-height: 20.73px;
 }
-.Title-1 h2 {
+.Title-1 h2, .Title-1 h1, .Title-1 p {
   width: auto;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-.Title-1 h2 span {
+.Title-1 h2 span, .Title-1 h1 span, .Title-1 p span {
   font-size: 24px;
   font-weight: 900;
   color: #000000;
   line-height: 41.45px;
 }
-.Title-1 h2 span.color {
+.Title-1 h2 span.color, .Title-1 h1 span.color, .Title-1 p span.color {
   color: #D30E15;
 }
 
@@ -1128,6 +1128,113 @@ footer.DesktopFooter > .Bottom .CopyRight a span {
   line-height: 20.73px;
 }
 
+.About-Container {
+  width: 92%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  margin: 0 auto;
+}
+.About-Container > .Left {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  padding-top: 3em;
+}
+.About-Container > .Left > .Top {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.About-Container > .Left > .Top .Desc {
+  font-size: 12px;
+  line-height: 20.73px;
+  color: #000000;
+  font-weight: 300;
+}
+.About-Container > .Left > .Top h4 {
+  font-size: 24px;
+  line-height: 41.45px;
+  color: #000000;
+  font-weight: 700;
+}
+.About-Container > .Left > .Bottom {
+  width: 100%;
+  display: grid;
+  gap: 5.3em;
+  grid-template-columns: repeat(2, 1fr);
+}
+.About-Container > .Left > .Bottom .Col {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+}
+.About-Container > .Left > .Bottom .Col .Text {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+}
+.About-Container > .Left > .Bottom .Col .Text p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 31.09px;
+  color: #000000;
+  text-align: right;
+}
+.About-Container > .Right {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.8em;
+}
+.About-Container > .Right .Title-1 {
+  width: 100%;
+}
+.About-Container > .Right .IMG {
+  width: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.About-Container .ShowMoreBTN-2 {
+  width: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: auto;
+  position: relative;
+  margin-top: 3em;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+.About-Container .ShowMoreBTN-2 a {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.8em;
+}
+.About-Container .ShowMoreBTN-2 a svg, .About-Container .ShowMoreBTN-2 a path {
+  fill: #D30E15;
+}
+.About-Container .ShowMoreBTN-2 a span {
+  font-size: 16px;
+  font-weight: 300;
+  color: #D30E15;
+  line-height: 27.64px;
+}
+
 .Cataloge {
   width: auto;
   display: flex;
@@ -1173,6 +1280,46 @@ footer.DesktopFooter > .Bottom .CopyRight a span {
   font-weight: 300;
   color: #000000;
   line-height: 20.73px;
+}
+
+.Video-Clr {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: relative;
+  margin: 5em 0;
+}
+.Video-Clr.show .Video-OV {
+  left: -100vw;
+}
+.Video-Clr video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.Video-Clr .Video-OV {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+.Video-Clr .Video-OV .Icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 @keyframes pulse-ring {

@@ -769,4 +769,65 @@ body {
 }
 .article .section2 .midSection img {
   width: 100%;
+}
+.article .section2 .imagesSlider .imgS {
+  overflow: hidden;
+}
+.article .section2 .imagesSlider .imgS:hover img {
+  scale: 1.1;
+}
+.article .section2 .imagesSlider img {
+  width: 100%;
+  transition: 0.5s ease;
+}
+.article .section5 {
+  background-color: white;
+  padding: 40px 80px 20px;
+}
+.article .section5 .tit {
+  direction: rtl;
+  text-align: right;
+  margin-bottom: 40px;
+}
+.article .section5 .tit p {
+  font-family: IRANYekan;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 34.55px;
+}
+.article .section5 .proGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+}
+.article .section5 .proGrid .proBox {
+  width: 100%;
+}
+.article .section5 .proGrid .proBox .imgS {
+  overflow: hidden;
+}
+.article .section5 .proGrid .proBox .imgS img {
+  width: 100%;
+  transition: 0.5s ease;
+}
+.article .section5 .proGrid .proBox a {
+  text-decoration: none;
+}
+.article .section5 .proGrid .proBox .title {
+  display: flex;
+  align-items: baseline;
+  margin-top: 12px;
+  -moz-column-gap: 6px;
+       column-gap: 6px;
+}
+.article .section5 .proGrid .proBox .title p {
+  color: black;
+  font-family: IRANYekan;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 31.09px;
+  text-align: right;
+}
+.article .section5 .proGrid .proBox:hover img {
+  scale: 1.1;
 }/*# sourceMappingURL=m-style.css.map */

@@ -55,6 +55,19 @@ PlayBtn2.addEventListener('click',(e)=>{
     })
 })
 
+// PRODUCT CATEGORY2 SLIDER
+
+let swiperCat2= new Swiper(".swiper-productCat2", {
+    speed: 1000,
+    slidesPerView:2.1,
+    loop:true,
+    spaceBetween: 20,
+    // centeredSlides:true,
+    navigation: {
+        nextEl: ".ProductCat-2 .swiper-button-next",
+        prevEl: ".ProductCat-2 .swiper-button-prev",
+      },
+  });  
 
 // TAG PRODUCT
 let Tags = document.querySelectorAll('.Tag')

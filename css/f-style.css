@@ -573,6 +573,281 @@ main.Home .Product-Tags-C > .Right .Tag .Circle > .Circle-Inner {
   -o-border-radius: 50%;
   background-color: #fff;
 }
+main.Home .ProductCat-2 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin: 5em 0;
+  gap: 2em;
+}
+main.Home .ProductCat-2 .ShowMoreBTN-2 {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-right: 9%;
+  margin-top: 2.5em;
+  border: 1px solid #D30E15;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  padding: 0.5em 2em;
+  position: relative;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+main.Home .ProductCat-2 .ShowMoreBTN-2:hover::before {
+  width: 100%;
+  opacity: 1;
+}
+main.Home .ProductCat-2 .ShowMoreBTN-2:hover span, main.Home .ProductCat-2 .ShowMoreBTN-2:hover svg, main.Home .ProductCat-2 .ShowMoreBTN-2:hover path {
+  color: #fff;
+  fill: #fff;
+}
+main.Home .ProductCat-2 .ShowMoreBTN-2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  opacity: 0;
+  height: 100%;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  background-color: #D30E15;
+  z-index: 0;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+main.Home .ProductCat-2 .ShowMoreBTN-2 a {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.8em;
+}
+main.Home .ProductCat-2 .ShowMoreBTN-2 a svg, main.Home .ProductCat-2 .ShowMoreBTN-2 a path {
+  fill: #000000;
+}
+main.Home .ProductCat-2 .ShowMoreBTN-2 a span {
+  font-size: 12px;
+  font-weight: 300;
+  color: #000000;
+  line-height: 20.73px;
+}
+main.Home .ProductCat-2 .Left {
+  width: 58%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+main.Home .ProductCat-2 .Left::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 80%;
+  height: 66%;
+  background-color: #fff;
+  box-shadow: 0px 5px 21px -1px rgba(0, 0, 0, 0.75);
+  z-index: 1;
+  transform: translate(15%, 52%);
+}
+main.Home .ProductCat-2 .Left .swiper-button-prev::after, main.Home .ProductCat-2 .Left .swiper-button-prev::before, main.Home .ProductCat-2 .Left .swiper-button-next::after, main.Home .ProductCat-2 .Left .swiper-button-next::before {
+  color: #949494;
+  font-size: 25px;
+}
+main.Home .ProductCat-2 .Left .swiper-button-next {
+  right: 45%;
+  top: unset;
+  bottom: 0%;
+}
+main.Home .ProductCat-2 .Left .swiper-button-prev {
+  right: 50%;
+  top: unset;
+  bottom: 0%;
+}
+main.Home .ProductCat-2 .Left .ProductCat-Slider {
+  overflow: hidden;
+}
+main.Home .ProductCat-2 .Left .ProductCat-Slider,
+main.Home .ProductCat-2 .Left .swiper-productCat2 {
+  width: 100%;
+  height: 350px;
+}
+main.Home .ProductCat-2 .Left .ProductCat-Slider .swiper-wrapper,
+main.Home .ProductCat-2 .Left .swiper-productCat2 .swiper-wrapper {
+  width: 100%;
+  max-width: 100%;
+}
+main.Home .ProductCat-2 .Left .ProductCat-Slider .swiper-slide,
+main.Home .ProductCat-2 .Left .swiper-productCat2 .swiper-slide {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main.Home .ProductCat-2 .Left .ProductCat-Slider .swiper-slide-active p,
+main.Home .ProductCat-2 .Left .swiper-productCat2 .swiper-slide-active p {
+  transition: all 0.4s ease;
+  transform: translateY(0px) !important;
+  -webkit-transform: translateY(0px) !important;
+  -moz-transform: translateY(0px) !important;
+  -ms-transform: translateY(0px) !important;
+  -o-transform: translateY(0px) !important;
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+}
+main.Home .ProductCat-2 .Left .ProductCat-Slider .swiper-slide .Product-cat,
+main.Home .ProductCat-2 .Left .swiper-productCat2 .swiper-slide .Product-cat {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main.Home .ProductCat-2 .Left .ProductCat-Slider .swiper-slide .IMG,
+main.Home .ProductCat-2 .Left .swiper-productCat2 .swiper-slide .IMG {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 250px;
+  overflow: hidden;
+}
+main.Home .ProductCat-2 .Left .ProductCat-Slider .swiper-slide .IMG > img,
+main.Home .ProductCat-2 .Left .swiper-productCat2 .swiper-slide .IMG > img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main.Home .ProductCat-2 .Left .ProductCat-Slider .swiper-slide .Title,
+main.Home .ProductCat-2 .Left .swiper-productCat2 .swiper-slide .Title {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 0.5em;
+  overflow: hidden;
+}
+main.Home .ProductCat-2 .Left .ProductCat-Slider .swiper-slide .Title p,
+main.Home .ProductCat-2 .Left .swiper-productCat2 .swiper-slide .Title p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 31.09px;
+  color: #000000;
+  transition: all 0.4s ease;
+  transform: translateY(100px);
+  -webkit-transform: translateY(100px);
+  -moz-transform: translateY(100px);
+  -ms-transform: translateY(100px);
+  -o-transform: translateY(100px);
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+}
+main.Home .ProductCat-2 .Left .ProductCat-Slider .swiper-slide .Desc,
+main.Home .ProductCat-2 .Left .swiper-productCat2 .swiper-slide .Desc {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  overflow: hidden;
+  margin-top: 0.3em;
+}
+main.Home .ProductCat-2 .Left .ProductCat-Slider .swiper-slide .Desc p,
+main.Home .ProductCat-2 .Left .swiper-productCat2 .swiper-slide .Desc p {
+  font-size: 12px;
+  transition: all 0.4s ease;
+  transform: translateY(100px);
+  -webkit-transform: translateY(100px);
+  -moz-transform: translateY(100px);
+  -ms-transform: translateY(100px);
+  -o-transform: translateY(100px);
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  font-weight: 300;
+  line-height: 20.73px;
+  color: #000000;
+}
+main.Home .ProductCat-2 .Right {
+  width: 40%;
+  position: relative;
+}
+main.Home .ProductCat-2 .Right::before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 421px;
+  height: 421px;
+  background-color: transparent;
+  border: 1px solid #949494;
+  z-index: 1;
+  transform: rotate(50deg) translate(-25%, -38%);
+  -webkit-transform: rotate(50deg) translate(-25%, -38%);
+  -moz-transform: rotate(50deg) translate(-25%, -38%);
+  -ms-transform: rotate(50deg) translate(-25%, -38%);
+  -o-transform: rotate(50deg) translate(-25%, -38%);
+  z-index: -1;
+  opacity: 0.7;
+}
+main.Home .ProductCat-2 .Right::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 532px;
+  height: 532px;
+  background-color: transparent;
+  border: 1px solid #949494;
+  z-index: 1;
+  transform: rotate(50deg) translate(-23%, -43%);
+  -webkit-transform: rotate(50deg) translate(-23%, -43%);
+  -moz-transform: rotate(50deg) translate(-23%, -43%);
+  -ms-transform: rotate(50deg) translate(-23%, -43%);
+  -o-transform: rotate(50deg) translate(-23%, -43%);
+  z-index: -1;
+  opacity: 0.7;
+}
+main.Home .ProductCat-2 .Right .Title-1 {
+  margin-right: auto;
+  width: 80%;
+}
+main.Home .ProductCat-2 .Right .Text {
+  margin-right: auto;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0.8em;
+  margin-top: 1.5em;
+}
+main.Home .ProductCat-2 .Right .Text p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 27.64px;
+  color: #000000;
+}
 
 .Product {
   width: 100%;

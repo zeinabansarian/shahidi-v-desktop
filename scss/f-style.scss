@@ -212,155 +212,8 @@ main.Home{
         }
     }
    }
-   .Video-Clr{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    position: relative;
-    margin: 5em 0;
-    &.show{
-        .Video-OV{
-            left: -100vw;
-        } 
-    }
-   video{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-   }
-   .Video-OV{
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 2;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transition: all .5s ease;
-    -webkit-transition: all .5s ease;
-    -moz-transition: all .5s ease;
-    -ms-transition: all .5s ease;
-    -o-transition: all .5s ease;
-    .Icon
- 
-{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-   }
-   }
-   .About-Container{
-    width: 92%;
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    margin: 0 auto;
-    >.Left{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        gap: 2em;
-        padding-top: 3em;
-        >.Top{
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            .Desc{
-                font-size: 12px;
-                line-height: 20.73px;
-                color: $color-1;
-                font-weight: 300;
-            }
-            h4{
-                font-size: 24px;
-                line-height: 41.45px;
-                color: $color-1;
-                font-weight: 700;
-            }
-        }
-        >.Bottom{
-            width: 100%;
-            display: grid;
-            gap: 5.3em;
-            grid-template-columns: repeat(2,1fr);
-            .Col{
-                width: 100%;
-                display: flex;
-                justify-content: flex-start;
-                flex-direction: column;
-                align-items: center;
-                .Text{
-                    width: 100%;
-                    display: flex;
-                    justify-content: flex-start;
-                    flex-direction: column;
-                    align-items: center;
-                    gap: .5em;
-                    p{
-                        font-size: 18px;
-                        font-weight: 400;
-                        line-height: 31.09px;
-                        color: $color-1;
-                        text-align: right;
-                    }
-                }
-            }
-        }
-    }
-    >.Right{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: .8em;
-        .Title-1{
-            width: 100%;
-        }
-        .IMG{
+  
 
-            width:auto;
-            display: flex;
-            justify-content: flex-start;
-            align-items: flex-start;
-        }
-    }
-    .ShowMoreBTN-2{
-        width: auto;
-        display: flex;
-        justify-content:flex-start;
-        align-items:center;
-        margin-left: auto;
-        position: relative;
-        margin-top: 3em;
-        transition: all .5s ease;
-        -webkit-transition: all .5s ease;
-        -moz-transition: all .5s ease;
-        -ms-transition: all .5s ease;
-        -o-transition: all .5s ease;
-        a {
-            position: relative;
-             z-index: 1;
-            width: 100%;
-            display: flex;
-            justify-content:flex-start;
-            align-items:center;
-            gap: .8em;    
-            svg,path{
-                fill: $color-primary;
-            }
-            span{
-                font-size: 16px;
-                font-weight: 300;
-                color:$color-primary;
-                line-height: 27.64px;
-            }
-        }
-       }
-   }
    .Product-Tags-C{
     width: 92%;
     height: 600px;
@@ -1256,6 +1109,325 @@ position: relative;
         }
     }
    }
+main.AboutUsC{
+    width: 100%;
+    overflow: hidden;
+    .AboutBannerC{
+        width: 100%;
+        display: grid;
+        min-height: 100vh;
+        margin-bottom: 4em;
+        grid-template-columns: repeat(2,1fr);
+    
+        .Left{
+            min-height: 100vh;
+            height: inherit;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .Banner-Container{
+                width: 100%;
+                height: inherit;
+                min-height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative;
+                >img{
+                    min-height: 100vh;
+                    height: inherit;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            .OVBox{
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                z-index: 2;
+                width: 46%;
+                height: 74%;
+                overflow: hidden;
+                border-top-left-radius: 180px;
+                border-top-right-radius: 180px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                background-color: $color-3;
+                transform: translate(50%,-5%);
+                -webkit-transform: translate(50%,-5%);
+                -moz-transform: translate(50%,-5%);
+                -ms-transform: translate(50%,-5%);
+                -o-transform: translate(50%,-5%);
+                .IMG
+{
+                width: 95%;
+                height: 95%;
+                margin: 0 auto;
+                overflow: hidden;
+                border-top-left-radius: 180px;
+                border-top-right-radius: 180px;
+               }
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+        .Right{
+            width: 100%;
+            padding-top: 25vh;
+            position: relative;
+            .ShowMoreBTN-2{
+                width: fit-content;
+                display: flex;
+                justify-content:flex-start;
+                align-items:center;
+                margin-right: 9%;
+                margin-top: 2.5em;
+                border: 1px solid $color-primary;
+                border-radius: 30px;
+                -webkit-border-radius: 30px;
+                -moz-border-radius: 30px;
+                -ms-border-radius: 30px;
+                -o-border-radius: 30px;
+                padding: .5em 2em;
+                position: relative;
+                transition: all .5s ease;
+                -webkit-transition: all .5s ease;
+                -moz-transition: all .5s ease;
+                -ms-transition: all .5s ease;
+                -o-transition: all .5s ease;
+                &:hover{
+                    &::before{
+                        width: 100%;
+                        opacity: 1;
+                    }
+                    span,svg,path{
+                        color: $color-3;
+                        fill: $color-3;
+                    }
+                }
+                &::before{
+                    content: '';
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    opacity: 0;
+                    height: 100%;
+                    border-radius: 30px;
+                    -webkit-border-radius: 30px;
+                    -moz-border-radius: 30px;
+                    -ms-border-radius: 30px;
+                    -o-border-radius: 30px;
+                    background-color: $color-primary;
+                    z-index: 0;
+                    transition: all .5s ease;
+                    -webkit-transition: all .5s ease;
+                    -moz-transition: all .5s ease;
+                    -ms-transition: all .5s ease;
+                    -o-transition: all .5s ease;
+          }
+                a {
+                    position: relative;
+                     z-index: 1;
+                    width: 100%;
+                    display: flex;
+                    justify-content:flex-start;
+                    align-items:center;
+                    gap: .8em;    
+                    svg,path{
+                        fill:$color-1
+                    }
+                    span{
+                        font-size: 12px;
+                        font-weight: 300;
+                        color:$color-1;
+                        line-height: 20.73px;
+                    }
+                }
+               }
+            .Title-1{
+                margin-right: auto;
+                width: 80%;
+                h1{
+                    width: 80%;
+                    margin-left: auto;
+                }
+            }
+            .Text{
+                margin-right: auto;
+                width: 90%;
+                display: flex;
+                flex-direction: column;
+                padding-bottom: 0.8em;
+                margin-top: 1.5em;
+                p{
+                    width: 65%;
+                    margin-left: auto;
+                    font-size: 16px;
+                    font-weight: 300;
+                    line-height: 27.64px;
+                    color: $color-1;
+                }
+            }
+        }
+    }
+    .About-ContainerS2{
+        height: 670px;
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        display: grid;
+        margin: 10em 0 0 0;
+        grid-template-columns: repeat(2,50%);
+        &::before{
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #00000088;
+            z-index: 0;
+          }
+          .Right{
+            width: 80%;
+            margin-left: auto;
+            display: flex;
+            justify-content: flex-end;
+            align-items: flex-start;
+            .OVBox{
+                transform:rotate(180deg) translateY(5%);
+                position: relative;
+                z-index: 5;
+                width: 450px;
+                height: 612px;
+                overflow: hidden;
+                border-top-left-radius: 180px;
+                border-top-right-radius: 180px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                border: 1px solid $color-3;
+                -webkit-transform:rotate(180deg) translateY(5%);
+                -moz-transform:rotate(180deg) translateY(5%);
+                -ms-transform:rotate(180deg) translateY(5%);
+                -o-transform:rotate(180deg) translateY(5%);
+                .IMG
+{
+                width: 95%;
+                height: 95%;
+                margin: 0 auto;
+                overflow: hidden;
+                border-top-left-radius: 180px;
+                border-top-right-radius: 180px;
+               }
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+          }
+          .Left{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            z-index: 5;
+            padding-top: 20%;
+            .Title-1{
+                width: 100%;
+                p,span{
+                    color: $color-3 ;
+                    width: 90%;
+                    margin-left: auto;
+                    &.color{
+                        color: $color-primary;
+                    }
+                }
+            }
+            .Text{
+                display: flex;
+                flex-direction: column;
+                padding-bottom: 0.8em;
+                margin-top: 1.5em;
+                p{
+                    width: 90%;
+                    margin-left: auto;
+                    font-size: 16px;
+                    font-weight: 300;
+                    line-height: 27.64px;
+                    color: $color-3 !important;
+                }
+            }
+          }
+          .ImgSlider{
+            width: 90%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            margin-left: auto;
+            margin-top: 2em;
+
+            .swiper-button-prev{
+                left: 0;
+                right: unset;
+                top: 50%;
+            }
+            .swiper-button-next{
+                right: 0;
+                left: unset;
+                top: 50%;
+            }
+            .swiper-button-next,.swiper-button-prev{
+                &::before,&::after{
+                    font-size: 20px;
+                    color: $color-3;
+                }
+            }
+            .swiper-IMG{
+                width: 90%;
+                margin: 0 auto;
+                height: 149px;
+                overflow: hidden;
+                .swiper-wrapper{
+                    width: 100%;
+                    height: 100%;
+                    .swiper-slide{
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 20px;
+                        -webkit-border-radius: 20px;
+                        -moz-border-radius: 20px;
+                        -ms-border-radius: 20px;
+                        -o-border-radius: 20px;
+                        img
+{
+                            width: 100%;
+                            object-fit: cover;
+                            height: 100%;
+                            border-radius: 20px;
+                            -webkit-border-radius: 20px;
+                            -moz-border-radius: 20px;
+                            -ms-border-radius: 20px;
+                            -o-border-radius: 20px;
+}
+                    }
+                }
+            }
+          }
+    }
+}
 .Product{
     width: 100%;
     display: flex;

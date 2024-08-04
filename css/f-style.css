@@ -209,151 +209,6 @@ main.Home .Cataloge-Container .Left .Box .Text p {
   line-height: 31.09px;
   color: #000000;
 }
-main.Home .Video-Clr {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  position: relative;
-  margin: 5em 0;
-}
-main.Home .Video-Clr.show .Video-OV {
-  left: -100vw;
-}
-main.Home .Video-Clr video {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-main.Home .Video-Clr .Video-OV {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-}
-main.Home .Video-Clr .Video-OV .Icon {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-main.Home .About-Container {
-  width: 92%;
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  margin: 0 auto;
-}
-main.Home .About-Container > .Left {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: 2em;
-  padding-top: 3em;
-}
-main.Home .About-Container > .Left > .Top {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-main.Home .About-Container > .Left > .Top .Desc {
-  font-size: 12px;
-  line-height: 20.73px;
-  color: #000000;
-  font-weight: 300;
-}
-main.Home .About-Container > .Left > .Top h4 {
-  font-size: 24px;
-  line-height: 41.45px;
-  color: #000000;
-  font-weight: 700;
-}
-main.Home .About-Container > .Left > .Bottom {
-  width: 100%;
-  display: grid;
-  gap: 5.3em;
-  grid-template-columns: repeat(2, 1fr);
-}
-main.Home .About-Container > .Left > .Bottom .Col {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  align-items: center;
-}
-main.Home .About-Container > .Left > .Bottom .Col .Text {
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5em;
-}
-main.Home .About-Container > .Left > .Bottom .Col .Text p {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 31.09px;
-  color: #000000;
-  text-align: right;
-}
-main.Home .About-Container > .Right {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 0.8em;
-}
-main.Home .About-Container > .Right .Title-1 {
-  width: 100%;
-}
-main.Home .About-Container > .Right .IMG {
-  width: auto;
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-}
-main.Home .About-Container .ShowMoreBTN-2 {
-  width: auto;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  margin-left: auto;
-  position: relative;
-  margin-top: 3em;
-  transition: all 0.5s ease;
-  -webkit-transition: all 0.5s ease;
-  -moz-transition: all 0.5s ease;
-  -ms-transition: all 0.5s ease;
-  -o-transition: all 0.5s ease;
-}
-main.Home .About-Container .ShowMoreBTN-2 a {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 0.8em;
-}
-main.Home .About-Container .ShowMoreBTN-2 a svg, main.Home .About-Container .ShowMoreBTN-2 a path {
-  fill: #D30E15;
-}
-main.Home .About-Container .ShowMoreBTN-2 a span {
-  font-size: 16px;
-  font-weight: 300;
-  color: #D30E15;
-  line-height: 27.64px;
-}
 main.Home .Product-Tags-C {
   width: 92%;
   height: 600px;
@@ -1225,6 +1080,322 @@ main.ProductCat .ProductCat:hover span, main.ProductCat .ProductCat:hover p {
   -ms-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
   color: #fff;
+}
+
+main.AboutUsC {
+  width: 100%;
+  overflow: hidden;
+}
+main.AboutUsC .AboutBannerC {
+  width: 100%;
+  display: grid;
+  min-height: 100vh;
+  margin-bottom: 4em;
+  grid-template-columns: repeat(2, 1fr);
+}
+main.AboutUsC .AboutBannerC .Left {
+  min-height: 100vh;
+  height: inherit;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main.AboutUsC .AboutBannerC .Left .Banner-Container {
+  width: 100%;
+  height: inherit;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+main.AboutUsC .AboutBannerC .Left .Banner-Container > img {
+  min-height: 100vh;
+  height: inherit;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main.AboutUsC .AboutBannerC .Left .OVBox {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: 2;
+  width: 46%;
+  height: 74%;
+  overflow: hidden;
+  border-top-left-radius: 180px;
+  border-top-right-radius: 180px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #fff;
+  transform: translate(50%, -5%);
+  -webkit-transform: translate(50%, -5%);
+  -moz-transform: translate(50%, -5%);
+  -ms-transform: translate(50%, -5%);
+  -o-transform: translate(50%, -5%);
+}
+main.AboutUsC .AboutBannerC .Left .OVBox .IMG {
+  width: 95%;
+  height: 95%;
+  margin: 0 auto;
+  overflow: hidden;
+  border-top-left-radius: 180px;
+  border-top-right-radius: 180px;
+}
+main.AboutUsC .AboutBannerC .Left .OVBox img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main.AboutUsC .AboutBannerC .Right {
+  width: 100%;
+  padding-top: 25vh;
+  position: relative;
+}
+main.AboutUsC .AboutBannerC .Right .ShowMoreBTN-2 {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-right: 9%;
+  margin-top: 2.5em;
+  border: 1px solid #D30E15;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  padding: 0.5em 2em;
+  position: relative;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+main.AboutUsC .AboutBannerC .Right .ShowMoreBTN-2:hover::before {
+  width: 100%;
+  opacity: 1;
+}
+main.AboutUsC .AboutBannerC .Right .ShowMoreBTN-2:hover span, main.AboutUsC .AboutBannerC .Right .ShowMoreBTN-2:hover svg, main.AboutUsC .AboutBannerC .Right .ShowMoreBTN-2:hover path {
+  color: #fff;
+  fill: #fff;
+}
+main.AboutUsC .AboutBannerC .Right .ShowMoreBTN-2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  opacity: 0;
+  height: 100%;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  background-color: #D30E15;
+  z-index: 0;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+main.AboutUsC .AboutBannerC .Right .ShowMoreBTN-2 a {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.8em;
+}
+main.AboutUsC .AboutBannerC .Right .ShowMoreBTN-2 a svg, main.AboutUsC .AboutBannerC .Right .ShowMoreBTN-2 a path {
+  fill: #000000;
+}
+main.AboutUsC .AboutBannerC .Right .ShowMoreBTN-2 a span {
+  font-size: 12px;
+  font-weight: 300;
+  color: #000000;
+  line-height: 20.73px;
+}
+main.AboutUsC .AboutBannerC .Right .Title-1 {
+  margin-right: auto;
+  width: 80%;
+}
+main.AboutUsC .AboutBannerC .Right .Title-1 h1 {
+  width: 80%;
+  margin-left: auto;
+}
+main.AboutUsC .AboutBannerC .Right .Text {
+  margin-right: auto;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0.8em;
+  margin-top: 1.5em;
+}
+main.AboutUsC .AboutBannerC .Right .Text p {
+  width: 65%;
+  margin-left: auto;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 27.64px;
+  color: #000000;
+}
+main.AboutUsC .About-ContainerS2 {
+  height: 670px;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: grid;
+  margin: 10em 0 0 0;
+  grid-template-columns: repeat(2, 50%);
+}
+main.AboutUsC .About-ContainerS2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5333333333);
+  z-index: 0;
+}
+main.AboutUsC .About-ContainerS2 .Right {
+  width: 80%;
+  margin-left: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+main.AboutUsC .About-ContainerS2 .Right .OVBox {
+  transform: rotate(180deg) translateY(5%);
+  position: relative;
+  z-index: 5;
+  width: 450px;
+  height: 612px;
+  overflow: hidden;
+  border-top-left-radius: 180px;
+  border-top-right-radius: 180px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border: 1px solid #fff;
+  -webkit-transform: rotate(180deg) translateY(5%);
+  -moz-transform: rotate(180deg) translateY(5%);
+  -ms-transform: rotate(180deg) translateY(5%);
+  -o-transform: rotate(180deg) translateY(5%);
+}
+main.AboutUsC .About-ContainerS2 .Right .OVBox .IMG {
+  width: 95%;
+  height: 95%;
+  margin: 0 auto;
+  overflow: hidden;
+  border-top-left-radius: 180px;
+  border-top-right-radius: 180px;
+}
+main.AboutUsC .About-ContainerS2 .Right .OVBox img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+main.AboutUsC .About-ContainerS2 .Left {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 5;
+  padding-top: 20%;
+}
+main.AboutUsC .About-ContainerS2 .Left .Title-1 {
+  width: 100%;
+}
+main.AboutUsC .About-ContainerS2 .Left .Title-1 p, main.AboutUsC .About-ContainerS2 .Left .Title-1 span {
+  color: #fff;
+  width: 90%;
+  margin-left: auto;
+}
+main.AboutUsC .About-ContainerS2 .Left .Title-1 p.color, main.AboutUsC .About-ContainerS2 .Left .Title-1 span.color {
+  color: #D30E15;
+}
+main.AboutUsC .About-ContainerS2 .Left .Text {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0.8em;
+  margin-top: 1.5em;
+}
+main.AboutUsC .About-ContainerS2 .Left .Text p {
+  width: 90%;
+  margin-left: auto;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 27.64px;
+  color: #fff !important;
+}
+main.AboutUsC .About-ContainerS2 .ImgSlider {
+  width: 90%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-top: 2em;
+}
+main.AboutUsC .About-ContainerS2 .ImgSlider .swiper-button-prev {
+  left: 0;
+  right: unset;
+  top: 50%;
+}
+main.AboutUsC .About-ContainerS2 .ImgSlider .swiper-button-next {
+  right: 0;
+  left: unset;
+  top: 50%;
+}
+main.AboutUsC .About-ContainerS2 .ImgSlider .swiper-button-next::before, main.AboutUsC .About-ContainerS2 .ImgSlider .swiper-button-next::after, main.AboutUsC .About-ContainerS2 .ImgSlider .swiper-button-prev::before, main.AboutUsC .About-ContainerS2 .ImgSlider .swiper-button-prev::after {
+  font-size: 20px;
+  color: #fff;
+}
+main.AboutUsC .About-ContainerS2 .ImgSlider .swiper-IMG {
+  width: 90%;
+  margin: 0 auto;
+  height: 149px;
+  overflow: hidden;
+}
+main.AboutUsC .About-ContainerS2 .ImgSlider .swiper-IMG .swiper-wrapper {
+  width: 100%;
+  height: 100%;
+}
+main.AboutUsC .About-ContainerS2 .ImgSlider .swiper-IMG .swiper-wrapper .swiper-slide {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+main.AboutUsC .About-ContainerS2 .ImgSlider .swiper-IMG .swiper-wrapper .swiper-slide img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
 }
 
 .Product {

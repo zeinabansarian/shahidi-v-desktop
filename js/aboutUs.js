@@ -3,7 +3,20 @@ Sections.forEach(d=>{
     let ImgSRC =d.getAttribute('data-bg')
     d.style.backgroundImage =`url('${ImgSRC}')`
 })
-
+// BANNER SLIDER
+let swiperBanner= new Swiper(".swiper-Banners", {
+    speed: 1000,
+    slidesPerView:1,
+    spaceBetween: 0,
+    autoplay:true,
+    pagination: {
+        el: '.AboutBannerC .swiper-pagination',
+              clickable: true,
+          renderBullet: function (index, className) {
+            return '<span class="' + className + '">' + '<span class="line"></span><span class="num">0'+ (index+1) +'</span>' + '</span>';
+          },
+      },
+  });  
 //  IMG SLIDER
 
 let swiperCat2= new Swiper(".swiper-IMG", {

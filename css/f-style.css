@@ -1106,8 +1106,73 @@ main.AboutUsC .AboutBannerC {
   width: 100%;
   display: grid;
   min-height: 100vh;
+  align-items: flex-start;
   margin-bottom: 4em;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 50%);
+}
+main.AboutUsC .AboutBannerC .Navigation {
+  width: 90%;
+  display: flex;
+  justify-content: flex-start;
+  margin-right: auto;
+  transform: translateY(100%);
+  height: 100px;
+}
+main.AboutUsC .AboutBannerC .Navigation .swiper-pagination {
+  height: 100px;
+  transform: translateY(15%);
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  width: 100%;
+  margin-left: auto;
+  position: static;
+  direction: ltr;
+}
+main.AboutUsC .AboutBannerC .Navigation .swiper-pagination .swiper-pagination-bullet {
+  width: auto;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5em;
+}
+main.AboutUsC .AboutBannerC .Navigation .swiper-pagination .swiper-pagination-bullet .line {
+  order: 2;
+  display: flex;
+  width: 30px;
+  height: 4px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  background-color: #949494;
+  position: relative;
+}
+main.AboutUsC .AboutBannerC .Navigation .swiper-pagination .swiper-pagination-bullet .line::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #949494;
+  width: 100%;
+  height: 1px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+main.AboutUsC .AboutBannerC .Navigation .swiper-pagination .swiper-pagination-bullet-active .line::before {
+  background-color: #000000;
+}
+main.AboutUsC .AboutBannerC .Navigation .swiper-pagination .swiper-pagination-bullet .num {
+  color: #000000;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 31.09px;
 }
 main.AboutUsC .AboutBannerC .Left {
   min-height: 100vh;
@@ -1126,12 +1191,40 @@ main.AboutUsC .AboutBannerC .Left .Banner-Container {
   align-items: center;
   position: relative;
 }
-main.AboutUsC .AboutBannerC .Left .Banner-Container > img {
+main.AboutUsC .AboutBannerC .Left .Banner-Container .swiper-Banners {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  overflow: hidden;
+}
+main.AboutUsC .AboutBannerC .Left .Banner-Container .swiper-Banners .swiper-wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+main.AboutUsC .AboutBannerC .Left .Banner-Container .swiper-Banners .swiper-slide {
+  width: 0%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+main.AboutUsC .AboutBannerC .Left .Banner-Container .swiper-Banners .swiper-slide > img {
   min-height: 100vh;
   height: inherit;
-  width: 100%;
+  width: 0%;
+  opacity: 0;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: all 0.8s ease;
+  -webkit-transition: all 0.8s ease;
+  -moz-transition: all 0.8s ease;
+  -ms-transition: all 0.8s ease;
+  -o-transition: all 0.8s ease;
+}
+main.AboutUsC .AboutBannerC .Left .Banner-Container .swiper-Banners .swiper-slide-active img {
+  opacity: 1;
+  width: 100%;
 }
 main.AboutUsC .AboutBannerC .Left .OVBox {
   position: absolute;

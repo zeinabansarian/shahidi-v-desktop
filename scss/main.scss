@@ -661,7 +661,205 @@ header.DesktopHeader{
     }
    }
 }
-
+footer.DesktopFooter{
+  width: 100%;
+  display: flex;
+  background-color: $color-1;
+  flex-direction: column;
+  padding: 2em 0;
+  padding-bottom: 0;
+  >.Top{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .Nav{
+      width: 90%;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 3fr 1fr 3fr;
+      padding-bottom: 3em;
+      border-bottom: 1px solid #949494c7;
+      >.Left{
+        width: 100%;
+        display: flex;
+        .Socials{
+          width: 100%;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          gap: 1.8em;
+          .Social{
+            border: 1px solid $color-2;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            -ms-border-radius: 50%;
+            -o-border-radius: 50%;
+}
+        }
+      }
+      >.Middle{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .Logo{
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+      >.Right{
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        .Menu{
+          width: fit-content;
+          display: flex;
+          justify-content: flex-start;
+          align-items: center;
+          gap: 1.8em;
+          .Menu-Item{
+            width: fit-content;
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            a{
+              font-size: 18px;
+              font-weight: 400;
+              line-height: 31.09px;
+              color: $color-primary;
+            } 
+          }
+        }
+      }
+    }
+  }
+  >.Middle{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+ 
+    .ContactBoxes{
+      margin: 0 auto;
+      width: 90%;
+      display: grid;
+      padding: 2em 0;
+      border-bottom: 1px solid #949494c7;
+      grid-template-columns: repeat(3,1fr);
+      .Contact{
+        width: 100%;
+        gap: .8em;
+        display: flex;
+        flex-direction: column;
+        .IMG{
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .Title{
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          p{
+           font-size: 18px;
+           font-weight: 400;
+           line-height: 31.09px;
+           color: $color-2;
+           text-align: center;
+          }
+        }
+        .Des{
+          width: 100%;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          p,a{
+           font-size: 12px;
+           font-weight: 300;
+           line-height: 20.73px;
+           color: $color-2;
+           text-align: center;
+          }
+        }
+      }
+    }
+  }
+  >.Bottom{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    &::before{
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 50%;
+      height: 200px;
+      background-color: #fff;
+      border-radius: 30px;
+      z-index: 2;
+      -webkit-border-radius: 66px;
+      -moz-border-radius: 30px;
+      -ms-border-radius: 30px;
+      -o-border-radius: 30px;
+      transform: translate(-18%, 71%);
+}
+&::after{
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  height: 200px;
+  background-color: #fff;
+  border-radius: 30px;
+  z-index: 2;
+  -webkit-border-radius: 66px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  transform: translate(18%, 71%);
+}
+    .CopyRight{
+      padding: 2em 0;
+      width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a{
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: .8em;
+      span{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 10px;
+        font-weight: 300;
+        line-height: 17.27px;
+        color:$color-3;
+      }
+    }
+    }
+  }
+}
 .ShowMBTN{
   width: auto;
   display: flex;

@@ -570,6 +570,206 @@ header.DesktopHeader > .Menu-Container > .Right .IMG-C img {
      object-fit: cover;
 }
 
+footer.DesktopFooter {
+  width: 100%;
+  display: flex;
+  background-color: #000000;
+  flex-direction: column;
+  padding: 2em 0;
+  padding-bottom: 0;
+}
+footer.DesktopFooter > .Top {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer.DesktopFooter > .Top .Nav {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 3fr 1fr 3fr;
+  padding-bottom: 3em;
+  border-bottom: 1px solid rgba(148, 148, 148, 0.7803921569);
+}
+footer.DesktopFooter > .Top .Nav > .Left {
+  width: 100%;
+  display: flex;
+}
+footer.DesktopFooter > .Top .Nav > .Left .Socials {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 1.8em;
+}
+footer.DesktopFooter > .Top .Nav > .Left .Socials .Social {
+  border: 1px solid #949494;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+footer.DesktopFooter > .Top .Nav > .Middle {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer.DesktopFooter > .Top .Nav > .Middle .Logo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer.DesktopFooter > .Top .Nav > .Right {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+footer.DesktopFooter > .Top .Nav > .Right .Menu {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.8em;
+}
+footer.DesktopFooter > .Top .Nav > .Right .Menu .Menu-Item {
+  width: -moz-fit-content;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer.DesktopFooter > .Top .Nav > .Right .Menu .Menu-Item a {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 31.09px;
+  color: #D30E15;
+}
+footer.DesktopFooter > .Middle {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer.DesktopFooter > .Middle .ContactBoxes {
+  margin: 0 auto;
+  width: 90%;
+  display: grid;
+  padding: 2em 0;
+  border-bottom: 1px solid rgba(148, 148, 148, 0.7803921569);
+  grid-template-columns: repeat(3, 1fr);
+}
+footer.DesktopFooter > .Middle .ContactBoxes .Contact {
+  width: 100%;
+  gap: 0.8em;
+  display: flex;
+  flex-direction: column;
+}
+footer.DesktopFooter > .Middle .ContactBoxes .Contact .IMG {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer.DesktopFooter > .Middle .ContactBoxes .Contact .Title {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer.DesktopFooter > .Middle .ContactBoxes .Contact .Title p {
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 31.09px;
+  color: #949494;
+  text-align: center;
+}
+footer.DesktopFooter > .Middle .ContactBoxes .Contact .Des {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer.DesktopFooter > .Middle .ContactBoxes .Contact .Des p, footer.DesktopFooter > .Middle .ContactBoxes .Contact .Des a {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 20.73px;
+  color: #949494;
+  text-align: center;
+}
+footer.DesktopFooter > .Bottom {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+footer.DesktopFooter > .Bottom::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50%;
+  height: 200px;
+  background-color: #fff;
+  border-radius: 30px;
+  z-index: 2;
+  -webkit-border-radius: 66px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  transform: translate(-18%, 71%);
+}
+footer.DesktopFooter > .Bottom::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 50%;
+  height: 200px;
+  background-color: #fff;
+  border-radius: 30px;
+  z-index: 2;
+  -webkit-border-radius: 66px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  transform: translate(18%, 71%);
+}
+footer.DesktopFooter > .Bottom .CopyRight {
+  padding: 2em 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+footer.DesktopFooter > .Bottom .CopyRight a {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8em;
+}
+footer.DesktopFooter > .Bottom .CopyRight a span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  font-weight: 300;
+  line-height: 17.27px;
+  color: #fff;
+}
+
 .ShowMBTN {
   width: auto;
   display: flex;

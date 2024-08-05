@@ -1,0 +1,93 @@
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" catid="209364" q="[##cms.query.q##]"> 
+    <member name="newsList" type="list" size="488x332" propertyid="7249,7244,7248"
+     postsql=" select *, SUBSTR(prp_7244, 1,100-CHARINDEX(' ', REVERSE(SUBSTR(prp_7244, 1, 100)))) || '...' as substr from [db.newsList]" /> 
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" catid="209300" q="[##cms.query.q##]"> 
+    <member name="list-produts" size="330x443" type="list"/> 
+</basis>
+
+	
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>جستجو کنید</title>
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/main.css">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/f-style.css">
+</head>
+<body>
+        <!-- HEADER -->
+        <basis core="call" file="header.inc" />
+        <!-- HEADER -->
+    <main class="searchh">
+        <div class="searchContainer">
+            <div class="inputBox">
+              <input type="search" name="q" id="search" placeholder="جستجو کنید">
+              <button type="button" aria-label="search">
+              <span class="SearchIcon">
+                  <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M13.92 13.92L17 17M16.111 8.581C16.111 12.768 12.728 16.162 8.556 16.162C4.383 16.162 1 12.768 1 8.582C1 4.393 4.383 1 8.555 1C12.728 1 16.111 4.394 16.111 8.581Z" stroke="#808080" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                      </svg>
+                      </button>
+              </span>
+          
+        
+          </div>
+          <!-- <div class="resultSearch">
+            <p>باعرض پوزش مطلبی پیدا نشد. واژه دیگری را جست و جو نمایید.</p>
+          </div> -->
+          </div> 
+            <div class="loaded">
+         
+              </div>
+        
+
+    </main>
+    <basis core="call" file="script.inc" />
+    <script>
+        let swiperNews = new Swiper(".swiper-news", {
+    slidesPerView:3,
+    spaceBetween: 40
+    ,  navigation: {
+        nextEl: ".news .swiper-button-next",
+        prevEl: ".news .swiper-button-prev",
+      },
+  }); 
+  
+  let swiperProject= new Swiper(".swiper-product", {
+    slidesPerView:3.5,
+    spaceBetween: 40
+
+  }); 
+      
+// SEARCH
+let searchIcon = document.querySelector('.searchContainer .SearchIcon')
+searchIcon.addEventListener('click',()=>{
+  console.log('clicked');
+  let input = document.querySelector('.searchContainer input#search')
+  let Val = input.value
+  console.log('val',Val);
+  var url = `/loadSearch.bc?q=${Val}`;
+  $(".loaded").load(url);
+  setTimeout(() => {
+    let swiperNews = new Swiper(".swiper-news", {
+    slidesPerView:3,
+    spaceBetween: 40
+    ,  navigation: {
+        nextEl: ".news .swiper-button-next",
+        prevEl: ".news .swiper-button-prev",
+      },
+  }); 
+  
+  let swiperProject= new Swiper(".swiper-product", {
+    slidesPerView:3.5,
+    spaceBetween: 40
+
+  }); 
+  }, 1000);
+})
+    </script>
+</body>
+</html>

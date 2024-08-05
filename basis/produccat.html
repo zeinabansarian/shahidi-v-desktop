@@ -1,0 +1,77 @@
+<basis core="dbsource" source="basiscore" name="basisName" lid="1" mid="20" > 
+    <member request="cat" type="tree" name="product-Cat" parentid="209300"  /> 
+</basis>	
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دسته بندی محصصولات</title>
+    <meta name="description" content="دسته بندی محصولات">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/main.css">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/f-style.css">
+</head>
+<body>
+    <main class="ProductCat">
+    <!-- HEADER -->
+    <basis core="call" file="header.inc" />
+    <!-- HEADER -->
+     <!-- SECTIONE ONE -->
+     <div class="ProductCategories">
+                   
+    <div class="Title-1">
+                        <h2>
+                            <span>
+                            دسته بندی محصولات
+                            </span>
+                        
+                        </h2>
+    </div>
+    <div class="Cat">
+                      
+    <div class="Product-Category">
+          <basis core="print" datamembername="basisName.product-Cat">
+              <layout>
+                  @child
+              </layout>
+              <face filter="parentid not in (65918)">
+                <div class="ProductCat">
+                      
+                    <a href="@link" alt="@title" title="@title">
+                    <div class="IMG">
+                      
+                    </div>
+                    <div class="Overlay-Hover">
+                        <div class="IMG">
+                        <img src="@image" alt="@title" title="@title"></div>
+                    </div>
+                    <div class="TitleBox">
+                        <p></p>
+                        <span> @title</span>
+                    </div>
+                </a>
+                </div>
+              </face>
+          </basis>         
+     </div>
+     </div>       
+     </div>
+    <!-- SECTIONE ONE -->
+    <!--  FOOTER -->
+    <basis core="call" file="footer.inc" />
+    <!-- FOOTER -->        
+    </main>
+    <basis core="call" file="script.inc" />
+    <script>
+        let titles = document.querySelectorAll('.ProductCat .TitleBox p')
+        let cats = document.querySelectorAll('.ProductCat')
+        let i =1
+        for(let i =0;i<cats.length;i++){
+            titles[i].innerHTML = i+1;
+        }
+
+    
+    </script>
+</body>
+</html>

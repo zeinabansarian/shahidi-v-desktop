@@ -1,323 +1,883 @@
-<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2358681">
-    <member name="article" type="view"/>
-    <member name="article250" type="view" postsql="select * from [db.article250] where TypeID=250"/> 
-
-   </basis>	
-
-<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2358681"> <member name="rel-pro" type="list" blgid="222" size="330x320"/> </basis>	
-
-<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2358681"> <member name="image-article" type="list" format="4"/> </basis>	
-<basis core="dbsource" source="basiscore" name="db" lid="1" request="seo">
-   <member name="seolist" type="list" request="product" id="[##cms.query.id##]"></member>
-</basis>
-<basis core="dbsource" source="basiscore" name="json" lid="1" usedforid="[##cms.query.id##]" > 
-   <member request="json-ld" type="scalar" name="fq" /> 
-  </basis>
 <!DOCTYPE html>
 <html lang="fa">
- <head>
-   <meta charset="UTF-8" />
-   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <basis core="print" datamembername="db.seolist">
-       <face>
-           <title>[##cms.seo.title|db.seolist.title##]</title>
-           <meta name="description" content="[##cms.seo.description|db.seolist.description##]" />
-       </face>
-   </basis>
-   <link rel="stylesheet" href="css/swiper-bundle.min.css" />
-   <link rel="stylesheet" href="css/main.css" />
-   <link rel="stylesheet" href="css/m-style.css" />
- </head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="theme-color" content="#ffff">
 
- <body>
-   <main class="article">
-     <section class="section1">
-       <basis core="print" datamembername="db.image-article">
-           <layout>
-               <div class="imgS">
-                   @child
-               </div>
-           </layout>
-           <face filter="ord=1">
-               <img src="/@largeIMG" alt="@name" title="@name" />
-               
-           </face>
-       </basis>
-       <div class="socialShare">
-         <ul>
-           <li>
-             <a href="https://twitter.com/intent/tweet?text=[##cms.request.host##]&url=[##cms.request.rawurl##]" title="twitter">
-               <svg
-                 width="28"
-                 height="28"
-                 viewBox="0 0 28 28"
-                 fill="none"
-                 xmlns="http://www.w3.org/2000/svg"
-               >
-                 <circle cx="14" cy="14" r="13.5" stroke="black" />
-                 <path
-                   d="M20 10.1838C19.5584 10.3838 19.0844 10.5213 18.5864 10.5813C19.0952 10.2688 19.484 9.77376 19.6688 9.18501C19.184 9.47934 18.6549 9.68641 18.104 9.79751C17.8723 9.54448 17.5935 9.34327 17.2846 9.20616C16.9758 9.06905 16.6433 8.99891 16.3076 9.00001C14.948 9.00001 13.8464 10.1313 13.8464 11.525C13.8464 11.7225 13.868 11.915 13.91 12.1C12.9348 12.0518 11.9799 11.7923 11.1064 11.3382C10.2328 10.8841 9.45971 10.2453 8.8364 9.46251C8.61748 9.84639 8.50221 10.2848 8.5028 10.7313C8.5028 11.6063 8.9384 12.3813 9.5984 12.8325C9.20773 12.8197 8.82543 12.7114 8.4824 12.5163V12.5475C8.48611 13.1343 8.68496 13.7017 9.0451 14.1529C9.40524 14.6042 9.9044 14.9115 10.4576 15.0225C10.0944 15.1225 9.71443 15.137 9.3452 15.065C9.50615 15.5698 9.81401 16.0099 10.226 16.3242C10.638 16.6385 11.1338 16.8113 11.6444 16.8187C10.7684 17.5219 9.69277 17.9019 8.5868 17.8987C8.3888 17.8987 8.1932 17.8862 8 17.8637C9.12857 18.6079 10.4372 19.002 11.7728 19C16.3016 19 18.7772 15.1525 18.7772 11.815L18.7688 11.4875C19.2516 11.1341 19.6687 10.6924 20 10.1838Z"
-                   fill="black"
-                 />
-               </svg>
-             </a>
-           </li>
-           <li>
-             <a href="https://www.pinterest.com/pin/create/button/?description=[##cms.request.host##]&url=[##cms.request.rawurl##]" title="pinterest">
-               <svg
-                 width="28"
-                 height="28"
-                 viewBox="0 0 28 28"
-                 fill="none"
-                 xmlns="http://www.w3.org/2000/svg"
-               >
-                 <path
-                   d="M13.1101 15.9375C12.7726 17.5887 12.3623 19.1727 11.1393 20.0007C10.7635 17.5047 11.6939 15.6279 12.1254 13.6371C11.3895 12.4803 12.214 10.1499 13.7665 10.7247C15.679 11.4303 12.1121 15.0279 14.5077 15.4767C17.0065 15.9471 18.0283 11.4279 16.4771 9.9567C14.2377 7.8351 9.95611 9.9087 10.4829 12.9471C10.6113 13.6911 11.4332 13.9155 10.8111 14.9403C9.37773 14.6439 8.95023 13.5879 9.00449 12.1803C9.09317 9.8763 11.2214 8.2647 13.3576 8.0403C16.0575 7.7583 18.5908 8.9667 18.9415 11.3379C19.3346 14.0139 17.7225 16.9131 14.8346 16.7043C14.0537 16.6479 13.7229 16.2843 13.1101 15.9363V15.9375Z"
-                   fill="black"
-                 />
-                 <circle cx="14" cy="14" r="13.5" stroke="black" />
-               </svg>
-             </a>
-           </li>
-           <li>
-             <a href="https://www.linkedin.com/?url=https://[##cms.request.host##]/[##cms.request.rawurl##]" title="linkdin">
-               <svg
-                 width="28"
-                 height="28"
-                 viewBox="0 0 28 28"
-                 fill="none"
-                 xmlns="http://www.w3.org/2000/svg"
-               >
-                 <path
-                   d="M13.0385 12.725V13.757L13.8483 13.1174C14.4657 12.6299 15.2552 12.358 16.0764 12.3571C16.9949 12.3598 17.8683 12.7002 18.5074 13.2936C19.1452 13.8859 19.4972 14.6802 19.5 15.5007V19.3571C19.5 19.3826 19.4895 19.4152 19.457 19.4453C19.4233 19.4766 19.3702 19.5 19.3077 19.5C19.2452 19.5 19.1921 19.4766 19.1584 19.4453C19.1259 19.4152 19.1154 19.3826 19.1154 19.3571V15.5C19.1154 14.7298 18.7855 13.9993 18.2121 13.4669C17.6399 12.9355 16.8713 12.6429 16.0769 12.6429C15.2825 12.6429 14.5139 12.9355 13.9417 13.4669C13.3683 13.9993 13.0385 14.7298 13.0385 15.5V19.3571C13.0385 19.3826 13.0279 19.4152 12.9955 19.4453C12.9618 19.4766 12.9086 19.5 12.8462 19.5C12.7837 19.5 12.7306 19.4766 12.6968 19.4453C12.6644 19.4152 12.6538 19.3826 12.6538 19.3571V12.5C12.6538 12.4746 12.6644 12.442 12.6968 12.4118C12.7305 12.3805 12.7837 12.3571 12.8462 12.3571C12.9086 12.3571 12.9618 12.3805 12.9955 12.4118C13.0279 12.442 13.0385 12.4746 13.0385 12.5V12.725ZM9.41591 9.59463L9.5954 10.0613L9.41591 9.59463C9.29183 9.64235 9.15342 9.65531 9.01956 9.63059C8.88577 9.60588 8.76757 9.54565 8.67818 9.46265C8.58918 9.38001 8.53328 9.27935 8.51108 9.17572C8.48896 9.07247 8.49991 8.96498 8.54446 8.8651C8.58927 8.76465 8.66793 8.67274 8.77641 8.60543C8.88519 8.53794 9.01663 8.5 9.15385 8.5C9.33872 8.5 9.50925 8.56854 9.62951 8.68021C9.74852 8.79072 9.80769 8.93234 9.80769 9.07143C9.80769 9.17583 9.77455 9.2813 9.70739 9.37464C9.63984 9.46851 9.53981 9.54697 9.41591 9.59463ZM9.34615 12.5V19.3571C9.34615 19.3826 9.33561 19.4152 9.30316 19.4453C9.26945 19.4766 9.21631 19.5 9.15385 19.5C9.09138 19.5 9.03824 19.4766 9.00454 19.4453C8.97208 19.4152 8.96154 19.3826 8.96154 19.3571V12.5C8.96154 12.4746 8.97208 12.442 9.00454 12.4118C9.03824 12.3805 9.09138 12.3571 9.15385 12.3571C9.21631 12.3571 9.26945 12.3805 9.30316 12.4118C9.33561 12.442 9.34615 12.4746 9.34615 12.5Z"
-                   fill="#CCCCCC"
-                   stroke="black"
-                 />
-                 <circle cx="14" cy="14" r="13.5" stroke="black" />
-               </svg>
-             </a>
-           </li>
-           <li>
-             <a href="https://www.instagram.com/?url=https://[##cms.request.host##]/[##cms.request.rawurl##]" title="instagram">
-               <svg
-                 width="28"
-                 height="28"
-                 viewBox="0 0 28 28"
-                 fill="none"
-                 xmlns="http://www.w3.org/2000/svg"
-               >
-                 <path
-                   d="M14 15.875C12.9681 15.875 12.125 15.0319 12.125 14C12.125 12.9681 12.9681 12.125 14 12.125C15.0319 12.125 15.875 12.9681 15.875 14C15.875 15.0319 15.0319 15.875 14 15.875ZM14 12.375C13.1019 12.375 12.375 13.1019 12.375 14C12.375 14.8981 13.1019 15.625 14 15.625C14.8981 15.625 15.625 14.8981 15.625 14C15.625 13.1019 14.8981 12.375 14 12.375Z"
-                   fill="black"
-                   stroke="black"
-                   stroke-width="0.5"
-                 />
-                 <mask id="path-2-inside-1_62_975" fill="white">
-                   <path
-                     d="M16.5 11.75C16.435 11.75 16.37 11.735 16.31 11.71C16.25 11.685 16.195 11.65 16.145 11.605C16.1 11.555 16.06 11.5 16.035 11.44C16.01 11.38 16 11.315 16 11.25C16 11.185 16.01 11.12 16.035 11.06C16.065 10.995 16.1 10.945 16.145 10.895C16.17 10.875 16.195 10.85 16.22 10.835C16.25 10.815 16.28 10.8 16.31 10.79C16.34 10.775 16.37 10.765 16.405 10.76C16.565 10.725 16.735 10.78 16.855 10.895C16.9 10.945 16.935 10.995 16.96 11.06C16.985 11.12 17 11.185 17 11.25C17 11.315 16.985 11.38 16.96 11.44C16.935 11.5 16.9 11.555 16.855 11.605C16.805 11.65 16.75 11.685 16.69 11.71C16.63 11.735 16.565 11.75 16.5 11.75Z"
-                   />
-                 </mask>
-                 <path
-                   d="M16.5 11.75C16.435 11.75 16.37 11.735 16.31 11.71C16.25 11.685 16.195 11.65 16.145 11.605C16.1 11.555 16.06 11.5 16.035 11.44C16.01 11.38 16 11.315 16 11.25C16 11.185 16.01 11.12 16.035 11.06C16.065 10.995 16.1 10.945 16.145 10.895C16.17 10.875 16.195 10.85 16.22 10.835C16.25 10.815 16.28 10.8 16.31 10.79C16.34 10.775 16.37 10.765 16.405 10.76C16.565 10.725 16.735 10.78 16.855 10.895C16.9 10.945 16.935 10.995 16.96 11.06C16.985 11.12 17 11.185 17 11.25C17 11.315 16.985 11.38 16.96 11.44C16.935 11.5 16.9 11.555 16.855 11.605C16.805 11.65 16.75 11.685 16.69 11.71C16.63 11.735 16.565 11.75 16.5 11.75Z"
-                   fill="black"
-                 />
-                 <path
-                   d="M16.145 11.605L15.4017 12.2739L15.4369 12.313L15.476 12.3482L16.145 11.605ZM16.035 11.06L15.127 10.6409L15.1192 10.658L15.1119 10.6753L16.035 11.06ZM16.145 10.895L15.5203 10.1141L15.4564 10.1652L15.4017 10.226L16.145 10.895ZM16.22 10.835L16.7345 11.6924L16.7549 11.6802L16.7747 11.667L16.22 10.835ZM16.31 10.79L16.6262 11.7386L16.6936 11.7162L16.7572 11.6844L16.31 10.79ZM16.405 10.76L16.5464 11.7499L16.5828 11.7447L16.6187 11.7369L16.405 10.76ZM16.855 10.895L17.5983 10.226L17.5736 10.1985L17.5469 10.173L16.855 10.895ZM16.96 11.06L16.0267 11.4189L16.0316 11.4318L16.0369 11.4446L16.96 11.06ZM16.855 11.605L17.524 12.3482L17.5631 12.313L17.5983 12.2739L16.855 11.605ZM16.5 10.75C16.5867 10.75 16.6523 10.7693 16.6946 10.7869L15.9254 12.633C16.0877 12.7006 16.2833 12.75 16.5 12.75V10.75ZM16.6946 10.7869C16.7425 10.8068 16.783 10.8338 16.814 10.8617L15.476 12.3482C15.607 12.4661 15.7575 12.5631 15.9254 12.633L16.6946 10.7869ZM16.8883 10.936C16.8885 10.9362 16.8968 10.9453 16.9087 10.9629C16.9207 10.9804 16.9397 11.0113 16.9581 11.0553L15.1119 11.8246C15.1965 12.0277 15.3156 12.1783 15.4017 12.2739L16.8883 10.936ZM16.9581 11.0553C16.9951 11.1441 17 11.2156 17 11.25H15C15 11.4143 15.0249 11.6158 15.1119 11.8246L16.9581 11.0553ZM17 11.25C17 11.2843 16.9951 11.3558 16.9581 11.4446L15.1119 10.6753C15.0249 10.8841 15 11.0856 15 11.25H17ZM16.943 11.479C16.9362 11.4937 16.9263 11.512 16.9134 11.531C16.901 11.5494 16.8909 11.561 16.8883 11.5639L15.4017 10.226C15.2996 10.3394 15.2049 10.4721 15.127 10.6409L16.943 11.479ZM16.7697 11.6758C16.7907 11.659 16.8081 11.6441 16.8169 11.6365C16.8208 11.6331 16.8264 11.6283 16.8276 11.6272C16.83 11.6251 16.8305 11.6247 16.8301 11.625C16.83 11.6251 16.8212 11.6326 16.8076 11.643C16.7941 11.6533 16.769 11.6718 16.7345 11.6924L15.7055 9.97746C15.6585 10.0056 15.6209 10.0328 15.5949 10.0526C15.5688 10.0726 15.5475 10.0904 15.5349 10.1011C15.5283 10.1067 15.5225 10.1118 15.5186 10.1151C15.5136 10.1194 15.513 10.12 15.5106 10.122C15.5069 10.1252 15.5118 10.1209 15.5203 10.1141L16.7697 11.6758ZM16.7747 11.667C16.7409 11.6895 16.6914 11.7169 16.6262 11.7386L15.9938 9.84127C15.8686 9.88298 15.7591 9.94036 15.6653 10.0029L16.7747 11.667ZM16.7572 11.6844C16.7318 11.6971 16.6992 11.7112 16.6604 11.7236C16.6213 11.7361 16.5829 11.7447 16.5464 11.7499L16.2636 9.77C16.1131 9.7915 15.9804 9.83674 15.8628 9.89552L16.7572 11.6844ZM16.6187 11.7369C16.42 11.7803 16.258 11.7079 16.1631 11.6169L17.5469 10.173C17.212 9.85198 16.71 9.66959 16.1913 9.78305L16.6187 11.7369ZM16.1117 11.5639C16.1097 11.5617 16.0951 11.5453 16.077 11.5175C16.0578 11.488 16.0403 11.4544 16.0267 11.4189L17.8933 10.701C17.8122 10.49 17.6986 10.3374 17.5983 10.226L16.1117 11.5639ZM16.0369 11.4446C16.0193 11.4023 16 11.3367 16 11.25H18C18 11.0333 17.9507 10.8376 17.8831 10.6753L16.0369 11.4446ZM16 11.25C16 11.1633 16.0193 11.0976 16.0369 11.0553L17.8831 11.8246C17.9507 11.6623 18 11.4667 18 11.25H16ZM16.0369 11.0553C16.0569 11.0075 16.0838 10.967 16.1117 10.936L17.5983 12.2739C17.7162 12.1429 17.8131 11.9924 17.8831 11.8246L16.0369 11.0553ZM16.186 10.8617C16.217 10.8338 16.2575 10.8068 16.3054 10.7869L17.0746 12.633C17.2425 12.5631 17.393 12.4661 17.524 12.3482L16.186 10.8617ZM16.3054 10.7869C16.3477 10.7693 16.4133 10.75 16.5 10.75V12.75C16.7167 12.75 16.9123 12.7006 17.0746 12.633L16.3054 10.7869Z"
-                   fill="black"
-                   mask="url(#path-2-inside-1_62_975)"
-                 />
-                 <rect
-                   x="8.5"
-                   y="8.5"
-                   width="11"
-                   height="11"
-                   rx="3.5"
-                   stroke="black"
-                 />
-                 <circle cx="14" cy="14" r="13.5" stroke="black" />
-               </svg>
-             </a>
-           </li>
-         </ul>
-       </div>
-     </section>
-     <article class="section2">
-       <div class="title">
-           <basis core="print" datamembername="db.article">
-               <layout>
-                   @child
-               </layout>
-               <face filter="TypeID=150">
-                   
-                   <h1>@Answer</h1>
-               </face>
-               <face filter="prpID=7249">
-                   
-                   <div class="date">
-                     <span> @Answer </span>
-                   </div>
-               </face>
-           </basis>
-       </div>
-       <basis core="print" datamembername="db.article">
-           <layout>
-               <div class="para">
-                   @child
-                
-               </div>
-           </layout>
-           <face filter="TypeID=129">
-               @Answer
-           </face>
-       </basis>
-       <section class="midSection">
-           <basis core="print" datamembername="db.article250">
-               <layout>
-                   <div class="para">
-                       @child
-                   
-                   </div>
-               </layout>
-               <face filter="RowNumber=1">
-                   <h3>
-                       @text
-                   </h3>
-                   @largetext
-               </face>
-           </basis>
-         <basis core="print" datamembername="db.image-article">
-             <layout>
-                 <div class="imgS">
-                     @child
-                   </div>
-               </layout>
-               <face filter="ord=2">
-                 <img src="/@largeIMG" alt="@name" title="@name" />
-                 
-             </face>
-         </basis>
-       </section>
-       <basis core="print" datamembername="db.article250">
-           <layout>
-               <div class="para">
-                   @child
-               
-               </div>
-           </layout>
-           <face filter="RowNumber=2">
-               <h3>
-                   @text
-               </h3>
-               @largetext
-           </face>
-       </basis>
-       <section class="midSection">
-        <basis core="print" datamembername="db.image-article">
-            <layout>
-                <div class="imgS">
-                    @child
-                  </div>
-              </layout>
-              <face filter="ord=3">
-                <img src="/@largeIMG" alt="@name" title="@name" />
-                
-            </face>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>جهانتاب | میز و صندلی رستورانی و فست فود</title>
+<meta name="description"
+ content="کارخانۀ جهانتاب با بیش از 40 سال تجربه در زمینه تجهیز فست فودها، رستوران ها ، تالارها، سالن های غذاخوری، آمفی تئاترها و همچنین ارائه سرویـس کـامـل مبـلمـان غـذاخـوری منـازل، در فضایی مجهّز به وسعت 5000 متر مربع، از پیشگامان این عرصه بوده و همواره سعی داشته تا با تولید به روزترین محصولات در این عرصه رضایت تمامی اقشار مردم راحاصل نماید." />
+ 
+        <link rel="stylesheet" href="[##cms.cms.cdn##]/css/app.css">
+        <script src="[##cms.cms.cdn##]/_js/jquery/jquery-3.3.1.js"  ></script>
+    </head>
+
+    
+    <basis core="dbsource" source="media" name="db" lid="1" usedforid="1442668" sourcemid="1">
+            <member name="gallery20" type="list" format="4" postsql="select * from [db.gallery20] where ord=20" ></member>
         </basis>
+        <basis core="dbsource" source="media" name="db" lid="1" usedforid="1442668" sourcemid="1">
+            <member name="gallery30" type="list" format="4"  postsql="select * from [db.gallery30] where ord=30"></member>
+        </basis>
+        <basis core="dbsource" source="media" name="db" lid="1" usedforid="1442668" sourcemid="1">
+            <member name="vid" type="list" format="3" ></member>
+        </basis>
+        <basis core="dbsource" source="basiscore"  mid="1"   name="db"   lid="1"  usedforid="1442668" >
+                <member  name="projinfo" type="list" ></member>
+              </basis>
+    <body>
+       <basis core="call" file="header.inc"></basis>
 
-         <basis core="print" datamembername="db.article250">
-           <layout>
-               <div class="para">
-                   @child
-               
-               </div>
-           </layout>
-           <face filter="RowNumber=3">
-               <h3>
-                   @text
-               </h3>
-               @largetext
-           </face>
-       </basis>
-       </section>
-       <basis core="print" datamembername="db.article250">
-           <layout>
-               <div class="para">
-                   @child
-               
-               </div>
-           </layout>
-           <face filter="RowNumber>3">
-               <h3>
-                   @text
-               </h3>
-               @largetext
-           </face>
-       </basis>
-       <basis core="print" datamembername="db.image-article">
-           <layout>
-               
-               <div class="sliderSection section4">
-                 <div class="swiper imagesSlider" dir="ltr"> 
-                   <!-- Additional required wrapper -->
-                   <div class="swiper-wrapper">
-                     <!-- Slides -->
+        <main class="home home1 swiper  desktop-slider">
+
+<h1 style="display: none"> میز و صندلی رستورانی و فست فود جهانتاب</h1>
+
+
+            <div class="swiper-wrapper">
+
+              
+                <div class="swiper-slide" data-title="جهانتاب">
+           
+
+                    <video width="100%" height="100%" autoplay muted loop>
+                        <source src="[##cms.cms.cdn##]/images/video-default.mp4" type="video/mp4">
                  
+                      </video> 
+                    
+
                   
-                @child
-                   </div>
-               
-                 </div>
-               </div>
-           </layout>
-           <face filter="ord=1000">
-                   <div class="swiper-slide">
-                       
-                       <div class="imgS">
-                         <img src="/@largeIMG" alt="@name" title="@name" />
-                       </div>
-                     </div>
-           </face>
-       </basis>
-     </article>
-     <basis core="print" datamembername="db.rel-pro">
-         <layout>
-             <div class="section5 relatedProduct">
-               <div class="tit">
-       
-                 <p> شاید بپسندید</p>
-               </div>
-               <div class="proGrid">
-                   @child
-                   
-               </div>
-           </div>
-       </layout>
-       <face>
-             <div class="proBox">
-                 <a href="/@link" title="@title">
-                     <div class="imgS">
-                         <img src="/@00330X00320prp" alt="@title" title="@title" />
-                     </div>
-                     <div class="title">
-                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
-                             xmlns="http://www.w3.org/2000/svg">
-                             <path
-                                 d="M8 0C8.3384 0 8.6128 0.2744 8.6128 0.6128V7.3864H15.3872C15.5498 7.3864 15.7058 7.451 15.8208 7.566C15.9358 7.681 16.0004 7.83697 16.0004 7.9996C16.0004 8.16223 15.9358 8.3182 15.8208 8.4332C15.7058 8.54819 15.5498 8.6128 15.3872 8.6128H8.6128V15.3872C8.6128 15.5497 8.54824 15.7056 8.43332 15.8205C8.31839 15.9354 8.16253 16 8 16C7.83748 16 7.68161 15.9354 7.56668 15.8205C7.45176 15.7056 7.3872 15.5497 7.3872 15.3872L7.3864 8.6128H0.6128C0.450275 8.6128 0.294407 8.54824 0.179485 8.43332C0.0645627 8.31839 0 8.16253 0 8C0 7.83748 0.0645627 7.68161 0.179485 7.56668C0.294407 7.45176 0.450275 7.3872 0.6128 7.3872L7.3864 7.3864V0.6128C7.38682 0.450267 7.45163 0.294523 7.56664 0.17967C7.68164 0.0648161 7.83747 0.000211082 8 0Z"
-                                 fill="black" />
-                         </svg>
-     
-                         <p>@title</p>
-                     </div>
-                 </a>
-             </div>
+                    </div>
              
-         </face>
-     </basis>
-   </main>
-   <script src="[##cms.cms.cdn##]/_js/swiper-bundle11.0.6.min.js"></script>
-   <script src="[##cms.cms.cdn##]/js/article.js"></script>
-   <script type="application/ld+json"> 
-       [##json.fq.column1##] 
-       </script>
- </body>
+               
+                <basis core="print" datamembername="db.gallery20">
+                    <face filter="ord=20" >
+                        <div class="swiper-slide rrr@Table2ID" data-title="@description ">
+           
+
+                            <img src="[##cms.cms.cdn##]/@largeimg" alt="@description" width="1600" height="800" class="bg" id="image@Table2ID" data-rownumber="@rownumber" value="@table2id">
+
+
+
+                            <div class="text">
+                             
+                                <p class="h2">@description</p>
+                                <a title="@title" href="@name">
+                                    نمایش بیشتر
+                                </a>
+                            </div>
+                            </div>
+                         </face>
+            </basis>
+              
+                
+            </div>
+
+
+          
+
+
+
+
+
+
+
+
+            <div class="bottomSect">
+                <div class="container">
+                    <div class="row">
+                        <div class="paginate">
+                            <span></span>
+                            <strong></strong>
+                        </div>
+                        <div class="scroll">
+                            <span>اسکرول کنید</span>
+                            <img src="[##cms.cms.cdn##]/img/carret-down-icon.png" alt="scroll">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="projectsOpen">
+                <i class="grid"></i>
+            </div>
+        </main>
+
+
+
+
+        <main class="home home2 swiper mob-slider">
+
+
+
+
+    
+                <div class="swiper-wrapper ">
+    
+    
+             
+        <div class="swiper-slide" data-title="جهانتاب">
+           <div class="flex-first">
+            <div class="hero-video-wrap is-inview" data-scroll="" data-scroll-speed="-3.5">
+                <video class="lazy" autoplay muted loop playsinline width=" " height="  " id="myVideo"
+                    poster="/images/banner-video.png">
+
+                    <source data-src="[##cms.cms.cdn##]/images/video-default.mp4" type="video/mp4">
+                </video>
+             
+            </div>
+        </div>
+                      
+                        </div>
+             
+                      
+                   
+                    <basis core="print" datamembername="db.gallery30">
+                        <face  filter="ord=30">
+                            <div class="swiper-slide rrr@Table2ID" data-title="@description ">
+               
+    
+                                <img src="[##cms.cms.cdn##]/@largeimg" alt="@description" width="1600" height="800" class="bg" id="image@Table2ID" data-rownumber="@rownumber" value="@table2id">
+    
+    
+    
+                                <div class="text">
+                                  
+                                    <p class="h2">@description</p>
+                                    <a title="@title" href="@name">
+                                        نمایش بیشتر
+                                    </a>
+                                </div>
+                                </div>
+                             </face>
+                </basis>
+                  
+                    
+                </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+                <div class="bottomSect">
+                    <div class="container">
+                        <div class="row">
+                            <div class="paginate">
+                                <span></span>
+                                <strong></strong>
+                            </div>
+                            <div class="scroll">
+                                <span>اسکرول کنید</span>
+                                <img src="[##cms.cms.cdn##]/img/carret-down-icon.png" alt="icon">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                    <section class="call-buton" id="cal-fix">
+ 
+ 
+                        <a class="cc-calto-action-ripple aaa" href="tel:02188201468">
+                            <span class="m2">
+                            <img src="/img/headset-1.png" width="50" height="52" alt=" تلفن جهانتاب">
+                            </span>
+                            </a>
+                        </section>
+
+                <div class="projectsOpen">
+                    <i class="grid"></i>
+                </div>
+            </main>
+
+
+
+
+        <aside class="projects">
+            <button name="button" class="closeProjects">
+                <i class="close"></i>
+            </button>
+            <div class="bgs"></div>
+            <div class="slider">
+                <div class="sWrapper">
+                    <div class="btns">
+                        <button name="button" class="left"></button>
+                        <button name="button" class="right"></button>
+                    </div>
+                    <div class="images">
+                        <div class="wrapper"></div>
+                    </div>
+                    <div class="titles">
+                        <div class="wrapper"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="btmSect">
+                <div class="showAll">
+                    <button  name="button">
+                        <div class="icon"></div>
+                        نمایش همه
+                    </button>
+                </div>
+                <div class="link">
+                    <a title="icon" href="#"></a>
+                </div>
+                <div class="none"></div>
+            </div>
+        </aside>
+        <script src="[##cms.cms.cdn##]/js/app.js"></script>
+        <script src="[##cms.cms.cdn##]/js/swiper.js"></script>
+
+
+
+
+    <script>
+        var homeSlider = new Swiper(".home1", {
+            direction: "vertical",
+            slidesPerView: 1,
+            spaceBetween: 0,
+            mousewheel: true,
+            speed: 2000,
+            delay: 2000,
+            effect: "fade",
+        })
+        document.querySelector(`main.home1 .scroll`).addEventListener('click', () => {
+            homeSlider.slideNext()
+        })
+        var title = document.querySelector(`main.home1 .swiper-slide-active`).getAttribute('data-title')
+        document.querySelector(`main.home1 .bottomSect .paginate strong`).textContent = title
+        var index = `01`
+        document.querySelector(`main.home1 .bottomSect .paginate span`).textContent = index
+        homeSlider.on('slideChangeTransitionStart', (swiper) => {
+            var title = document.querySelector(`main.home1 .swiper-slide-active`).getAttribute('data-title')
+            document.querySelector(`main.home1 .bottomSect .paginate strong`).textContent = title
+            var index = `0${swiper.activeIndex + 1}`
+            document.querySelector(`main.home1 .bottomSect .paginate span`).textContent = index
+        })
+        var sIndex = 0
+        document.querySelectorAll(`main.home1 .swiper-slide`).forEach((slide) => {
+            var img = slide.querySelector(`.bg`).getAttribute('src')
+            var title = slide.getAttribute('data-title')
+            var tiles = document.createElement('div')
+            tiles.classList.add('tiles')
+            for (var i = 0; i < 6; i++) {
+                var div = document.createElement('div')
+                div.style.backgroundImage = `url('${img}')`
+                tiles.appendChild(div)
+            }
+            slide.append(tiles)
+            // ProjectsSlider
+            var projectImage = document.createElement('div')
+                projectImage.classList.add('single')
+                projectImage.setAttribute('data-index', sIndex)
+                if (sIndex == 0) {
+                    projectImage.classList.add('current')
+                }
+            var imageEl = document.createElement('img')
+                imageEl.setAttribute('src', img)
+                imageEl.setAttribute('alt', title)
+                projectImage.append(imageEl)
+            document.querySelector('.projects .images .wrapper').append(projectImage)
+            var projectTitle = document.createElement('div')
+                projectTitle.classList.add('single')
+                projectTitle.setAttribute('data-index', sIndex)
+                if (sIndex == 0) {
+                    projectTitle.classList.add('current')
+                }
+            var titleEl = document.createElement('h2')
+                titleEl.textContent = title
+                projectTitle.append(titleEl)
+            document.querySelector('.projects .titles .wrapper').append(projectTitle)
+            var projectBg = document.createElement('img')
+                projectBg.setAttribute('src', img)
+                projectBg.setAttribute('data-index', sIndex)
+                if (sIndex == 0) {
+                    projectBg.classList.add('current')
+                }
+            document.querySelector('.projects .bgs').append(projectBg)
+            sIndex++
+        })
+        document.querySelector('.projectsOpen').addEventListener('click', () => {
+            document.querySelector(`header`).classList.add('closed')
+            document.querySelector(`.projects`).classList.add('opened')
+        })
+        document.querySelector('.closeProjects').addEventListener('click', () => {
+            document.querySelector(`header`).classList.remove('closed')
+            document.querySelector(`.projects`).classList.remove('opened')
+        })
+        var changeTrans = 0
+        var isMoved = true
+        document.querySelector(`.projects .btns .right`).addEventListener('mouseenter', () => {
+            var widthSingle = document.querySelector(`.projects .images .single`).clientWidth
+            var cIndex = Number(document.querySelector(`.projects .images .single.current`).getAttribute('data-index'))
+            if (isMoved == true && cIndex < homeSlider.slides.length) {
+                changeTrans = (widthSingle / 6) + (widthSingle * cIndex)
+                if (cIndex + 1 < homeSlider.slides.length) {
+                    document.querySelector(`.projects .images .wrapper`).style.transform = `translate(-${changeTrans}px, 0)`
+                    document.querySelector(`.projects .titles .wrapper`).style.transform = `translate(-${changeTrans}px, 0)`
+                    document.querySelector(`.projects .images .single.current`).classList.remove('current')
+                    document.querySelector(`.projects .titles .single.current`).classList.remove('current')
+                    document.querySelector(`.projects .images .single[data-index="${cIndex + 1}"]`).classList.add('current')
+                    document.querySelector(`.projects .titles .single[data-index="${cIndex + 1}"]`).classList.add('current')
+                    isMoved = false
+                }
+            }
+        })
+        document.querySelector(`.projects .btns .left`).addEventListener('mouseenter', () => {
+            var widthSingle = document.querySelector(`.projects .images .single`).clientWidth
+            var cIndex = Number(document.querySelector(`.projects .images .single.current`).getAttribute('data-index'))
+            if (isMoved == true && cIndex > 0) {
+                changeTrans = widthSingle * cIndex - (widthSingle / 6)
+                if (cIndex - 1 >= 0) {
+                    document.querySelector(`.projects .images .wrapper`).style.transform = `translate(-${changeTrans}px, 0)`
+                    document.querySelector(`.projects .titles .wrapper`).style.transform = `translate(-${changeTrans}px, 0)`
+                    document.querySelector(`.projects .images .single.current`).classList.remove('current')
+                    document.querySelector(`.projects .titles .single.current`).classList.remove('current')
+                    document.querySelector(`.projects .images .single[data-index="${cIndex - 1}"]`).classList.add('current')
+                    document.querySelector(`.projects .titles .single[data-index="${cIndex - 1}"]`).classList.add('current')
+                    isMoved = false
+                }
+            }
+        })
+        document.querySelector(`.projects .btns .right`).addEventListener('mouseleave', () => {
+            var widthSingle = document.querySelector(`.projects .images .single`).clientWidth
+            var cIndex = Number(document.querySelector(`.projects .images .single.current`).getAttribute('data-index'))
+            if (isMoved == false && cIndex < homeSlider.slides.length) {
+                changeTrans = changeTrans - (widthSingle / 6)
+                document.querySelector(`.projects .images .wrapper`).style.transform = `translate(-${changeTrans}px, 0)`
+                document.querySelector(`.projects .titles .wrapper`).style.transform = `translate(-${changeTrans}px, 0)`
+                document.querySelector(`.projects .images .single.current`).classList.remove('current')
+                document.querySelector(`.projects .titles .single.current`).classList.remove('current')
+                document.querySelector(`.projects .images .single[data-index="${cIndex - 1}"]`).classList.add('current')
+                document.querySelector(`.projects .titles .single[data-index="${cIndex - 1}"]`).classList.add('current')
+                isMoved = true
+            }
+        })
+        document.querySelector(`.projects .btns .left`).addEventListener('mouseleave', () => {
+            var widthSingle = document.querySelector(`.projects .images .single`).clientWidth
+            var cIndex = Number(document.querySelector(`.projects .images .single.current`).getAttribute('data-index'))
+            if (isMoved == false && cIndex >= 0 ) {
+                changeTrans = changeTrans + (widthSingle / 6)
+                document.querySelector(`.projects .images .wrapper`).style.transform = `translate(-${changeTrans}px, 0)`
+                document.querySelector(`.projects .titles .wrapper`).style.transform = `translate(-${changeTrans}px, 0)`
+                document.querySelector(`.projects .images .single.current`).classList.remove('current')
+                document.querySelector(`.projects .titles .single.current`).classList.remove('current')
+                document.querySelector(`.projects .images .single[data-index="${cIndex + 1}"]`).classList.add('current')
+                document.querySelector(`.projects .titles .single[data-index="${cIndex + 1}"]`).classList.add('current')
+                isMoved = true
+            }
+        })
+        document.querySelector(`.projects .btns .right`).addEventListener('click', () => {
+            var widthSingle = document.querySelector(`.projects .images .single`).clientWidth
+            var cIndex = Number(document.querySelector(`.projects .images .single.current`).getAttribute('data-index'))
+            var changeTrans = widthSingle * (cIndex)
+            if (cIndex < homeSlider.slides.length) {
+                document.querySelector(`.projects .images .wrapper`).style.transform = `translate(-${changeTrans}px, 0)`
+                document.querySelector(`.projects .titles .wrapper`).style.transform = `translate(-${changeTrans}px, 0)`
+                document.querySelector(`.projects .images .single.current`).classList.remove('current')
+                document.querySelector(`.projects .titles .single.current`).classList.remove('current')
+                document.querySelector(`.projects .bgs img.current`).classList.remove('current')
+                document.querySelector(`.projects .images .single[data-index="${cIndex}"]`).classList.add('current')
+                document.querySelector(`.projects .titles .single[data-index="${cIndex}"]`).classList.add('current')
+                document.querySelector(`.projects .bgs img[data-index="${cIndex}"]`).classList.add('current')
+                homeSlider.slideTo(cIndex)
+                isMoved = true
+            }
+        })
+        document.querySelector(`.projects .btns .left`).addEventListener('click', () => {
+            var widthSingle = document.querySelector(`.projects .images .single`).clientWidth
+            var cIndex = Number(document.querySelector(`.projects .images .single.current`).getAttribute('data-index'))
+            var changeTrans = widthSingle * (cIndex)
+            if (cIndex >= 0) {
+                document.querySelector(`.projects .images .wrapper`).style.transform = `translate(-${changeTrans}px, 0)`
+                document.querySelector(`.projects .titles .wrapper`).style.transform = `translate(-${changeTrans}px, 0)`
+                document.querySelector(`.projects .images .single.current`).classList.remove('current')
+                document.querySelector(`.projects .titles .single.current`).classList.remove('current')
+                document.querySelector(`.projects .bgs img.current`).classList.remove('current')
+                document.querySelector(`.projects .images .single[data-index="${cIndex}"]`).classList.add('current')
+                document.querySelector(`.projects .titles .single[data-index="${cIndex}"]`).classList.add('current')
+                document.querySelector(`.projects .bgs img[data-index="${cIndex}"]`).classList.add('current')
+                homeSlider.slideTo(cIndex)
+                isMoved = true
+            }
+        })
+    </script>
+  <script>
+        var homeSlider = new Swiper(".home2", {
+            direction: "vertical",
+            slidesPerView: 1,
+            spaceBetween: 0,
+            mousewheel: true,
+            speed: 2000,
+            delay: 2000,
+            effect: "fade",
+        })
+        document.querySelector(`main.home2 .scroll`).addEventListener('click', () => {
+            homeSlider.slideNext()
+        })
+        var title = document.querySelector(`main.home2 .swiper-slide-active`).getAttribute('data-title')
+        document.querySelector(`main.home2 .bottomSect .paginate strong`).textContent = title
+        var index = `01`
+        document.querySelector(`main.home2 .bottomSect .paginate span`).textContent = index
+        homeSlider.on('slideChangeTransitionStart', (swiper) => {
+            var title = document.querySelector(`main.home2 .swiper-slide-active`).getAttribute('data-title')
+            document.querySelector(`main.home2 .bottomSect .paginate strong`).textContent = title
+            var index = `0${swiper.activeIndex + 1}`
+            document.querySelector(`main.home2 .bottomSect .paginate span`).textContent = index
+        })
+        var sIndex = 0
+        document.querySelectorAll(`main.home2 .swiper-slide`).forEach((slide) => {
+            var img = slide.querySelector(`.bg`).getAttribute('src')
+            var title = slide.getAttribute('data-title')
+            var tiles = document.createElement('div')
+            tiles.classList.add('tiles')
+            for (var i = 0; i < 6; i++) {
+                var div = document.createElement('div')
+                div.style.backgroundImage = `url('${img}')`
+                tiles.appendChild(div)
+            }
+            slide.append(tiles)
+            // ProjectsSlider
+            var projectImage = document.createElement('div')
+                projectImage.classList.add('single')
+                projectImage.setAttribute('data-index', sIndex)
+                if (sIndex == 0) {
+                    projectImage.classList.add('current')
+                }
+            var imageEl = document.createElement('img')
+                imageEl.setAttribute('src', img)
+                imageEl.setAttribute('alt', title)
+                projectImage.append(imageEl)
+            document.querySelector('.projects .images .wrapper').append(projectImage)
+            var projectTitle = document.createElement('div')
+                projectTitle.classList.add('single')
+                projectTitle.setAttribute('data-index', sIndex)
+                if (sIndex == 0) {
+                    projectTitle.classList.add('current')
+                }
+            var titleEl = document.createElement('h2')
+                titleEl.textContent = title
+                projectTitle.append(titleEl)
+            document.querySelector('.projects .titles .wrapper').append(projectTitle)
+            var projectBg = document.createElement('img')
+                projectBg.setAttribute('src', img)
+                projectBg.setAttribute('data-index', sIndex)
+                if (sIndex == 0) {
+                    projectBg.classList.add('current')
+                }
+            document.querySelector('.projects .bgs').append(projectBg)
+            sIndex++
+        })
+        document.querySelector('.projectsOpen').addEventListener('click', () => {
+            document.querySelector(`header`).classList.add('closed')
+            document.querySelector(`.projects`).classList.add('opened')
+        })
+        document.querySelector('.closeProjects').addEventListener('click', () => {
+            document.querySelector(`header`).classList.remove('closed')
+            document.querySelector(`.projects`).classList.remove('opened')
+        })
+        var changeTrans = 0
+        var isMoved = true
+        document.querySelector(`.projects .btns .right`).addEventListener('mouseenter', () => {
+            var widthSingle = document.querySelector(`.projects .images .single`).clientWidth
+            var cIndex = Number(document.querySelector(`.projects .images .single.current`).getAttribute('data-index'))
+            if (isMoved == true && cIndex < homeSlider.slides.length) {
+                changeTrans = (widthSingle / 6) + (widthSingle * cIndex)
+                if (cIndex + 1 < homeSlider.slides.length) {
+                    document.querySelector(`.projects .images .wrapper`).style.transform = `translate(-${changeTrans}px, 0)`
+                    document.querySelector(`.projects .titles .wrapper`).style.transform = `translate(-${changeTrans}px, 0)`
+                    document.querySelector(`.projects .images .single.current`).classList.remove('current')
+                    document.querySelector(`.projects .titles .single.current`).classList.remove('current')
+                    document.querySelector(`.projects .images .single[data-index="${cIndex + 1}"]`).classList.add('current')
+                    document.querySelector(`.projects .titles .single[data-index="${cIndex + 1}"]`).classList.add('current')
+                    isMoved = false
+                }
+            }
+        })
+        document.querySelector(`.projects .btns .left`).addEventListener('mouseenter', () => {
+            var widthSingle = document.querySelector(`.projects .images .single`).clientWidth
+            var cIndex = Number(document.querySelector(`.projects .images .single.current`).getAttribute('data-index'))
+            if (isMoved == true && cIndex > 0) {
+                changeTrans = widthSingle * cIndex - (widthSingle / 6)
+                if (cIndex - 1 >= 0) {
+                    document.querySelector(`.projects .images .wrapper`).style.transform = `translate(-${changeTrans}px, 0)`
+                    document.querySelector(`.projects .titles .wrapper`).style.transform = `translate(-${changeTrans}px, 0)`
+                    document.querySelector(`.projects .images .single.current`).classList.remove('current')
+                    document.querySelector(`.projects .titles .single.current`).classList.remove('current')
+                    document.querySelector(`.projects .images .single[data-index="${cIndex - 1}"]`).classList.add('current')
+                    document.querySelector(`.projects .titles .single[data-index="${cIndex - 1}"]`).classList.add('current')
+                    isMoved = false
+                }
+            }
+        })
+        document.querySelector(`.projects .btns .right`).addEventListener('mouseleave', () => {
+            var widthSingle = document.querySelector(`.projects .images .single`).clientWidth
+            var cIndex = Number(document.querySelector(`.projects .images .single.current`).getAttribute('data-index'))
+            if (isMoved == false && cIndex < homeSlider.slides.length) {
+                changeTrans = changeTrans - (widthSingle / 6)
+                document.querySelector(`.projects .images .wrapper`).style.transform = `translate(-${changeTrans}px, 0)`
+                document.querySelector(`.projects .titles .wrapper`).style.transform = `translate(-${changeTrans}px, 0)`
+                document.querySelector(`.projects .images .single.current`).classList.remove('current')
+                document.querySelector(`.projects .titles .single.current`).classList.remove('current')
+                document.querySelector(`.projects .images .single[data-index="${cIndex - 1}"]`).classList.add('current')
+                document.querySelector(`.projects .titles .single[data-index="${cIndex - 1}"]`).classList.add('current')
+                isMoved = true
+            }
+        })
+        document.querySelector(`.projects .btns .left`).addEventListener('mouseleave', () => {
+            var widthSingle = document.querySelector(`.projects .images .single`).clientWidth
+            var cIndex = Number(document.querySelector(`.projects .images .single.current`).getAttribute('data-index'))
+            if (isMoved == false && cIndex >= 0 ) {
+                changeTrans = changeTrans + (widthSingle / 6)
+                document.querySelector(`.projects .images .wrapper`).style.transform = `translate(-${changeTrans}px, 0)`
+                document.querySelector(`.projects .titles .wrapper`).style.transform = `translate(-${changeTrans}px, 0)`
+                document.querySelector(`.projects .images .single.current`).classList.remove('current')
+                document.querySelector(`.projects .titles .single.current`).classList.remove('current')
+                document.querySelector(`.projects .images .single[data-index="${cIndex + 1}"]`).classList.add('current')
+                document.querySelector(`.projects .titles .single[data-index="${cIndex + 1}"]`).classList.add('current')
+                isMoved = true
+            }
+        })
+        document.querySelector(`.projects .btns .right`).addEventListener('click', () => {
+            var widthSingle = document.querySelector(`.projects .images .single`).clientWidth
+            var cIndex = Number(document.querySelector(`.projects .images .single.current`).getAttribute('data-index'))
+            var changeTrans = widthSingle * (cIndex)
+            if (cIndex < homeSlider.slides.length) {
+                document.querySelector(`.projects .images .wrapper`).style.transform = `translate(-${changeTrans}px, 0)`
+                document.querySelector(`.projects .titles .wrapper`).style.transform = `translate(-${changeTrans}px, 0)`
+                document.querySelector(`.projects .images .single.current`).classList.remove('current')
+                document.querySelector(`.projects .titles .single.current`).classList.remove('current')
+                document.querySelector(`.projects .bgs img.current`).classList.remove('current')
+                document.querySelector(`.projects .images .single[data-index="${cIndex}"]`).classList.add('current')
+                document.querySelector(`.projects .titles .single[data-index="${cIndex}"]`).classList.add('current')
+                document.querySelector(`.projects .bgs img[data-index="${cIndex}"]`).classList.add('current')
+                homeSlider.slideTo(cIndex)
+                isMoved = true
+            }
+        })
+        document.querySelector(`.projects .btns .left`).addEventListener('click', () => {
+            var widthSingle = document.querySelector(`.projects .images .single`).clientWidth
+            var cIndex = Number(document.querySelector(`.projects .images .single.current`).getAttribute('data-index'))
+            var changeTrans = widthSingle * (cIndex)
+            if (cIndex >= 0) {
+                document.querySelector(`.projects .images .wrapper`).style.transform = `translate(-${changeTrans}px, 0)`
+                document.querySelector(`.projects .titles .wrapper`).style.transform = `translate(-${changeTrans}px, 0)`
+                document.querySelector(`.projects .images .single.current`).classList.remove('current')
+                document.querySelector(`.projects .titles .single.current`).classList.remove('current')
+                document.querySelector(`.projects .bgs img.current`).classList.remove('current')
+                document.querySelector(`.projects .images .single[data-index="${cIndex}"]`).classList.add('current')
+                document.querySelector(`.projects .titles .single[data-index="${cIndex}"]`).classList.add('current')
+                document.querySelector(`.projects .bgs img[data-index="${cIndex}"]`).classList.add('current')
+                homeSlider.slideTo(cIndex)
+                isMoved = true
+            }
+        })
+    </script>
+
+
+
+<script>
+ window.addEventListener("load", event => {
+
+
+ 
+        <basis  core="repeater" name="rep" datamembername="db.gallery20">
+    
+            <basis core="dbsource" source="media" name="db" usedforid="[##rep.current.Table2ID##]">
+                    <member name="listt" type="list" request="taglist" ></member>
+                </basis>
+        
+       <basis core="print" datamembername="rep.current">
+                                    <face>
+                               
+                                 var  naturalWidth = document.getElementById("image@Table2ID").naturalWidth;
+                                 var naturalHeight = document.getElementById("image@Table2ID").naturalHeight;
+             var image = $('#image@Table2ID');
+            //  alert(naturalWidth);
+            //  alert(naturalHeight);
+             var xRatio = naturalWidth / image.width();
+             var yRatio = naturalHeight / image.height();
+            //  alert(xRatio);
+            //  alert(yRatio);
+             var width = image.width();
+             var height = image.height(); 
+            //  alert(width);
+            //  alert(height);
+    
+    </face>
+    </basis> 
+    
+     <basis core="print" datamembername="db.listt">
+                <layout>
+                   var price=[@child]
+                </layout>
+                <face  >
+                {{"id":"@id",
+                  "xCoordinates":"@xCoordinates",
+                   "yCoordinates":"@yCoordinates",
+                   "mediaid":"@mediaid",
+                   "usedforid":"@usedforid",
+                   "link":"@link",
+                   "description":"@description"
+                   }},
+                </face>
+            <else-layout>
+                var price='null'
+            </else-layout>
+            </basis>
+    
+    
+    
+        
+            <basis core="print" datamembername="rep.current">
+                                    <face>
+                                            var   iddd=@Table2ID;
+    
+                    tagList( price , width, height, xRatio, yRatio,iddd);
+           
+            
+            </face>
+            
+           </basis>
+        </basis>
+           function tagList ( price , width, height, xRatio, yRatio,iddd) {
+                for (i=0 ; i<(price.length) ; i++) {
+                  
+            $(".rrr"+iddd).append('<div  data-id="' + price[i].usedforid + '"   class="info  tag-item tag' + price[i].id + '"  ><div class="cnt "> <div class="dot tag-item-image"><span></span> </div><div class="box"   data-id="' + price[i].usedforid + '"><div class="bdy"><button class="close"><i></i></button> <div class="load-product'+price[i].usedforid +'"></div>  </div></div></div></div>');
+            
+            xCoordinates = price[i].xCoordinates/xRatio;
+     yCoordinates = price[i].yCoordinates/yRatio;
+            //  alert(yCoordinates);
+             var iconWidth = parseInt($('.tag' + price[i].id).find('.tag-item-image').width());
+             var iconHeight = $('.tag' + price[i].id).find('.tag-item-image').height();
+              
+             var left =  xCoordinates - iconWidth  ;
+             var top =  yCoordinates ; 
+            //  alert(left);
+            //  alert(top);
+             $(".tag" + price[i].id).css({
+             "position": "absolute",
+             "left": left + "px",
+             "top": top + "px",
+             "z-index": "214748"
+             }); 
+            
+             }
+           
+            }
+        
+                    $('body').on('mouseover', '.tag-item', function () { 
+                       
+                        var width = $(".width-94").width() + 400 ;
+                        var rt = ($(window).width() - ($(this).offset().left + $(this).outerWidth()));
+                        if(rt < width){
+                        var id=$(this).attr("data-id"); 
+                       
+                        $(this).css("z-index","214748361")
+                        $(".load-product"+id).show();
+                        $(this).children(".cnt").children(".box").addClass("active");
+                        $(".load-product"+id).addClass("load-producty");
+                        $(".load-product"+id).css({"right":"33px" , "left":"unset"});
+                        $(".load-product"+id).load("/load-tagproject.bc?type=4&ownerid=[##db.projinfo.ownerid##]&id="+id);
+                        }
+                        else{
+                        var id=$(this).attr("data-id"); 
+                        $(this).css("z-index","214748361")
+                        $(".load-product"+id).show();
+                        $(this).children(".cnt").children(".box").addClass("active");
+                        $(".load-product"+id).addClass("load-productx")
+                        $(".load-product"+id).load("/load-tagproject.bc?type=4&ownerid=[##db.projinfo.ownerid##]&id="+id);
+                        }
+                    });
+                     $('body').on('mouseout', '.tag-item', function () {   
+                        var id=$(this).attr("data-id"); 
+                        $(".load-product"+id).hide();
+                        $(this).children(".cnt").children(".box").removeClass("active");
+                       
+                            $(this).css("z-index","214748")
+                        });
+                    
+     
+            
+            
+                });
+    
+    </script>
+    <script>
+            window.addEventListener("load", event => {
+           
+           
+            
+                   <basis  core="repeater" name="rep" datamembername="db.gallery30">
+               
+                       <basis core="dbsource" source="media" name="db" usedforid="[##rep.current.Table2ID##]">
+                               <member name="listt" type="list" request="taglist" ></member>
+                           </basis>
+                   
+                  <basis core="print" datamembername="rep.current">
+                                               <face>
+                                          
+                                            var  naturalWidth = document.getElementById("image@Table2ID").naturalWidth;
+                                            var naturalHeight = document.getElementById("image@Table2ID").naturalHeight;
+                        var image = $('#image@Table2ID');
+                       //  alert(naturalWidth);
+                       //  alert(naturalHeight);
+                        var xRatio = naturalWidth / image.width();
+                        var yRatio = naturalHeight / image.height();
+                       //  alert(xRatio);
+                       //  alert(yRatio);
+                        var width = image.width();
+                        var height = image.height(); 
+                       //  alert(width);
+                       //  alert(height);
+               
+               </face>
+               </basis> 
+               
+                <basis core="print" datamembername="db.listt">
+                           <layout>
+                              var price=[@child]
+                           </layout>
+                           <face  >
+                           {{"id":"@id",
+                             "xCoordinates":"@xCoordinates",
+                              "yCoordinates":"@yCoordinates",
+                              "mediaid":"@mediaid",
+                              "usedforid":"@usedforid",
+                              "link":"@link",
+                              "description":"@description"
+                              }},
+                           </face>
+                       <else-layout>
+                           var price='null'
+                       </else-layout>
+                       </basis>
+               
+               
+               
+                   
+                       <basis core="print" datamembername="rep.current">
+                                               <face>
+                                                       var   iddd=@Table2ID;
+               
+                               tagList( price , width, height, xRatio, yRatio,iddd);
+                      
+                       
+                       </face>
+                       
+                      </basis>
+                   </basis>
+                      function tagList ( price , width, height, xRatio, yRatio,iddd) {
+                           for (i=0 ; i<(price.length) ; i++) {
+                             
+                       $(".rrr"+iddd).append('<div  data-id="' + price[i].usedforid + '"   class="info  tag-item tag' + price[i].id + '"  ><div class="cnt "> <div class="dot tag-item-image"><span></span> </div><div class="box"   data-id="' + price[i].usedforid + '"><div class="bdy"><button class="close"><i></i></button> <div class="load-product'+price[i].usedforid +'"></div>  </div></div></div></div>');
+                       
+                       xCoordinates = price[i].xCoordinates/xRatio;
+                yCoordinates = price[i].yCoordinates/yRatio;
+                       //  alert(yCoordinates);
+                        var iconWidth = parseInt($('.tag' + price[i].id).find('.tag-item-image').width());
+                        var iconHeight = $('.tag' + price[i].id).find('.tag-item-image').height();
+                         
+                        var left =  xCoordinates - iconWidth  ;
+                        var top =  yCoordinates ; 
+                       //  alert(left);
+                       //  alert(top);
+                        $(".tag" + price[i].id).css({
+                        "position": "absolute",
+                        "left": left + "px",
+                        "top": top + "px",
+                        "z-index": "214748"
+                        }); 
+                       
+                        }
+                      
+                       }
+                   
+                               $('body').on('mouseover', '.tag-item', function () { 
+                                  
+                                   var width = $(".width-94").width() + 400 ;
+                                   var rt = ($(window).width() - ($(this).offset().left + $(this).outerWidth()));
+                                   if(rt < width){
+                                   var id=$(this).attr("data-id"); 
+                                  
+                                   $(this).css("z-index","214748361")
+                                   $(".load-product"+id).show();
+                                   $(this).children(".cnt").children(".box").addClass("active");
+                                   $(".load-product"+id).addClass("load-producty");
+                                   $(".load-product"+id).css({"right":"33px" , "left":"unset"});
+                                   $(".load-product"+id).load("/load-tagproject.bc?type=4&ownerid=[##db.projinfo.ownerid##]&id="+id);
+                                   }
+                                   else{
+                                   var id=$(this).attr("data-id"); 
+                                   $(this).css("z-index","214748361")
+                                   $(".load-product"+id).show();
+                                   $(this).children(".cnt").children(".box").addClass("active");
+                                   $(".load-product"+id).addClass("load-productx")
+                                   $(".load-product"+id).load("/load-tagproject.bc?type=4&ownerid=[##db.projinfo.ownerid##]&id="+id);
+                                   }
+                               });
+                                $('body').on('mouseout', '.tag-item', function () {   
+                                   var id=$(this).attr("data-id"); 
+                                   $(".load-product"+id).hide();
+                                   $(this).children(".cnt").children(".box").removeClass("active");
+                                  
+                                       $(this).css("z-index","214748")
+                                   });
+                               
+                
+                       
+                       
+                           });
+               
+               </script>
+
+  <script>
+            $(document).ready(function () {
+                $(".js__widget__show-more").click(function (e) {
+                    $(".js__widget__show-more").toggleClass("autoheight2");
+                    $(".toggle").toggleClass("active");
+                    $(".toggleblody").toggleClass("auto");
+                });
+            });
+            document.addEventListener("DOMContentLoaded", function () {
+                var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
+
+                if ("IntersectionObserver" in window) {
+                    var lazyVideoObserver = new IntersectionObserver(function (entries, observer) {
+                        entries.forEach(function (video) {
+                            if (video.isIntersecting) {
+                                for (var source in video.target.children) {
+                                    var videoSource = video.target.children[source];
+                                    if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
+                                        videoSource.src = videoSource.dataset.src;
+                                    }
+                                }
+
+                                video.target.load();
+                                video.target.classList.remove("lazy");
+                                lazyVideoObserver.unobserve(video.target);
+                            }
+                        });
+                    });
+
+                    lazyVideos.forEach(function (lazyVideo) {
+                        lazyVideoObserver.observe(lazyVideo);
+                    });
+                }
+            });
+        </script>
+
+
+
+
+
+
+
+<noscript>Your browser does not support JavaScript!</noscript>
+
+    </body>
 </html>

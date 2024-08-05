@@ -129,6 +129,10 @@ table {
   border-spacing: 0;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 @font-face {
   font-family: "iranyekanwebblackfanum";
   src: url("../_fonts/iranyekanwebblackfanum.eot");
@@ -296,6 +300,36 @@ a, ul, li {
   direction: rtl;
 }
 
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 24px;
+  font-weight: 600;
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 18.72px;
+}
+
+h4 {
+  font-weight: 400;
+  font-size: 16px;
+}
+
+h5 {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+h6 {
+  font-weight: 300;
+  font-size: 13px;
+}
+
 header.DesktopHeader {
   width: 100vw;
   overflow: hidden;
@@ -351,7 +385,6 @@ header.DesktopHeader > .Left .Menu .Menu-Item > .Menu-Link {
   color: #000000;
   font-family: "IRANYekan";
   position: relative;
-  padding-bottom: 10px;
   transition: all 0.4s ease;
 }
 header.DesktopHeader > .Left .Menu .Menu-Item > .Menu-Link::before {
@@ -455,6 +488,19 @@ header.DesktopHeader > .Menu-Container > .Left .IMG-C img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+header.DesktopHeader > .Menu-Container > .Left .IMG-C img.hide {
+  transition: all 1.2s ease;
+  -webkit-transition: all 1.2s ease;
+  -moz-transition: all 1.2s ease;
+  -ms-transition: all 1.2s ease;
+  -o-transition: all 1.2s ease;
+  opacity: 0 !important;
+  transform: translateY(-200px) !important;
+  -webkit-transform: translateY(-200px) !important;
+  -moz-transform: translateY(-200px) !important;
+  -ms-transform: translateY(-200px) !important;
+  -o-transform: translateY(-200px) !important;
 }
 header.DesktopHeader > .Menu-Container > .Middle {
   width: 100%;
@@ -568,6 +614,19 @@ header.DesktopHeader > .Menu-Container > .Right .IMG-C img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+header.DesktopHeader > .Menu-Container > .Right .IMG-C img.hide {
+  transition: all 1.2s ease;
+  -webkit-transition: all 1.2s ease;
+  -moz-transition: all 1.2s ease;
+  -ms-transition: all 1.2s ease;
+  -o-transition: all 1.2s ease;
+  opacity: 0 !important;
+  transform: translateY(-200px) !important;
+  -webkit-transform: translateY(-200px) !important;
+  -moz-transform: translateY(-200px) !important;
+  -ms-transform: translateY(-200px) !important;
+  -o-transform: translateY(-200px) !important;
 }
 
 footer.DesktopFooter {
@@ -699,6 +758,7 @@ footer.DesktopFooter > .Middle .ContactBoxes .Contact .Des {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 footer.DesktopFooter > .Middle .ContactBoxes .Contact .Des p, footer.DesktopFooter > .Middle .ContactBoxes .Contact .Des a {
   font-size: 12px;
@@ -791,7 +851,7 @@ footer.DesktopFooter > .Bottom .CopyRight a span {
 }
 
 .Title-1 {
-  width: 90%;
+  width: 91.5%;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -805,18 +865,22 @@ footer.DesktopFooter > .Bottom .CopyRight a span {
   line-height: 20.73px;
 }
 .Title-1 h2, .Title-1 h1, .Title-1 p {
+  font-size: 24px;
+  font-weight: 500;
+  color: #949494;
+  line-height: 41.45px;
   width: auto;
   display: flex;
   justify-content: flex-start;
   align-items: center;
 }
-.Title-1 h2 span, .Title-1 h1 span, .Title-1 p span {
+.Title-1 h2 span, .Title-1 h2 p, .Title-1 h1 span, .Title-1 h1 p, .Title-1 p span, .Title-1 p p {
   font-size: 24px;
   font-weight: 900;
   color: #000000;
   line-height: 41.45px;
 }
-.Title-1 h2 span.color, .Title-1 h1 span.color, .Title-1 p span.color {
+.Title-1 h2 span.color, .Title-1 h2 p.color, .Title-1 h1 span.color, .Title-1 h1 p.color, .Title-1 p span.color, .Title-1 p p.color {
   color: #D30E15;
 }
 
@@ -1019,7 +1083,7 @@ footer.DesktopFooter > .Bottom .CopyRight a span {
   z-index: 5;
 }
 .About-Clr .Right .Box {
-  width: 91%;
+  width: 91.5%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -1129,7 +1193,7 @@ footer.DesktopFooter > .Bottom .CopyRight a span {
 }
 
 .About-Container {
-  width: 92%;
+  width: 91.5%;
   display: grid;
   grid-template-columns: 1fr 2fr;
   margin: 0 auto;
@@ -1176,15 +1240,15 @@ footer.DesktopFooter > .Bottom .CopyRight a span {
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
-  align-items: center;
-  gap: 0.5em;
+  align-items: flex-start;
+  gap: 1.5em;
 }
 .About-Container > .Left > .Bottom .Col .Text p {
   font-size: 18px;
   font-weight: 400;
   line-height: 31.09px;
   color: #000000;
-  text-align: right;
+  text-align: justify;
 }
 .About-Container > .Right {
   width: 100%;
@@ -1197,10 +1261,15 @@ footer.DesktopFooter > .Bottom .CopyRight a span {
   width: 100%;
 }
 .About-Container > .Right .IMG {
-  width: auto;
+  width: 390px;
+  height: 591px;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
+}
+.About-Container > .Right .IMG img {
+  width: 100%;
+  height: 100%;
 }
 .About-Container .ShowMoreBTN-2 {
   width: auto;
@@ -1352,4 +1421,297 @@ footer.DesktopFooter > .Bottom .CopyRight a span {
     -ms-transform: scale(0.2);
     -o-transform: scale(0.2);
   }
+}
+.searchContainer {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 100;
+  transition: all 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  -webkit-transition: all 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  -moz-transition: all 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  -ms-transition: all 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  -o-transition: all 0.5s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+}
+.searchContainer form {
+  width: 100%;
+}
+.searchContainer button {
+  border: none;
+  outline: none;
+  width: 20px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 10px;
+  top: 0;
+  background-color: transparent;
+}
+.searchContainer.show {
+  opacity: 1;
+  pointer-events: all;
+}
+.searchContainer .resultSearch {
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transform: translateY(15vh);
+  margin: 0 auto;
+}
+.searchContainer .resultSearch p {
+  text-align: center;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 22.45px;
+  color: #000;
+}
+
+.searchh .searchContainer {
+  position: unset;
+  opacity: 1;
+  height: unset;
+  z-index: 0;
+  pointer-events: fill;
+}
+
+.searchContainer .CloseSerch {
+  position: absolute;
+  z-index: 100;
+  right: 5vh;
+  top: 5vh;
+}
+
+.searchContainer input {
+  width: 100%;
+  height: 40px;
+  border: none;
+  outline: none;
+  padding: 10px;
+  background-color: transparent;
+  border: 1px solid #949494;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+
+.searchContainer input::-moz-placeholder {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 21.91px;
+  color: #949494;
+}
+
+.searchContainer input::placeholder {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 21.91px;
+  color: #949494;
+}
+
+.searchContainer .inputBox {
+  width: 60%;
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchContainer .inputBox span {
+  width: 20px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 10px;
+  top: 0;
+}
+
+.searchh {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  padding-top: 30vh;
+}
+.searchh .loaded {
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  margin-top: 3em;
+  gap: 5em;
+  flex-direction: column;
+}
+.searchh .loaded .news {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+.searchh .loaded .news > .Title {
+  width: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5em;
+}
+.searchh .loaded .news > .Title p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25.04px;
+  color: #000000;
+}
+.searchh .loaded .news .swiper-button-next,
+.searchh .loaded .news .swiper-button-prev {
+  width: 55px;
+  z-index: 1;
+  right: 0;
+  top: 35%;
+  right: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  transform: skew(5deg) rotate(4deg);
+  -webkit-transform: skew(5deg) rotate(4deg);
+  -moz-transform: skew(5deg) rotate(4deg);
+  -ms-transform: skew(5deg) rotate(4deg);
+  -o-transform: skew(5deg) rotate(4deg);
+}
+.searchh .loaded .news .swiper-button-next::before, .searchh .loaded .news .swiper-button-next::after,
+.searchh .loaded .news .swiper-button-prev::before,
+.searchh .loaded .news .swiper-button-prev::after {
+  content: none;
+}
+.searchh .loaded .news .swiper-button-next svg,
+.searchh .loaded .news .swiper-button-prev svg {
+  width: 10px;
+}
+.searchh .loaded .news .swiper-button-prev {
+  left: unset;
+  left: 0;
+  transform: skew(-2deg) rotateY(-20deg);
+}
+.searchh .loaded .news .Newslist {
+  width: 100%;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  margin-top: 1.5em;
+}
+.searchh .loaded .news .Newslist .swiper-news,
+.searchh .loaded .news .Newslist .swiper-slide {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+.searchh .loaded .Blogs {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  margin-right: auto;
+}
+.searchh .loaded .Blogs > .Title {
+  width: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5em;
+}
+.searchh .loaded .Blogs > .Title p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25.04px;
+  color: #000000;
+}
+.searchh .loaded .Blogs .Newslist {
+  width: 100%;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  margin-top: 1.5em;
+}
+.searchh .loaded .Blogs .Newslist .swiper-blog,
+.searchh .loaded .Blogs .Newslist .swiper-slide {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+}
+.searchh .loaded .product {
+  width: 95%;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5em;
+}
+.searchh .loaded .product > .Title {
+  width: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5em;
+}
+.searchh .loaded .product > .Title p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25.04px;
+  color: #000000;
+}
+.searchh .loaded .product .Productlist {
+  width: 100%;
+  position: relative;
+  display: flex;
+  margin-bottom: 5em;
+  margin-top: 1.5em;
+}
+.searchh .loaded .product .Productlist .swiper-product,
+.searchh .loaded .product .Productlist .swiper-slide {
+  width: 100%;
+  display: flex;
+}
+.searchh .loaded .product .swiper-button-next,
+.searchh .loaded .product .swiper-button-prev {
+  width: 55px;
+  right: 0;
+  z-index: 1;
+  top: 35%;
+  right: unset;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #000000;
+  transform: skew(5deg) rotate(4deg);
+  -webkit-transform: skew(5deg) rotate(4deg);
+  -moz-transform: skew(5deg) rotate(4deg);
+  -ms-transform: skew(5deg) rotate(4deg);
+  -o-transform: skew(5deg) rotate(4deg);
+}
+.searchh .loaded .product .swiper-button-next::before, .searchh .loaded .product .swiper-button-next::after,
+.searchh .loaded .product .swiper-button-prev::before,
+.searchh .loaded .product .swiper-button-prev::after {
+  content: none;
+}
+.searchh .loaded .product .swiper-button-next svg,
+.searchh .loaded .product .swiper-button-prev svg {
+  width: 10px;
+}
+.searchh .loaded .product .swiper-button-prev {
+  left: unset;
+  left: 0;
+  transform: skew(-2deg) rotateY(-20deg);
 }/*# sourceMappingURL=main.css.map */

@@ -195,10 +195,10 @@ main.Home .Cataloge-Container .Left .Box {
   align-items: center;
 }
 main.Home .Cataloge-Container .Left .Box .Text {
-  width: 94%;
+  width: 93.5%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   flex-direction: column;
   margin-right: auto;
   margin-top: 3em;
@@ -210,7 +210,7 @@ main.Home .Cataloge-Container .Left .Box .Text p {
   color: #000000;
 }
 main.Home .Product-Tags-C {
-  width: 92%;
+  width: 91.5%;
   height: 600px;
   display: grid;
   margin: 5em auto;
@@ -441,7 +441,7 @@ main.Home .ProductCat-2 .ShowMoreBTN-2 {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-right: 9%;
+  margin-right: 10%;
   margin-top: 2.5em;
   border: 1px solid #D30E15;
   border-radius: 30px;
@@ -691,13 +691,15 @@ main.Home .ProductCat-2 .Right .Title-1 {
 }
 main.Home .ProductCat-2 .Right .Text {
   margin-right: auto;
-  width: 90%;
+  width: 89.5%;
   display: flex;
   flex-direction: column;
   padding-bottom: 0.8em;
   margin-top: 1.5em;
 }
 main.Home .ProductCat-2 .Right .Text p {
+  width: 80%;
+  margin-left: auto;
   font-size: 16px;
   font-weight: 300;
   line-height: 27.64px;
@@ -712,7 +714,7 @@ main.Home .NewsBlogs-Container {
   margin-top: 10em;
 }
 main.Home .NewsBlogs-Container .Top {
-  width: 90%;
+  width: 91.5%;
   display: grid;
   grid-template-columns: 2fr 1fr;
   margin: 0 auto;
@@ -767,6 +769,7 @@ main.Home .NewsBlogs-Container .ShowMoreBTN-2 {
   -moz-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
+  margin-top: auto;
 }
 main.Home .NewsBlogs-Container .ShowMoreBTN-2:hover::before {
   width: 100%;
@@ -817,7 +820,7 @@ main.Home .NewsBlogs-Container .ShowMoreBTN-2 a span {
   line-height: 31.09px;
 }
 main.Home .NewsBlogs-Container .Bottom {
-  width: 90%;
+  width: 91.5%;
   display: grid;
   grid-template-columns: 2fr 1fr;
   margin: 0 auto;
@@ -846,6 +849,9 @@ main.Home .NewsBlogs-Container .Bottom .Blogs .Col-right {
   gap: 2em;
   flex-direction: column;
 }
+main.Home .NewsBlogs-Container .Bottom .Blogs .Col-right .Blog:first-child img {
+  height: 317px;
+}
 main.Home .NewsBlogs-Container .Bottom .News {
   width: 100%;
   display: flex;
@@ -864,7 +870,7 @@ main.ProductCat {
   overflow: hidden;
 }
 main.ProductCat .ProductCategories {
-  width: 90%;
+  width: 91.5%;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
@@ -1115,12 +1121,15 @@ main.AboutUsC .AboutBannerC .Navigation {
   display: flex;
   justify-content: flex-start;
   margin-right: auto;
-  transform: translateY(100%);
+  transform: translateY(-10%);
   height: 100px;
+  -webkit-transform: translateY(-10%);
+  -moz-transform: translateY(-10%);
+  -ms-transform: translateY(-10%);
+  -o-transform: translateY(-10%);
 }
 main.AboutUsC .AboutBannerC .Navigation .swiper-pagination {
   height: 100px;
-  transform: translateY(15%);
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -1203,8 +1212,9 @@ main.AboutUsC .AboutBannerC .Left .Banner-Container .swiper-Banners .swiper-wrap
   display: flex;
 }
 main.AboutUsC .AboutBannerC .Left .Banner-Container .swiper-Banners .swiper-slide {
-  width: 0%;
+  width: 100%;
   height: 100%;
+  min-width: 100%;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -1349,6 +1359,7 @@ main.AboutUsC .AboutBannerC .Right .Text {
   flex-direction: column;
   padding-bottom: 0.8em;
   margin-top: 1.5em;
+  overflow: hidden;
 }
 main.AboutUsC .AboutBannerC .Right .Text p {
   width: 65%;
@@ -1546,6 +1557,7 @@ main.AboutUsC .About-ContainerS2 .ImgSlider .swiper-IMG .swiper-wrapper .swiper-
   justify-content: center;
   align-items: center;
   padding: 0.8em 0;
+  min-height: 70px;
 }
 .Product > .Box .Title {
   width: 95%;
@@ -1598,6 +1610,7 @@ main.AboutUsC .About-ContainerS2 .ImgSlider .swiper-IMG .swiper-wrapper .swiper-
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  margin-top: 1em;
 }
 .Blog .Title a {
   width: -moz-fit-content;
@@ -1659,6 +1672,7 @@ main.AboutUsC .About-ContainerS2 .ImgSlider .swiper-IMG .swiper-wrapper .swiper-
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  margin-top: 1em;
 }
 .New .Title a {
   width: -moz-fit-content;

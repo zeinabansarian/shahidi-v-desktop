@@ -1,0 +1,292 @@
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2358536">
+    <member name="about--us" type="view"/> 
+   </basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2358536">
+    <member name="text" type="view"  postsql="select * from [db.text] where TypeID=250"/> 
+</basis>
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2358536">
+    <member name="media-about" type="list" format="3,4"/>
+</basis>
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2358536">
+    <member name="banner" type="list" format="3,4" postsql="select * from [db.banner] where ord=7"/> 
+</basis>
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2358536">
+    <member name="banner1" type="list" format="3,4" postsql="select * from [db.banner1] where ord=5"/> 
+</basis>
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>درباره ما</title>
+    <meta name="description" content="درباره ما">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/main.css">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/f-style.css">
+</head>
+<body>
+    <main class="AboutUsC">
+              <!-- HEADER -->
+            <basis core="call" file="header.inc" />
+             <!-- HEADER -->
+            <!-- SECTIONE ONE -->
+            <div class="AboutBannerC">
+         
+                <div class="Right">
+                    <div class="ContentBox">
+                        <div class="Title-1">
+                            <basis core="print" datamembername="db.text">
+                                <layout>
+                                    @child
+                                </layout>
+                                <face filter="RowNumber=1">
+                                    <h1>
+                                        <span>
+                                            
+                                            <span class="color">
+                                               @text
+                                            </span>
+                                            @largetext
+                                        </span>
+                                    </h1>
+                                </face>
+                            </basis>
+                 
+                        </div>
+                        <div class="Text">
+                            <basis core="print" datamembername="db.text">
+                                <layout>
+                                    @child
+                                </layout>
+                                <face filter="RowNumber=2">
+                                    <p>
+                                        @largetext
+                                    </p>
+                                </face>
+                            </basis>
+                        
+                        </div>
+                   
+                          <div class="Navigation">
+                            <div class="swiper-pagination"></div>
+                          </div>
+                    </div>
+                </div>
+                <div class="Left">
+                    <div class="Banner-Container">
+                        <div class="swiper-Banners">
+                            <div class="swiper-wrapper">
+                                <basis core="print" datamembername="db.media-about">
+                                    <layout>
+                                        @child
+                                    </layout>
+                                    <face filter="ord=5">
+                                        <div class="swiper-slide">
+                                            <img src="@largeIMG" alt="shahidi" title="shahidi">
+                                        </div>
+                                    </face>
+                                </basis>
+                            </div>
+                        </div>
+                
+                        <div class="OVBox">
+                            <basis core="print" datamembername="db.banner1">
+                                <layout>
+                                    @child
+                                </layout>
+                                <face filter="RowNumber=1">
+                                    <div class="IMG">
+                                        <img src="@largeIMG" alt="shahidi" title="shahidi">
+                                    </div>
+                                </face>
+                            </basis>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- SECTIONE ONE -->
+
+            <!-- SECTIONE TWO -->
+            <div class="About-Container">
+            
+                    <div class="Right">
+                        <div class="Title-1">
+                            <h2>
+                                <span class="color">
+                                  درباره
+                                </span>
+                                <span>
+                                  شرکت شهیدی
+                                </span>
+                               
+                            </h2>
+                         </div>
+                         <basis core="print" datamembername="db.media-about">
+                            <layout>
+                                @child
+                            </layout>
+                            <face filter="ord=6">
+                               <div class="IMG">
+                                   <img src="@largeIMG" alt="shahidi" title="shahidi">
+                                </div>
+                            </face>
+                        </basis>
+                    </div>
+                    <div class="Left">
+                        <div class="Top">
+                            <!-- <span class="Desc">
+                                زیبایی در سادگیست.
+                            </span>
+                            <h4>
+                                زیبایی در سادگیست.
+                            </h4> -->
+                        </div>
+                        <div class="Bottom">
+                            <div class="Col">
+                                <div class="Text">
+                                    <basis core="print" datamembername="db.text">
+                                        <layout>
+                                            @child
+                                        </layout>
+                                        <face filter="RowNumber=2">
+                                            <p>
+                                                @largetext
+                                            </p>
+                                        </face>
+                                    </basis>
+                                </div>
+                            </div>
+                            <div class="Col">
+                                <div class="Text">
+                                    <basis core="print" datamembername="db.text">
+                                        <layout>
+                                            @child
+                                        </layout>
+                                        <face filter="RowNumber=4">
+                                            <p>
+                                                @largetext
+                                            </p>
+                                        </face>
+                                    </basis>
+                                </div>
+                            </div>
+    
+                        </div>
+                
+                    </div>
+            </div>
+            <!-- SECTIONE TWO -->
+
+             <!-- SECTIONE TWO -->
+              <div class="About-ContainerS2 BG"  data-bg="[##db.banner.largeIMG##]">
+                <div class="Right">
+                    <div class="Banner-Container">
+                        <div class="OVBox">
+                            <basis core="print" datamembername="db.media-about">
+                                <layout>
+                                    @child
+                                </layout>
+                                <face filter="ord=8">
+                                   <div class="IMG">
+                                       <img src="@largeIMG" alt="shahidi" title="shahidi">
+                                    </div>
+                                </face>
+                            </basis>
+                        </div>
+                    </div>
+                </div>
+                <div class="Left">
+                    <div class="ContentBox">
+                        
+                            <basis core="print" datamembername="db.text">
+                                <layout>
+                                    <div class="Title-1">
+                                        <p>
+                                    @child
+                                        </p>
+                                    </div>
+                                </layout>
+                                <face filter="RowNumber=1">
+                                  
+                                        <span>
+                                            
+                                            <span class="color">
+                                               @text
+                                            </span>
+                                            @largetext
+                                        </span>
+                                
+                                </face>
+                            </basis>
+                            <div class="Text">
+                                <basis core="print" datamembername="db.text">
+                                    <layout>
+                                        @child
+                                    </layout>
+                                    <face filter="RowNumber=3">
+                                        <p>
+                                            @text
+                                        </p>
+                                    </face>
+                                </basis>
+                            </div>
+                            <div class="ImgSlider">
+                                <div class="swiper-button-prev"></div>
+                                <div class="swiper-button-next"></div>
+    
+                                <div class="swiper-IMG">
+                                    <div class="swiper-wrapper">
+                                        <basis core="print" datamembername="db.media-about">
+                                            <layout>
+                                                @child
+                                            </layout>
+                                            <face filter="ord=9">
+                                                <div class="swiper-slide">
+                                                   <img src="@largeIMG" alt="shahidi" title="shahidi">
+                                                </div>
+                                            </face>
+                                        </basis>
+                                    </div>
+                                </div>
+                              </div>
+                    </div>
+                     
+                     
+                       
+                    </div>
+                </div>
+              </div>
+             <!-- SECTIONE TWO -->
+                <!-- SECTIONE THREE -->
+                <div class="Video-Clr">
+                    <basis core="print" datamembername="db.media-about">
+                        <layout>
+                            @child
+                        </layout>
+                        <face filter="ord=1001">
+                            <video id="main-2" src="@largeIMG" ></video>
+                            <div class="Video-OV">
+                                <span class="Icon PlayBTN2">
+                                    <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0 3.53067C0 1.58222 1.58222 0 3.53067 0H60.4693C62.4178 0 64 1.58222 64 3.53067V60.4693C63.9991 61.4054 63.6268 62.3029 62.9649 62.9649C62.3029 63.6268 61.4054 63.9991 60.4693 64H3.53067C2.59428 64 1.69624 63.628 1.03411 62.9659C0.37198 62.3038 0 61.4057 0 60.4693V3.53067ZM27.1004 19.2533C26.8865 19.1106 26.6378 19.0285 26.3808 19.0159C26.1239 19.0033 25.8683 19.0606 25.6414 19.1817C25.4145 19.3029 25.2246 19.4833 25.0921 19.7038C24.9596 19.9242 24.8894 20.1765 24.8889 20.4338V43.5662C24.8894 43.8235 24.9596 44.0758 25.0921 44.2962C25.2246 44.5167 25.4145 44.6971 25.6414 44.8183C25.8683 44.9394 26.1239 44.9967 26.3808 44.9841C26.6378 44.9715 26.8865 44.8894 27.1004 44.7467L44.448 33.184C44.6423 33.0536 44.8016 32.8774 44.9117 32.6709C45.0218 32.4644 45.0794 32.234 45.0794 32C45.0794 31.766 45.0218 31.5356 44.9117 31.3291C44.8016 31.1226 44.6423 30.9464 44.448 30.816L27.1004 19.2533Z" fill="#D30E15"/>
+                                        </svg>
+                                        
+                                </span>
+                            </div>
+                        </face>
+                    </basis>
+               
+                </div>
+                <!-- SECTIONE THREE -->
+
+           <!--  FOOTER -->
+            
+           <basis core="call" file="footer.inc" />
+           <!-- FOOTER -->        
+    </main>
+    <basis core="call" file="script.inc" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Readmore.js/2.2.0/readmore.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.0.8/popper.min.js"></script>
+    <script src="[##cms.cms.cdn##]/js/aboutUs.js"></script>
+</body>
+</html>

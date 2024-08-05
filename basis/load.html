@@ -1,0 +1,119 @@
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" catid="209364" q="[##cms.query.q##]"> 
+    <member name="newsList" type="list" size="488x332" propertyid="7249,7244,7248"
+     postsql=" select *, SUBSTR(prp_7244, 1,100-CHARINDEX(' ', REVERSE(SUBSTR(prp_7244, 1, 100)))) || '...' as substr from [db.newsList]" /> 
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" catid="209300" q="[##cms.query.q##]"> 
+    <member name="list-produts" size="330x443" type="list"/> 
+</basis>
+<basis core="group" if="'[##db.newsList.RowNumber##]' = '' and 
+'[##db.list-produts.RowNumber##]' = ''">
+
+<div class="resultSearch">
+  <p data-res="true">باعرض پوزش مطلبی پیدا نشد. واژه دیگری را جست و جو نمایید.</p>
+</div>
+    </basis>
+
+  
+    <basis core="print" datamembername="db.newsList">
+                    <layout>
+                        <div class="news">
+                            <div class="Title">
+                                
+                            <p>نتایج جستجو در اخبار و مقالات </p>
+                            </div>
+                        <div class="Newslist">
+                            <div class="swiper-news">
+                                <div class="swiper-wrapper">
+                        @child
+                                </div>
+                            </div>
+                            <div class="swiper-button-next">
+                                <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 1L6 6L1 11" stroke="#1D2F3B"/>
+                                    </svg>
+                                    
+                                    
+                            </div>
+                            <div class="swiper-button-prev">
+                                <svg width="7" height="12" viewBox="0 0 7 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6 1L1 6L6 11" stroke="#1D2F3B"/>
+                                    </svg>
+                            
+                            </div>
+                        </div>
+                        </div>
+                    </layout>
+                    <face>
+                        <div class="swiper-slide">
+                        <div class="Blog">
+                            <div class="IMG">
+                                <a href="@link" title="@title" alt="@title">
+                                    <img src="@00488X00332prp" alt="@title" title="@title">
+                                </a>
+                            </div>
+                            <div class="Title">
+                                <a  href="@link" title="@title" alt="@title"><p>
+                                    @title
+                                </p>
+                            </a>
+                            </div>
+                            <div class="Desc">
+                                <p>@prp_7248</p>
+                            </div>
+                        </div>
+                    </div>
+                    </face>
+    </basis>
+
+
+                <basis core="print" datamembername="db.list-produts">
+                    <layout>
+                        <div class="product">
+                            <div class="Title">
+                              
+                                <p>  نتایج جست و جو در محصولات: </p>
+                            </div>
+                        <div class="Productlist">
+                            <div class="swiper-product">
+                                <div class="swiper-wrapper">
+                        @child
+                    </div>
+                </div>
+              
+               </div>
+            </div>
+                    </layout>
+                    <face>
+                        <div class="swiper-slide">
+                            <div class="Product">
+                                <div class="IMG">
+                                    <a href="@link" title="@title" alt="@title">
+                                    <img src="@00330X00443prp"title="@title" alt="@title"></a>
+                                </div>
+                                <div class="Box">
+                                    <div class="Title">
+                                        <a href="@link" title="@title" alt="@title"> 
+                                            <span>
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <g clip-path="url(#clip0_644_2)">
+                                                    <path d="M8 0C8.3384 0 8.6128 0.2744 8.6128 0.6128V7.3864H15.3872C15.5498 7.3864 15.7058 7.451 15.8208 7.566C15.9358 7.681 16.0004 7.83697 16.0004 7.9996C16.0004 8.16223 15.9358 8.3182 15.8208 8.4332C15.7058 8.54819 15.5498 8.6128 15.3872 8.6128H8.6128V15.3872C8.6128 15.5497 8.54824 15.7056 8.43332 15.8205C8.31839 15.9354 8.16253 16 8 16C7.83748 16 7.68161 15.9354 7.56668 15.8205C7.45176 15.7056 7.3872 15.5497 7.3872 15.3872L7.3864 8.6128H0.6128C0.450275 8.6128 0.294407 8.54824 0.179485 8.43332C0.0645627 8.31839 0 8.16253 0 8C0 7.83748 0.0645627 7.68161 0.179485 7.56668C0.294407 7.45176 0.450275 7.3872 0.6128 7.3872L7.3864 7.3864V0.6128C7.38682 0.450267 7.45163 0.294523 7.56664 0.17967C7.68164 0.0648161 7.83747 0.000211082 8 0Z" fill="black"/>
+                                                    </g>
+                                                    <defs>
+                                                    <clipPath id="clip0_644_2">
+                                                    <rect width="16" height="16" fill="white"/>
+                                                    </clipPath>
+                                                    </defs>
+                                                    </svg>
+                                                    
+                                            </span>
+                                            <span>
+                                               @title
+                                            </span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> 
+                    </face>
+                </basis>
+    

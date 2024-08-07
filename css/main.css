@@ -83,7 +83,6 @@ video {
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
   vertical-align: baseline;
 }
 
@@ -151,8 +150,8 @@ body {
 }
 @font-face {
   font-family: "IRANYekan";
-  src: url("../_fonts/IRANYekanRegular.eot");
-  src: url("../_fonts/IRANYekanRegular.eot?#iefix") format("embedded-opentype"), url("../_fonts/IRANYekanRegular.woff") format("woff"), url("../_fonts/IRANYekanRegular.woff2") format("woff2"), url("../_fonts/IRANYekanRegular.ttf") format("truetype");
+  src: url("../_fonts/iranyekanwebmedium.eot");
+  src: url("../_fonts/iranyekanwebmedium.eot?#iefix") format("embedded-opentype"), url("../_fonts/iranyekanwebmedium.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -262,6 +261,13 @@ body {
   font-style: normal;
 }
 @font-face {
+  font-family: "PlusJakartaSans";
+  src: url("../fonts/PlusJakartaSans-VariableFont_wght.ttf"), format("truetype");
+  font-weight: 300;
+  font-display: swap;
+  font-style: normal;
+}
+@font-face {
   font-family: "Josefin Sans";
   src: url("../_fonts/JosefinSans-Italic.eot");
   src: local("../_fonts/Josefin Sans Italic"), local("../_fonts/JosefinSans-Italic"), url("../_fonts/JosefinSans-Italic.eot?#iefix") format("embedded-opentype"), url("../_fonts/JosefinSans-Italic.woff2") format("woff2"), url("../_fonts/JosefinSans-Italic.woff") format("woff"), url("../_fonts/JosefinSans-Italic.ttf") format("truetype");
@@ -330,14 +336,81 @@ h6 {
   font-size: 13px;
 }
 
+.ShowMoreBTN-2 {
+  width: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: auto;
+  border: 1px solid #D30E15;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  padding: 0.5em 2em;
+  gap: 0.5em;
+  position: relative;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+.ShowMoreBTN-2::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  opacity: 0;
+  height: 100%;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  background-color: #D30E15;
+  z-index: 0;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+.ShowMoreBTN-2 span {
+  position: relative;
+  z-index: 1;
+  width: -moz-max-content;
+  width: max-content;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.8em;
+  font-size: 12px;
+  font-weight: 300;
+  color: #fff;
+  line-height: 20.73px;
+}
+.ShowMoreBTN-2:hover::before {
+  width: 100%;
+  opacity: 1;
+}
+.ShowMoreBTN-2:hover span {
+  color: #fff;
+}
+
 header.DesktopHeader {
   width: 100vw;
   overflow: hidden;
   display: grid;
   position: fixed;
   z-index: 99;
-  padding: 50px 0;
+  padding: 15px 0;
   grid-template-columns: 3fr 1fr 3fr;
+}
+header.DesktopHeader.color {
+  background: linear-gradient(178deg, transparent 0%, rgba(148, 148, 148, 0.76) 100%);
 }
 header.DesktopHeader > .Left {
   width: 90%;
@@ -764,7 +837,7 @@ footer.DesktopFooter > .Middle .ContactBoxes .Contact .Des p, footer.DesktopFoot
   font-size: 12px;
   font-weight: 300;
   line-height: 20.73px;
-  color: #949494;
+  color: #fff;
   text-align: center;
 }
 footer.DesktopFooter > .Bottom {
@@ -865,6 +938,7 @@ footer.DesktopFooter > .Bottom .CopyRight a span {
   line-height: 20.73px;
 }
 .Title-1 h2, .Title-1 h1, .Title-1 p {
+  gap: 0.4em;
   font-size: 24px;
   font-weight: 500;
   color: #949494;
@@ -991,7 +1065,7 @@ footer.DesktopFooter > .Bottom .CopyRight a span {
   -o-transition: all 800ms ease 0s;
 }
 .About-Clr .Left .Video-C {
-  width: 91%;
+  width: 92%;
   display: flex;
   justify-content: flex-end;
   align-content: center;
@@ -1071,8 +1145,12 @@ footer.DesktopFooter > .Bottom .CopyRight a span {
   border-top: 1px solid #fff;
   border-left: 1px solid #fff;
   border-right: 1px solid #fff;
-  transform: rotate(196deg) translateX(8px);
+  transform: rotate(196deg) translate(7px, -2px);
   bottom: 0;
+  -webkit-transform: rotate(196deg) translate(7px, -2px);
+  -moz-transform: rotate(196deg) translate(7px, -2px);
+  -ms-transform: rotate(196deg) translate(7px, -2px);
+  -o-transform: rotate(196deg) translate(7px, -2px);
 }
 .About-Clr .Right {
   width: 100%;
@@ -1083,7 +1161,7 @@ footer.DesktopFooter > .Bottom .CopyRight a span {
   z-index: 5;
 }
 .About-Clr .Right .Box {
-  width: 91.5%;
+  width: 75%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -1096,6 +1174,9 @@ footer.DesktopFooter > .Bottom .CopyRight a span {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+}
+.About-Clr .Right .Box > .Title p {
+  display: contents;
 }
 .About-Clr .Right .Box > .Title h3 {
   width: 100%;
@@ -1132,7 +1213,8 @@ footer.DesktopFooter > .Bottom .CopyRight a span {
   text-align: right;
 }
 .About-Clr .Right .Box .ShowMoreBTN-2 {
-  width: auto;
+  width: -moz-max-content;
+  width: max-content;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -1150,10 +1232,6 @@ footer.DesktopFooter > .Bottom .CopyRight a span {
   -moz-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
-}
-.About-Clr .Right .Box .ShowMoreBTN-2:hover::before {
-  width: 100%;
-  opacity: 1;
 }
 .About-Clr .Right .Box .ShowMoreBTN-2::before {
   content: "";
@@ -1176,23 +1254,30 @@ footer.DesktopFooter > .Bottom .CopyRight a span {
   -ms-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
 }
-.About-Clr .Right .Box .ShowMoreBTN-2 a {
+.About-Clr .Right .Box .ShowMoreBTN-2 span {
   position: relative;
   z-index: 1;
-  width: 100%;
+  width: -moz-max-content;
+  width: max-content;
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 0.8em;
-}
-.About-Clr .Right .Box .ShowMoreBTN-2 a span {
   font-size: 12px;
   font-weight: 300;
   color: #fff;
   line-height: 20.73px;
 }
+.About-Clr .Right .Box .ShowMoreBTN-2:hover::before {
+  width: 100%;
+  opacity: 1;
+}
+.About-Clr .Right .Box .ShowMoreBTN-2:hover span {
+  color: #fff;
+}
 
 .About-Container {
+  gap: 6em;
   width: 91.5%;
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -1201,13 +1286,14 @@ footer.DesktopFooter > .Bottom .CopyRight a span {
 .About-Container > .Left {
   width: 100%;
   display: flex;
+  justify-content: flex-start;
   flex-direction: column;
   gap: 2em;
   padding-top: 3em;
 }
 .About-Container > .Left > .Top {
   width: 100%;
-  display: flex;
+  display: none;
   flex-direction: column;
 }
 .About-Container > .Left > .Top .Desc {
@@ -1237,6 +1323,7 @@ footer.DesktopFooter > .Bottom .CopyRight a span {
 }
 .About-Container > .Left > .Bottom .Col .Text {
   width: 100%;
+  min-width: 417px;
   display: flex;
   justify-content: flex-start;
   flex-direction: column;
@@ -1248,7 +1335,10 @@ footer.DesktopFooter > .Bottom .CopyRight a span {
   font-weight: 400;
   line-height: 31.09px;
   color: #000000;
-  text-align: justify;
+  text-align: right;
+}
+.About-Container > .Left > .Bottom .Col .Text p:first-child {
+  display: none;
 }
 .About-Container > .Right {
   width: 100%;
@@ -1261,7 +1351,8 @@ footer.DesktopFooter > .Bottom .CopyRight a span {
   width: 100%;
 }
 .About-Container > .Right .IMG {
-  width: 390px;
+  width: 100%;
+  min-width: 390px;
   height: 591px;
   display: flex;
   justify-content: flex-start;
@@ -1284,24 +1375,28 @@ footer.DesktopFooter > .Bottom .CopyRight a span {
   -moz-transition: all 0.5s ease;
   -ms-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
+  border: none;
+  margin-top: auto;
+  padding-bottom: 0;
 }
-.About-Container .ShowMoreBTN-2 a {
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: 0.8em;
-}
-.About-Container .ShowMoreBTN-2 a svg, .About-Container .ShowMoreBTN-2 a path {
+.About-Container .ShowMoreBTN-2 svg, .About-Container .ShowMoreBTN-2 path {
   fill: #D30E15;
 }
-.About-Container .ShowMoreBTN-2 a span {
+.About-Container .ShowMoreBTN-2 span {
   font-size: 16px;
   font-weight: 300;
   color: #D30E15;
   line-height: 27.64px;
+}
+.About-Container .ShowMoreBTN-2:hover {
+  background-color: transparent;
+}
+.About-Container .ShowMoreBTN-2:hover::before {
+  width: 0;
+  opacity: 0;
+}
+.About-Container .ShowMoreBTN-2:hover span {
+  color: #D30E15;
 }
 
 .Cataloge {

@@ -1,883 +1,882 @@
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2358534"> 
+    <member name="image-def" type="list" format="4"/> 
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" usedforid="1434034"> 
+    <member name="link" type="list" /> 
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" catid="209279">
+    <member name="productList1" type="list" typeid="159"  size="330x443"/> 
+</basis>
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2358536">
+    <member name="gallery" type="list" format="3,4"/> 
+</basis>
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2358536">
+    <member name="banner" type="list" format="3,4" postsql="select * from [db.banner] where ord=1"/> 
+</basis>
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2358536">
+    <member name="videoCover" type="list" format="3,4" postsql="select * from [db.videoCover] where ord=2"/> 
+</basis>
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2358536">
+    <member name="video" type="list" format="3,4"/> 
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2358536">
+    <member name="about" type="view"/> 
+</basis> 
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2358536">
+    <member name="text" type="view" postsql="select * from [db.text] where TypeID=250"/> 
+</basis> 
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2358541"> 
+    <member name="cataloge" type="view"/> 
+</basis>
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2358541"> 
+<member name="media-cataloge" type="list" format="4,9"/> 
+</basis>	
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2358541"> 
+    <member name="cataloguu" type="list" format="4,9" postsql="select * from [db.cataloguu] where ord=1000"/> 
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2358541"> 
+    <member name="catalogetext" type="view"  postsql="select * from [db.catalogetext] where TypeID=250"/> 
+</basis>
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2358534"> 
+    <member name="video-def" type="list" format="3"/> 
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2358536">
+    <member name="aboutus" type="view"/> 
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2358536">
+    <member name="text2" type="view"  postsql="select * from [db.text2] where TypeID=250"/> 
+</basis>
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2358536">
+    <member name="image-about" type="list" format="4"/> 
+</basis>	
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2358782"> 
+    <member name="image-def-pro" type="list" format="4"  postsql="select * from [db.image-def-pro] where ord=1000"/> 
+</basis>
+<basis core="dbsource" source="basiscore" name="basisName" lid="1" mid="20" >
+    <member request="cat" type="tree" name="productCat" parentid="209291"  /> 
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" catid="66161"> 
+    <member name="list-blog" size="415x646" type="list" propertyid="7248,7249"/>
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" catid="66167"> 
+    <member name="list-news" size="415x646" type="list" propertyid="7248,7249"/>
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" usedforid="2358555">
+    <member name="product" type="view"/>
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" usedforid="2358555">
+    <member name="producttext" type="view" postsql="select * from [db.producttext] where TypeID=144"/>
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" usedforid="2358555">
+    <member name="producttitle" type="view"  postsql="select * from [db.producttitle] where TypeID=150"/>
+</basis>
+<basis core="dbsource" name="db" source="media" lid="1" sourcemid="20" usedforid="2358555"> 
+    <member name="productGallery" type="list" postsql="select * from [db.productGallery] where ord=50" />
+ </basis>
+ <basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" usedforid="2358555">
+   <member name="productList" type="list"/> 
+</basis>
 <!DOCTYPE html>
 <html lang="fa">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="theme-color" content="#ffff">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>بازرگانی شهیدی</title>
+    <meta name="description" content="بازرگانی شهیدی">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/main.css">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/f-style.css">
+</head>
+<body>
+    <main class="Home">
+        <!-- HEADER -->
+    <basis core="call" file="header.inc" />
+        <!-- HEADER -->
 
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>جهانتاب | میز و صندلی رستورانی و فست فود</title>
-<meta name="description"
- content="کارخانۀ جهانتاب با بیش از 40 سال تجربه در زمینه تجهیز فست فودها، رستوران ها ، تالارها، سالن های غذاخوری، آمفی تئاترها و همچنین ارائه سرویـس کـامـل مبـلمـان غـذاخـوری منـازل، در فضایی مجهّز به وسعت 5000 متر مربع، از پیشگامان این عرصه بوده و همواره سعی داشته تا با تولید به روزترین محصولات در این عرصه رضایت تمامی اقشار مردم راحاصل نماید." />
- 
-        <link rel="stylesheet" href="[##cms.cms.cdn##]/css/app.css">
-        <script src="[##cms.cms.cdn##]/_js/jquery/jquery-3.3.1.js"  ></script>
-    </head>
-
-    
-    <basis core="dbsource" source="media" name="db" lid="1" usedforid="1442668" sourcemid="1">
-            <member name="gallery20" type="list" format="4" postsql="select * from [db.gallery20] where ord=20" ></member>
-        </basis>
-        <basis core="dbsource" source="media" name="db" lid="1" usedforid="1442668" sourcemid="1">
-            <member name="gallery30" type="list" format="4"  postsql="select * from [db.gallery30] where ord=30"></member>
-        </basis>
-        <basis core="dbsource" source="media" name="db" lid="1" usedforid="1442668" sourcemid="1">
-            <member name="vid" type="list" format="3" ></member>
-        </basis>
-        <basis core="dbsource" source="basiscore"  mid="1"   name="db"   lid="1"  usedforid="1442668" >
-                <member  name="projinfo" type="list" ></member>
-              </basis>
-    <body>
-       <basis core="call" file="header.inc"></basis>
-
-        <main class="home home1 swiper  desktop-slider">
-
-<h1 style="display: none"> میز و صندلی رستورانی و فست فود جهانتاب</h1>
-
-
-            <div class="swiper-wrapper">
-
-              
-                <div class="swiper-slide" data-title="جهانتاب">
-           
-
-                    <video width="100%" height="100%" autoplay muted loop>
-                        <source src="[##cms.cms.cdn##]/images/video-default.mp4" type="video/mp4">
-                 
-                      </video> 
-                    
-
-                  
-                    </div>
-             
-               
-                <basis core="print" datamembername="db.gallery20">
-                    <face filter="ord=20" >
-                        <div class="swiper-slide rrr@Table2ID" data-title="@description ">
-           
-
-                            <img src="[##cms.cms.cdn##]/@largeimg" alt="@description" width="1600" height="800" class="bg" id="image@Table2ID" data-rownumber="@rownumber" value="@table2id">
-
-
-
-                            <div class="text">
-                             
-                                <p class="h2">@description</p>
-                                <a title="@title" href="@name">
-                                    نمایش بیشتر
-                                </a>
-                            </div>
-                            </div>
-                         </face>
-            </basis>
-              
-                
-            </div>
-
-
-          
-
-
-
-
-
-
-
-
-            <div class="bottomSect">
-                <div class="container">
-                    <div class="row">
-                        <div class="paginate">
-                            <span></span>
-                            <strong></strong>
-                        </div>
-                        <div class="scroll">
-                            <span>اسکرول کنید</span>
-                            <img src="[##cms.cms.cdn##]/img/carret-down-icon.png" alt="scroll">
-                        </div>
+        <!-- SECTIONE ONE -->
+        <div class="Banner-Container">
+            <div class="Banner-Slider">
+                <div class="swiper-Banner">
+                    <div class="swiper-wrapper">
+                        <basis core="print" datamembername="db.image-def">
+                            <layout>
+                                @child
+                            </layout>
+                            <face filter="ord=1">
+                                <div class="swiper-slide">
+                                    <div class="IMG">
+                                        <img src="@largeIMG" alt="@name" title="@name">
+                                    </div>
+                                    <div class="OV">
+                                        <div class="Title">
+                                            <h1>@name   </h1>
+                                        </div>
+                                        <div class="Desc">
+                                            <p>@description	  </p>
+                                        </div>
+                                        <div class="ShowMBTN">
+                                            <a href="[##db.link.link##]" alt="[##db.link.title##]" title="[##db.link.title##]">
+                                                <span>
+                                                    <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M4 0C4.1692 0 4.3064 0.1372 4.3064 0.3064V3.6932H7.6936C7.77492 3.6932 7.8529 3.7255 7.9104 3.783C7.9679 3.8405 8.0002 3.91848 8.0002 3.9998C8.0002 4.08112 7.9679 4.1591 7.9104 4.2166C7.8529 4.2741 7.77492 4.3064 7.6936 4.3064H4.3064V7.6936C4.3064 7.77486 4.27412 7.8528 4.21666 7.91026C4.1592 7.96772 4.08126 8 4 8C3.91874 8 3.8408 7.96772 3.78334 7.91026C3.72588 7.8528 3.6936 7.77486 3.6936 7.6936L3.6932 4.3064H0.3064C0.225138 4.3064 0.147204 4.27412 0.0897425 4.21666C0.0322813 4.1592 0 4.08126 0 4C0 3.91874 0.0322813 3.8408 0.0897425 3.78334C0.147204 3.72588 0.225138 3.6936 0.3064 3.6936L3.6932 3.6932V0.3064C3.69341 0.225133 3.72582 0.147262 3.78332 0.0898349C3.84082 0.0324081 3.91873 0.000105541 4 0Z" fill="#D30E15"/>
+                                                        </svg>
+                                                        
+                                                </span>
+                                                <span>نمایش بیشتر</span>
+                                              
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </face>
+                        </basis>
+                      
                     </div>
                 </div>
-            </div>
-            <div class="projectsOpen">
-                <i class="grid"></i>
-            </div>
-        </main>
-
-
-
-
-        <main class="home home2 swiper mob-slider">
-
-
-
-
-    
-                <div class="swiper-wrapper ">
-    
-    
-             
-        <div class="swiper-slide" data-title="جهانتاب">
-           <div class="flex-first">
-            <div class="hero-video-wrap is-inview" data-scroll="" data-scroll-speed="-3.5">
-                <video class="lazy" autoplay muted loop playsinline width=" " height="  " id="myVideo"
-                    poster="/images/banner-video.png">
-
-                    <source data-src="[##cms.cms.cdn##]/images/video-default.mp4" type="video/mp4">
-                </video>
-             
             </div>
         </div>
-                      
-                        </div>
-             
-                      
-                   
-                    <basis core="print" datamembername="db.gallery30">
-                        <face  filter="ord=30">
-                            <div class="swiper-slide rrr@Table2ID" data-title="@description ">
-               
-    
-                                <img src="[##cms.cms.cdn##]/@largeimg" alt="@description" width="1600" height="800" class="bg" id="image@Table2ID" data-rownumber="@rownumber" value="@table2id">
-    
-    
-    
-                                <div class="text">
-                                  
-                                    <p class="h2">@description</p>
-                                    <a title="@title" href="@name">
-                                        نمایش بیشتر
-                                    </a>
-                                </div>
-                                </div>
-                             </face>
-                </basis>
+        <!-- SECTIONE ONE -->
+
+        <!-- SECTIONE TWO -->
+         <div class="ProductCategories">
+            <div class="Title-1">
+                <h2>
+                    <span class="color">
+                      آخرین
+                    </span>
+                    <span>
+                      محصولات
+                    </span>
                   
-                    
+                </h2>
+                <div class="ShowM">
+                    <a href="محصولات" alt="محصولات" title="محصولات">
+                        <span>
+                            <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_1_153)">
+                                <path d="M4 0C4.1692 0 4.3064 0.1372 4.3064 0.3064V3.6932H7.6936C7.77492 3.6932 7.8529 3.7255 7.9104 3.783C7.9679 3.8405 8.0002 3.91848 8.0002 3.9998C8.0002 4.08112 7.9679 4.1591 7.9104 4.2166C7.8529 4.2741 7.77492 4.3064 7.6936 4.3064H4.3064V7.6936C4.3064 7.77486 4.27412 7.8528 4.21666 7.91026C4.1592 7.96772 4.08126 8 4 8C3.91874 8 3.8408 7.96772 3.78334 7.91026C3.72588 7.8528 3.6936 7.77486 3.6936 7.6936L3.6932 4.3064H0.3064C0.225138 4.3064 0.147204 4.27412 0.0897425 4.21666C0.0322813 4.1592 0 4.08126 0 4C0 3.91874 0.0322813 3.8408 0.0897425 3.78334C0.147204 3.72588 0.225138 3.6936 0.3064 3.6936L3.6932 3.6932V0.3064C3.69341 0.225133 3.72582 0.147262 3.78332 0.0898349C3.84082 0.0324081 3.91873 0.000105541 4 0Z" fill="#949494"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_1_153">
+                                <rect width="8" height="8" fill="white"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
+                                
+                        </span>
+                        <span>نمایش بیشتر</span>
+                       
+                    </a>
                 </div>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-                <div class="bottomSect">
-                    <div class="container">
-                        <div class="row">
-                            <div class="paginate">
-                                <span></span>
-                                <strong></strong>
-                            </div>
-                            <div class="scroll">
-                                <span>اسکرول کنید</span>
-                                <img src="[##cms.cms.cdn##]/img/carret-down-icon.png" alt="icon">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                    <section class="call-buton" id="cal-fix">
- 
- 
-                        <a class="cc-calto-action-ripple aaa" href="tel:02188201468">
-                            <span class="m2">
-                            <img src="/img/headset-1.png" width="50" height="52" alt=" تلفن جهانتاب">
-                            </span>
-                            </a>
-                        </section>
-
-                <div class="projectsOpen">
-                    <i class="grid"></i>
-                </div>
-            </main>
-
-
-
-
-        <aside class="projects">
-            <button name="button" class="closeProjects">
-                <i class="close"></i>
-            </button>
-            <div class="bgs"></div>
-            <div class="slider">
-                <div class="sWrapper">
-                    <div class="btns">
-                        <button name="button" class="left"></button>
-                        <button name="button" class="right"></button>
-                    </div>
-                    <div class="images">
-                        <div class="wrapper"></div>
-                    </div>
-                    <div class="titles">
-                        <div class="wrapper"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="btmSect">
-                <div class="showAll">
-                    <button  name="button">
-                        <div class="icon"></div>
-                        نمایش همه
-                    </button>
-                </div>
-                <div class="link">
-                    <a title="icon" href="#"></a>
-                </div>
-                <div class="none"></div>
-            </div>
-        </aside>
-        <script src="[##cms.cms.cdn##]/js/app.js"></script>
-        <script src="[##cms.cms.cdn##]/js/swiper.js"></script>
-
-
-
-
-    <script>
-        var homeSlider = new Swiper(".home1", {
-            direction: "vertical",
-            slidesPerView: 1,
-            spaceBetween: 0,
-            mousewheel: true,
-            speed: 2000,
-            delay: 2000,
-            effect: "fade",
-        })
-        document.querySelector(`main.home1 .scroll`).addEventListener('click', () => {
-            homeSlider.slideNext()
-        })
-        var title = document.querySelector(`main.home1 .swiper-slide-active`).getAttribute('data-title')
-        document.querySelector(`main.home1 .bottomSect .paginate strong`).textContent = title
-        var index = `01`
-        document.querySelector(`main.home1 .bottomSect .paginate span`).textContent = index
-        homeSlider.on('slideChangeTransitionStart', (swiper) => {
-            var title = document.querySelector(`main.home1 .swiper-slide-active`).getAttribute('data-title')
-            document.querySelector(`main.home1 .bottomSect .paginate strong`).textContent = title
-            var index = `0${swiper.activeIndex + 1}`
-            document.querySelector(`main.home1 .bottomSect .paginate span`).textContent = index
-        })
-        var sIndex = 0
-        document.querySelectorAll(`main.home1 .swiper-slide`).forEach((slide) => {
-            var img = slide.querySelector(`.bg`).getAttribute('src')
-            var title = slide.getAttribute('data-title')
-            var tiles = document.createElement('div')
-            tiles.classList.add('tiles')
-            for (var i = 0; i < 6; i++) {
-                var div = document.createElement('div')
-                div.style.backgroundImage = `url('${img}')`
-                tiles.appendChild(div)
-            }
-            slide.append(tiles)
-            // ProjectsSlider
-            var projectImage = document.createElement('div')
-                projectImage.classList.add('single')
-                projectImage.setAttribute('data-index', sIndex)
-                if (sIndex == 0) {
-                    projectImage.classList.add('current')
-                }
-            var imageEl = document.createElement('img')
-                imageEl.setAttribute('src', img)
-                imageEl.setAttribute('alt', title)
-                projectImage.append(imageEl)
-            document.querySelector('.projects .images .wrapper').append(projectImage)
-            var projectTitle = document.createElement('div')
-                projectTitle.classList.add('single')
-                projectTitle.setAttribute('data-index', sIndex)
-                if (sIndex == 0) {
-                    projectTitle.classList.add('current')
-                }
-            var titleEl = document.createElement('h2')
-                titleEl.textContent = title
-                projectTitle.append(titleEl)
-            document.querySelector('.projects .titles .wrapper').append(projectTitle)
-            var projectBg = document.createElement('img')
-                projectBg.setAttribute('src', img)
-                projectBg.setAttribute('data-index', sIndex)
-                if (sIndex == 0) {
-                    projectBg.classList.add('current')
-                }
-            document.querySelector('.projects .bgs').append(projectBg)
-            sIndex++
-        })
-        document.querySelector('.projectsOpen').addEventListener('click', () => {
-            document.querySelector(`header`).classList.add('closed')
-            document.querySelector(`.projects`).classList.add('opened')
-        })
-        document.querySelector('.closeProjects').addEventListener('click', () => {
-            document.querySelector(`header`).classList.remove('closed')
-            document.querySelector(`.projects`).classList.remove('opened')
-        })
-        var changeTrans = 0
-        var isMoved = true
-        document.querySelector(`.projects .btns .right`).addEventListener('mouseenter', () => {
-            var widthSingle = document.querySelector(`.projects .images .single`).clientWidth
-            var cIndex = Number(document.querySelector(`.projects .images .single.current`).getAttribute('data-index'))
-            if (isMoved == true && cIndex < homeSlider.slides.length) {
-                changeTrans = (widthSingle / 6) + (widthSingle * cIndex)
-                if (cIndex + 1 < homeSlider.slides.length) {
-                    document.querySelector(`.projects .images .wrapper`).style.transform = `translate(-${changeTrans}px, 0)`
-                    document.querySelector(`.projects .titles .wrapper`).style.transform = `translate(-${changeTrans}px, 0)`
-                    document.querySelector(`.projects .images .single.current`).classList.remove('current')
-                    document.querySelector(`.projects .titles .single.current`).classList.remove('current')
-                    document.querySelector(`.projects .images .single[data-index="${cIndex + 1}"]`).classList.add('current')
-                    document.querySelector(`.projects .titles .single[data-index="${cIndex + 1}"]`).classList.add('current')
-                    isMoved = false
-                }
-            }
-        })
-        document.querySelector(`.projects .btns .left`).addEventListener('mouseenter', () => {
-            var widthSingle = document.querySelector(`.projects .images .single`).clientWidth
-            var cIndex = Number(document.querySelector(`.projects .images .single.current`).getAttribute('data-index'))
-            if (isMoved == true && cIndex > 0) {
-                changeTrans = widthSingle * cIndex - (widthSingle / 6)
-                if (cIndex - 1 >= 0) {
-                    document.querySelector(`.projects .images .wrapper`).style.transform = `translate(-${changeTrans}px, 0)`
-                    document.querySelector(`.projects .titles .wrapper`).style.transform = `translate(-${changeTrans}px, 0)`
-                    document.querySelector(`.projects .images .single.current`).classList.remove('current')
-                    document.querySelector(`.projects .titles .single.current`).classList.remove('current')
-                    document.querySelector(`.projects .images .single[data-index="${cIndex - 1}"]`).classList.add('current')
-                    document.querySelector(`.projects .titles .single[data-index="${cIndex - 1}"]`).classList.add('current')
-                    isMoved = false
-                }
-            }
-        })
-        document.querySelector(`.projects .btns .right`).addEventListener('mouseleave', () => {
-            var widthSingle = document.querySelector(`.projects .images .single`).clientWidth
-            var cIndex = Number(document.querySelector(`.projects .images .single.current`).getAttribute('data-index'))
-            if (isMoved == false && cIndex < homeSlider.slides.length) {
-                changeTrans = changeTrans - (widthSingle / 6)
-                document.querySelector(`.projects .images .wrapper`).style.transform = `translate(-${changeTrans}px, 0)`
-                document.querySelector(`.projects .titles .wrapper`).style.transform = `translate(-${changeTrans}px, 0)`
-                document.querySelector(`.projects .images .single.current`).classList.remove('current')
-                document.querySelector(`.projects .titles .single.current`).classList.remove('current')
-                document.querySelector(`.projects .images .single[data-index="${cIndex - 1}"]`).classList.add('current')
-                document.querySelector(`.projects .titles .single[data-index="${cIndex - 1}"]`).classList.add('current')
-                isMoved = true
-            }
-        })
-        document.querySelector(`.projects .btns .left`).addEventListener('mouseleave', () => {
-            var widthSingle = document.querySelector(`.projects .images .single`).clientWidth
-            var cIndex = Number(document.querySelector(`.projects .images .single.current`).getAttribute('data-index'))
-            if (isMoved == false && cIndex >= 0 ) {
-                changeTrans = changeTrans + (widthSingle / 6)
-                document.querySelector(`.projects .images .wrapper`).style.transform = `translate(-${changeTrans}px, 0)`
-                document.querySelector(`.projects .titles .wrapper`).style.transform = `translate(-${changeTrans}px, 0)`
-                document.querySelector(`.projects .images .single.current`).classList.remove('current')
-                document.querySelector(`.projects .titles .single.current`).classList.remove('current')
-                document.querySelector(`.projects .images .single[data-index="${cIndex + 1}"]`).classList.add('current')
-                document.querySelector(`.projects .titles .single[data-index="${cIndex + 1}"]`).classList.add('current')
-                isMoved = true
-            }
-        })
-        document.querySelector(`.projects .btns .right`).addEventListener('click', () => {
-            var widthSingle = document.querySelector(`.projects .images .single`).clientWidth
-            var cIndex = Number(document.querySelector(`.projects .images .single.current`).getAttribute('data-index'))
-            var changeTrans = widthSingle * (cIndex)
-            if (cIndex < homeSlider.slides.length) {
-                document.querySelector(`.projects .images .wrapper`).style.transform = `translate(-${changeTrans}px, 0)`
-                document.querySelector(`.projects .titles .wrapper`).style.transform = `translate(-${changeTrans}px, 0)`
-                document.querySelector(`.projects .images .single.current`).classList.remove('current')
-                document.querySelector(`.projects .titles .single.current`).classList.remove('current')
-                document.querySelector(`.projects .bgs img.current`).classList.remove('current')
-                document.querySelector(`.projects .images .single[data-index="${cIndex}"]`).classList.add('current')
-                document.querySelector(`.projects .titles .single[data-index="${cIndex}"]`).classList.add('current')
-                document.querySelector(`.projects .bgs img[data-index="${cIndex}"]`).classList.add('current')
-                homeSlider.slideTo(cIndex)
-                isMoved = true
-            }
-        })
-        document.querySelector(`.projects .btns .left`).addEventListener('click', () => {
-            var widthSingle = document.querySelector(`.projects .images .single`).clientWidth
-            var cIndex = Number(document.querySelector(`.projects .images .single.current`).getAttribute('data-index'))
-            var changeTrans = widthSingle * (cIndex)
-            if (cIndex >= 0) {
-                document.querySelector(`.projects .images .wrapper`).style.transform = `translate(-${changeTrans}px, 0)`
-                document.querySelector(`.projects .titles .wrapper`).style.transform = `translate(-${changeTrans}px, 0)`
-                document.querySelector(`.projects .images .single.current`).classList.remove('current')
-                document.querySelector(`.projects .titles .single.current`).classList.remove('current')
-                document.querySelector(`.projects .bgs img.current`).classList.remove('current')
-                document.querySelector(`.projects .images .single[data-index="${cIndex}"]`).classList.add('current')
-                document.querySelector(`.projects .titles .single[data-index="${cIndex}"]`).classList.add('current')
-                document.querySelector(`.projects .bgs img[data-index="${cIndex}"]`).classList.add('current')
-                homeSlider.slideTo(cIndex)
-                isMoved = true
-            }
-        })
-    </script>
-  <script>
-        var homeSlider = new Swiper(".home2", {
-            direction: "vertical",
-            slidesPerView: 1,
-            spaceBetween: 0,
-            mousewheel: true,
-            speed: 2000,
-            delay: 2000,
-            effect: "fade",
-        })
-        document.querySelector(`main.home2 .scroll`).addEventListener('click', () => {
-            homeSlider.slideNext()
-        })
-        var title = document.querySelector(`main.home2 .swiper-slide-active`).getAttribute('data-title')
-        document.querySelector(`main.home2 .bottomSect .paginate strong`).textContent = title
-        var index = `01`
-        document.querySelector(`main.home2 .bottomSect .paginate span`).textContent = index
-        homeSlider.on('slideChangeTransitionStart', (swiper) => {
-            var title = document.querySelector(`main.home2 .swiper-slide-active`).getAttribute('data-title')
-            document.querySelector(`main.home2 .bottomSect .paginate strong`).textContent = title
-            var index = `0${swiper.activeIndex + 1}`
-            document.querySelector(`main.home2 .bottomSect .paginate span`).textContent = index
-        })
-        var sIndex = 0
-        document.querySelectorAll(`main.home2 .swiper-slide`).forEach((slide) => {
-            var img = slide.querySelector(`.bg`).getAttribute('src')
-            var title = slide.getAttribute('data-title')
-            var tiles = document.createElement('div')
-            tiles.classList.add('tiles')
-            for (var i = 0; i < 6; i++) {
-                var div = document.createElement('div')
-                div.style.backgroundImage = `url('${img}')`
-                tiles.appendChild(div)
-            }
-            slide.append(tiles)
-            // ProjectsSlider
-            var projectImage = document.createElement('div')
-                projectImage.classList.add('single')
-                projectImage.setAttribute('data-index', sIndex)
-                if (sIndex == 0) {
-                    projectImage.classList.add('current')
-                }
-            var imageEl = document.createElement('img')
-                imageEl.setAttribute('src', img)
-                imageEl.setAttribute('alt', title)
-                projectImage.append(imageEl)
-            document.querySelector('.projects .images .wrapper').append(projectImage)
-            var projectTitle = document.createElement('div')
-                projectTitle.classList.add('single')
-                projectTitle.setAttribute('data-index', sIndex)
-                if (sIndex == 0) {
-                    projectTitle.classList.add('current')
-                }
-            var titleEl = document.createElement('h2')
-                titleEl.textContent = title
-                projectTitle.append(titleEl)
-            document.querySelector('.projects .titles .wrapper').append(projectTitle)
-            var projectBg = document.createElement('img')
-                projectBg.setAttribute('src', img)
-                projectBg.setAttribute('data-index', sIndex)
-                if (sIndex == 0) {
-                    projectBg.classList.add('current')
-                }
-            document.querySelector('.projects .bgs').append(projectBg)
-            sIndex++
-        })
-        document.querySelector('.projectsOpen').addEventListener('click', () => {
-            document.querySelector(`header`).classList.add('closed')
-            document.querySelector(`.projects`).classList.add('opened')
-        })
-        document.querySelector('.closeProjects').addEventListener('click', () => {
-            document.querySelector(`header`).classList.remove('closed')
-            document.querySelector(`.projects`).classList.remove('opened')
-        })
-        var changeTrans = 0
-        var isMoved = true
-        document.querySelector(`.projects .btns .right`).addEventListener('mouseenter', () => {
-            var widthSingle = document.querySelector(`.projects .images .single`).clientWidth
-            var cIndex = Number(document.querySelector(`.projects .images .single.current`).getAttribute('data-index'))
-            if (isMoved == true && cIndex < homeSlider.slides.length) {
-                changeTrans = (widthSingle / 6) + (widthSingle * cIndex)
-                if (cIndex + 1 < homeSlider.slides.length) {
-                    document.querySelector(`.projects .images .wrapper`).style.transform = `translate(-${changeTrans}px, 0)`
-                    document.querySelector(`.projects .titles .wrapper`).style.transform = `translate(-${changeTrans}px, 0)`
-                    document.querySelector(`.projects .images .single.current`).classList.remove('current')
-                    document.querySelector(`.projects .titles .single.current`).classList.remove('current')
-                    document.querySelector(`.projects .images .single[data-index="${cIndex + 1}"]`).classList.add('current')
-                    document.querySelector(`.projects .titles .single[data-index="${cIndex + 1}"]`).classList.add('current')
-                    isMoved = false
-                }
-            }
-        })
-        document.querySelector(`.projects .btns .left`).addEventListener('mouseenter', () => {
-            var widthSingle = document.querySelector(`.projects .images .single`).clientWidth
-            var cIndex = Number(document.querySelector(`.projects .images .single.current`).getAttribute('data-index'))
-            if (isMoved == true && cIndex > 0) {
-                changeTrans = widthSingle * cIndex - (widthSingle / 6)
-                if (cIndex - 1 >= 0) {
-                    document.querySelector(`.projects .images .wrapper`).style.transform = `translate(-${changeTrans}px, 0)`
-                    document.querySelector(`.projects .titles .wrapper`).style.transform = `translate(-${changeTrans}px, 0)`
-                    document.querySelector(`.projects .images .single.current`).classList.remove('current')
-                    document.querySelector(`.projects .titles .single.current`).classList.remove('current')
-                    document.querySelector(`.projects .images .single[data-index="${cIndex - 1}"]`).classList.add('current')
-                    document.querySelector(`.projects .titles .single[data-index="${cIndex - 1}"]`).classList.add('current')
-                    isMoved = false
-                }
-            }
-        })
-        document.querySelector(`.projects .btns .right`).addEventListener('mouseleave', () => {
-            var widthSingle = document.querySelector(`.projects .images .single`).clientWidth
-            var cIndex = Number(document.querySelector(`.projects .images .single.current`).getAttribute('data-index'))
-            if (isMoved == false && cIndex < homeSlider.slides.length) {
-                changeTrans = changeTrans - (widthSingle / 6)
-                document.querySelector(`.projects .images .wrapper`).style.transform = `translate(-${changeTrans}px, 0)`
-                document.querySelector(`.projects .titles .wrapper`).style.transform = `translate(-${changeTrans}px, 0)`
-                document.querySelector(`.projects .images .single.current`).classList.remove('current')
-                document.querySelector(`.projects .titles .single.current`).classList.remove('current')
-                document.querySelector(`.projects .images .single[data-index="${cIndex - 1}"]`).classList.add('current')
-                document.querySelector(`.projects .titles .single[data-index="${cIndex - 1}"]`).classList.add('current')
-                isMoved = true
-            }
-        })
-        document.querySelector(`.projects .btns .left`).addEventListener('mouseleave', () => {
-            var widthSingle = document.querySelector(`.projects .images .single`).clientWidth
-            var cIndex = Number(document.querySelector(`.projects .images .single.current`).getAttribute('data-index'))
-            if (isMoved == false && cIndex >= 0 ) {
-                changeTrans = changeTrans + (widthSingle / 6)
-                document.querySelector(`.projects .images .wrapper`).style.transform = `translate(-${changeTrans}px, 0)`
-                document.querySelector(`.projects .titles .wrapper`).style.transform = `translate(-${changeTrans}px, 0)`
-                document.querySelector(`.projects .images .single.current`).classList.remove('current')
-                document.querySelector(`.projects .titles .single.current`).classList.remove('current')
-                document.querySelector(`.projects .images .single[data-index="${cIndex + 1}"]`).classList.add('current')
-                document.querySelector(`.projects .titles .single[data-index="${cIndex + 1}"]`).classList.add('current')
-                isMoved = true
-            }
-        })
-        document.querySelector(`.projects .btns .right`).addEventListener('click', () => {
-            var widthSingle = document.querySelector(`.projects .images .single`).clientWidth
-            var cIndex = Number(document.querySelector(`.projects .images .single.current`).getAttribute('data-index'))
-            var changeTrans = widthSingle * (cIndex)
-            if (cIndex < homeSlider.slides.length) {
-                document.querySelector(`.projects .images .wrapper`).style.transform = `translate(-${changeTrans}px, 0)`
-                document.querySelector(`.projects .titles .wrapper`).style.transform = `translate(-${changeTrans}px, 0)`
-                document.querySelector(`.projects .images .single.current`).classList.remove('current')
-                document.querySelector(`.projects .titles .single.current`).classList.remove('current')
-                document.querySelector(`.projects .bgs img.current`).classList.remove('current')
-                document.querySelector(`.projects .images .single[data-index="${cIndex}"]`).classList.add('current')
-                document.querySelector(`.projects .titles .single[data-index="${cIndex}"]`).classList.add('current')
-                document.querySelector(`.projects .bgs img[data-index="${cIndex}"]`).classList.add('current')
-                homeSlider.slideTo(cIndex)
-                isMoved = true
-            }
-        })
-        document.querySelector(`.projects .btns .left`).addEventListener('click', () => {
-            var widthSingle = document.querySelector(`.projects .images .single`).clientWidth
-            var cIndex = Number(document.querySelector(`.projects .images .single.current`).getAttribute('data-index'))
-            var changeTrans = widthSingle * (cIndex)
-            if (cIndex >= 0) {
-                document.querySelector(`.projects .images .wrapper`).style.transform = `translate(-${changeTrans}px, 0)`
-                document.querySelector(`.projects .titles .wrapper`).style.transform = `translate(-${changeTrans}px, 0)`
-                document.querySelector(`.projects .images .single.current`).classList.remove('current')
-                document.querySelector(`.projects .titles .single.current`).classList.remove('current')
-                document.querySelector(`.projects .bgs img.current`).classList.remove('current')
-                document.querySelector(`.projects .images .single[data-index="${cIndex}"]`).classList.add('current')
-                document.querySelector(`.projects .titles .single[data-index="${cIndex}"]`).classList.add('current')
-                document.querySelector(`.projects .bgs img[data-index="${cIndex}"]`).classList.add('current')
-                homeSlider.slideTo(cIndex)
-                isMoved = true
-            }
-        })
-    </script>
-
-
-
-<script>
- window.addEventListener("load", event => {
-
-
- 
-        <basis  core="repeater" name="rep" datamembername="db.gallery20">
-    
-            <basis core="dbsource" source="media" name="db" usedforid="[##rep.current.Table2ID##]">
-                    <member name="listt" type="list" request="taglist" ></member>
-                </basis>
-        
-       <basis core="print" datamembername="rep.current">
-                                    <face>
-                               
-                                 var  naturalWidth = document.getElementById("image@Table2ID").naturalWidth;
-                                 var naturalHeight = document.getElementById("image@Table2ID").naturalHeight;
-             var image = $('#image@Table2ID');
-            //  alert(naturalWidth);
-            //  alert(naturalHeight);
-             var xRatio = naturalWidth / image.width();
-             var yRatio = naturalHeight / image.height();
-            //  alert(xRatio);
-            //  alert(yRatio);
-             var width = image.width();
-             var height = image.height(); 
-            //  alert(width);
-            //  alert(height);
-    
-    </face>
-    </basis> 
-    
-     <basis core="print" datamembername="db.listt">
-                <layout>
-                   var price=[@child]
-                </layout>
-                <face  >
-                {{"id":"@id",
-                  "xCoordinates":"@xCoordinates",
-                   "yCoordinates":"@yCoordinates",
-                   "mediaid":"@mediaid",
-                   "usedforid":"@usedforid",
-                   "link":"@link",
-                   "description":"@description"
-                   }},
-                </face>
-            <else-layout>
-                var price='null'
-            </else-layout>
-            </basis>
-    
-    
-    
-        
-            <basis core="print" datamembername="rep.current">
-                                    <face>
-                                            var   iddd=@Table2ID;
-    
-                    tagList( price , width, height, xRatio, yRatio,iddd);
-           
-            
-            </face>
-            
-           </basis>
-        </basis>
-           function tagList ( price , width, height, xRatio, yRatio,iddd) {
-                for (i=0 ; i<(price.length) ; i++) {
-                  
-            $(".rrr"+iddd).append('<div  data-id="' + price[i].usedforid + '"   class="info  tag-item tag' + price[i].id + '"  ><div class="cnt "> <div class="dot tag-item-image"><span></span> </div><div class="box"   data-id="' + price[i].usedforid + '"><div class="bdy"><button class="close"><i></i></button> <div class="load-product'+price[i].usedforid +'"></div>  </div></div></div></div>');
-            
-            xCoordinates = price[i].xCoordinates/xRatio;
-     yCoordinates = price[i].yCoordinates/yRatio;
-            //  alert(yCoordinates);
-             var iconWidth = parseInt($('.tag' + price[i].id).find('.tag-item-image').width());
-             var iconHeight = $('.tag' + price[i].id).find('.tag-item-image').height();
+             </div>
+             <div class="Product-Category">
+                <div class="Product-Slider">
+                    <div class="swiper-Category">
+                        <div class="swiper-wrapper">
+                            <basis core="print" datamembername="db.productList1">
+                                <layout>
+                                    @child
+                                </layout>
+                                <face>
+                                    <div class="swiper-slide">
+                                        <div class="Product">
+                                            <div class="IMG">
+                                                <a href="@link" title="@title" alt="@title">
+                                                <img src="@00330X00443prp"title="@title" alt="@title"></a>
+                                            </div>
+                                            <div class="Box">
+                                                <div class="Title">
+                                                    <a href="@link" title="@title" alt="@title"> 
+                                                        <span>
+                                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                                <g clip-path="url(#clip0_644_2)">
+                                                                <path d="M8 0C8.3384 0 8.6128 0.2744 8.6128 0.6128V7.3864H15.3872C15.5498 7.3864 15.7058 7.451 15.8208 7.566C15.9358 7.681 16.0004 7.83697 16.0004 7.9996C16.0004 8.16223 15.9358 8.3182 15.8208 8.4332C15.7058 8.54819 15.5498 8.6128 15.3872 8.6128H8.6128V15.3872C8.6128 15.5497 8.54824 15.7056 8.43332 15.8205C8.31839 15.9354 8.16253 16 8 16C7.83748 16 7.68161 15.9354 7.56668 15.8205C7.45176 15.7056 7.3872 15.5497 7.3872 15.3872L7.3864 8.6128H0.6128C0.450275 8.6128 0.294407 8.54824 0.179485 8.43332C0.0645627 8.31839 0 8.16253 0 8C0 7.83748 0.0645627 7.68161 0.179485 7.56668C0.294407 7.45176 0.450275 7.3872 0.6128 7.3872L7.3864 7.3864V0.6128C7.38682 0.450267 7.45163 0.294523 7.56664 0.17967C7.68164 0.0648161 7.83747 0.000211082 8 0Z" fill="black"/>
+                                                                </g>
+                                                                <defs>
+                                                                <clipPath id="clip0_644_2">
+                                                                <rect width="16" height="16" fill="white"/>
+                                                                </clipPath>
+                                                                </defs>
+                                                                </svg>
+                                                                
+                                                        </span>
+                                                        <span>
+                                                           @title
+                                                        </span>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div> 
+                                </face>
+                            </basis>
+                        
               
-             var left =  xCoordinates - iconWidth  ;
-             var top =  yCoordinates ; 
-            //  alert(left);
-            //  alert(top);
-             $(".tag" + price[i].id).css({
-             "position": "absolute",
-             "left": left + "px",
-             "top": top + "px",
-             "z-index": "214748"
-             }); 
-            
-             }
-           
-            }
-        
-                    $('body').on('mouseover', '.tag-item', function () { 
-                       
-                        var width = $(".width-94").width() + 400 ;
-                        var rt = ($(window).width() - ($(this).offset().left + $(this).outerWidth()));
-                        if(rt < width){
-                        var id=$(this).attr("data-id"); 
-                       
-                        $(this).css("z-index","214748361")
-                        $(".load-product"+id).show();
-                        $(this).children(".cnt").children(".box").addClass("active");
-                        $(".load-product"+id).addClass("load-producty");
-                        $(".load-product"+id).css({"right":"33px" , "left":"unset"});
-                        $(".load-product"+id).load("/load-tagproject.bc?type=4&ownerid=[##db.projinfo.ownerid##]&id="+id);
-                        }
-                        else{
-                        var id=$(this).attr("data-id"); 
-                        $(this).css("z-index","214748361")
-                        $(".load-product"+id).show();
-                        $(this).children(".cnt").children(".box").addClass("active");
-                        $(".load-product"+id).addClass("load-productx")
-                        $(".load-product"+id).load("/load-tagproject.bc?type=4&ownerid=[##db.projinfo.ownerid##]&id="+id);
-                        }
-                    });
-                     $('body').on('mouseout', '.tag-item', function () {   
-                        var id=$(this).attr("data-id"); 
-                        $(".load-product"+id).hide();
-                        $(this).children(".cnt").children(".box").removeClass("active");
-                       
-                            $(this).css("z-index","214748")
-                        });
-                    
-     
-            
-            
-                });
+                        </div>
+                    </div>
+                </div>
+             </div>
+         </div>
     
-    </script>
-    <script>
-            window.addEventListener("load", event => {
-           
-           
-            
-                   <basis  core="repeater" name="rep" datamembername="db.gallery30">
-               
-                       <basis core="dbsource" source="media" name="db" usedforid="[##rep.current.Table2ID##]">
-                               <member name="listt" type="list" request="taglist" ></member>
-                           </basis>
-                   
-                  <basis core="print" datamembername="rep.current">
-                                               <face>
-                                          
-                                            var  naturalWidth = document.getElementById("image@Table2ID").naturalWidth;
-                                            var naturalHeight = document.getElementById("image@Table2ID").naturalHeight;
-                        var image = $('#image@Table2ID');
-                       //  alert(naturalWidth);
-                       //  alert(naturalHeight);
-                        var xRatio = naturalWidth / image.width();
-                        var yRatio = naturalHeight / image.height();
-                       //  alert(xRatio);
-                       //  alert(yRatio);
-                        var width = image.width();
-                        var height = image.height(); 
-                       //  alert(width);
-                       //  alert(height);
-               
-               </face>
-               </basis> 
-               
-                <basis core="print" datamembername="db.listt">
-                           <layout>
-                              var price=[@child]
-                           </layout>
-                           <face  >
-                           {{"id":"@id",
-                             "xCoordinates":"@xCoordinates",
-                              "yCoordinates":"@yCoordinates",
-                              "mediaid":"@mediaid",
-                              "usedforid":"@usedforid",
-                              "link":"@link",
-                              "description":"@description"
-                              }},
-                           </face>
-                       <else-layout>
-                           var price='null'
-                       </else-layout>
-                       </basis>
-               
-               
-               
-                   
-                       <basis core="print" datamembername="rep.current">
-                                               <face>
-                                                       var   iddd=@Table2ID;
-               
-                               tagList( price , width, height, xRatio, yRatio,iddd);
+        <!-- SECTIONE TWO -->
+
+        <!-- SECTIONE THREE -->
+        <div class="About-Clr BG" data-bg="[##db.banner.largeIMG##]">
+            <div class="Right">
+                <div class="Box">
+                    <div class="Title">
+                        <basis core="print" datamembername="db.text">
+                            <layout>
+                                @child
+                            </layout>
+                            <face filter="Rownumber=1">
+                                <h3>
+                                    <span>
+                                        <span class="color">@text </span>
+                                   @largetext
+                                    </span>
+                                </h3>
+                            </face>
+                        </basis>
+                      </div>
+                      <div class="Text">
+                        <basis core="print" datamembername="db.text">
+                            <layout>
+                                @child
+                            </layout>
+                            <face filter="Rownumber=1">
+                               <p>@largetext</p>
+                            </face>
+                        </basis>
                       
-                       
-                       </face>
-                       
-                      </basis>
-                   </basis>
-                      function tagList ( price , width, height, xRatio, yRatio,iddd) {
-                           for (i=0 ; i<(price.length) ; i++) {
-                             
-                       $(".rrr"+iddd).append('<div  data-id="' + price[i].usedforid + '"   class="info  tag-item tag' + price[i].id + '"  ><div class="cnt "> <div class="dot tag-item-image"><span></span> </div><div class="box"   data-id="' + price[i].usedforid + '"><div class="bdy"><button class="close"><i></i></button> <div class="load-product'+price[i].usedforid +'"></div>  </div></div></div></div>');
-                       
-                       xCoordinates = price[i].xCoordinates/xRatio;
-                yCoordinates = price[i].yCoordinates/yRatio;
-                       //  alert(yCoordinates);
-                        var iconWidth = parseInt($('.tag' + price[i].id).find('.tag-item-image').width());
-                        var iconHeight = $('.tag' + price[i].id).find('.tag-item-image').height();
+                      </div>
+                      <a class="ShowMoreBTN-2" href="درباره-ما" alt=" درباره ما" title=" درباره ما">
+                     
+                            <span>
+                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 0C4.1692 0 4.3064 0.1372 4.3064 0.3064V3.6932H7.6936C7.77492 3.6932 7.8529 3.7255 7.9104 3.783C7.9679 3.8405 8.0002 3.91848 8.0002 3.9998C8.0002 4.08112 7.9679 4.1591 7.9104 4.2166C7.8529 4.2741 7.77492 4.3064 7.6936 4.3064H4.3064V7.6936C4.3064 7.77486 4.27412 7.8528 4.21666 7.91026C4.1592 7.96772 4.08126 8 4 8C3.91874 8 3.8408 7.96772 3.78334 7.91026C3.72588 7.8528 3.6936 7.77486 3.6936 7.6936L3.6932 4.3064H0.3064C0.225138 4.3064 0.147204 4.27412 0.0897425 4.21666C0.0322813 4.1592 0 4.08126 0 4C0 3.91874 0.0322813 3.8408 0.0897425 3.78334C0.147204 3.72588 0.225138 3.6936 0.3064 3.6936L3.6932 3.6932V0.3064C3.69341 0.225133 3.72582 0.147262 3.78332 0.0898349C3.84082 0.0324081 3.91873 0.000105541 4 0Z" fill="#FFFFFF"/>
+                                    </svg>
+                                    
+                            </span>
+                            <span>نمایش بیشتر</span>
+                          
+                     
+                      </a>
+                </div>
+             
+              </div>
+              <div class="Left">
+                <div class="Video-C">
+                    <div class="Video">
+                        <img src="[##db.videoCover.largeIMG##]" alt="shahidi" title="shahidi">
+                        <div class="PopUp">
+                            <div class="Close">
+                                <svg width="40" height="40" viewbox="0 0 40 40">
+                                    <path d="M 10,10 L 30,30 M 30,10 L 10,30" stroke="#fff" stroke-width="4" />
+                                </svg>
+                            </div>
+                            <basis core="print" datamembername="db.video">
+                                <layout>
+                                    @child
+                                </layout>
+                                <face filter="ord=1000">
+                                    <video id="main" poster="[##db.videoCover.largeIMG##]"
+                                    src="@largeIMG" type="video/mp4" controls></video>
+                                </face>
+                            </basis>
+                        </div>
+                    
+                        <div class="Video-Overlay">
+                            <div class="w-circle PlayBTN">
+                                <span class="Cricle">
+                                    <svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15 9L-8.15666e-07 17.6603L-5.85621e-08 0.339745L15 9Z" fill="#D30E15"/>
+                                        </svg>
+                                        
+                                </span>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+              </div>
+        <!-- SECTIONE THREE -->
+
+        <!-- SECTIONE FOUR -->
+         <div class="Cataloge-Container">
+        
+             <div class="CatalogeS">
+        
+                <div class="Left">
+                    <div class="Title-1">
+                        <span class="Detail">
+                            کاتالوگ شهیدی 
+                        </span>
+                        <h2>
+                            <span class="color">
+                              دانلود
+                            </span>
+                            <span>
+                              آخرین کاتالوگ
+                            </span>
+                           
+                        </h2>
+                     </div>
+                    <div class="Box">
+                        <div class="Text">
+                           <basis core="print" datamembername="db.cataloge">
+                               <layout>
+                                   @child
+                               </layout>
+                               <face>
+                                   <p>
+                                    @largetext
+                                </p>
+                               </face>
+                           </basis>
                          
-                        var left =  xCoordinates - iconWidth  ;
-                        var top =  yCoordinates ; 
-                       //  alert(left);
-                       //  alert(top);
-                        $(".tag" + price[i].id).css({
+                        </div>
+                    </div>
+                </div>
+                     
+                <div class="Right">
+                    <div class="Cataloge">
+                        <basis core="print" datamembername="db.media-cataloge">
+                            <layout>
+                                @child
+                            </layout>
+                            <face filter="ord=1">     
+                                 <a href="[##db.cataloguu.largeIMG##]" download="" alt="shahidi" title="shahidi">
+                                <div class="IMG">
+                                    <img src="@largeIMG" alt="shahidi" title="shahidi">
+                                    <div class="OV">
+                                        <span class="Icon">
+                                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <g clip-path="url(#clip0_23_10)">
+                                                <path d="M20 0C8.95434 0 0 8.95434 0 20C0 31.0457 8.95434 40 20 40C31.0456 40 40 31.0456 40 20C40 8.95434 31.0456 0 20 0ZM20 35.6522C11.3543 35.6522 4.34783 28.6435 4.34783 20C4.34783 11.3565 11.3543 4.34783 20 4.34783C28.6456 4.34783 35.6522 11.3565 35.6522 20C35.6522 28.6435 28.6456 35.6522 20 35.6522ZM23.9131 11.6304H16.0869V20.5217H11.1957L20 28.8043L28.8043 20.5217H23.913L23.9131 11.6304Z" fill="#D30E15"/>
+                                                </g>
+                                                <defs>
+                                                <clipPath id="clip0_23_10">
+                                                <rect width="40" height="40" fill="white"/>
+                                                </clipPath>
+                                                </defs>
+                                                </svg>
+                                                
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="Title">
+                          
+                                    <span>
+                                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <g clip-path="url(#clip0_23_17)">
+                                            <path d="M4 0C4.1692 0 4.3064 0.1372 4.3064 0.3064V3.6932H7.6936C7.77492 3.6932 7.8529 3.7255 7.9104 3.783C7.9679 3.8405 8.0002 3.91848 8.0002 3.9998C8.0002 4.08112 7.9679 4.1591 7.9104 4.2166C7.8529 4.2741 7.77492 4.3064 7.6936 4.3064H4.3064V7.6936C4.3064 7.77486 4.27412 7.8528 4.21666 7.91026C4.1592 7.96772 4.08126 8 4 8C3.91874 8 3.8408 7.96772 3.78334 7.91026C3.72588 7.8528 3.6936 7.77486 3.6936 7.6936L3.6932 4.3064H0.3064C0.225138 4.3064 0.147204 4.27412 0.0897425 4.21666C0.0322813 4.1592 0 4.08126 0 4C0 3.91874 0.0322813 3.8408 0.0897425 3.78334C0.147204 3.72588 0.225138 3.6936 0.3064 3.6936L3.6932 3.6932V0.3064C3.69341 0.225133 3.72582 0.147262 3.78332 0.0898349C3.84082 0.0324081 3.91873 0.000105541 4 0Z" fill="black"/>
+                                            </g>
+                                            <defs>
+                                            <clipPath id="clip0_23_17">
+                                            <rect width="8" height="8" fill="white"/>
+                                            </clipPath>
+                                            </defs>
+                                            </svg>
+                                            
+                                    </span>
+                                    <span>
+                                    [##db.catalogetext.text##]
+                                    </span>
+                                </div>
+                            </a>
+                                
+                            </face>
+                        </basis>
+                  
+                    </div>
+                </div>
+             </div>
+         </div>
+         <!-- SECTIONE FOUR -->
+
+           <!-- SECTIONE FIVE -->
+            <div class="Video-Clr">
+                <basis core="print" datamembername="db.video-def">
+                    <layout>
+                        @child
+                    </layout>
+                    <face>
+                        <video id="main-2" src="@largeIMG" ></video>
+                        <div class="Video-OV">
+                            <span class="Icon PlayBTN2">
+                                <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 3.53067C0 1.58222 1.58222 0 3.53067 0H60.4693C62.4178 0 64 1.58222 64 3.53067V60.4693C63.9991 61.4054 63.6268 62.3029 62.9649 62.9649C62.3029 63.6268 61.4054 63.9991 60.4693 64H3.53067C2.59428 64 1.69624 63.628 1.03411 62.9659C0.37198 62.3038 0 61.4057 0 60.4693V3.53067ZM27.1004 19.2533C26.8865 19.1106 26.6378 19.0285 26.3808 19.0159C26.1239 19.0033 25.8683 19.0606 25.6414 19.1817C25.4145 19.3029 25.2246 19.4833 25.0921 19.7038C24.9596 19.9242 24.8894 20.1765 24.8889 20.4338V43.5662C24.8894 43.8235 24.9596 44.0758 25.0921 44.2962C25.2246 44.5167 25.4145 44.6971 25.6414 44.8183C25.8683 44.9394 26.1239 44.9967 26.3808 44.9841C26.6378 44.9715 26.8865 44.8894 27.1004 44.7467L44.448 33.184C44.6423 33.0536 44.8016 32.8774 44.9117 32.6709C45.0218 32.4644 45.0794 32.234 45.0794 32C45.0794 31.766 45.0218 31.5356 44.9117 31.3291C44.8016 31.1226 44.6423 30.9464 44.448 30.816L27.1004 19.2533Z" fill="#D30E15"/>
+                                    </svg>
+                                    
+                            </span>
+                        </div>
+                    </face>
+                </basis>
+           
+            </div>
+           <!-- SECTIONE FIVE -->
+
+           <!-- SECTIONE SIX -->
+            <div class="About-Container">
+            
+                <div class="Right">
+                    <div class="Title-1">
+                        <h2>
+                            <span class="color">
+                              درباره
+                            </span>
+                            <span>
+                              شرکت شهیدی
+                            </span>
+                           
+                        </h2>
+                     </div>
+                     <basis core="print" datamembername="db.image-about">
+                         <layout>
+                             @child
+                         </layout>
+                         <face filter="ord=3">
+                            <div class="IMG">
+                                <img src="@largeIMG" alt="shahidi" title="shahidi">
+                             </div>
+                         </face>
+                     </basis>
+                  
+                </div>
+                <div class="Left">
+                    <div class="Top">
+                        <!-- <span class="Desc">
+                            زیبایی در سادگیست.
+                        </span>
+                        <h4>
+                            زیبایی در سادگیست.
+                        </h4> -->
+                    </div>
+                    <div class="Bottom">
+                        <div class="Col">
+                            <div class="Text">
+                                <basis core="print" datamembername="db.text2">
+                                    <layout>
+                                        @child
+                                    </layout>
+                                    <face filter="RowNumber in (2)">
+                                        <p>
+                                            @largetext
+                                        </p>
+                                    </face>
+                                </basis>
+                              
+                            </div>
+                        </div>
+                        <div class="Col">
+                            <div class="Text">
+                                <basis core="print" datamembername="db.text2">
+                                    <layout>
+                                        @child
+                                    </layout>
+                                    <face filter="RowNumber in (3,4)">
+                                        <p>
+                                            @largetext
+                                        </p>
+                                    </face>
+                                </basis>
+                            </div>
+                        </div>
+
+                    </div>
+                    <a class="ShowMoreBTN-2"  href="درباره-ما" alt=" درباره ما" title=" درباره ما">
+                    
+                            <span>
+                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 0C4.1692 0 4.3064 0.1372 4.3064 0.3064V3.6932H7.6936C7.77492 3.6932 7.8529 3.7255 7.9104 3.783C7.9679 3.8405 8.0002 3.91848 8.0002 3.9998C8.0002 4.08112 7.9679 4.1591 7.9104 4.2166C7.8529 4.2741 7.77492 4.3064 7.6936 4.3064H4.3064V7.6936C4.3064 7.77486 4.27412 7.8528 4.21666 7.91026C4.1592 7.96772 4.08126 8 4 8C3.91874 8 3.8408 7.96772 3.78334 7.91026C3.72588 7.8528 3.6936 7.77486 3.6936 7.6936L3.6932 4.3064H0.3064C0.225138 4.3064 0.147204 4.27412 0.0897425 4.21666C0.0322813 4.1592 0 4.08126 0 4C0 3.91874 0.0322813 3.8408 0.0897425 3.78334C0.147204 3.72588 0.225138 3.6936 0.3064 3.6936L3.6932 3.6932V0.3064C3.69341 0.225133 3.72582 0.147262 3.78332 0.0898349C3.84082 0.0324081 3.91873 0.000105541 4 0Z" fill="#FFFFFF"/>
+                                    </svg>
+                                    
+                            </span>
+                            <span>نمایش بیشتر</span>
+                       
+                      </a>
+                </div>
+            </div>
+           <!-- SECTIONE SIX -->
+
+           <!-- SECTIONE SEVEN -->
+            <div class="Product-Tags-C BG" data-bg="[##db.image-def-pro.largeIMG##]"  >
+            
+               <div class="Right">
+                <basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2358782">
+                    <member name="gallery" type="list" format="3,4" /> 
+                </basis>
+                <basis core="print" datamembername="db.gallery">
+                    <face filter="ord=1000">
+                <span class="rrr@Table2ID">
+                    <img src="[##db.image-def-pro.largeIMG##]" alt="" id="image@Table2ID" style="display: none;">
+                </span>
+                    </face>
+                </basis>
+               </div>
+               <div class="Left">
+                <div class="Box">
+                  <div class="product">
+                      <div class="title">
+                          <p>[##db.producttitle.Answer##]   </p>
+                      </div>
+                      <div class="text">
+                        <basis core="print" datamembername="db.producttext">
+                            <layout>
+                                @child
+                            </layout>
+                            <face  filter="RowNumber=1">
+                                <p>@Answer</p>
+                            </face>
+                        </basis>
+                         
+                      </div>
+                      <div class="ShowMBTN">
+                          <a href="[##db.productList.link##]" alt="[##db.producttitle.Answer##]"
+                           title="[##db.producttitle.Answer##]">
+                              <span>
+                                  <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                      <path d="M4 0C4.1692 0 4.3064 0.1372 4.3064 0.3064V3.6932H7.6936C7.77492 3.6932 7.8529 3.7255 7.9104 3.783C7.9679 3.8405 8.0002 3.91848 8.0002 3.9998C8.0002 4.08112 7.9679 4.1591 7.9104 4.2166C7.8529 4.2741 7.77492 4.3064 7.6936 4.3064H4.3064V7.6936C4.3064 7.77486 4.27412 7.8528 4.21666 7.91026C4.1592 7.96772 4.08126 8 4 8C3.91874 8 3.8408 7.96772 3.78334 7.91026C3.72588 7.8528 3.6936 7.77486 3.6936 7.6936L3.6932 4.3064H0.3064C0.225138 4.3064 0.147204 4.27412 0.0897425 4.21666C0.0322813 4.1592 0 4.08126 0 4C0 3.91874 0.0322813 3.8408 0.0897425 3.78334C0.147204 3.72588 0.225138 3.6936 0.3064 3.6936L3.6932 3.6932V0.3064C3.69341 0.225133 3.72582 0.147262 3.78332 0.0898349C3.84082 0.0324081 3.91873 0.000105541 4 0Z" fill="#D30E15"/>
+                                      </svg>
+                                      
+                              </span>
+                              <span>نمایش بیشتر</span>
+                            
+                          </a>
+                      </div>
+                  </div>
+                </div>
+             </div>
+            </div>
+            <!-- SECTIONE SEVEN -->
+
+             <!-- SECTIONE EIGHT -->
+              <div class="ProductCat-2">
+         
+                <div class="Right">
+                    <div class="Title-1">
+                        <h2>
+                            <span class="color">
+                              دسته بندی
+                            </span>
+                            <span>
+                              محصولات
+                            </span>
+                           
+                        </h2>
+                     </div>
+                     <div class="Text">
+                        <basis core="print" datamembername="basisName.productCat">
+                            <layout>
+                                @child
+                            </layout>
+                            <face filter="catid=209291">
+                               <p>@urldescription</p> 
+                            </face>
+                        </basis>
+                         </div>
+                     <a class="ShowMoreBTN-2 "  href="محصولات" alt="محصولات" title="محصولات" >
+                    
+                            <span>
+                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M4 0C4.1692 0 4.3064 0.1372 4.3064 0.3064V3.6932H7.6936C7.77492 3.6932 7.8529 3.7255 7.9104 3.783C7.9679 3.8405 8.0002 3.91848 8.0002 3.9998C8.0002 4.08112 7.9679 4.1591 7.9104 4.2166C7.8529 4.2741 7.77492 4.3064 7.6936 4.3064H4.3064V7.6936C4.3064 7.77486 4.27412 7.8528 4.21666 7.91026C4.1592 7.96772 4.08126 8 4 8C3.91874 8 3.8408 7.96772 3.78334 7.91026C3.72588 7.8528 3.6936 7.77486 3.6936 7.6936L3.6932 4.3064H0.3064C0.225138 4.3064 0.147204 4.27412 0.0897425 4.21666C0.0322813 4.1592 0 4.08126 0 4C0 3.91874 0.0322813 3.8408 0.0897425 3.78334C0.147204 3.72588 0.225138 3.6936 0.3064 3.6936L3.6932 3.6932V0.3064C3.69341 0.225133 3.72582 0.147262 3.78332 0.0898349C3.84082 0.0324081 3.91873 0.000105541 4 0Z" fill="#FFFFFF"/>
+                                    </svg>
+                                    
+                            </span>
+                            <span>نمایش بیشتر</span>
+                       
+                      </a>
+                </div>
+                <div class="Left">
+                    <div class="ProductCat-Slider">
+                        <div class="swiper-productCat2">
+                            <div class="swiper-wrapper">
+                                <basis core="print" datamembername="basisName.productCat">
+                                    <layout>
+                                        @child
+                                    </layout>
+                                    <face filter="parentid not in (65918)">
+                                        <div class="swiper-slide">
+                                            <div class="Product-cat">
+                                                <div class="IMG">
+                                                    <a href="@link" alt="@title" title="@title">
+                                                    <img src="@image" alt="@title" title="@title"></a>
+                                                </div>
+                                                <div class="Title">
+                                                    <a href="@link" alt="@title" title="@title">
+                                                    <p>@title     </p>
+                                                    </a>
+                                                </div>
+                                                <div class="Desc">
+                                                    <p>  @urldescription</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </face>
+                                </basis>
+                              
+                    
+                            </div>
+                        </div>
+                  
+                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+
+                </div>
+              </div>
+             <!-- SECTIONE EIGHT -->
+
+             <!-- SECTIONE NINE -->
+              <div class="NewsBlogs-Container">
+                <div class="Top">
+                    <div class="Blogs-nav">
+                        <span class="Title">
+                            بلاگ
+                        </span>
+                        <a  href="بلاگ" class="Showl"  alt="بلاگ" title="بلاگ">
+                            نمایش همه وبلاگ
+                        </a>
+                    </div>
+                    <div class="News-nav">
+                        <span class="Title">
+                            اخبار
+                        </span>
+                        <a href="بلاگ" class="Showl" alt="بلاگ" title="بلاگ">
+                            نمایش همه اخبار
+                        </a>
+                    </div>
+                </div>
+                <div class="Bottom">
+                    <div class="Blogs">
+                        <div class="Col-right">
+                            <basis core="print" datamembername="db.list-blog">
+                                <layout>
+                                    @child
+                                </layout>
+                                <face filter="RowNumber in (1,2)">
+                                    <div class="Blog">
+                                        <div class="IMG">
+                                            <a href="@link" title="@title" alt="@title">
+                                                <img src="@00415X00646prp" alt="@title" title="@title">
+                                            </a>
+                                        </div>
+                                        <div class="Title">
+                                            <a  href="@link" title="@title" alt="@title"><p>
+                                                @title
+                                            </p>
+                                        </a>
+                                        </div>
+                                        <div class="Desc">
+                                            <p>@prp_7248</p>
+                                        </div>
+                                    </div>
+                                </face>
+                            </basis>
+                        
+                                <a class="ShowMoreBTN-2" href="بلاگ" alt="بلاگ" title="بلاگ" >
+                             
+                                  
+                                    <span>همه مقالات </span>
+                                  
+                            </a>
+                        </div>
+                        <div class="Col-left">
+                            <basis core="print" datamembername="db.list-blog">
+                                <layout>
+                                    @child
+                                </layout>
+                                <face filter="RowNumber in (3,4)">
+                                    <div class="Blog">
+                                        <div class="IMG">
+                                            <a href="@link" title="@title" alt="@title">
+                                                <img src="@00415X00646prp" alt="@title" title="@title">
+                                            </a>
+                                        </div>
+                                        <div class="Title">
+                                            <a  href="@link" title="@title" alt="@title"><p>
+                                                @title
+                                            </p>
+                                        </a>
+                                        </div>
+                                        <div class="Desc">
+                                            <p>@prp_7248</p>
+                                        </div>
+                                    </div>
+                                </face>
+                            </basis>
+                        </div>
+              
+
+                    </div>
+                    <div class="News">
+                        <div class="Col">
+                            <basis core="print" datamembername="db.list-news">
+                                <layout>
+                                    @child
+                                </layout>
+                                <face filter="RowNumber in (1,2)">
+                                    <div class="New">
+                                        <div class="IMG">
+                                            <a href="@link" title="@title" alt="@title">
+                                                <img src="@00415X00646prp" alt="@title" title="@title">
+                                            </a>
+                                        </div>
+                                        <div class="Title">
+                                            <a  href="@link" title="@title" alt="@title"><p>
+                                                @title
+                                            </p>
+                                        </a>
+                                        </div>
+                                        <div class="Desc">
+                                            <p>@prp_7248</p>
+                                        </div>
+                                    </div>
+                                </face>
+                            </basis>
+                        
+                        </div>
+                    </div>
+                </div>
+              </div>
+             <!-- SECTIONE NINE -->
+            
+
+             <!--  FOOTER -->
+            
+             <basis core="call" file="footer.inc" />
+            <!-- FOOTER -->
+            
+<basis core="dbsource" source="basiscore" mid="1" name="db" lid="1" usedforid="1443430">
+    <member name="productinfo" type="list"></member>
+</basis>
+
+    </main>
+    <basis core="call" file="script.inc" />
+    <script src="[##cms.cms.cdn##]/js/home.js"></script>
+<script>
+    // TAG PRODUCT
+window.addEventListener("load", event => {
+    <basis core="repeater" name="rep" datamembername="db.gallery">
+
+<basis core="dbsource" source="media" name="db" usedforid="[##rep.current.Table2ID##]">
+    <member name="listt" type="list" request="taglist" />
+</basis>
+
+<basis core="print" datamembername="rep.current">
+    <face>
+        var  naturalWidth = document.getElementById("image@Table2ID").naturalWidth;
+        var naturalHeight = document.getElementById("image@Table2ID").naturalHeight;
+        var image = $('#image@Table2ID');
+        var xRatio = naturalWidth / image.width();
+        var yRatio = naturalHeight / image.height();
+        var width = image.width();
+        var height = image.height();
+</face>
+</basis>
+<basis core="print" datamembername="db.listt">
+ <layout>
+        var settings=[@child]
+ </layout>
+    <face  >
+         {{
+           "id": "@id",
+            "xCoordinates": "@xCoordinates",
+            "yCoordinates": "@yCoordinates",
+            "mediaid": "@mediaid",
+            "usedforid": "@usedforid",
+             "link": "@link",
+            "description": "@description"
+         }},
+     </face>
+     <else-layout>
+         var settings='null'
+    </else-layout>
+ </basis>
+
+<basis core="print" datamembername="rep.current">
+ <face>
+ var   iddd=@Table2ID;
+      tagList(settings,width, height, xRatio, yRatio,iddd);
+ </face>
+
+ </basis>
+</basis>
+function tagList(settings, width, height, xRatio, yRatio, iddd) {
+    console.log('tagg');
+    
+                for (i = 0; i < (settings.length); i++) {
+                    $(".rrr" + iddd).append(`
+                    
+                    <div class="Tag Tag-1 info  tag-item tag${settings[i].id}" data-id=${settings[i].usedforid }>
+                     <span class="Circle pulsating-circle">
+                        <span class="Circle-Inner">
+
+                        </span>
+                     </span>
+                             <div class="Pop-tag" data-id=${settings[i].usedforid }>
+                        <div class="pop">
+
+                            <div class="Box">
+                                <div class="IMG load-product${settings[i].usedforid }">
+            
+                             </a>
+                             </div>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                    `);
+                    xCoordinates =parseInt(settings[i].xCoordinates ) / xRatio;
+                    yCoordinates =parseInt(settings[i].yCoordinates )  / yRatio;
+                    var iconWidth = parseInt($('.tag' + settings[i].id).find('.tag-item').width());
+                    var iconHeight = $('.tag' + settings[i].id).find('.tag-item ').height();
+                    var left = xCoordinates ;
+                    var top = yCoordinates;
+                    console.log(left,'l');
+                    console.log(iconWidth,'lc');
+                    
+                    $(".tag" + settings[i].id).css({
                         "position": "absolute",
                         "left": left + "px",
                         "top": top + "px",
                         "z-index": "214748"
-                        }); 
-                       
-                        }
-                      
-                       }
-                   
-                               $('body').on('mouseover', '.tag-item', function () { 
-                                  
-                                   var width = $(".width-94").width() + 400 ;
-                                   var rt = ($(window).width() - ($(this).offset().left + $(this).outerWidth()));
-                                   if(rt < width){
-                                   var id=$(this).attr("data-id"); 
-                                  
-                                   $(this).css("z-index","214748361")
-                                   $(".load-product"+id).show();
-                                   $(this).children(".cnt").children(".box").addClass("active");
-                                   $(".load-product"+id).addClass("load-producty");
-                                   $(".load-product"+id).css({"right":"33px" , "left":"unset"});
-                                   $(".load-product"+id).load("/load-tagproject.bc?type=4&ownerid=[##db.projinfo.ownerid##]&id="+id);
-                                   }
-                                   else{
-                                   var id=$(this).attr("data-id"); 
-                                   $(this).css("z-index","214748361")
-                                   $(".load-product"+id).show();
-                                   $(this).children(".cnt").children(".box").addClass("active");
-                                   $(".load-product"+id).addClass("load-productx")
-                                   $(".load-product"+id).load("/load-tagproject.bc?type=4&ownerid=[##db.projinfo.ownerid##]&id="+id);
-                                   }
-                               });
-                                $('body').on('mouseout', '.tag-item', function () {   
-                                   var id=$(this).attr("data-id"); 
-                                   $(".load-product"+id).hide();
-                                   $(this).children(".cnt").children(".box").removeClass("active");
-                                  
-                                       $(this).css("z-index","214748")
-                                   });
-                               
-                
-                       
-                       
-                           });
-               
-               </script>
-
-  <script>
-            $(document).ready(function () {
-                $(".js__widget__show-more").click(function (e) {
-                    $(".js__widget__show-more").toggleClass("autoheight2");
-                    $(".toggle").toggleClass("active");
-                    $(".toggleblody").toggleClass("auto");
-                });
-            });
-            document.addEventListener("DOMContentLoaded", function () {
-                var lazyVideos = [].slice.call(document.querySelectorAll("video.lazy"));
-
-                if ("IntersectionObserver" in window) {
-                    var lazyVideoObserver = new IntersectionObserver(function (entries, observer) {
-                        entries.forEach(function (video) {
-                            if (video.isIntersecting) {
-                                for (var source in video.target.children) {
-                                    var videoSource = video.target.children[source];
-                                    if (typeof videoSource.tagName === "string" && videoSource.tagName === "SOURCE") {
-                                        videoSource.src = videoSource.dataset.src;
-                                    }
-                                }
-
-                                video.target.load();
-                                video.target.classList.remove("lazy");
-                                lazyVideoObserver.unobserve(video.target);
-                            }
-                        });
                     });
 
-                    lazyVideos.forEach(function (lazyVideo) {
-                        lazyVideoObserver.observe(lazyVideo);
-                    });
                 }
-            });
-        </script>
 
+            }
+ $('body').on('mouseover', '.tag-item', function () {
+var width = $(".width-94").width() + 400;
+var rt = ($(window).width() - ($(this).offset().left + $(this).outerWidth()));
+if (rt < width) {
+    var id = $(this).attr("data-id");
 
+    $(this).css("z-index", "214748361")
+    $(".load-product" + id).show();
+    $(this).children('.Pop-tag').addClass("expand");
+    $(".load-product" + id).addClass("load-producty");
+    $(".load-product" + id).css({ "right": "33px", "left": "unset" });
+    $(".load-product" + id).load("/loadtagPro.bc?type=4&ownerid=[##db.productinfo.ownerid##]&id=" + id);
+}
+else {
+    var id = $(this).attr("data-id");
+    $(this).css("z-index", "214748361")
+    $(".load-product" + id).show();
+    $(this).children('.Pop-tag').addClass("expand");
+    $(".load-product" + id).addClass("load-productx")
+    $(".load-product" + id).load("/loadtagPro.bc?type=4&ownerid=[##db.productinfo.ownerid##]&id=" + id);
+}
+});
+$('body').on('mouseout', '.tag-item', function () {
+var id = $(this).attr("data-id");
+$(".load-product" + id).hide();
+$(this).children('.Pop-tag').removeClass("expand");
+$(this).css("z-index", "214748")
+});
+   })
+</script>
 
-
-
-
-
-<noscript>Your browser does not support JavaScript!</noscript>
-
-    </body>
+</body>
 </html>

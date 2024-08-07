@@ -34,6 +34,16 @@ main.Home{
                     justify-content: center;
                     align-items: center;
                     position: relative;
+                   &::before{ 
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: 1;
+                    background-color: rgba(0, 0, 0, 0.3960784314);
+                }
                     &-active{
                         h1,p{
                             transition: all .8s ease;
@@ -149,6 +159,28 @@ main.Home{
         flex-direction: column;
         .Title-1{
             margin-bottom: 2em;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            .ShowM{
+                width: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                a{
+                    width:auto;
+                    gap: .3em;
+                    display: flex;
+                    align-items: center;
+                    justify-content: flex-end;
+                    span{
+                        font-size: 12px;
+                        font-weight: 300;
+                        line-height: 20.73px;
+                        color: $color-2;
+                    }
+                }
+            }
         }
         .Product-Category,
         .Product-Slider,
@@ -168,6 +200,10 @@ main.Home{
     width: 100%;
     display: flex;
     flex-direction: column;
+    .Title-1{
+     gap: 0;
+     width: 87%;
+    }
     .CatalogeS{
         width: 100%;
         display: grid;
@@ -187,8 +223,9 @@ main.Home{
     .Left{
         width: 100%;
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: flex-start;
+        flex-direction: column;
             .Box{
             width: 100%;
             display: flex;
@@ -201,7 +238,7 @@ main.Home{
                 align-items: flex-start;
                 flex-direction: column;
                 margin-right: auto;
-                margin-top: 3em;
+                margin-top: 1em;
                 p{
                     font-size: 18px;
                     font-weight: 400;
@@ -218,6 +255,7 @@ main.Home{
     width: 91.5%;
     height: 600px;
     display: grid;
+    position: relative;
     margin: 5em auto;
     grid-template-columns: repeat(2,1fr);
     >.Left{
@@ -272,7 +310,7 @@ main.Home{
                 align-items: flex-start;
                 flex-direction: column;
                 margin-top: 2em;
-                margin-bottom: 4em;
+                margin-bottom: 2em;
                 p{
                     text-align: right;
                     font-size: 12px;
@@ -292,7 +330,9 @@ main.Home{
     >.Right{
         width: 100%;
         display: flex;
+     
         .Tag{
+
             width: auto;
             height: fit-content;
             display: flex;
@@ -301,53 +341,57 @@ main.Home{
                   opacity: 0;
                   transition: .8s cubic-bezier(0.7, 0, 0.3, 1);
                   position: absolute;
-                  right: 0;
-                  top: 0;
+                  right: -9em;
+                  top: -6em;
                   width: 250px;
-                  height: 250px;
                   background-color: $color-3;
                   z-index: 5;
-                  transform: translate(-4em, -2em) scale(0);
-                  -webkit-transform: translate(-4em, -2em) scale(0);
-                  -moz-transform: translate(-4em, -2em) scale(0);
-                  -ms-transform: translate(-4em, -2em) scale(0);
-                  -o-transform: translate(-4em, -2em) scale(0);
+                  transform:  scale(0);
+                  -webkit-transform:  scale(0);
+                  -moz-transform:  scale(0);
+                  -ms-transform:  scale(0);
+                  -o-transform:  scale(0);
                   -webkit-transition: .8s cubic-bezier(0.7, 0, 0.3, 1);
                   -moz-transition: .8s cubic-bezier(0.7, 0, 0.3, 1);
                   -ms-transition: .8s cubic-bezier(0.7, 0, 0.3, 1);
                   -o-transition: .8s cubic-bezier(0.7, 0, 0.3, 1);
-                  &.expand{
+                  &.expand
+{
                     opacity: 1;
-                    transform: translate(-4em, -2em) scale(1);
-                
-                    -webkit-transform: translate(-4em, -2em) scale(1);
-                    -moz-transform: translate(-4em, -2em) scale(1);
-                    -ms-transform: translate(-4em, -2em) scale(1);
-                    -o-transform: translate(-4em, -2em) scale(1);
-
-                   
-                  }
+                    transform: scale(1);
+                    -webkit-transform: scale(1);
+                    -moz-transform: scale(1);
+                    -ms-transform: scale(1);
+                    -o-transform: scale(1);
+}
                 .pop{
                     width: 85%;
                     height: 100%;
                     display: flex;
                     flex-direction: column;
                     margin: 0 auto;
-                    .Close{
-                        width: 100%;
-                        display: flex;
-                        justify-content: flex-start;
-                        align-items: center;
-                        svg{
-                            width: 15px;
-                        }
-                    }
+                  
                     .Box{
                         width: 100%;
                         display: flex;
                         justify-content: center;
                         align-items: center;
                         height: 75%;
+                        p,a,h5{
+                            text-align: right;
+                            font-size: 12px;
+                            font-weight: 300;
+                            line-height: 20.37px;
+                            color:$color-1;
+                            margin-top: .8em;
+                          }
+                        .tag-list{
+                            padding: 1em 0;
+                          width: 100%;
+                          display: flex;
+                          flex-direction: column;
+                         
+                        } 
                         .IMG{
                             width: 100%;
                             display: flex;
@@ -409,16 +453,7 @@ main.Home{
             }
   
 
-            &-1{
-                top: 21%;
-                 right: 40%;
-
-            }
-            &-2{
-                top: 81%;
-                 right: 40%;
-
-            }
+     
             .Circle{
                 width: 40px;
                 height: 40px;
@@ -502,14 +537,7 @@ main.Home{
             -ms-transition: all .5s ease;
             -o-transition: all .5s ease;
   }
-        a {
-            position: relative;
-             z-index: 1;
-            width: 100%;
-            display: flex;
-            justify-content:flex-start;
-            align-items:center;
-            gap: .8em;    
+        
             svg,path{
                 fill:$color-1
             }
@@ -519,7 +547,7 @@ main.Home{
                 color:$color-1;
                 line-height: 20.73px;
             }
-        }
+      
        }
     .Left{
         width: 58%;
@@ -537,8 +565,9 @@ main.Home{
             background-color: #fff;
             box-shadow: 0px 5px 21px -1px rgba(0, 0, 0, 0.75);
             z-index: 1;
-            transform: translate(15%, 52%);
-        }
+            transform:  translate(4em, 52%);
+
+}
         .swiper-button-prev
         ,.swiper-button-next{
            &::after,
@@ -548,12 +577,15 @@ main.Home{
            }
         }
         .swiper-button-next{
-            right: 45%;
+            right: 49%;
             top: unset;
             bottom: 0%;
+            @media (min-width: 1850px) {
+                right: 50%;
+              }
         }
         .swiper-button-prev{
-            right: 50%;
+            right:53%;
             top: unset;
             bottom: 0%;
         }
@@ -574,6 +606,13 @@ main.Home{
                 display: flex;
                 justify-content: center;
                 align-items: center;
+              
+                a{
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
                 &-active{
                     p{
                         transition: all .4s ease;
@@ -602,8 +641,21 @@ main.Home{
                     align-items: center;
                     height: 250px;
                     overflow: hidden;
-                    >img{
+                    position: relative;
+                    &::before{
+                        position: relative;
+                        content: '';
+                        position: absolute;
+                        left: 0;
+                        top: 0;
                         width: 100%;
+                        height: 100%;
+                        background: $color-3;
+                        z-index: -1;
+                    }
+                    img{
+                        width: 95%;
+                        height: 95%;
                         object-fit: cover;
                     }
                 }
@@ -614,6 +666,9 @@ main.Home{
                     align-items: center;
                     margin-top: .5em;
                     overflow: hidden;
+                    >a{
+                        justify-content: flex-start;
+                    }
                     p{
                         font-size: 18px;
                         font-weight: 400;
@@ -784,6 +839,8 @@ main.Home{
         -ms-transition: all .5s ease;
         -o-transition: all .5s ease;
         margin-top: auto;
+        padding-left: 0;
+        padding-right: 0;
         &:hover{
             &::before{
                 width: 100%;
@@ -815,15 +872,7 @@ main.Home{
             -ms-transition: all .5s ease;
             -o-transition: all .5s ease;
   }
-        a {
-            position: relative;
-             z-index: 1;
-            width: 100%;
-            display: flex;
-            justify-content:center;
-            align-items:center;
-            padding: 1em 0;
-            gap: .8em;    
+    
             svg,path{
                 fill:$color-1
             }
@@ -833,7 +882,7 @@ main.Home{
                 color:$color-1;
                 line-height: 31.09px;
             }
-        }
+     
        }
     .Bottom{
         width: 91.5%;
@@ -864,6 +913,7 @@ main.Home{
              flex-direction: column;
             }
             .Col-right{
+                gap: 5em;
                 .Blog{
                     &:first-child{
                         img{
@@ -871,6 +921,9 @@ main.Home{
                         }
                     }
                 }
+            }
+            .Col-left{
+             gap: 5em;
             }
         }
         .News{
@@ -894,15 +947,15 @@ main.ProductCat{
     overflow: hidden;
     .ProductCategories{
         width: 91.5%;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin-top: 30vh;
-        padding: 10vh 0;
-position: relative;
-overflow: hidden;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6em;
+    padding: 5em 0;
+    position: relative;
+    overflow: hidden;
 &::before{
     content: "";
     position: absolute;
@@ -1050,14 +1103,14 @@ overflow: hidden;
             flex-direction: column;
             justify-content: flex-end;
             align-items: flex-start;
-            z-index:101;
+            z-index:30;
             margin-right: auto;
             p{
                 font-size: 96px;
                 font-weight: 200;
                 line-height: 120.96px;
                 color: $color-1;
-                font-family: 'Josefin Sans';
+                font-family: 'PlusJakartaSans';
                 text-align: right;
                 transition: all .5s ease;
                 -webkit-transition: all .5s ease;
@@ -1088,7 +1141,7 @@ overflow: hidden;
             height: 100%;
             bottom: 0;
             margin: auto;
-            z-index: 100;
+            z-index: 30;
             background-color: $color-primary;
             display: flex;
             justify-content: center;
@@ -1119,11 +1172,7 @@ overflow: hidden;
         }
         &:hover{
             .Overlay-Hover{
-                transform:  translateY(-7px);
-                -webkit-transform:  translateY(-7px);
-                -moz-transform:  translateY(-7px);
-                -ms-transform:  translateY(-7px);
-                -o-transform:  translateY(-7px);
+
                 opacity: 1;
                 height: calc(100% + 80px);
                 pointer-events: fill;
@@ -1155,14 +1204,9 @@ main.AboutUsC{
         display: flex;
         justify-content: flex-start;
         margin-right: auto;
-        transform: translateY(-10%);
-        height: 100px;
-        -webkit-transform: translateY(-10%);
-        -moz-transform: translateY(-10%);
-        -ms-transform: translateY(-10%);
-        -o-transform: translateY(-10%);
+        height: 130px;
+   
         .swiper-pagination
-       
 {
             height: 100px;
             display: flex;
@@ -1260,28 +1304,29 @@ main.AboutUsC{
                         height: 100%;
                         min-width: 100%;
                         display: flex;
-                        justify-content: flex-end;
+                        justify-content: center;
                         align-items: center;
                         >img{
-                          
                             min-height: 100vh;
                             height: inherit;
                             width: 0%;
                             opacity: 0;
-                            object-fit: cover;
+                            //object-fit: cover;
                             transition: all .8s ease;
                             -webkit-transition: all .8s ease;
                             -moz-transition: all .8s ease;
                             -ms-transition: all .8s ease;
                             -o-transition: all .8s ease;
-                        }
+}
                         &-active
                     
                            { 
                             img{
+                                
                                 opacity: 1;
                                 width: 100%;
-                            }
+                 
+}
                             
                         }
                     
@@ -1295,11 +1340,11 @@ main.AboutUsC{
                 right: 0;
                 bottom: 0;
                 z-index: 2;
-                width: 46%;
-                height: 74%;
-                overflow: hidden;
-                border-top-left-radius: 180px;
-                border-top-right-radius: 180px;
+                width: 400px;
+    height: 500px;
+    overflow: hidden;
+    border-top-left-radius: 205px;
+    border-top-right-radius: 205px;
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
@@ -1311,12 +1356,12 @@ main.AboutUsC{
                 -o-transform: translate(50%,-5%);
                 .IMG
 {
-                width: 95%;
-                height: 95%;
-                margin: 0 auto;
-                overflow: hidden;
-                border-top-left-radius: 180px;
-                border-top-right-radius: 180px;
+    width: 384px;
+    height: 484px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-top-left-radius: 194px;
+    border-top-right-radius: 194px;
                }
                 img{
                     width: 100%;
@@ -1327,8 +1372,20 @@ main.AboutUsC{
         }
         .Right{
             width: 100%;
-            padding-top: 25vh;
+            padding-top: 10em;
             position: relative;
+            height: 100%;
+            .ContentBox{
+                height: 74vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .One{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+            }
             .ShowMoreBTN-2{
                 width: fit-content;
                 display: flex;
@@ -1402,8 +1459,12 @@ main.AboutUsC{
             .Title-1{
                 margin-right: auto;
                 width: 80%;
+                p{
+                    display: contents;
+                }
                 h1{
                     width: 80%;
+                  
                     margin-left: auto;
                 }
             }
@@ -1456,11 +1517,11 @@ main.AboutUsC{
                 transform:rotate(180deg) translateY(5%);
                 position: relative;
                 z-index: 5;
-                width: 450px;
-                height: 612px;
+                width: 400px;
+                height: 500px;
                 overflow: hidden;
-                border-top-left-radius: 180px;
-                border-top-right-radius: 180px;
+                border-top-left-radius: 205px;
+                border-top-right-radius: 205px;
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
@@ -1471,12 +1532,12 @@ main.AboutUsC{
                 -o-transform:rotate(180deg) translateY(5%);
                 .IMG
 {
-                width: 95%;
-                height: 95%;
-                margin: 0 auto;
-                overflow: hidden;
-                border-top-left-radius: 180px;
-                border-top-right-radius: 180px;
+    width: 384px;
+    height: 484px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-top-left-radius: 194px;
+    border-top-right-radius: 194px;
                }
                 img{
                     width: 100%;
@@ -1493,11 +1554,14 @@ main.AboutUsC{
             z-index: 5;
             padding-top: 20%;
             .Title-1{
-                width: 100%;
+                width: 92%;
+                margin-left: auto;
+                margin-right: unset;
                 p,span{
                     color: $color-3 ;
                     width: 90%;
                     margin-left: auto;
+                    display: contents;
                     &.color{
                         color: $color-primary;
                     }

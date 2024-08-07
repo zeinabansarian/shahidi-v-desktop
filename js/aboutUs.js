@@ -8,6 +8,7 @@ let swiperBanner= new Swiper(".swiper-Banners", {
     speed: 1000,
     slidesPerView:1,
     spaceBetween: 0,
+    effect:'creative',
     pagination: {
         el: '.AboutBannerC .swiper-pagination',
               clickable: true,
@@ -42,7 +43,7 @@ PlayBtn2.addEventListener('click',(e)=>{
         video2.pause()
     })
 })
-
+let is = false
 
 jQuery(document).ready(function() {
 	
@@ -79,13 +80,30 @@ jQuery(document).ready(function() {
                           </div>
         `,
 		heightMargin: 16,
+        beforeToggle:function(e){
+     console.log('before',e);
+    let content = document.querySelector('.ContentBox')
+    if(!is){
+    content.style.height='auto'
+     is = true
+     console.log('c',is);
+    }
+    else{
+         content.style.height='74vh'
+         is = false
+      console.log('d',is);
+
+    }
+        },
         afterToggle: function(trigger, element, expanded) {
             console.log("element");
             
             if(! expanded) { // The "Close" link was clicked
+                let content = document.querySelector('.ContentBox')
               $('html, body').animate( { scrollTop: element.offset().top }, {duration: 100 } );
+               content.style.height='74vh'
             }
           },
 	});
-	
+
 });

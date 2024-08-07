@@ -65,6 +65,9 @@
     <member name="product" type="view"/>
 </basis>
 <basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" usedforid="2358555">
+    <member name="producttext" type="view" postsql="select * from [db.producttext] where TypeID=144"/>
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" usedforid="2358555">
     <member name="producttitle" type="view"  postsql="select * from [db.producttitle] where TypeID=150"/>
 </basis>
 <basis core="dbsource" name="db" source="media" lid="1" sourcemid="20" usedforid="2358555"> 
@@ -144,8 +147,27 @@
                     <span>
                       محصولات
                     </span>
-                   
+                  
                 </h2>
+                <div class="ShowM">
+                    <a href="محصولات" alt="محصولات" title="محصولات">
+                        <span>
+                            <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <g clip-path="url(#clip0_1_153)">
+                                <path d="M4 0C4.1692 0 4.3064 0.1372 4.3064 0.3064V3.6932H7.6936C7.77492 3.6932 7.8529 3.7255 7.9104 3.783C7.9679 3.8405 8.0002 3.91848 8.0002 3.9998C8.0002 4.08112 7.9679 4.1591 7.9104 4.2166C7.8529 4.2741 7.77492 4.3064 7.6936 4.3064H4.3064V7.6936C4.3064 7.77486 4.27412 7.8528 4.21666 7.91026C4.1592 7.96772 4.08126 8 4 8C3.91874 8 3.8408 7.96772 3.78334 7.91026C3.72588 7.8528 3.6936 7.77486 3.6936 7.6936L3.6932 4.3064H0.3064C0.225138 4.3064 0.147204 4.27412 0.0897425 4.21666C0.0322813 4.1592 0 4.08126 0 4C0 3.91874 0.0322813 3.8408 0.0897425 3.78334C0.147204 3.72588 0.225138 3.6936 0.3064 3.6936L3.6932 3.6932V0.3064C3.69341 0.225133 3.72582 0.147262 3.78332 0.0898349C3.84082 0.0324081 3.91873 0.000105541 4 0Z" fill="#949494"/>
+                                </g>
+                                <defs>
+                                <clipPath id="clip0_1_153">
+                                <rect width="8" height="8" fill="white"/>
+                                </clipPath>
+                                </defs>
+                                </svg>
+                                
+                        </span>
+                        <span>نمایش بیشتر</span>
+                       
+                    </a>
+                </div>
              </div>
              <div class="Product-Category">
                 <div class="Product-Slider">
@@ -228,8 +250,8 @@
                         </basis>
                       
                       </div>
-                      <div class="ShowMoreBTN-2">
-                        <a href="درباره-ما" alt=" درباره ما" title=" درباره ما">
+                      <a class="ShowMoreBTN-2" href="درباره-ما" alt=" درباره ما" title=" درباره ما">
+                     
                             <span>
                                 <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M4 0C4.1692 0 4.3064 0.1372 4.3064 0.3064V3.6932H7.6936C7.77492 3.6932 7.8529 3.7255 7.9104 3.783C7.9679 3.8405 8.0002 3.91848 8.0002 3.9998C8.0002 4.08112 7.9679 4.1591 7.9104 4.2166C7.8529 4.2741 7.77492 4.3064 7.6936 4.3064H4.3064V7.6936C4.3064 7.77486 4.27412 7.8528 4.21666 7.91026C4.1592 7.96772 4.08126 8 4 8C3.91874 8 3.8408 7.96772 3.78334 7.91026C3.72588 7.8528 3.6936 7.77486 3.6936 7.6936L3.6932 4.3064H0.3064C0.225138 4.3064 0.147204 4.27412 0.0897425 4.21666C0.0322813 4.1592 0 4.08126 0 4C0 3.91874 0.0322813 3.8408 0.0897425 3.78334C0.147204 3.72588 0.225138 3.6936 0.3064 3.6936L3.6932 3.6932V0.3064C3.69341 0.225133 3.72582 0.147262 3.78332 0.0898349C3.84082 0.0324081 3.91873 0.000105541 4 0Z" fill="#FFFFFF"/>
@@ -238,8 +260,8 @@
                             </span>
                             <span>نمایش بیشتر</span>
                           
-                        </a>
-                      </div>
+                     
+                      </a>
                 </div>
              
               </div>
@@ -282,23 +304,24 @@
 
         <!-- SECTIONE FOUR -->
          <div class="Cataloge-Container">
-            <div class="Title-1">
-                <span class="Detail">
-                    کاتالوگ شهیدی 
-                </span>
-                <h2>
-                    <span class="color">
-                      دانلود
-                    </span>
-                    <span>
-                      آخرین کاتالوگ
-                    </span>
-                   
-                </h2>
-             </div>
+        
              <div class="CatalogeS">
         
                 <div class="Left">
+                    <div class="Title-1">
+                        <span class="Detail">
+                            کاتالوگ شهیدی 
+                        </span>
+                        <h2>
+                            <span class="color">
+                              دانلود
+                            </span>
+                            <span>
+                              آخرین کاتالوگ
+                            </span>
+                           
+                        </h2>
+                     </div>
                     <div class="Box">
                         <div class="Text">
                            <basis core="print" datamembername="db.cataloge">
@@ -452,7 +475,7 @@
                                     <layout>
                                         @child
                                     </layout>
-                                    <face filter="RowNumber in (1)">
+                                    <face filter="RowNumber in (3,4)">
                                         <p>
                                             @largetext
                                         </p>
@@ -462,8 +485,8 @@
                         </div>
 
                     </div>
-                    <div class="ShowMoreBTN-2">
-                        <a href="درباره-ما" alt=" درباره ما" title=" درباره ما">
+                    <a class="ShowMoreBTN-2"  href="درباره-ما" alt=" درباره ما" title=" درباره ما">
+                    
                             <span>
                                 <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M4 0C4.1692 0 4.3064 0.1372 4.3064 0.3064V3.6932H7.6936C7.77492 3.6932 7.8529 3.7255 7.9104 3.783C7.9679 3.8405 8.0002 3.91848 8.0002 3.9998C8.0002 4.08112 7.9679 4.1591 7.9104 4.2166C7.8529 4.2741 7.77492 4.3064 7.6936 4.3064H4.3064V7.6936C4.3064 7.77486 4.27412 7.8528 4.21666 7.91026C4.1592 7.96772 4.08126 8 4 8C3.91874 8 3.8408 7.96772 3.78334 7.91026C3.72588 7.8528 3.6936 7.77486 3.6936 7.6936L3.6932 4.3064H0.3064C0.225138 4.3064 0.147204 4.27412 0.0897425 4.21666C0.0322813 4.1592 0 4.08126 0 4C0 3.91874 0.0322813 3.8408 0.0897425 3.78334C0.147204 3.72588 0.225138 3.6936 0.3064 3.6936L3.6932 3.6932V0.3064C3.69341 0.225133 3.72582 0.147262 3.78332 0.0898349C3.84082 0.0324081 3.91873 0.000105541 4 0Z" fill="#FFFFFF"/>
@@ -471,9 +494,8 @@
                                     
                             </span>
                             <span>نمایش بیشتر</span>
-                          
-                        </a>
-                      </div>
+                       
+                      </a>
                 </div>
             </div>
            <!-- SECTIONE SIX -->
@@ -482,6 +504,10 @@
             <div class="Product-Tags-C BG" data-bg="[##db.image-def-pro.largeIMG##]">
             
                <div class="Right">
+                <basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2358782">
+                    <member name="gallery" type="list" format="3,4" /> 
+                </basis>
+       
                 <basis core="print" datamembername="db.productGallery">
                     <layout>
                         @child
@@ -554,9 +580,15 @@
                           <p>[##db.producttitle.Answer##]   </p>
                       </div>
                       <div class="text">
-                          <!-- <p>
-                            حوله خشک کن های مدل مهشیدی 102 در مترال خیلی خوب و کتربردی تهیه شئه و در ان از متریال درجه یک و بسیار مرغوب استفاده شده
-                          </p> -->
+                        <basis core="print" datamembername="db.producttext">
+                            <layout>
+                                @child
+                            </layout>
+                            <face  filter="RowNumber=1">
+                                <p>@Answer</p>
+                            </face>
+                        </basis>
+                         
                       </div>
                       <div class="ShowMBTN">
                           <a href="[##db.productList.link##]" alt="[##db.producttitle.Answer##]"
@@ -602,8 +634,8 @@
                             </face>
                         </basis>
                          </div>
-                     <div class="ShowMoreBTN-2">
-                        <a href="محصولات" alt="محصولات" title="محصولات">
+                     <a class="ShowMoreBTN-2 "  href="محصولات" alt="محصولات" title="محصولات" >
+                    
                             <span>
                                 <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M4 0C4.1692 0 4.3064 0.1372 4.3064 0.3064V3.6932H7.6936C7.77492 3.6932 7.8529 3.7255 7.9104 3.783C7.9679 3.8405 8.0002 3.91848 8.0002 3.9998C8.0002 4.08112 7.9679 4.1591 7.9104 4.2166C7.8529 4.2741 7.77492 4.3064 7.6936 4.3064H4.3064V7.6936C4.3064 7.77486 4.27412 7.8528 4.21666 7.91026C4.1592 7.96772 4.08126 8 4 8C3.91874 8 3.8408 7.96772 3.78334 7.91026C3.72588 7.8528 3.6936 7.77486 3.6936 7.6936L3.6932 4.3064H0.3064C0.225138 4.3064 0.147204 4.27412 0.0897425 4.21666C0.0322813 4.1592 0 4.08126 0 4C0 3.91874 0.0322813 3.8408 0.0897425 3.78334C0.147204 3.72588 0.225138 3.6936 0.3064 3.6936L3.6932 3.6932V0.3064C3.69341 0.225133 3.72582 0.147262 3.78332 0.0898349C3.84082 0.0324081 3.91873 0.000105541 4 0Z" fill="#FFFFFF"/>
@@ -611,9 +643,8 @@
                                     
                             </span>
                             <span>نمایش بیشتر</span>
-                          
-                        </a>
-                      </div>
+                       
+                      </a>
                 </div>
                 <div class="Left">
                     <div class="ProductCat-Slider">
@@ -702,13 +733,12 @@
                                 </face>
                             </basis>
                         
-                            <div class="ShowMoreBTN-2">
-                                <a href="بلاگ" alt="بلاگ" title="بلاگ" >
+                                <a class="ShowMoreBTN-2" href="بلاگ" alt="بلاگ" title="بلاگ" >
+                             
                                   
                                     <span>همه مقالات </span>
                                   
-                                </a>
-                            </div>
+                            </a>
                         </div>
                         <div class="Col-left">
                             <basis core="print" datamembername="db.list-blog">
@@ -779,6 +809,144 @@
     </main>
     <basis core="call" file="script.inc" />
     <script src="[##cms.cms.cdn##]/js/home.js"></script>
+    <script>
+ window.addEventListener("load", event => {
+
+
+<basis  core="repeater" name="rep" datamembername="db.gallery">
+
+    <basis core="dbsource" source="media" name="db" usedforid="[##rep.current.Table2ID##]">
+            <member name="listt" type="list" request="taglist" ></member>
+        </basis>
+
+<basis core="print" datamembername="rep.current">
+                            <face>
+                       
+                         var  naturalWidth = document.getElementById("image@Table2ID").naturalWidth;
+                         var naturalHeight = document.getElementById("image@Table2ID").naturalHeight;
+     var image = $('#image@Table2ID');
+    //  alert(naturalWidth);
+    //  alert(naturalHeight);
+     var xRatio = naturalWidth / image.width();
+     var yRatio = naturalHeight / image.height();
+    //  alert(xRatio);
+    //  alert(yRatio);
+     var width = image.width();
+     var height = image.height(); 
+    //  alert(width);
+    //  alert(height);
+
+</face>
+</basis> 
+
+<basis core="print" datamembername="db.listt">
+        <layout>
+           var price=[@child]
+        </layout>
+        <face  >
+        {{"id":"@id",
+          "xCoordinates":"@xCoordinates",
+           "yCoordinates":"@yCoordinates",
+           "mediaid":"@mediaid",
+           "usedforid":"@usedforid",
+           "link":"@link",
+           "description":"@description"
+           }},
+        </face>
+    <else-layout>
+        var price='null'
+    </else-layout>
+    </basis>
+
+
+
+
+    <basis core="print" datamembername="rep.current">
+                            <face>
+                                    var   iddd=@Table2ID;
+
+            tagList( price , width, height, xRatio, yRatio,iddd);
+   
+    
+    </face>
+    
+   </basis>
+</basis>
+   function tagList ( price , width, height, xRatio, yRatio,iddd) {
+        for (i=0 ; i<(price.length) ; i++) {
+          
+    $(".rrr"+iddd).append('<div  data-id="' + price[i].usedforid + '"   class="info  tag-item tag' + price[i].id + 
+    '"  ><div class="cnt "> <div class="dot tag-item-image"><span></span> </div><div class="box"   data-id="' 
+    + price[i].usedforid + '"><div class="bdy"><button class="close"><i></i></button> <div class="load-product'
+        +price[i].usedforid +'"></div>  </div></div></div></div>');
+    
+    xCoordinates = price[i].xCoordinates/xRatio;
+yCoordinates = price[i].yCoordinates/yRatio;
+    //  alert(yCoordinates);
+     var iconWidth = parseInt($('.tag' + price[i].id).find('.tag-item-image').width());
+     var iconHeight = $('.tag' + price[i].id).find('.tag-item-image').height();
+      
+     var left =  xCoordinates - iconWidth  ;
+     var top =  yCoordinates ; 
+    //  alert(left);
+    //  alert(top);
+     $(".tag" + price[i].id).css({
+     "position": "absolute",
+     "left": left + "px",
+     "top": top + "px",
+     "z-index": "214748"
+     }); 
+    
+     }
+   
+    }
+
+            // $('body').on('mouseover', '.tag-item', function () { 
+               
+            //     var width = $(".width-94").width() + 400 ;
+            //     var rt = ($(window).width() - ($(this).offset().left + $(this).outerWidth()));
+            //     if(rt < width){
+            //     var id=$(this).attr("data-id"); 
+               
+            //     $(this).css("z-index","214748361")
+            //     $(".load-product"+id).show();
+            //     $(this).children(".cnt").children(".box").addClass("active");
+            //     $(".load-product"+id).addClass("load-producty");
+            //     $(".load-product"+id).css({"right":"33px" , "left":"unset"});
+            //     $(".load-product"+id).load("/load-tagproject.bc?type=4&ownerid=[##db.projinfo.ownerid##]&id="+id);
+            //     }
+            //     else{
+            //     var id=$(this).attr("data-id"); 
+            //     $(this).css("z-index","214748361")
+            //     $(".load-product"+id).show();
+            //     $(this).children(".cnt").children(".box").addClass("active");
+            //     $(".load-product"+id).addClass("load-productx")
+            //     $(".load-product"+id).load("/load-tagproject.bc?type=4&ownerid=[##db.projinfo.ownerid##]&id="+id);
+            //     }
+            // });
+            //  $('body').on('mouseout', '.tag-item', function () {   
+            //     var id=$(this).attr("data-id"); 
+            //     $(".load-product"+id).hide();
+            //     $(this).children(".cnt").children(".box").removeClass("active");
+               
+            //         $(this).css("z-index","214748")
+            //     });
+            
+
+    
+    
+        });
+
+
+
+                let text= document.querySelectorAll('.About-Container > .Left > .Bottom .Col .Text p')
+                text.forEach((t)=>{
+            if(t.innerHTML=='' || t.innerText==' '){
+                console.log(t.innerHTML);
+                t.style.display='none'
+            }
+        })
+    </script>
 
 </body>
 </html>

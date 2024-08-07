@@ -1,0 +1,20 @@
+<basis core="group" if="[##cms.query.type##]=4">
+    <basis core="dbsource" source="basiscore" name="db" lid="1" mid="20"  ownerid="[##cms.query.ownerid##]"
+      usedforid="[##cms.query.id##]" >
+    <member type="list" name="listpro"  pageno="1" size="40x40" request="ownerclass" typeid="144"  />
+    </basis>
+    
+    <basis core="print" datamembername="db.listpro">
+    <face>
+           
+                 
+    <div class="tag-list">
+    
+            <img src="@image" alt="">
+            <h5>@title</h5>
+            <p>@type_144</p>
+            <a href="/@link">نمایش بیشتر</a>
+    </div>
+    </face>
+    </basis>
+    </basis>

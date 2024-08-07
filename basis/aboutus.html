@@ -34,38 +34,41 @@
          
                 <div class="Right">
                     <div class="ContentBox">
-                        <div class="Title-1">
-                            <basis core="print" datamembername="db.text">
-                                <layout>
-                                    @child
-                                </layout>
-                                <face filter="RowNumber=1">
-                                    <h1>
-                                        <span>
-                                            
-                                            <span class="color">
-                                               @text
+                        <div class="One">
+                            <div class="Title-1">
+                                <basis core="print" datamembername="db.text">
+                                    <layout>
+                                        @child
+                                    </layout>
+                                    <face filter="RowNumber=1">
+                                        <h1>
+                                            <span>
+                                                
+                                                <span class="color">
+                                                   @text
+                                                </span>
+                                                @largetext
                                             </span>
+                                        </h1>
+                                    </face>
+                                </basis>
+                     
+                            </div>
+                            <div class="Text">
+                                <basis core="print" datamembername="db.text">
+                                    <layout>
+                                        @child
+                                    </layout>
+                                    <face filter="RowNumber=2">
+                                        <p>
                                             @largetext
-                                        </span>
-                                    </h1>
-                                </face>
-                            </basis>
-                 
+                                        </p>
+                                    </face>
+                                </basis>
+                            
+                            </div>
                         </div>
-                        <div class="Text">
-                            <basis core="print" datamembername="db.text">
-                                <layout>
-                                    @child
-                                </layout>
-                                <face filter="RowNumber=2">
-                                    <p>
-                                        @largetext
-                                    </p>
-                                </face>
-                            </basis>
-                        
-                        </div>
+                  
                    
                           <div class="Navigation">
                             <div class="swiper-pagination"></div>
@@ -94,7 +97,7 @@
                                 <layout>
                                     @child
                                 </layout>
-                                <face filter="RowNumber=1">
+                                <face filter="RowNumber=2">
                                     <div class="IMG">
                                         <img src="@largeIMG" alt="shahidi" title="shahidi">
                                     </div>

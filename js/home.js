@@ -69,13 +69,14 @@ let swiperCat2= new Swiper(".swiper-productCat2", {
       },
   });  
 
-// TAG PRODUCT
-let Tags = document.querySelectorAll('.Tag')
-Tags.forEach(tag=>{
 
-    tag.addEventListener('click',(e)=>{
-        console.log(e.currentTarget.children[1]);
-        let PopUp = e.currentTarget.children[1]
-        PopUp.classList.toggle('expand')
-   } )
-})
+
+ let text= document.querySelectorAll('.About-Container > .Left > .Bottom .Col .Text p')
+ text.forEach((t)=>{
+     if(t.innerHTML=='' || t.innerText==' '){
+                console.log(t.innerHTML);
+                t.style.display='none'
+         }
+        })
+
+

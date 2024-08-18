@@ -126,6 +126,7 @@ body{
   overflow-x: hidden;
 }
 @font-face {
+  font-family: IRANYekan;
   font-family: "iranyekanwebblackfanum";
   src: url("../_fonts/iranyekanwebblackfanum.eot");
   src: url("../_fonts/iranyekanwebblackfanum.eot?#iefix")
@@ -138,6 +139,31 @@ body{
   font-display: swap;
 }
 @font-face {
+  font-family: "IRANSansWeb";
+  src: url("../_fonts/IRANSansWeb(FaNum).eot");
+  src: url("../_fonts/IRANSansWeb(FaNum).eot?#iefix")
+      format("embedded-opentype"),
+    url("../_fonts/IRANSansWeb(FaNum).woff") format("woff"),
+    url("../_fonts/IRANSansWeb(FaNum).woff2") format("woff2"),
+    url("../_fonts/IRANSansWeb(FaNum).ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IRANSansWeb";
+  src: url("../_fonts/IRANSansWeb(FaNum)_Medium.eot");
+  src: url("../_fonts/IRANSansWeb(FaNum)_Medium.eot?#iefix")
+      format("embedded-opentype"),
+    url("../_fonts/IRANSansWeb(FaNum)_Medium.woff") format("woff"),
+    url("../_fonts/IRANSansWeb(FaNum)_Medium.woff2") format("woff2"),
+    url("../_fonts/IRANSansWeb(FaNum)_Medium.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
   font-family: "IRANYekan";
   src: url("../_fonts/IRANYekanLight.eot");
   src: url("../_fonts/IRANYekanLight.eot?#iefix") format("embedded-opentype"),
@@ -148,15 +174,15 @@ body{
   font-style: normal;
   font-display: swap;
 }
-@font-face {
-  font-family: "IRANYekan";
-  src: url("../_fonts/iranyekanwebmedium.eot");
-  src: url("../_fonts/iranyekanwebmedium.eot?#iefix") format("embedded-opentype"),
-    url("../_fonts/iranyekanwebmedium.ttf") format("truetype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
+// @font-face {
+//   font-family: "IRANYekan";
+//   src: url("../_fonts/iranyekanwebmedium.eot");
+//   src: url("../_fonts/iranyekanwebmedium.eot?#iefix") format("embedded-opentype"),
+//     url("../_fonts/iranyekanwebmedium.ttf") format("truetype");
+//   font-weight: 400;
+//   font-style: normal;
+//   font-display: swap;
+// }
 @font-face {
   font-family: "IRANYekan";
   src: url("../_fonts/iranyekanwebmediumfanum.eot");
@@ -358,7 +384,7 @@ a,ul,li{
 }
 
 .faNum {
-  font-family: "iranyekanwebblackfanum" !important;
+  font-family: "IRANSansWeb" !important;
 }
 
 $primary : #D30E15;
@@ -490,6 +516,9 @@ header.DesktopHeader{
     z-index: 99;
     padding: 15px 0;
     grid-template-columns: 3fr 1fr 3fr;
+    @media (1024px <= width <= 1200px ){
+      grid-template-columns: 5fr 1fr 3fr;
+      }
     &.color{
       background: linear-gradient(178deg, transparent 0%, rgba(148,148,148,0.76) 100%);
     }
@@ -636,19 +665,25 @@ header.DesktopHeader{
           -ms-transform: translateY(200px);
           -o-transform: translateY(200px);
           opacity: 0;
-          transition: all 1.2s .5s ease;
-          -webkit-transition: all 1.2s .5s ease;
-          -moz-transition: all 1.2s .5s ease;
-          -ms-transition: all 1.2s .5s ease;
-          -o-transition: all 1.2s .5s ease;
+          //transition: all 1.2s .5s ease;
+          //-webkit-transition: all 1.2s .5s ease;
+          //-moz-transition: all 1.2s .5s ease;
+          //-ms-transition: all 1.2s .5s ease;
+          //-o-transition: all 1.2s .5s ease;
+          transition: all  1s .3s ease;
+          -webkit-transition: all  1s .3s ease;
+          -moz-transition: all  1s .3s ease;
+          -ms-transition: all  1s .3s ease;
+          -o-transition: all  1s .3s ease;
           width: 100%;
           object-fit: cover;
-          &.hide{
-            transition: all 1.2s ease;
-            -webkit-transition: all 1.2s ease;
-            -moz-transition: all 1.2s ease;
-            -ms-transition: all 1.2s ease;
-            -o-transition: all 1.2s ease;
+          &.hide
+{
+            transition: all .5s ease;
+            -webkit-transition: all .5s ease;
+            -moz-transition: all .5s ease;
+            -ms-transition: all .5s ease;
+            -o-transition: all .5s ease;
             opacity: 0 !important;
             transform: translateY(-200px) !important;
             -webkit-transform: translateY(-200px) !important;
@@ -763,19 +798,25 @@ header.DesktopHeader{
               -ms-transform: translateY(-200px);
               -o-transform: translateY(-200px);
               opacity: 0;
-              transition: all 1.2s .6s ease;
-              -webkit-transition: all 1.2s .6s ease;
-              -moz-transition: all 1.2s .6s ease;
-              -ms-transition: all 1.2s .6s ease;
-              -o-transition: all 1.2s .6s ease;
+              //transition: all 1.2s .6s ease;
+              //-webkit-transition: all 1.2s .6s ease;
+              //-moz-transition: all 1.2s .6s ease;
+              //-ms-transition: all 1.2s .6s ease;
+              //-o-transition: all 1.2s .6s ease;
+              transition: all 1s .2s ease;
+              -webkit-transition: all 1s .2s ease;
+              -moz-transition: all 1s .2s ease;
+              -ms-transition: all 1s .2s ease;
+              -o-transition: all 1s .2s ease;
               width: 100%;
               object-fit: cover;
-              &.hide{
-                transition: all 1.2s  ease;
-                -webkit-transition: all 1.2s  ease;
-                -moz-transition: all 1.2s  ease;
-                -ms-transition: all 1.2s  ease;
-                -o-transition: all 1.2s  ease;
+              &.hide
+{
+                transition: all .5s  ease;
+                -webkit-transition: all .5s  ease;
+                -moz-transition: all .5s  ease;
+                -ms-transition: all .5s  ease;
+                -o-transition: all .5s  ease;
                 opacity: 0 !important;
                 transform: translateY(-200px) !important;
                 -webkit-transform: translateY(-200px) !important;
@@ -1159,12 +1200,12 @@ margin: 5em 0;
       margin-left: auto;
   }
   .Video{
-      width: 526px;
+      width: auto;
       height: 310px;
       position: relative;
       overflow: hidden;
       display: flex;
-      justify-content: center;
+      justify-content: flex-end;
       align-content: center;
       >video{
           width: 100%;
@@ -1255,7 +1296,7 @@ margin: 5em 0;
       margin-right: auto;
      >.Title{
       width: 100%;
-      margin-bottom: 2.5em;
+      margin-bottom: 1em;
       display: flex;
       justify-content: flex-start;
       align-items: center;
@@ -1401,6 +1442,14 @@ margin: 5em 0;
           display: grid;
           gap: 5.3em;
           grid-template-columns: repeat(2,1fr);
+          @media screen and (min-width: 1024px), 
+       screen and (max-width: 1200px) {
+
+       }
+          @media (1024px <= width <= 1200px ){
+            display: flex;
+            flex-direction: column;
+            }
           .Col{
               width: 100%;
               display: flex;
@@ -1410,12 +1459,20 @@ margin: 5em 0;
               .Text{
                 width: 100%;
     min-width: 417px;
+
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
     align-items: flex-start;
     gap: 1.5em;
+    @media (min-width: 1250px) {
+      min-width:unset;
+    }
+    @media (1024px <= width <= 1200px ){
+      min-width:unset;
+      }
                   p{
+
                       font-size: 18px;
                       font-weight: 400;
                       line-height: 31.09px;
@@ -1437,6 +1494,21 @@ margin: 5em 0;
       gap: .8em;
       .Title-1{
           width: 100%;
+          h2{
+            span{
+                font-weight: 400;
+                &:not(.color){
+                  transform: translateY(1px)                ;
+                  -webkit-transform: translateY(1px)                ;
+                  -moz-transform: translateY(1px)                ;
+                  -ms-transform: translateY(1px)                ;
+                  -o-transform: translateY(1px)                ;
+}
+                &.color{
+                    font-weight: 900;
+                }
+            }
+        }
       }
       .IMG{
         width: 100%;
@@ -1445,10 +1517,26 @@ margin: 5em 0;
         display: flex;
         justify-content: flex-start;
         align-items: flex-start;
+        overflow: hidden;
           img{
             width: 100%;
             height: 100%;
+            transition: all .5s ease;
           }
+          &:hover{
+            img{
+                transition: all .5s ease;
+                -webkit-transition: all .5s ease;
+                -moz-transition: all .5s ease;
+                -ms-transition: all .5s ease;
+                -o-transition: all .5s ease;
+                transform: scale(1.1);
+                -webkit-transform: scale(1.1);
+                -moz-transform: scale(1.1);
+                -ms-transform: scale(1.1);
+                -o-transform: scale(1.1);
+    }
+        }
       }
   }
   .ShowMoreBTN-2{
@@ -1467,6 +1555,7 @@ margin: 5em 0;
        border: none;  
        margin-top: auto;
        padding-bottom: 0;
+       padding: 0;
           svg,path{
               fill: $color-primary;
           }
@@ -1490,16 +1579,18 @@ margin: 5em 0;
      }
  }
 .Cataloge{
-  width: auto;
+  width: 88%;
   display: flex;
   flex-direction: column;
+  margin-left: auto;
+  align-items: flex-end;
   a{
     width: auto;
     display: flex;
     flex-direction: column;
   }
   .IMG{
-    width: auto;
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.container {
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+}
+.handler {
+	width: 50px;
+	position: absolute;
+	left: 0;
+	top: 50%;
+	z-index: 23;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+    gap: 1em;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: column;
+	flex-direction: column;
+	-webkit-box-pack: justify;
+	-ms-flex-pack: justify;
+	-webkit-transform: translatey(-50%);
+	transform: translatey(-50%);
+}
+.handler span {
+	display: block;
+	height: 5px;
+	width: 50%;
+	background-color: #FAD6A4;
+	-webkit-transition: .4s ease-in-out;
+	transition: .4s ease-in-out;
+	cursor: pointer;
+	border-radius: 0 5px 5px 0;
+}
+.handler span:hover {
+	width: 100%;
+}
+
+.handler .choosen {
+	width: 100%;
+}
+.slide {
+	height: 100%;
+	position: absolute;
+	width: 0;
+	left:0;
+	right:0;
+	margin:auto;
+	overflow: hidden;
+	-webkit-transition: 1s ease-in-out;
+	transition: 1s ease-in-out;
+	transition-delay:1s;
+
+}
+
+.slide img {
+	width: 100vw;
+	height: 100vh;
+}
+.show {
+	width: 100vw;
+	z-index: 22;
+	transition-delay:0s
+}
+/* my button style */
+.white-mode {
+	text-decoration: none;
+	padding: 7px 10px;
+	background-color: #122;
+	border-radius: 3px;
+	color: #FFF;
+	transition: .1s ease-in-out;
+	position: fixed;
+	left: 15px;
+	bottom: 15px;
+	z-index: 11111;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="handler">
+            <span class=""></span>
+            <span class="choosen"></span>
+            <span class=""></span>
+            <span class=""></span>
+        </div>
+        <div class="slide"><img src="/images/1.png"></div>
+        <div class="slide show"><img src="/images/2.png"></div>
+        <div class="slide"><img src="/images/4.png"></div>
+        <div class="slide"><img src="/images/5.png"></div>
+      </div> 
+      <script src="js/gsap.js"></script>
+      <script src="js/scrollTrigger.js"></script>
+      <script src="js/jQuery.js"></script>
+      <script src="js/lenisScroll.js"></script>
+      <script src="js/swiper-bundle.8.4.7.min.js"></script>
+  
+      <script>
+        $(function() {
+	$(".handler span").on("click", function() {
+		$(this).addClass("choosen").siblings().removeClass("choosen");
+		$(".slide")
+			.eq($(this).index())
+			.addClass("show")
+			.siblings()
+			.removeClass("show");
+	});
+	/*
+	$(document).keydown(function(e) {
+		var code = e.keyCode || e.which;
+		if (code === 40 || code === 39) {
+			if ($(".handler span:last-child").hasClass("choosen")) {
+				$(".handler span")
+					.eq(0)
+					.addClass("choosen")
+					.siblings()
+					.removeClass("choosen");
+			} else {
+				$(".choosen").removeClass("choosen").next().addClass("choosen");
+			}
+			$(".slide")
+				.eq($(".choosen").index())
+				.addClass("show")
+				.siblings()
+				.removeClass("show");
+		} else {
+			if (code === 38 || code === 37) {
+				if ($(".handler span:first-child").hasClass("choosen")) {
+					$(".handler span:last-child")
+						.addClass("choosen")
+						.siblings()
+						.removeClass("choosen");
+				} else {
+					$(".choosen").removeClass("choosen").prev().addClass("choosen");
+				}
+				$(".slide")
+					.eq($(".choosen").index())
+					.addClass("show")
+					.siblings()
+					.removeClass("show");
+			}
+		}
+	});
+	*/
+});
+// Hakkam Abdullah 24/11/1438
+
+      </script>
+</body>
+</html>

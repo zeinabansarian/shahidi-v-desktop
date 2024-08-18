@@ -1,882 +1,459 @@
-<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2358534"> 
-    <member name="image-def" type="list" format="4"/> 
-</basis>
-<basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" usedforid="1434034"> 
-    <member name="link" type="list" /> 
-</basis>
-<basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" catid="209279">
-    <member name="productList1" type="list" typeid="159"  size="330x443"/> 
-</basis>
-<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2358536">
-    <member name="gallery" type="list" format="3,4"/> 
-</basis>
-<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2358536">
-    <member name="banner" type="list" format="3,4" postsql="select * from [db.banner] where ord=1"/> 
-</basis>
-<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2358536">
-    <member name="videoCover" type="list" format="3,4" postsql="select * from [db.videoCover] where ord=2"/> 
-</basis>
-<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2358536">
-    <member name="video" type="list" format="3,4"/> 
-</basis>
-<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2358536">
-    <member name="about" type="view"/> 
-</basis> 
-<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2358536">
-    <member name="text" type="view" postsql="select * from [db.text] where TypeID=250"/> 
-</basis> 
-<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2358541"> 
-    <member name="cataloge" type="view"/> 
-</basis>
-<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2358541"> 
-<member name="media-cataloge" type="list" format="4,9"/> 
-</basis>	
-<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2358541"> 
-    <member name="cataloguu" type="list" format="4,9" postsql="select * from [db.cataloguu] where ord=1000"/> 
-</basis>
-<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2358541"> 
-    <member name="catalogetext" type="view"  postsql="select * from [db.catalogetext] where TypeID=250"/> 
-</basis>
-<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2358534"> 
-    <member name="video-def" type="list" format="3"/> 
-</basis>
-<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2358536">
-    <member name="aboutus" type="view"/> 
-</basis>
-<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2358536">
-    <member name="text2" type="view"  postsql="select * from [db.text2] where TypeID=250"/> 
-</basis>
-<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2358536">
-    <member name="image-about" type="list" format="4"/> 
-</basis>	
-<basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2358782"> 
-    <member name="image-def-pro" type="list" format="4"  postsql="select * from [db.image-def-pro] where ord=1000"/> 
-</basis>
-<basis core="dbsource" source="basiscore" name="basisName" lid="1" mid="20" >
-    <member request="cat" type="tree" name="productCat" parentid="209291"  /> 
-</basis>
-<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" catid="66161"> 
-    <member name="list-blog" size="415x646" type="list" propertyid="7248,7249"/>
-</basis>
-<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" catid="66167"> 
-    <member name="list-news" size="415x646" type="list" propertyid="7248,7249"/>
-</basis>
-<basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" usedforid="2358555">
-    <member name="product" type="view"/>
-</basis>
-<basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" usedforid="2358555">
-    <member name="producttext" type="view" postsql="select * from [db.producttext] where TypeID=144"/>
-</basis>
-<basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" usedforid="2358555">
-    <member name="producttitle" type="view"  postsql="select * from [db.producttitle] where TypeID=150"/>
-</basis>
-<basis core="dbsource" name="db" source="media" lid="1" sourcemid="20" usedforid="2358555"> 
-    <member name="productGallery" type="list" postsql="select * from [db.productGallery] where ord=50" />
- </basis>
- <basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" usedforid="2358555">
-   <member name="productList" type="list"/> 
-</basis>
 <!DOCTYPE html>
 <html lang="fa">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>بازرگانی شهیدی</title>
-    <meta name="description" content="بازرگانی شهیدی">
-    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/main.css">
-    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="[##cms.cms.cdn##]/css/f-style.css">
+    <title>AboutUS</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/f-style.css">
 </head>
 <body>
-    <main class="Home">
-        <!-- HEADER -->
-    <basis core="call" file="header.inc" />
-        <!-- HEADER -->
-
-        <!-- SECTIONE ONE -->
-        <div class="Banner-Container">
-            <div class="Banner-Slider">
-                <div class="swiper-Banner">
-                    <div class="swiper-wrapper">
-                        <basis core="print" datamembername="db.image-def">
-                            <layout>
-                                @child
-                            </layout>
-                            <face filter="ord=1">
-                                <div class="swiper-slide">
-                                    <div class="IMG">
-                                        <img src="@largeIMG" alt="@name" title="@name">
-                                    </div>
-                                    <div class="OV">
-                                        <div class="Title">
-                                            <h1>@name   </h1>
-                                        </div>
-                                        <div class="Desc">
-                                            <p>@description	  </p>
-                                        </div>
-                                        <div class="ShowMBTN">
-                                            <a href="[##db.link.link##]" alt="[##db.link.title##]" title="[##db.link.title##]">
-                                                <span>
-                                                    <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                        <path d="M4 0C4.1692 0 4.3064 0.1372 4.3064 0.3064V3.6932H7.6936C7.77492 3.6932 7.8529 3.7255 7.9104 3.783C7.9679 3.8405 8.0002 3.91848 8.0002 3.9998C8.0002 4.08112 7.9679 4.1591 7.9104 4.2166C7.8529 4.2741 7.77492 4.3064 7.6936 4.3064H4.3064V7.6936C4.3064 7.77486 4.27412 7.8528 4.21666 7.91026C4.1592 7.96772 4.08126 8 4 8C3.91874 8 3.8408 7.96772 3.78334 7.91026C3.72588 7.8528 3.6936 7.77486 3.6936 7.6936L3.6932 4.3064H0.3064C0.225138 4.3064 0.147204 4.27412 0.0897425 4.21666C0.0322813 4.1592 0 4.08126 0 4C0 3.91874 0.0322813 3.8408 0.0897425 3.78334C0.147204 3.72588 0.225138 3.6936 0.3064 3.6936L3.6932 3.6932V0.3064C3.69341 0.225133 3.72582 0.147262 3.78332 0.0898349C3.84082 0.0324081 3.91873 0.000105541 4 0Z" fill="#D30E15"/>
-                                                        </svg>
-                                                        
-                                                </span>
-                                                <span>نمایش بیشتر</span>
-                                              
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </face>
-                        </basis>
-                      
+    <main class="AboutUsC">
+            <!-- HEADER -->
+            <header class="DesktopHeader">
+                <div class="Left">
+                    <div class="Toggles">
+                        <span class="ToggleItem"></span>
+                        <span class="ToggleItem"></span>
+                        <span class="ToggleItem"></span>
+                    </div>
+                    <nav class="Menu">
+                        <ul>
+                            <li class="Menu-Item">
+                                <a href="" class="Menu-Link">
+                                    خانه
+                                </a>
+                            </li>
+                            <li class="Menu-Item">
+                                <a href="" class="Menu-Link">
+                                    تماس باما
+                                </a>
+                            </li>
+                            <li class="Menu-Item">
+                                <a href="" class="Menu-Link">
+                                   درباره ما
+                                </a>
+                            </li>
+                            <li class="Menu-Item">
+                                <a href="" class="Menu-Link">
+                                   بلاگ
+                                </a>
+                            </li>
+                            <li class="Menu-Item">
+                                <a href="" class="Menu-Link">
+                                  محصولات
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="Middle">
+                    <div class="Logo">
+                        <a href="">
+                            <img src="images/logo.png" alt="">
+                        </a>
                     </div>
                 </div>
-            </div>
-        </div>
-        <!-- SECTIONE ONE -->
-
-        <!-- SECTIONE TWO -->
-         <div class="ProductCategories">
-            <div class="Title-1">
-                <h2>
-                    <span class="color">
-                      آخرین
+                <div class="Right">
+                    <span class="SearchIcon">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 18L5.8604 14.1396M5.8604 14.1396C5.20006 13.4793 4.67626 12.6953 4.31888 11.8326C3.96151 10.9698 3.77757 10.0451 3.77757 9.11121C3.77757 8.17735 3.96151 7.25264 4.31888 6.38987C4.67625 5.5271 5.20006 4.74316 5.8604 4.08283C6.52074 3.42249 7.30467 2.89868 8.16744 2.54131C9.03022 2.18394 9.95493 2 10.8888 2C11.8226 2 12.7474 2.18394 13.6101 2.54131C14.4729 2.89868 15.2568 3.42249 15.9172 4.08283C17.2508 5.41644 18 7.2252 18 9.11121C18 10.9972 17.2508 12.806 15.9172 14.1396C14.5836 15.4732 12.7748 16.2224 10.8888 16.2224C9.00278 16.2224 7.19401 15.4732 5.8604 14.1396Z" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                            
                     </span>
-                    <span>
-                      محصولات
-                    </span>
-                  
-                </h2>
-                <div class="ShowM">
-                    <a href="محصولات" alt="محصولات" title="محصولات">
-                        <span>
-                            <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_1_153)">
-                                <path d="M4 0C4.1692 0 4.3064 0.1372 4.3064 0.3064V3.6932H7.6936C7.77492 3.6932 7.8529 3.7255 7.9104 3.783C7.9679 3.8405 8.0002 3.91848 8.0002 3.9998C8.0002 4.08112 7.9679 4.1591 7.9104 4.2166C7.8529 4.2741 7.77492 4.3064 7.6936 4.3064H4.3064V7.6936C4.3064 7.77486 4.27412 7.8528 4.21666 7.91026C4.1592 7.96772 4.08126 8 4 8C3.91874 8 3.8408 7.96772 3.78334 7.91026C3.72588 7.8528 3.6936 7.77486 3.6936 7.6936L3.6932 4.3064H0.3064C0.225138 4.3064 0.147204 4.27412 0.0897425 4.21666C0.0322813 4.1592 0 4.08126 0 4C0 3.91874 0.0322813 3.8408 0.0897425 3.78334C0.147204 3.72588 0.225138 3.6936 0.3064 3.6936L3.6932 3.6932V0.3064C3.69341 0.225133 3.72582 0.147262 3.78332 0.0898349C3.84082 0.0324081 3.91873 0.000105541 4 0Z" fill="#949494"/>
-                                </g>
-                                <defs>
-                                <clipPath id="clip0_1_153">
-                                <rect width="8" height="8" fill="white"/>
-                                </clipPath>
-                                </defs>
-                                </svg>
-                                
-                        </span>
-                        <span>نمایش بیشتر</span>
-                       
-                    </a>
                 </div>
-             </div>
-             <div class="Product-Category">
-                <div class="Product-Slider">
-                    <div class="swiper-Category">
-                        <div class="swiper-wrapper">
-                            <basis core="print" datamembername="db.productList1">
-                                <layout>
-                                    @child
-                                </layout>
-                                <face>
-                                    <div class="swiper-slide">
-                                        <div class="Product">
-                                            <div class="IMG">
-                                                <a href="@link" title="@title" alt="@title">
-                                                <img src="@00330X00443prp"title="@title" alt="@title"></a>
-                                            </div>
-                                            <div class="Box">
-                                                <div class="Title">
-                                                    <a href="@link" title="@title" alt="@title"> 
-                                                        <span>
-                                                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                                <g clip-path="url(#clip0_644_2)">
-                                                                <path d="M8 0C8.3384 0 8.6128 0.2744 8.6128 0.6128V7.3864H15.3872C15.5498 7.3864 15.7058 7.451 15.8208 7.566C15.9358 7.681 16.0004 7.83697 16.0004 7.9996C16.0004 8.16223 15.9358 8.3182 15.8208 8.4332C15.7058 8.54819 15.5498 8.6128 15.3872 8.6128H8.6128V15.3872C8.6128 15.5497 8.54824 15.7056 8.43332 15.8205C8.31839 15.9354 8.16253 16 8 16C7.83748 16 7.68161 15.9354 7.56668 15.8205C7.45176 15.7056 7.3872 15.5497 7.3872 15.3872L7.3864 8.6128H0.6128C0.450275 8.6128 0.294407 8.54824 0.179485 8.43332C0.0645627 8.31839 0 8.16253 0 8C0 7.83748 0.0645627 7.68161 0.179485 7.56668C0.294407 7.45176 0.450275 7.3872 0.6128 7.3872L7.3864 7.3864V0.6128C7.38682 0.450267 7.45163 0.294523 7.56664 0.17967C7.68164 0.0648161 7.83747 0.000211082 8 0Z" fill="black"/>
-                                                                </g>
-                                                                <defs>
-                                                                <clipPath id="clip0_644_2">
-                                                                <rect width="16" height="16" fill="white"/>
-                                                                </clipPath>
-                                                                </defs>
-                                                                </svg>
-                                                                
-                                                        </span>
-                                                        <span>
-                                                           @title
-                                                        </span>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div> 
-                                </face>
-                            </basis>
-                        
-              
+                <div class="Menu-Container">
+                    <div class="Left">
+                        <div class="IMG-C">
+                            <img src="images/Rectangle 3.png" alt="">
                         </div>
                     </div>
-                </div>
-             </div>
-         </div>
+                    <div class="Middle">
     
-        <!-- SECTIONE TWO -->
-
-        <!-- SECTIONE THREE -->
-        <div class="About-Clr BG" data-bg="[##db.banner.largeIMG##]">
-            <div class="Right">
-                <div class="Box">
-                    <div class="Title">
-                        <basis core="print" datamembername="db.text">
-                            <layout>
-                                @child
-                            </layout>
-                            <face filter="Rownumber=1">
-                                <h3>
-                                    <span>
-                                        <span class="color">@text </span>
-                                   @largetext
-                                    </span>
-                                </h3>
-                            </face>
-                        </basis>
-                      </div>
-                      <div class="Text">
-                        <basis core="print" datamembername="db.text">
-                            <layout>
-                                @child
-                            </layout>
-                            <face filter="Rownumber=1">
-                               <p>@largetext</p>
-                            </face>
-                        </basis>
-                      
-                      </div>
-                      <a class="ShowMoreBTN-2" href="درباره-ما" alt=" درباره ما" title=" درباره ما">
-                     
-                            <span>
-                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4 0C4.1692 0 4.3064 0.1372 4.3064 0.3064V3.6932H7.6936C7.77492 3.6932 7.8529 3.7255 7.9104 3.783C7.9679 3.8405 8.0002 3.91848 8.0002 3.9998C8.0002 4.08112 7.9679 4.1591 7.9104 4.2166C7.8529 4.2741 7.77492 4.3064 7.6936 4.3064H4.3064V7.6936C4.3064 7.77486 4.27412 7.8528 4.21666 7.91026C4.1592 7.96772 4.08126 8 4 8C3.91874 8 3.8408 7.96772 3.78334 7.91026C3.72588 7.8528 3.6936 7.77486 3.6936 7.6936L3.6932 4.3064H0.3064C0.225138 4.3064 0.147204 4.27412 0.0897425 4.21666C0.0322813 4.1592 0 4.08126 0 4C0 3.91874 0.0322813 3.8408 0.0897425 3.78334C0.147204 3.72588 0.225138 3.6936 0.3064 3.6936L3.6932 3.6932V0.3064C3.69341 0.225133 3.72582 0.147262 3.78332 0.0898349C3.84082 0.0324081 3.91873 0.000105541 4 0Z" fill="#FFFFFF"/>
-                                    </svg>
-                                    
-                            </span>
-                            <span>نمایش بیشتر</span>
-                          
-                     
-                      </a>
-                </div>
-             
-              </div>
-              <div class="Left">
-                <div class="Video-C">
-                    <div class="Video">
-                        <img src="[##db.videoCover.largeIMG##]" alt="shahidi" title="shahidi">
-                        <div class="PopUp">
-                            <div class="Close">
+                        <div class="CloseIcon">
+                            <span class="Close">
                                 <svg width="40" height="40" viewbox="0 0 40 40">
-                                    <path d="M 10,10 L 30,30 M 30,10 L 10,30" stroke="#fff" stroke-width="4" />
+                                    <path d="M 10,10 L 30,30 M 30,10 L 10,30" stroke="black" stroke-width="4" />
                                 </svg>
-                            </div>
-                            <basis core="print" datamembername="db.video">
-                                <layout>
-                                    @child
-                                </layout>
-                                <face filter="ord=1000">
-                                    <video id="main" poster="[##db.videoCover.largeIMG##]"
-                                    src="@largeIMG" type="video/mp4" controls></video>
-                                </face>
-                            </basis>
+                            </span>
                         </div>
-                    
-                        <div class="Video-Overlay">
-                            <div class="w-circle PlayBTN">
-                                <span class="Cricle">
-                                    <svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M15 9L-8.15666e-07 17.6603L-5.85621e-08 0.339745L15 9Z" fill="#D30E15"/>
+                        <div class="OpenMenu">
+                            <ul>
+                                <li class="Menu-Item">
+                                    <a href="" class="Menu-Link">
+                                        خانه
+                                    </a>
+                                </li>
+                                <li class="Menu-Item">
+                                    <a href="" class="Menu-Link">
+                                        تماس باما
+                                    </a>
+                                </li>
+                                <li class="Menu-Item">
+                                    <a href="" class="Menu-Link">
+                                       درباره ما
+                                    </a>
+                                </li>
+                                <li class="Menu-Item">
+                                    <a href="" class="Menu-Link">
+                                       بلاگ
+                                    </a>
+                                </li>
+                                <li class="Menu-Item">
+                                    <a href="" class="Menu-Link">
+                                      محصولات
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="Right">
+                        <div class="IMG-C">
+                            <img src="images/Rectangle 4.png" alt="">
+                          
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <!-- HEADER -->
+            <!-- SECTIONE ONE -->
+            <div class="AboutBannerC">
+         
+                <div class="Right">
+                    <div class="ContentBox">
+                        <div class="Title-1">
+                            <h1>
+                                <span>
+                                    
+                                    <span class="color">
+                                       بازرگانی شهیدی
+                                    </span>
+                                     با دو دهه فعالیت در زمینه عرضه‌ی کاشی و سرامیک و صنایع وابسته به آن
+                                </span>
+                            </h1>
+                        </div>
+                        <div class="Text">
+                            <p>
+                                گروه بازرگانی شهیدی با بیش از دو دهه فعالیت در زمینه عرضه و پخش محصولات صنعت ساختمان اعم از کاشی و سرامیک‌های گرانیتی و پرسلانی، اسلب‌های پرسلانی
+                            </p>
+                            <p>
+                                گروه بازرگانی شهیدی با بیش از دو دهه فعالیت در زمینه عرضه و پخش محصولات صنعت ساختمان اعم از کاشی و سرامیک‌های گرانیتی و پرسلانی، اسلب‌های پرسلانی
+                            </p>
+                            <p>
+                                گروه بازرگانی شهیدی با بیش از دو دهه فعالیت در زمینه عرضه و پخش محصولات صنعت ساختمان اعم از کاشی و سرامیک‌های گرانیتی و پرسلانی، اسلب‌های پرسلانی
+                            </p>
+                        </div>
+                        <!-- <div class="ShowMoreBTN-2">
+                            <a href="">
+                                <span>
+                                    <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4 0C4.1692 0 4.3064 0.1372 4.3064 0.3064V3.6932H7.6936C7.77492 3.6932 7.8529 3.7255 7.9104 3.783C7.9679 3.8405 8.0002 3.91848 8.0002 3.9998C8.0002 4.08112 7.9679 4.1591 7.9104 4.2166C7.8529 4.2741 7.77492 4.3064 7.6936 4.3064H4.3064V7.6936C4.3064 7.77486 4.27412 7.8528 4.21666 7.91026C4.1592 7.96772 4.08126 8 4 8C3.91874 8 3.8408 7.96772 3.78334 7.91026C3.72588 7.8528 3.6936 7.77486 3.6936 7.6936L3.6932 4.3064H0.3064C0.225138 4.3064 0.147204 4.27412 0.0897425 4.21666C0.0322813 4.1592 0 4.08126 0 4C0 3.91874 0.0322813 3.8408 0.0897425 3.78334C0.147204 3.72588 0.225138 3.6936 0.3064 3.6936L3.6932 3.6932V0.3064C3.69341 0.225133 3.72582 0.147262 3.78332 0.0898349C3.84082 0.0324081 3.91873 0.000105541 4 0Z" fill="#FFFFFF"/>
                                         </svg>
                                         
                                 </span>
+                                <span>نمایش بیشتر</span>
+                              
+                            </a>
+                          </div> -->
+                          <div class="Navigation">
+                            <div class="handler">
+                          
+                            </div>
+                          </div>
+                    </div>
+                </div>
+                <div class="Left">
+                    <div class="Banner-Container">
+                        <div class="Banners">
+                            <div class="slide"><img src="/images/1.png"></div>
+        <div class="slide "><img src="/images/2.png"></div>
+        <div class="slide"><img src="/images/4.png"></div>
+        <div class="slide"><img src="/images/5.png"></div>
+                        </div>
+                
+                        <div class="OVBox">
+                            <div class="IMG">
+                                <img src="images/Rectangle 8.jpg" alt="">
                             </div>
                         </div>
+                    </div>
+                </div>
+            </div>
+            <!-- SECTIONE ONE -->
+
+            <!-- SECTIONE TWO -->
+            <div class="About-Container">
+            
+                    <div class="Right">
+                        <div class="Title-1">
+                            <h2>
+                                <span class="color">
+                                  درباره
+                                </span>
+                                <span>
+                                  شرکت شهیدی
+                                </span>
+                               
+                            </h2>
+                         </div>
+                         <div class="IMG">
+                            <img src="images/Rectangle 3.png" alt="">
+                         </div>
+                    </div>
+                    <div class="Left">
+                        <div class="Top">
+                            <span class="Desc">
+                                زیبایی در سادگیست.
+                            </span>
+                            <h4>
+                                زیبایی در سادگیست.
+                            </h4>
                         </div>
+                        <div class="Bottom">
+                            <div class="Col">
+                                <div class="Text">
+                                    <p>
+                                        از گذشته تاکنون، هر شغلی نیاز به وسیله‌ای داشته که بتواند خود را توسط آن معرفی کند.
+    
+     کسب‌وکار مرتبط با وب‌سایت نیز، از این مدل معرفی مستثنا نیست؛ صفحه‌ی درباره‌ی ما می‌تواند این کار را انجام دهد.
+    
+     صفحه‌ی درباره‌ی ما یکی از مهم‌ترین صفحاتی است که باید در سایت خود قرار دهید. در حقیقت، صفحه‌ی درباره‌ی ما به عنوان مهم‌ترین پل ارتباطی در میان شما و مخاطبانتان شناخته می‌شود 
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="Col">
+                                <div class="Text">
+                                    <p>
+                                        از گذشته تاکنون، هر شغلی نیاز به وسیله‌ای داشته که بتواند خود را توسط آن معرفی کند.
+    
+     کسب‌وکار مرتبط با وب‌سایت نیز، از این مدل معرفی مستثنا نیست؛ صفحه‌ی درباره‌ی ما می‌تواند این کار را انجام دهد.
+    
+     صفحه‌ی درباره‌ی ما یکی از مهم‌ترین صفحاتی است که باید در سایت خود قرار دهید. در حقیقت، صفحه‌ی درباره‌ی ما به عنوان مهم‌ترین پل ارتباطی در میان شما و مخاطبانتان شناخته می‌شود 
+                                    </p>
+                                </div>
+                            </div>
+    
+                        </div>
+                
+                    </div>
+            </div>
+            <!-- SECTIONE TWO -->
+
+             <!-- SECTIONE TWO -->
+              <div class="About-ContainerS2 BG" data-bg="images/Rectangle 11.jpg">
+                <div class="Right">
+                    <div class="Banner-Container">
+                        <div class="OVBox">
+                            <div class="IMG">
+                                <img src="images/Rectangle 3.png" alt="">
+             
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="Left">
+                    <div class="ContentBox">
+                        <div class="Title-1">
+                            <p>
+                                <span>
+                                    
+                                    <span class="color">
+                                       بازرگانی شهیدی
+                                    </span>
+                                     با دو دهه فعالیت در زمینه عرضه‌ی کاشی و سرامیک و صنایع وابسته به آن
+                                </span>
+                            </p>
+                        </div>
+                        <div class="Text">
+                            <p>
+                                گروه بازرگانی شهیدی با بیش از دو دهه فعالیت در زمینه عرضه و پخش محصولات صنعت ساختمان اعم از کاشی و سرامیک‌های گرانیتی و پرسلانی، اسلب‌های پرسلانی
+                            </p>
+                        </div>
+                        <div class="ImgSlider">
+                            <div class="swiper-button-prev"></div>
+                            <div class="swiper-button-next"></div>
+
+                            <div class="swiper-IMG">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <img src="images/2.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="images/2.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="images/3.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="images/4.png" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="images/5.png" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                          </div>
                     </div>
                 </div>
               </div>
-        <!-- SECTIONE THREE -->
-
-        <!-- SECTIONE FOUR -->
-         <div class="Cataloge-Container">
-        
-             <div class="CatalogeS">
-        
-                <div class="Left">
-                    <div class="Title-1">
-                        <span class="Detail">
-                            کاتالوگ شهیدی 
+             <!-- SECTIONE TWO -->
+                <!-- SECTIONE THREE -->
+                <div class="Video-Clr">
+                    <video id="main-2" src="" poster="/images/Rectangle 12.png"></video>
+                    <div class="Video-OV">
+                        <span class="Icon PlayBTN2">
+                            <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M0 3.53067C0 1.58222 1.58222 0 3.53067 0H60.4693C62.4178 0 64 1.58222 64 3.53067V60.4693C63.9991 61.4054 63.6268 62.3029 62.9649 62.9649C62.3029 63.6268 61.4054 63.9991 60.4693 64H3.53067C2.59428 64 1.69624 63.628 1.03411 62.9659C0.37198 62.3038 0 61.4057 0 60.4693V3.53067ZM27.1004 19.2533C26.8865 19.1106 26.6378 19.0285 26.3808 19.0159C26.1239 19.0033 25.8683 19.0606 25.6414 19.1817C25.4145 19.3029 25.2246 19.4833 25.0921 19.7038C24.9596 19.9242 24.8894 20.1765 24.8889 20.4338V43.5662C24.8894 43.8235 24.9596 44.0758 25.0921 44.2962C25.2246 44.5167 25.4145 44.6971 25.6414 44.8183C25.8683 44.9394 26.1239 44.9967 26.3808 44.9841C26.6378 44.9715 26.8865 44.8894 27.1004 44.7467L44.448 33.184C44.6423 33.0536 44.8016 32.8774 44.9117 32.6709C45.0218 32.4644 45.0794 32.234 45.0794 32C45.0794 31.766 45.0218 31.5356 44.9117 31.3291C44.8016 31.1226 44.6423 30.9464 44.448 30.816L27.1004 19.2533Z" fill="#D30E15"/>
+                                </svg>
+                                
                         </span>
-                        <h2>
-                            <span class="color">
-                              دانلود
-                            </span>
-                            <span>
-                              آخرین کاتالوگ
-                            </span>
-                           
-                        </h2>
-                     </div>
-                    <div class="Box">
-                        <div class="Text">
-                           <basis core="print" datamembername="db.cataloge">
-                               <layout>
-                                   @child
-                               </layout>
-                               <face>
-                                   <p>
-                                    @largetext
-                                </p>
-                               </face>
-                           </basis>
-                         
-                        </div>
                     </div>
                 </div>
-                     
-                <div class="Right">
-                    <div class="Cataloge">
-                        <basis core="print" datamembername="db.media-cataloge">
-                            <layout>
-                                @child
-                            </layout>
-                            <face filter="ord=1">     
-                                 <a href="[##db.cataloguu.largeIMG##]" download="" alt="shahidi" title="shahidi">
-                                <div class="IMG">
-                                    <img src="@largeIMG" alt="shahidi" title="shahidi">
-                                    <div class="OV">
-                                        <span class="Icon">
-                                            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                                <g clip-path="url(#clip0_23_10)">
-                                                <path d="M20 0C8.95434 0 0 8.95434 0 20C0 31.0457 8.95434 40 20 40C31.0456 40 40 31.0456 40 20C40 8.95434 31.0456 0 20 0ZM20 35.6522C11.3543 35.6522 4.34783 28.6435 4.34783 20C4.34783 11.3565 11.3543 4.34783 20 4.34783C28.6456 4.34783 35.6522 11.3565 35.6522 20C35.6522 28.6435 28.6456 35.6522 20 35.6522ZM23.9131 11.6304H16.0869V20.5217H11.1957L20 28.8043L28.8043 20.5217H23.913L23.9131 11.6304Z" fill="#D30E15"/>
-                                                </g>
-                                                <defs>
-                                                <clipPath id="clip0_23_10">
-                                                <rect width="40" height="40" fill="white"/>
-                                                </clipPath>
-                                                </defs>
-                                                </svg>
-                                                
+                <!-- SECTIONE THREE -->
+
+             <!--  FOOTER -->
+            <footer class="DesktopFooter">
+                        <div class="Top">
+                            <div class="Nav">
+                                <div class="Right">
+                                    <div class="Menu">
+                                        <span class="Menu-Item">
+                                            <a href="">
+                                                درباره ما
+                                            </a>
+                                        </span>
+                                        <span class="Menu-Item">
+                                            <a href="">
+                                                تماس با ما
+                                            </a>
+                                        </span>
+                                        <span class="Menu-Item">
+                                            <a href="">
+                                                محصولات
+                                            </a>
                                         </span>
                                     </div>
                                 </div>
-                                <div class="Title">
-                          
-                                    <span>
-                                        <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <g clip-path="url(#clip0_23_17)">
-                                            <path d="M4 0C4.1692 0 4.3064 0.1372 4.3064 0.3064V3.6932H7.6936C7.77492 3.6932 7.8529 3.7255 7.9104 3.783C7.9679 3.8405 8.0002 3.91848 8.0002 3.9998C8.0002 4.08112 7.9679 4.1591 7.9104 4.2166C7.8529 4.2741 7.77492 4.3064 7.6936 4.3064H4.3064V7.6936C4.3064 7.77486 4.27412 7.8528 4.21666 7.91026C4.1592 7.96772 4.08126 8 4 8C3.91874 8 3.8408 7.96772 3.78334 7.91026C3.72588 7.8528 3.6936 7.77486 3.6936 7.6936L3.6932 4.3064H0.3064C0.225138 4.3064 0.147204 4.27412 0.0897425 4.21666C0.0322813 4.1592 0 4.08126 0 4C0 3.91874 0.0322813 3.8408 0.0897425 3.78334C0.147204 3.72588 0.225138 3.6936 0.3064 3.6936L3.6932 3.6932V0.3064C3.69341 0.225133 3.72582 0.147262 3.78332 0.0898349C3.84082 0.0324081 3.91873 0.000105541 4 0Z" fill="black"/>
-                                            </g>
-                                            <defs>
-                                            <clipPath id="clip0_23_17">
-                                            <rect width="8" height="8" fill="white"/>
-                                            </clipPath>
-                                            </defs>
+                                <div class="Middle">
+                                    <div class="Logo">
+                                        <a href="">
+                                            <img src="images/logo.png" alt="">
+                                        </a>
+                                    </div>
+                                </div>
+                             
+                                <div class="Left">
+                                    <div class="Socials">
+                                        <span class="Social">
+                                            <a href="">
+                                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M14.0661 1.3335C14.4769 1.3335 14.7869 1.7631 14.6211 2.56216L12.61 13.8607C12.4694 14.664 12.0621 14.8573 11.4999 14.4836L6.70272 10.2606C6.68412 10.2447 6.66896 10.2237 6.65851 10.1995C6.64805 10.1752 6.6426 10.1483 6.6426 10.121C6.6426 10.0937 6.64805 10.0668 6.65851 10.0425C6.66896 10.0182 6.68412 9.99728 6.70272 9.98137L12.2424 4.0185C12.4946 3.75215 12.1883 3.62327 11.8567 3.86385L4.90423 9.09209C4.88315 9.10848 4.85921 9.11894 4.83423 9.12266C4.80925 9.12638 4.78389 9.12327 4.76007 9.11357L1.80824 8.00091C1.15228 7.77322 1.15228 7.23622 1.95601 6.85387L13.7669 1.42371C13.8606 1.37015 13.9623 1.33948 14.0661 1.3335V1.3335Z" stroke="#D30E15" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                    
+                                            </a>
+                                        </span>
+                                        <span class="Social">
+                                            <a href="">
+                                                <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M14.3707 2.33454C14.2947 2.01146 14.1459 1.71689 13.9393 1.48031C13.7326 1.24372 13.4752 1.07344 13.193 0.986484C12.4217 0.645367 4.94906 0.478243 2.78107 0.996023C2.49879 1.08301 2.24142 1.25335 2.03474 1.49001C1.82806 1.72666 1.67932 2.02131 1.60341 2.34446C1.25508 4.09316 1.22874 7.87368 1.61207 9.66168C1.68804 9.98476 1.8368 10.2793 2.04348 10.5159C2.25015 10.7525 2.50749 10.9228 2.78973 11.0097C4.31739 11.4123 11.58 11.4688 13.2017 11.0097C13.4839 10.9228 13.7413 10.7525 13.9479 10.5159C14.1546 10.2793 14.3034 9.98476 14.3793 9.66168C14.7507 7.75654 14.777 4.2103 14.3707 2.33454V2.33454Z" stroke="#D30E15" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    <path d="M10.189 5.99688L6.70673 3.71094V8.28281L10.189 5.99688Z" stroke="#D30E15" stroke-linecap="round" stroke-linejoin="round"/>
+                                                    </svg>
+                                                    
+                                            </a>
+                                        </span>
+                                        <span class="Social">
+                                            <a href="">
+                                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                    <path d="M6.99999 3.84461C6.37588 3.84461 5.76579 4.02968 5.24686 4.37641C4.72793 4.72315 4.32348 5.21598 4.08464 5.79258C3.84581 6.36919 3.78331 7.00366 3.90507 7.61578C4.02683 8.2279 4.32737 8.79016 4.76868 9.23148C5.20999 9.67279 5.77226 9.97333 6.38438 10.0951C6.99649 10.2168 7.63097 10.1544 8.20757 9.91551C8.78418 9.67668 9.27701 9.27222 9.62374 8.75329C9.97048 8.23437 10.1556 7.62427 10.1556 7.00016C10.1556 6.16326 9.82309 5.36063 9.23131 4.76885C8.63953 4.17707 7.8369 3.84461 6.99999 3.84461ZM6.99999 9.40016C6.52532 9.40016 6.0613 9.2594 5.66663 8.99569C5.27195 8.73197 4.96433 8.35714 4.78268 7.9186C4.60103 7.48006 4.55351 6.9975 4.64611 6.53195C4.73871 6.06639 4.96729 5.63875 5.30294 5.30311C5.63858 4.96746 6.06622 4.73888 6.53178 4.64628C6.99733 4.55367 7.47989 4.6012 7.91843 4.78285C8.35698 4.9645 8.73181 5.27212 8.99552 5.66679C9.25924 6.06147 9.39999 6.52549 9.39999 7.00016C9.39999 7.63668 9.14714 8.24713 8.69705 8.69722C8.24696 9.14731 7.63651 9.40016 6.99999 9.40016ZM10.0555 0.233496H3.94444C2.96019 0.233496 2.01626 0.624487 1.32029 1.32046C0.624319 2.01642 0.233328 2.96036 0.233328 3.94461V10.0557C0.233328 10.5431 0.329319 11.0256 0.51582 11.4759C0.70232 11.9262 0.975679 12.3353 1.32029 12.6799C2.01626 13.3758 2.96019 13.7668 3.94444 13.7668H10.0555C10.5429 13.7668 11.0255 13.6708 11.4757 13.4843C11.926 13.2978 12.3351 13.0245 12.6797 12.6799C13.0243 12.3353 13.2977 11.9262 13.4842 11.4759C13.6707 11.0256 13.7667 10.5431 13.7667 10.0557V3.94461C13.7667 3.45726 13.6707 2.97468 13.4842 2.52443C13.2977 2.07417 13.0243 1.66506 12.6797 1.32046C12.3351 0.975847 11.926 0.702488 11.4757 0.515988C11.0255 0.329487 10.5429 0.233496 10.0555 0.233496ZM13.0111 10.0557C13.0111 10.8396 12.6997 11.5913 12.1454 12.1456C11.5912 12.6999 10.8394 13.0113 10.0555 13.0113H3.94444C3.16058 13.0113 2.40882 12.6999 1.85455 12.1456C1.30027 11.5913 0.988884 10.8396 0.988884 10.0557V3.94461C0.988884 3.16075 1.30027 2.40899 1.85455 1.85471C2.40882 1.30044 3.16058 0.989052 3.94444 0.989052H10.0555C10.8394 0.989052 11.5912 1.30044 12.1454 1.85471C12.6997 2.40899 13.0111 3.16075 13.0111 3.94461V10.0557ZM11.1562 3.75326C11.2282 3.64545 11.2667 3.51871 11.2667 3.38905C11.2667 3.21519 11.1976 3.04844 11.0747 2.9255C10.9517 2.80256 10.785 2.7335 10.6111 2.7335C10.4814 2.7335 10.3547 2.77194 10.2469 2.84398C10.1391 2.91601 10.0551 3.01839 10.0055 3.13818C9.95583 3.25797 9.94285 3.38978 9.96815 3.51694C9.99344 3.64411 10.0559 3.76092 10.1476 3.8526C10.2392 3.94428 10.356 4.00672 10.4832 4.03201C10.6104 4.05731 10.7422 4.04432 10.862 3.99471C10.9818 3.94509 11.0841 3.86106 11.1562 3.75326Z" fill="#D30E15" stroke="#D30E15" stroke-width="0.2"/>
+                                                    </svg>
+                                                    
+                                            </a>
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="Middle">
+                            <div class="ContactBoxes">
+                                <div class="Contact">
+                                    <div class="IMG">
+                                        <svg width="17" height="23" viewBox="0 0 17 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M14.1675 3.21133C12.7422 1.78635 10.8395 0.939858 8.82673 0.835221C6.81396 0.730584 4.83378 1.37522 3.26836 2.64472C1.70295 3.91422 0.663261 5.71859 0.349971 7.70957C0.0366819 9.70055 0.471997 11.737 1.5719 13.4259L7.23942 22.1265C7.36554 22.3201 7.53799 22.4792 7.74113 22.5893C7.94427 22.6994 8.17167 22.7571 8.40274 22.7571C8.6338 22.7571 8.86121 22.6994 9.06435 22.5893C9.26749 22.4792 9.43993 22.3201 9.56606 22.1265L15.2338 13.4259C16.2543 11.8592 16.7054 9.98931 16.5112 8.12962C16.3171 6.26993 15.4896 4.53348 14.1675 3.21133ZM13.9769 12.6071L8.40276 21.1642L2.82853 12.6071C1.12227 9.98782 1.48823 6.48251 3.69867 4.27198C4.31641 3.65421 5.04978 3.16418 5.85691 2.82985C6.66405 2.49552 7.52913 2.32344 8.40276 2.32344C9.27639 2.32344 10.1415 2.49552 10.9486 2.82985C11.7557 3.16418 12.4891 3.65421 13.1069 4.27198C15.3173 6.48251 15.6832 9.98782 13.9769 12.6071Z" fill="#D30E15"/>
                                             </svg>
                                             
-                                    </span>
-                                    <span>
-                                    [##db.catalogetext.text##]
-                                    </span>
+                                    </div>
+                                    <div class="Title">
+                                        <p>
+                                            ادرس ما
+                                        </p>
+                                    </div>
+                                    <div class="Des">
+                                        <p>
+                                            ونک، خیابان ملاصدرا، خیابان شیراز جنوبی، خیابان سامان
+                                        </p>
+                                    </div>
                                 </div>
-                            </a>
-                                
-                            </face>
-                        </basis>
-                  
-                    </div>
-                </div>
-             </div>
-         </div>
-         <!-- SECTIONE FOUR -->
-
-           <!-- SECTIONE FIVE -->
-            <div class="Video-Clr">
-                <basis core="print" datamembername="db.video-def">
-                    <layout>
-                        @child
-                    </layout>
-                    <face>
-                        <video id="main-2" src="@largeIMG" ></video>
-                        <div class="Video-OV">
-                            <span class="Icon PlayBTN2">
-                                <svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M0 3.53067C0 1.58222 1.58222 0 3.53067 0H60.4693C62.4178 0 64 1.58222 64 3.53067V60.4693C63.9991 61.4054 63.6268 62.3029 62.9649 62.9649C62.3029 63.6268 61.4054 63.9991 60.4693 64H3.53067C2.59428 64 1.69624 63.628 1.03411 62.9659C0.37198 62.3038 0 61.4057 0 60.4693V3.53067ZM27.1004 19.2533C26.8865 19.1106 26.6378 19.0285 26.3808 19.0159C26.1239 19.0033 25.8683 19.0606 25.6414 19.1817C25.4145 19.3029 25.2246 19.4833 25.0921 19.7038C24.9596 19.9242 24.8894 20.1765 24.8889 20.4338V43.5662C24.8894 43.8235 24.9596 44.0758 25.0921 44.2962C25.2246 44.5167 25.4145 44.6971 25.6414 44.8183C25.8683 44.9394 26.1239 44.9967 26.3808 44.9841C26.6378 44.9715 26.8865 44.8894 27.1004 44.7467L44.448 33.184C44.6423 33.0536 44.8016 32.8774 44.9117 32.6709C45.0218 32.4644 45.0794 32.234 45.0794 32C45.0794 31.766 45.0218 31.5356 44.9117 31.3291C44.8016 31.1226 44.6423 30.9464 44.448 30.816L27.1004 19.2533Z" fill="#D30E15"/>
-                                    </svg>
-                                    
-                            </span>
-                        </div>
-                    </face>
-                </basis>
-           
-            </div>
-           <!-- SECTIONE FIVE -->
-
-           <!-- SECTIONE SIX -->
-            <div class="About-Container">
-            
-                <div class="Right">
-                    <div class="Title-1">
-                        <h2>
-                            <span class="color">
-                              درباره
-                            </span>
-                            <span>
-                              شرکت شهیدی
-                            </span>
-                           
-                        </h2>
-                     </div>
-                     <basis core="print" datamembername="db.image-about">
-                         <layout>
-                             @child
-                         </layout>
-                         <face filter="ord=3">
-                            <div class="IMG">
-                                <img src="@largeIMG" alt="shahidi" title="shahidi">
-                             </div>
-                         </face>
-                     </basis>
-                  
-                </div>
-                <div class="Left">
-                    <div class="Top">
-                        <!-- <span class="Desc">
-                            زیبایی در سادگیست.
-                        </span>
-                        <h4>
-                            زیبایی در سادگیست.
-                        </h4> -->
-                    </div>
-                    <div class="Bottom">
-                        <div class="Col">
-                            <div class="Text">
-                                <basis core="print" datamembername="db.text2">
-                                    <layout>
-                                        @child
-                                    </layout>
-                                    <face filter="RowNumber in (2)">
+                                <div class="Contact">
+                                    <div class="IMG">
+                                       
+                                <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M6.86885 0.127125L5.45942 0.451217C4.20445 0.740092 3.08371 1.2966 2.2291 2.05523C1.3745 2.81386 0.82161 3.74305 0.635499 4.73343C0.0516752 7.83631 1.35692 11.4643 4.50407 15.625C7.64335 19.7752 11.0991 22.449 14.9028 23.6193C16.125 23.9953 17.4629 24.0954 18.7574 23.9079C20.052 23.7204 21.2488 23.2531 22.2055 22.5615L23.271 21.7903C23.9628 21.2905 24.3934 20.616 24.4827 19.8921C24.572 19.1682 24.3139 18.4442 23.7565 17.8547L21.091 15.0339C20.7306 14.653 20.2231 14.3678 19.6397 14.2182C19.0563 14.0686 18.4262 14.0621 17.8377 14.1996L13.8059 15.1404L13.7017 15.1554C13.2575 15.2049 12.2314 14.4712 10.9536 12.7817C9.61695 11.0142 9.34175 9.98042 9.70934 9.71334L11.7596 8.25343C12.5094 7.71997 13.0215 7.02074 13.2242 6.25384C13.4269 5.48694 13.31 4.69083 12.8899 3.97722L11.5886 1.77009C11.1973 1.10592 10.5029 0.573019 9.63489 0.270734C8.76688 -0.0315498 7.78448 -0.0825913 6.87082 0.127125H6.86885ZM9.7978 2.38527L11.0952 4.59239C11.3479 5.02036 11.4185 5.498 11.2972 5.95819C11.1759 6.41839 10.8688 6.83802 10.419 7.15812L8.36281 8.61953C7.04773 9.5708 7.48412 11.1943 9.25329 13.5319C10.9163 15.7316 12.4338 16.8179 14.0654 16.6288L14.3092 16.5898L18.4136 15.634C18.6098 15.588 18.8199 15.5901 19.0145 15.6398C19.2092 15.6896 19.3785 15.7847 19.4987 15.9116L22.1642 18.7324C22.4434 19.0272 22.5727 19.3893 22.5282 19.7514C22.4838 20.1135 22.2685 20.4509 21.9225 20.701L20.8551 21.4722C20.1717 21.9659 19.317 22.2994 18.3925 22.4332C17.468 22.567 16.5127 22.4954 15.64 22.2269C12.3021 21.2006 9.14714 18.7594 6.20836 14.8748C3.26172 10.9812 2.06852 7.66976 2.58158 4.94649C2.71439 4.23894 3.10929 3.57507 3.71978 3.03307C4.33027 2.49106 5.13094 2.09348 6.02751 1.88712L7.43695 1.56303C7.8939 1.45823 8.38519 1.48385 8.81921 1.63514C9.25323 1.78643 9.60035 2.05304 9.79583 2.38527H9.7978Z" fill="#D30E15"/>
+                                    </svg> 
+                                    </div>
+                                    <div class="Title">
                                         <p>
-                                            @largetext
+                                            تماس با ما
                                         </p>
-                                    </face>
-                                </basis>
-                              
-                            </div>
-                        </div>
-                        <div class="Col">
-                            <div class="Text">
-                                <basis core="print" datamembername="db.text2">
-                                    <layout>
-                                        @child
-                                    </layout>
-                                    <face filter="RowNumber in (3,4)">
+                                    </div>
+                                    <div class="Des">
+                                       <a href="">0467575</a>
+                                    </div>
+                                </div>
+                                <div class="Contact">
+                                    <div class="IMG">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M19 4H5C4.20435 4 3.44129 4.31607 2.87868 4.87868C2.31607 5.44129 2 6.20435 2 7V17C2 17.7956 2.31607 18.5587 2.87868 19.1213C3.44129 19.6839 4.20435 20 5 20H19C19.7956 20 20.5587 19.6839 21.1213 19.1213C21.6839 18.5587 22 17.7956 22 17V7C22 6.20435 21.6839 5.44129 21.1213 4.87868C20.5587 4.31607 19.7956 4 19 4ZM18.33 6L12 10.75L5.67 6H18.33ZM19 18H5C4.73478 18 4.48043 17.8946 4.29289 17.7071C4.10536 17.5196 4 17.2652 4 17V7.25L11.4 12.8C11.5731 12.9298 11.7836 13 12 13C12.2164 13 12.4269 12.9298 12.6 12.8L20 7.25V17C20 17.2652 19.8946 17.5196 19.7071 17.7071C19.5196 17.8946 19.2652 18 19 18Z" fill="#D30E15"/>
+                                            </svg>
+                                            
+                                    </div>
+                                    <div class="Title">
                                         <p>
-                                            @largetext
+                                            ایمیل
                                         </p>
-                                    </face>
-                                </basis>
+                                    </div>
+                                    <div class="Des">
+                                       <a href="">salehmohamadkhani77@gmail.com</a>
+                                    </div>
+                                </div>
+                                    
                             </div>
                         </div>
-
-                    </div>
-                    <a class="ShowMoreBTN-2"  href="درباره-ما" alt=" درباره ما" title=" درباره ما">
-                    
-                            <span>
-                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4 0C4.1692 0 4.3064 0.1372 4.3064 0.3064V3.6932H7.6936C7.77492 3.6932 7.8529 3.7255 7.9104 3.783C7.9679 3.8405 8.0002 3.91848 8.0002 3.9998C8.0002 4.08112 7.9679 4.1591 7.9104 4.2166C7.8529 4.2741 7.77492 4.3064 7.6936 4.3064H4.3064V7.6936C4.3064 7.77486 4.27412 7.8528 4.21666 7.91026C4.1592 7.96772 4.08126 8 4 8C3.91874 8 3.8408 7.96772 3.78334 7.91026C3.72588 7.8528 3.6936 7.77486 3.6936 7.6936L3.6932 4.3064H0.3064C0.225138 4.3064 0.147204 4.27412 0.0897425 4.21666C0.0322813 4.1592 0 4.08126 0 4C0 3.91874 0.0322813 3.8408 0.0897425 3.78334C0.147204 3.72588 0.225138 3.6936 0.3064 3.6936L3.6932 3.6932V0.3064C3.69341 0.225133 3.72582 0.147262 3.78332 0.0898349C3.84082 0.0324081 3.91873 0.000105541 4 0Z" fill="#FFFFFF"/>
-                                    </svg>
-                                    
-                            </span>
-                            <span>نمایش بیشتر</span>
-                       
-                      </a>
-                </div>
-            </div>
-           <!-- SECTIONE SIX -->
-
-           <!-- SECTIONE SEVEN -->
-            <div class="Product-Tags-C BG" data-bg="[##db.image-def-pro.largeIMG##]"  >
-            
-               <div class="Right">
-                <basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2358782">
-                    <member name="gallery" type="list" format="3,4" /> 
-                </basis>
-                <basis core="print" datamembername="db.gallery">
-                    <face filter="ord=1000">
-                <span class="rrr@Table2ID">
-                    <img src="[##db.image-def-pro.largeIMG##]" alt="" id="image@Table2ID" style="display: none;">
-                </span>
-                    </face>
-                </basis>
-               </div>
-               <div class="Left">
-                <div class="Box">
-                  <div class="product">
-                      <div class="title">
-                          <p>[##db.producttitle.Answer##]   </p>
-                      </div>
-                      <div class="text">
-                        <basis core="print" datamembername="db.producttext">
-                            <layout>
-                                @child
-                            </layout>
-                            <face  filter="RowNumber=1">
-                                <p>@Answer</p>
-                            </face>
-                        </basis>
-                         
-                      </div>
-                      <div class="ShowMBTN">
-                          <a href="[##db.productList.link##]" alt="[##db.producttitle.Answer##]"
-                           title="[##db.producttitle.Answer##]">
-                              <span>
-                                  <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                      <path d="M4 0C4.1692 0 4.3064 0.1372 4.3064 0.3064V3.6932H7.6936C7.77492 3.6932 7.8529 3.7255 7.9104 3.783C7.9679 3.8405 8.0002 3.91848 8.0002 3.9998C8.0002 4.08112 7.9679 4.1591 7.9104 4.2166C7.8529 4.2741 7.77492 4.3064 7.6936 4.3064H4.3064V7.6936C4.3064 7.77486 4.27412 7.8528 4.21666 7.91026C4.1592 7.96772 4.08126 8 4 8C3.91874 8 3.8408 7.96772 3.78334 7.91026C3.72588 7.8528 3.6936 7.77486 3.6936 7.6936L3.6932 4.3064H0.3064C0.225138 4.3064 0.147204 4.27412 0.0897425 4.21666C0.0322813 4.1592 0 4.08126 0 4C0 3.91874 0.0322813 3.8408 0.0897425 3.78334C0.147204 3.72588 0.225138 3.6936 0.3064 3.6936L3.6932 3.6932V0.3064C3.69341 0.225133 3.72582 0.147262 3.78332 0.0898349C3.84082 0.0324081 3.91873 0.000105541 4 0Z" fill="#D30E15"/>
-                                      </svg>
-                                      
-                              </span>
-                              <span>نمایش بیشتر</span>
-                            
-                          </a>
-                      </div>
-                  </div>
-                </div>
-             </div>
-            </div>
-            <!-- SECTIONE SEVEN -->
-
-             <!-- SECTIONE EIGHT -->
-              <div class="ProductCat-2">
-         
-                <div class="Right">
-                    <div class="Title-1">
-                        <h2>
-                            <span class="color">
-                              دسته بندی
-                            </span>
-                            <span>
-                              محصولات
-                            </span>
+                        <div class="Bottom">
+                          <div class="CopyRight">
+                            <a href="">
                            
-                        </h2>
-                     </div>
-                     <div class="Text">
-                        <basis core="print" datamembername="basisName.productCat">
-                            <layout>
-                                @child
-                            </layout>
-                            <face filter="catid=209291">
-                               <p>@urldescription</p> 
-                            </face>
-                        </basis>
-                         </div>
-                     <a class="ShowMoreBTN-2 "  href="محصولات" alt="محصولات" title="محصولات" >
-                    
                             <span>
-                                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M4 0C4.1692 0 4.3064 0.1372 4.3064 0.3064V3.6932H7.6936C7.77492 3.6932 7.8529 3.7255 7.9104 3.783C7.9679 3.8405 8.0002 3.91848 8.0002 3.9998C8.0002 4.08112 7.9679 4.1591 7.9104 4.2166C7.8529 4.2741 7.77492 4.3064 7.6936 4.3064H4.3064V7.6936C4.3064 7.77486 4.27412 7.8528 4.21666 7.91026C4.1592 7.96772 4.08126 8 4 8C3.91874 8 3.8408 7.96772 3.78334 7.91026C3.72588 7.8528 3.6936 7.77486 3.6936 7.6936L3.6932 4.3064H0.3064C0.225138 4.3064 0.147204 4.27412 0.0897425 4.21666C0.0322813 4.1592 0 4.08126 0 4C0 3.91874 0.0322813 3.8408 0.0897425 3.78334C0.147204 3.72588 0.225138 3.6936 0.3064 3.6936L3.6932 3.6932V0.3064C3.69341 0.225133 3.72582 0.147262 3.78332 0.0898349C3.84082 0.0324081 3.91873 0.000105541 4 0Z" fill="#FFFFFF"/>
-                                    </svg>
-                                    
+                                طراحی سایت و بهینه سازی سایت
                             </span>
-                            <span>نمایش بیشتر</span>
-                       
-                      </a>
-                </div>
-                <div class="Left">
-                    <div class="ProductCat-Slider">
-                        <div class="swiper-productCat2">
-                            <div class="swiper-wrapper">
-                                <basis core="print" datamembername="basisName.productCat">
-                                    <layout>
-                                        @child
-                                    </layout>
-                                    <face filter="parentid not in (65918)">
-                                        <div class="swiper-slide">
-                                            <div class="Product-cat">
-                                                <div class="IMG">
-                                                    <a href="@link" alt="@title" title="@title">
-                                                    <img src="@image" alt="@title" title="@title"></a>
-                                                </div>
-                                                <div class="Title">
-                                                    <a href="@link" alt="@title" title="@title">
-                                                    <p>@title     </p>
-                                                    </a>
-                                                </div>
-                                                <div class="Desc">
-                                                    <p>  @urldescription</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </face>
-                                </basis>
-                              
-                    
-                            </div>
-                        </div>
-                  
-                    </div>
-                    <div class="swiper-button-prev"></div>
-                    <div class="swiper-button-next"></div>
-
-                </div>
-              </div>
-             <!-- SECTIONE EIGHT -->
-
-             <!-- SECTIONE NINE -->
-              <div class="NewsBlogs-Container">
-                <div class="Top">
-                    <div class="Blogs-nav">
-                        <span class="Title">
-                            بلاگ
-                        </span>
-                        <a  href="بلاگ" class="Showl"  alt="بلاگ" title="بلاگ">
-                            نمایش همه وبلاگ
+                            <span>
+                                <img src="images/n.png" alt="">
+                            </span>
                         </a>
-                    </div>
-                    <div class="News-nav">
-                        <span class="Title">
-                            اخبار
-                        </span>
-                        <a href="بلاگ" class="Showl" alt="بلاگ" title="بلاگ">
-                            نمایش همه اخبار
-                        </a>
-                    </div>
-                </div>
-                <div class="Bottom">
-                    <div class="Blogs">
-                        <div class="Col-right">
-                            <basis core="print" datamembername="db.list-blog">
-                                <layout>
-                                    @child
-                                </layout>
-                                <face filter="RowNumber in (1,2)">
-                                    <div class="Blog">
-                                        <div class="IMG">
-                                            <a href="@link" title="@title" alt="@title">
-                                                <img src="@00415X00646prp" alt="@title" title="@title">
-                                            </a>
-                                        </div>
-                                        <div class="Title">
-                                            <a  href="@link" title="@title" alt="@title"><p>
-                                                @title
-                                            </p>
-                                        </a>
-                                        </div>
-                                        <div class="Desc">
-                                            <p>@prp_7248</p>
-                                        </div>
-                                    </div>
-                                </face>
-                            </basis>
-                        
-                                <a class="ShowMoreBTN-2" href="بلاگ" alt="بلاگ" title="بلاگ" >
-                             
-                                  
-                                    <span>همه مقالات </span>
-                                  
-                            </a>
+                          </div>
                         </div>
-                        <div class="Col-left">
-                            <basis core="print" datamembername="db.list-blog">
-                                <layout>
-                                    @child
-                                </layout>
-                                <face filter="RowNumber in (3,4)">
-                                    <div class="Blog">
-                                        <div class="IMG">
-                                            <a href="@link" title="@title" alt="@title">
-                                                <img src="@00415X00646prp" alt="@title" title="@title">
-                                            </a>
-                                        </div>
-                                        <div class="Title">
-                                            <a  href="@link" title="@title" alt="@title"><p>
-                                                @title
-                                            </p>
-                                        </a>
-                                        </div>
-                                        <div class="Desc">
-                                            <p>@prp_7248</p>
-                                        </div>
-                                    </div>
-                                </face>
-                            </basis>
-                        </div>
-              
-
-                    </div>
-                    <div class="News">
-                        <div class="Col">
-                            <basis core="print" datamembername="db.list-news">
-                                <layout>
-                                    @child
-                                </layout>
-                                <face filter="RowNumber in (1,2)">
-                                    <div class="New">
-                                        <div class="IMG">
-                                            <a href="@link" title="@title" alt="@title">
-                                                <img src="@00415X00646prp" alt="@title" title="@title">
-                                            </a>
-                                        </div>
-                                        <div class="Title">
-                                            <a  href="@link" title="@title" alt="@title"><p>
-                                                @title
-                                            </p>
-                                        </a>
-                                        </div>
-                                        <div class="Desc">
-                                            <p>@prp_7248</p>
-                                        </div>
-                                    </div>
-                                </face>
-                            </basis>
-                        
-                        </div>
-                    </div>
-                </div>
-              </div>
-             <!-- SECTIONE NINE -->
-            
-
-             <!--  FOOTER -->
-            
-             <basis core="call" file="footer.inc" />
-            <!-- FOOTER -->
-            
-<basis core="dbsource" source="basiscore" mid="1" name="db" lid="1" usedforid="1443430">
-    <member name="productinfo" type="list"></member>
-</basis>
-
+            </footer>
+            <!-- FOOTER -->              
     </main>
-    <basis core="call" file="script.inc" />
-    <script src="[##cms.cms.cdn##]/js/home.js"></script>
-<script>
-    // TAG PRODUCT
-window.addEventListener("load", event => {
-    <basis core="repeater" name="rep" datamembername="db.gallery">
-
-<basis core="dbsource" source="media" name="db" usedforid="[##rep.current.Table2ID##]">
-    <member name="listt" type="list" request="taglist" />
-</basis>
-
-<basis core="print" datamembername="rep.current">
-    <face>
-        var  naturalWidth = document.getElementById("image@Table2ID").naturalWidth;
-        var naturalHeight = document.getElementById("image@Table2ID").naturalHeight;
-        var image = $('#image@Table2ID');
-        var xRatio = naturalWidth / image.width();
-        var yRatio = naturalHeight / image.height();
-        var width = image.width();
-        var height = image.height();
-</face>
-</basis>
-<basis core="print" datamembername="db.listt">
- <layout>
-        var settings=[@child]
- </layout>
-    <face  >
-         {{
-           "id": "@id",
-            "xCoordinates": "@xCoordinates",
-            "yCoordinates": "@yCoordinates",
-            "mediaid": "@mediaid",
-            "usedforid": "@usedforid",
-             "link": "@link",
-            "description": "@description"
-         }},
-     </face>
-     <else-layout>
-         var settings='null'
-    </else-layout>
- </basis>
-
-<basis core="print" datamembername="rep.current">
- <face>
- var   iddd=@Table2ID;
-      tagList(settings,width, height, xRatio, yRatio,iddd);
- </face>
-
- </basis>
-</basis>
-function tagList(settings, width, height, xRatio, yRatio, iddd) {
-    console.log('tagg');
-    
-                for (i = 0; i < (settings.length); i++) {
-                    $(".rrr" + iddd).append(`
-                    
-                    <div class="Tag Tag-1 info  tag-item tag${settings[i].id}" data-id=${settings[i].usedforid }>
-                     <span class="Circle pulsating-circle">
-                        <span class="Circle-Inner">
-
-                        </span>
-                     </span>
-                             <div class="Pop-tag" data-id=${settings[i].usedforid }>
-                        <div class="pop">
-
-                            <div class="Box">
-                                <div class="IMG load-product${settings[i].usedforid }">
-            
-                             </a>
-                             </div>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
-                    `);
-                    xCoordinates =parseInt(settings[i].xCoordinates ) / xRatio;
-                    yCoordinates =parseInt(settings[i].yCoordinates )  / yRatio;
-                    var iconWidth = parseInt($('.tag' + settings[i].id).find('.tag-item').width());
-                    var iconHeight = $('.tag' + settings[i].id).find('.tag-item ').height();
-                    var left = xCoordinates ;
-                    var top = yCoordinates;
-                    console.log(left,'l');
-                    console.log(iconWidth,'lc');
-                    
-                    $(".tag" + settings[i].id).css({
-                        "position": "absolute",
-                        "left": left + "px",
-                        "top": top + "px",
-                        "z-index": "214748"
-                    });
-
-                }
-
-            }
- $('body').on('mouseover', '.tag-item', function () {
-var width = $(".width-94").width() + 400;
-var rt = ($(window).width() - ($(this).offset().left + $(this).outerWidth()));
-if (rt < width) {
-    var id = $(this).attr("data-id");
-
-    $(this).css("z-index", "214748361")
-    $(".load-product" + id).show();
-    $(this).children('.Pop-tag').addClass("expand");
-    $(".load-product" + id).addClass("load-producty");
-    $(".load-product" + id).css({ "right": "33px", "left": "unset" });
-    $(".load-product" + id).load("/loadtagPro.bc?type=4&ownerid=[##db.productinfo.ownerid##]&id=" + id);
-}
-else {
-    var id = $(this).attr("data-id");
-    $(this).css("z-index", "214748361")
-    $(".load-product" + id).show();
-    $(this).children('.Pop-tag').addClass("expand");
-    $(".load-product" + id).addClass("load-productx")
-    $(".load-product" + id).load("/loadtagPro.bc?type=4&ownerid=[##db.productinfo.ownerid##]&id=" + id);
-}
-});
-$('body').on('mouseout', '.tag-item', function () {
-var id = $(this).attr("data-id");
-$(".load-product" + id).hide();
-$(this).children('.Pop-tag').removeClass("expand");
-$(this).css("z-index", "214748")
-});
-   })
-</script>
-
+  
+    <script src="js/gsap.js"></script>
+    <script src="js/scrollTrigger.js"></script>
+    <script src="js/jQuery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Readmore.js/2.2.0/readmore.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.0.8/popper.min.js"></script>
+    <script src="js/lenisScroll.js"></script>
+    <script src="js/swiper-bundle.8.4.7.min.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/aboutUs.js"></script>
 </body>
 </html>

@@ -133,9 +133,26 @@ body {
 }
 
 @font-face {
+  font-family: IRANYekan;
   font-family: "iranyekanwebblackfanum";
   src: url("../_fonts/iranyekanwebblackfanum.eot");
   src: url("../_fonts/iranyekanwebblackfanum.eot?#iefix") format("embedded-opentype"), url("../_fonts/iranyekanwebblackfanum.woff") format("woff"), url("../_fonts/iranyekanwebblackfanum.woff2") format("woff2"), url("../_fonts/iranyekanwebblackfanum.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IRANSansWeb";
+  src: url("../_fonts/IRANSansWeb(FaNum).eot");
+  src: url("../_fonts/IRANSansWeb(FaNum).eot?#iefix") format("embedded-opentype"), url("../_fonts/IRANSansWeb(FaNum).woff") format("woff"), url("../_fonts/IRANSansWeb(FaNum).woff2") format("woff2"), url("../_fonts/IRANSansWeb(FaNum).ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "IRANSansWeb";
+  src: url("../_fonts/IRANSansWeb(FaNum)_Medium.eot");
+  src: url("../_fonts/IRANSansWeb(FaNum)_Medium.eot?#iefix") format("embedded-opentype"), url("../_fonts/IRANSansWeb(FaNum)_Medium.woff") format("woff"), url("../_fonts/IRANSansWeb(FaNum)_Medium.woff2") format("woff2"), url("../_fonts/IRANSansWeb(FaNum)_Medium.ttf") format("truetype");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -145,14 +162,6 @@ body {
   src: url("../_fonts/IRANYekanLight.eot");
   src: url("../_fonts/IRANYekanLight.eot?#iefix") format("embedded-opentype"), url("../_fonts/IRANYekanLight.woff") format("woff"), url("../_fonts/IRANYekanLight.woff2") format("woff2"), url("../_fonts/IRANYekanLight.ttf") format("truetype");
   font-weight: 300;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "IRANYekan";
-  src: url("../_fonts/iranyekanwebmedium.eot");
-  src: url("../_fonts/iranyekanwebmedium.eot?#iefix") format("embedded-opentype"), url("../_fonts/iranyekanwebmedium.ttf") format("truetype");
-  font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
@@ -281,7 +290,7 @@ a, ul, li {
 }
 
 .faNum {
-  font-family: "iranyekanwebblackfanum" !important;
+  font-family: "IRANSansWeb" !important;
 }
 
 ::-webkit-scrollbar-track {
@@ -408,6 +417,11 @@ header.DesktopHeader {
   z-index: 99;
   padding: 15px 0;
   grid-template-columns: 3fr 1fr 3fr;
+}
+@media (1024px <= width <= 1200px) {
+  header.DesktopHeader {
+    grid-template-columns: 5fr 1fr 3fr;
+  }
 }
 header.DesktopHeader.color {
   background: linear-gradient(178deg, transparent 0%, rgba(148, 148, 148, 0.76) 100%);
@@ -553,21 +567,21 @@ header.DesktopHeader > .Menu-Container > .Left .IMG-C img {
   -ms-transform: translateY(200px);
   -o-transform: translateY(200px);
   opacity: 0;
-  transition: all 1.2s 0.5s ease;
-  -webkit-transition: all 1.2s 0.5s ease;
-  -moz-transition: all 1.2s 0.5s ease;
-  -ms-transition: all 1.2s 0.5s ease;
-  -o-transition: all 1.2s 0.5s ease;
+  transition: all 1s 0.3s ease;
+  -webkit-transition: all 1s 0.3s ease;
+  -moz-transition: all 1s 0.3s ease;
+  -ms-transition: all 1s 0.3s ease;
+  -o-transition: all 1s 0.3s ease;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 header.DesktopHeader > .Menu-Container > .Left .IMG-C img.hide {
-  transition: all 1.2s ease;
-  -webkit-transition: all 1.2s ease;
-  -moz-transition: all 1.2s ease;
-  -ms-transition: all 1.2s ease;
-  -o-transition: all 1.2s ease;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
   opacity: 0 !important;
   transform: translateY(-200px) !important;
   -webkit-transform: translateY(-200px) !important;
@@ -679,21 +693,21 @@ header.DesktopHeader > .Menu-Container > .Right .IMG-C img {
   -ms-transform: translateY(-200px);
   -o-transform: translateY(-200px);
   opacity: 0;
-  transition: all 1.2s 0.6s ease;
-  -webkit-transition: all 1.2s 0.6s ease;
-  -moz-transition: all 1.2s 0.6s ease;
-  -ms-transition: all 1.2s 0.6s ease;
-  -o-transition: all 1.2s 0.6s ease;
+  transition: all 1s 0.2s ease;
+  -webkit-transition: all 1s 0.2s ease;
+  -moz-transition: all 1s 0.2s ease;
+  -ms-transition: all 1s 0.2s ease;
+  -o-transition: all 1s 0.2s ease;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 header.DesktopHeader > .Menu-Container > .Right .IMG-C img.hide {
-  transition: all 1.2s ease;
-  -webkit-transition: all 1.2s ease;
-  -moz-transition: all 1.2s ease;
-  -ms-transition: all 1.2s ease;
-  -o-transition: all 1.2s ease;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
   opacity: 0 !important;
   transform: translateY(-200px) !important;
   -webkit-transform: translateY(-200px) !important;
@@ -1073,12 +1087,12 @@ footer.DesktopFooter > .Bottom .CopyRight a span {
   margin-left: auto;
 }
 .About-Clr .Left .Video {
-  width: 526px;
+  width: auto;
   height: 310px;
   position: relative;
   overflow: hidden;
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-content: center;
 }
 .About-Clr .Left .Video > video {
@@ -1170,7 +1184,7 @@ footer.DesktopFooter > .Bottom .CopyRight a span {
 }
 .About-Clr .Right .Box > .Title {
   width: 100%;
-  margin-bottom: 2.5em;
+  margin-bottom: 1em;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -1314,6 +1328,12 @@ footer.DesktopFooter > .Bottom .CopyRight a span {
   gap: 5.3em;
   grid-template-columns: repeat(2, 1fr);
 }
+@media (1024px <= width <= 1200px) {
+  .About-Container > .Left > .Bottom {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .About-Container > .Left > .Bottom .Col {
   width: 100%;
   display: flex;
@@ -1329,6 +1349,16 @@ footer.DesktopFooter > .Bottom .CopyRight a span {
   flex-direction: column;
   align-items: flex-start;
   gap: 1.5em;
+}
+@media (min-width: 1250px) {
+  .About-Container > .Left > .Bottom .Col .Text {
+    min-width: unset;
+  }
+}
+@media (1024px <= width <= 1200px) {
+  .About-Container > .Left > .Bottom .Col .Text {
+    min-width: unset;
+  }
 }
 .About-Container > .Left > .Bottom .Col .Text p {
   font-size: 18px;
@@ -1350,6 +1380,19 @@ footer.DesktopFooter > .Bottom .CopyRight a span {
 .About-Container > .Right .Title-1 {
   width: 100%;
 }
+.About-Container > .Right .Title-1 h2 span {
+  font-weight: 400;
+}
+.About-Container > .Right .Title-1 h2 span:not(.color) {
+  transform: translateY(1px);
+  -webkit-transform: translateY(1px);
+  -moz-transform: translateY(1px);
+  -ms-transform: translateY(1px);
+  -o-transform: translateY(1px);
+}
+.About-Container > .Right .Title-1 h2 span.color {
+  font-weight: 900;
+}
 .About-Container > .Right .IMG {
   width: 100%;
   min-width: 390px;
@@ -1357,10 +1400,24 @@ footer.DesktopFooter > .Bottom .CopyRight a span {
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
+  overflow: hidden;
 }
 .About-Container > .Right .IMG img {
   width: 100%;
   height: 100%;
+  transition: all 0.5s ease;
+}
+.About-Container > .Right .IMG:hover img {
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
 }
 .About-Container .ShowMoreBTN-2 {
   width: auto;
@@ -1378,6 +1435,7 @@ footer.DesktopFooter > .Bottom .CopyRight a span {
   border: none;
   margin-top: auto;
   padding-bottom: 0;
+  padding: 0;
 }
 .About-Container .ShowMoreBTN-2 svg, .About-Container .ShowMoreBTN-2 path {
   fill: #D30E15;
@@ -1400,9 +1458,11 @@ footer.DesktopFooter > .Bottom .CopyRight a span {
 }
 
 .Cataloge {
-  width: auto;
+  width: 88%;
   display: flex;
   flex-direction: column;
+  margin-left: auto;
+  align-items: flex-end;
 }
 .Cataloge a {
   width: auto;
@@ -1410,7 +1470,7 @@ footer.DesktopFooter > .Bottom .CopyRight a span {
   flex-direction: column;
 }
 .Cataloge .IMG {
-  width: auto;
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;

@@ -11,7 +11,10 @@
     <member name="banner" type="list" format="3,4" postsql="select * from [db.banner] where ord=7"/> 
 </basis>
 <basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2358536">
-    <member name="banner1" type="list" format="3,4" postsql="select * from [db.banner1] where ord=5"/> 
+    <member name="banner1" type="list" format="3,4" postsql="select * from [db.banner1] where ord=4"/> 
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" usedforid="2358536">
+    <member name="text2" type="view"  postsql="select * from [db.text2] where TypeID=250"/> 
 </basis>
 <!DOCTYPE html>
 <html lang="fa">
@@ -23,6 +26,15 @@
     <link rel="stylesheet" href="[##cms.cms.cdn##]/css/main.css">
     <link rel="stylesheet" href="[##cms.cms.cdn##]/css/swiper-bundle.min.css">
     <link rel="stylesheet" href="[##cms.cms.cdn##]/css/f-style.css">
+<style>
+main.AboutUsC .AboutBannerC .Right .Text.active .text-inner {
+    overflow-y: scroll;
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+}
+</style>
 </head>
 <body>
     <main class="AboutUsC">
@@ -55,6 +67,7 @@
                      
                             </div>
                             <div class="Text">
+                                <div class="text-inner">
                                 <basis core="print" datamembername="db.text">
                                     <layout>
                                         @child
@@ -65,31 +78,45 @@
                                         </p>
                                     </face>
                                 </basis>
-                            
+                                </div>
                             </div>
+                            <div class="ShowMoreBTN-2">
+                                <a href="javascript:void(0)">
+                                    <span class="more">
+                                        <svg  width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M4 0C4.1692 0 4.3064 0.1372 4.3064 0.3064V3.6932H7.6936C7.77492 3.6932 7.8529 3.7255 7.9104 3.783C7.9679 3.8405 8.0002 3.91848 8.0002 3.9998C8.0002 4.08112 7.9679 4.1591 7.9104 4.2166C7.8529 4.2741 7.77492 4.3064 7.6936 4.3064H4.3064V7.6936C4.3064 7.77486 4.27412 7.8528 4.21666 7.91026C4.1592 7.96772 4.08126 8 4 8C3.91874 8 3.8408 7.96772 3.78334 7.91026C3.72588 7.8528 3.6936 7.77486 3.6936 7.6936L3.6932 4.3064H0.3064C0.225138 4.3064 0.147204 4.27412 0.0897425 4.21666C0.0322813 4.1592 0 4.08126 0 4C0 3.91874 0.0322813 3.8408 0.0897425 3.78334C0.147204 3.72588 0.225138 3.6936 0.3064 3.6936L3.6932 3.6932V0.3064C3.69341 0.225133 3.72582 0.147262 3.78332 0.0898349C3.84082 0.0324081 3.91873 0.000105541 4 0Z" fill="#FFFFFF"/>
+                                            </svg>
+                                            
+                                    </span>
+                                    <span>نمایش بیشتر</span>
+                                  
+                                </a>
+                              </div>
                         </div>
                   
                    
                           <div class="Navigation">
-                            <div class="swiper-pagination"></div>
+                            <div class="handler">
+                              
+                            </div>
                           </div>
                     </div>
                 </div>
                 <div class="Left">
                     <div class="Banner-Container">
-                        <div class="swiper-Banners">
-                            <div class="swiper-wrapper">
+                        <div class="Banners">
+                          
                                 <basis core="print" datamembername="db.media-about">
                                     <layout>
                                         @child
                                     </layout>
                                     <face filter="ord=5">
-                                        <div class="swiper-slide">
-                                            <img src="@largeIMG" alt="shahidi" title="shahidi">
-                                        </div>
+                                <div class="slide">
+                                    <img src="@largeIMG" alt="shahidi" title="shahidi">
+                                </div>
                                     </face>
                                 </basis>
-                            </div>
+                            
                         </div>
                 
                         <div class="OVBox">
@@ -97,7 +124,7 @@
                                 <layout>
                                     @child
                                 </layout>
-                                <face filter="RowNumber=2">
+                                <face >
                                     <div class="IMG">
                                         <img src="@largeIMG" alt="shahidi" title="shahidi">
                                     </div>
@@ -112,72 +139,75 @@
             <!-- SECTIONE TWO -->
             <div class="About-Container">
             
-                    <div class="Right">
-                        <div class="Title-1">
-                            <h2>
-                                <span class="color">
-                                  درباره
-                                </span>
-                                <span>
-                                  شرکت شهیدی
-                                </span>
-                               
-                            </h2>
-                         </div>
-                         <basis core="print" datamembername="db.media-about">
-                            <layout>
-                                @child
-                            </layout>
-                            <face filter="ord=6">
-                               <div class="IMG">
-                                   <img src="@largeIMG" alt="shahidi" title="shahidi">
-                                </div>
-                            </face>
-                        </basis>
-                    </div>
-                    <div class="Left">
-                        <div class="Top">
-                            <!-- <span class="Desc">
-                                زیبایی در سادگیست.
+                <div class="Right">
+                    <div class="Title-1">
+                        <h2>
+                            <span class="color">
+                              درباره
                             </span>
-                            <h4>
-                                زیبایی در سادگیست.
-                            </h4> -->
-                        </div>
-                        <div class="Bottom">
-                            <div class="Col">
-                                <div class="Text">
-                                    <basis core="print" datamembername="db.text">
-                                        <layout>
-                                            @child
-                                        </layout>
-                                        <face filter="RowNumber=2">
-                                            <p>
-                                                @largetext
-                                            </p>
-                                        </face>
-                                    </basis>
-                                </div>
-                            </div>
-                            <div class="Col">
-                                <div class="Text">
-                                    <basis core="print" datamembername="db.text">
-                                        <layout>
-                                            @child
-                                        </layout>
-                                        <face filter="RowNumber=4">
-                                            <p>
-                                                @largetext
-                                            </p>
-                                        </face>
-                                    </basis>
-                                </div>
-                            </div>
-    
-                        </div>
-                
+                            <span>
+                              بازرگانی شهیدی
+                            </span>
+                           
+                        </h2>
+                     </div>
+                     <basis core="print" datamembername="db.media-about">
+                         <layout>
+                             @child
+                         </layout>
+                         <face filter="ord=6">
+                            <div class="IMG">
+                                <img src="@largeIMG" alt="shahidi" title="shahidi">
+                             </div>
+                         </face>
+                     </basis>
+                  
+                </div>
+                <div class="Left">
+                    <div class="Top">
+                        <!-- <span class="Desc">
+                            زیبایی در سادگیست.
+                        </span>
+                        <h4>
+                            زیبایی در سادگیست.
+                        </h4> -->
                     </div>
+                    <div class="Bottom">
+                        <div class="Col">
+                            <div class="Text">
+                                <basis core="print" datamembername="db.text2">
+                                    <layout>
+                                        @child
+                                    </layout>
+                                    <face filter="RowNumber in (2)">
+                                        <p>
+                                            @largetext
+                                        </p>
+                                    </face>
+                                </basis>
+                              
+                            </div>
+                        </div>
+                        <div class="Col">
+                            <div class="Text">
+                                <basis core="print" datamembername="db.text2">
+                                    <layout>
+                                        @child
+                                    </layout>
+                                    <face filter="RowNumber in (3)">
+                                        <p>
+                                            @largetext
+                                        </p>
+                                    </face>
+                                </basis>
+                            </div>
+                        </div>
+
+                    </div>
+                  
+                </div>
             </div>
+         
             <!-- SECTIONE TWO -->
 
              <!-- SECTIONE TWO -->
@@ -201,7 +231,7 @@
                 <div class="Left">
                     <div class="ContentBox">
                         
-                            <basis core="print" datamembername="db.text">
+                            <basis core="print" datamembername="db.text2">
                                 <layout>
                                     <div class="Title-1">
                                         <p>
@@ -209,7 +239,7 @@
                                         </p>
                                     </div>
                                 </layout>
-                                <face filter="RowNumber=1">
+                                <face filter="RowNumber=5">
                                   
                                         <span>
                                             
@@ -221,18 +251,18 @@
                                 
                                 </face>
                             </basis>
-                            <div class="Text">
-                                <basis core="print" datamembername="db.text">
+                            <!-- <div class="Text">
+                                <basis core="print" datamembername="db.text2">
                                     <layout>
                                         @child
                                     </layout>
-                                    <face filter="RowNumber=3">
+                                    <face filter="RowNumber=5">
                                         <p>
-                                            @text
+                                            @largetext
                                         </p>
                                     </face>
                                 </basis>
-                            </div>
+                            </div> -->
                             <div class="ImgSlider">
                                 <div class="swiper-button-prev"></div>
                                 <div class="swiper-button-next"></div>

@@ -56,10 +56,13 @@
     <member request="cat" type="tree" name="productCat" parentid="209291"  /> 
 </basis>
 <basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" catid="66161"> 
-    <member name="list-blog" size="415x646" type="list" propertyid="7248,7249"/>
+    <member name="list-blog" size="415x646" type="list" propertyid="7248,7249" request="catname"/>
+</basis>
+<basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" catid="66161"> 
+    <member name="list-blog1" size="415x317" type="list" propertyid="7248,7249" request="catname"/>
 </basis>
 <basis core="dbsource" name="db" source="basiscore" lid="1" mid="1" catid="66167"> 
-    <member name="list-news" size="415x646" type="list" propertyid="7248,7249"/>
+    <member name="list-news" size="415x646" type="list" propertyid="7248,7249" request="catname"/>
 </basis>
 <basis core="dbsource" name="db" source="basiscore" lid="1" mid="20" usedforid="2358555">
     <member name="product" type="view"/>
@@ -427,7 +430,7 @@
                               درباره
                             </span>
                             <span>
-                              شرکت شهیدی
+                              بازرگانی شهیدی
                             </span>
                            
                         </h2>
@@ -501,77 +504,22 @@
            <!-- SECTIONE SIX -->
 
            <!-- SECTIONE SEVEN -->
-            <div class="Product-Tags-C BG" data-bg="[##db.image-def-pro.largeIMG##]">
+           <basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2358782">
+            <member name="table2id" type="list" format="3,4" postsql="select * from [db.table2id] where ord=1000 " /> 
+        </basis>
+            <div class="Product-Tags-C BG" data-bg="[##db.image-def-pro.largeIMG##]" id="image[##db.table2id.Table2ID##]" >
             
                <div class="Right">
                 <basis core="dbsource" name="db" source="media" lid="1" sourcemid="1" usedforid="2358782">
                     <member name="gallery" type="list" format="3,4" /> 
                 </basis>
-       
-                <basis core="print" datamembername="db.productGallery">
-                    <layout>
-                        @child
-                    </layout>
-                    <face filter="RowNumber=1">
-                        <div class="Tag Tag-1">
-                            <span class="Circle pulsating-circle">
-                                <span class="Circle-Inner">
-        
-                                </span>
-                            </span>
-                            <div class="Pop-tag">
-                                <div class="pop">
-                                    <div class="Close">
-                                        <svg width="40" height="40" viewbox="0 0 40 40">
-                                            <path d="M 10,10 L 30,30 M 30,10 L 10,30" stroke="black" stroke-width="4" />
-                                        </svg>
-                                    </div>
-                                    <div class="Box">
-                                        <div class="IMG">
-                                            <a href="[##db.productList.link##]" alt="[##db.producttitle.Answer##]"
-                                             title="[##db.producttitle.Answer##]">
-                                            <img src="@largeIMG" alt="[##db.producttitle.Answer##]" 
-                                            title="[##db.producttitle.Answer##]">
-                                     </a>
-                                     </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                <basis core="print" datamembername="db.gallery">
+                    <face filter="ord=1000">
+                <span class="rrr@Table2ID">
+                    <img src="[##db.image-def-pro.largeIMG##]" alt=""  style="display: none;">
+                </span>
                     </face>
                 </basis>
-                <basis core="print" datamembername="db.productGallery">
-                    <layout>
-                        @child
-                    </layout>
-                    <face filter="RowNumber=2">
-                        <div class="Tag Tag-2">
-                            <span class="Circle pulsating-circle">
-                                <span class="Circle-Inner">
-        
-                                </span>
-                            </span>
-                            <div class="Pop-tag">
-                                <div class="pop">
-                                    <div class="Close">
-                                        <svg width="40" height="40" viewbox="0 0 40 40">
-                                            <path d="M 10,10 L 30,30 M 30,10 L 10,30" stroke="black" stroke-width="4" />
-                                        </svg>
-                                    </div>
-                                    <div class="Box">
-                                        <div class="IMG">
-                                            <a href="[##db.productList.link##]" alt="[##db.producttitle.Answer##]" 
-                                            title="[##db.producttitle.Answer##]">
-                                            <img src="@largeIMG" alt="[##db.producttitle.Answer##]" 
-                                            title="[##db.producttitle.Answer##]">
-                                        </a></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </face>
-                </basis>
-          
                </div>
                <div class="Left">
                 <div class="Box">
@@ -709,11 +657,34 @@
                 <div class="Bottom">
                     <div class="Blogs">
                         <div class="Col-right">
+                            <basis core="print" datamembername="db.list-blog1">
+                                <layout>
+                                    @child
+                                </layout>
+                                <face filter="RowNumber in (1)">
+                                    <div class="Blog">
+                                        <div class="IMG">
+                                            <a href="@link" title="@title" alt="@title">
+                                                <img src="@00415X00317prp" alt="@title" title="@title">
+                                            </a>
+                                        </div>
+                                        <div class="Title">
+                                            <a  href="@link" title="@title" alt="@title"><p>
+                                                @title
+                                            </p>
+                                        </a>
+                                        </div>
+                                        <div class="Desc">
+                                            <p>@Column1 </p>
+                                        </div>
+                                    </div>
+                                </face>
+                            </basis>
                             <basis core="print" datamembername="db.list-blog">
                                 <layout>
                                     @child
                                 </layout>
-                                <face filter="RowNumber in (1,2)">
+                                <face filter="RowNumber in (2)">
                                     <div class="Blog">
                                         <div class="IMG">
                                             <a href="@link" title="@title" alt="@title">
@@ -727,12 +698,11 @@
                                         </a>
                                         </div>
                                         <div class="Desc">
-                                            <p>@prp_7248</p>
+                                            <p>@Column1 </p>
                                         </div>
                                     </div>
                                 </face>
                             </basis>
-                        
                                 <a class="ShowMoreBTN-2" href="بلاگ" alt="بلاگ" title="بلاگ" >
                              
                                   
@@ -759,7 +729,7 @@
                                         </a>
                                         </div>
                                         <div class="Desc">
-                                            <p>@prp_7248</p>
+                                            <p>@Column1 </p>
                                         </div>
                                     </div>
                                 </face>
@@ -788,7 +758,7 @@
                                         </a>
                                         </div>
                                         <div class="Desc">
-                                            <p>@prp_7248</p>
+                                            <p>@Column1 </p>
                                         </div>
                                     </div>
                                 </face>
@@ -806,146 +776,202 @@
              <basis core="call" file="footer.inc" />
             <!-- FOOTER -->
             
+<basis core="dbsource" source="basiscore" mid="1" name="db" lid="1" usedforid="1443430">
+    <member name="productinfo" type="list"></member>
+</basis>
+
     </main>
     <basis core="call" file="script.inc" />
     <script src="[##cms.cms.cdn##]/js/home.js"></script>
     <script>
- window.addEventListener("load", event => {
+   window.addEventListener("load", event => {
+    <basis core="repeater" name="rep" datamembername="db.gallery">
 
-
-<basis  core="repeater" name="rep" datamembername="db.gallery">
-
-    <basis core="dbsource" source="media" name="db" usedforid="[##rep.current.Table2ID##]">
-            <member name="listt" type="list" request="taglist" ></member>
-        </basis>
+<basis core="dbsource" source="media" name="db" usedforid="[##rep.current.Table2ID##]">
+    <member name="listt" type="list" request="taglist" />
+</basis>
 
 <basis core="print" datamembername="rep.current">
-                            <face>
-                       
-                         var  naturalWidth = document.getElementById("image@Table2ID").naturalWidth;
-                         var naturalHeight = document.getElementById("image@Table2ID").naturalHeight;
-     var image = $('#image@Table2ID');
-    //  alert(naturalWidth);
-    //  alert(naturalHeight);
-     var xRatio = naturalWidth / image.width();
-     var yRatio = naturalHeight / image.height();
-    //  alert(xRatio);
-    //  alert(yRatio);
-     var width = image.width();
-     var height = image.height(); 
-    //  alert(width);
-    //  alert(height);
-
+    <face>
+        var  naturalWidth = document.getElementById("image@Table2ID").getBoundingClientRect().width
+        var naturalHeight = document.getElementById("image@Table2ID").getBoundingClientRect().height
+        var image = $('#image@Table2ID');
+        var xRatio = naturalWidth / image.width();
+        var yRatio = naturalHeight / image.height();
+        var width = naturalWidth;
+        var height = height;
 </face>
-</basis> 
-
-<basis core="print" datamembername="db.listt">
-        <layout>
-           var price=[@child]
-        </layout>
-        <face  >
-        {{"id":"@id",
-          "xCoordinates":"@xCoordinates",
-           "yCoordinates":"@yCoordinates",
-           "mediaid":"@mediaid",
-           "usedforid":"@usedforid",
-           "link":"@link",
-           "description":"@description"
-           }},
-        </face>
-    <else-layout>
-        var price='null'
-    </else-layout>
-    </basis>
-
-
-
-
-    <basis core="print" datamembername="rep.current">
-                            <face>
-                                    var   iddd=@Table2ID;
-
-            tagList( price , width, height, xRatio, yRatio,iddd);
-   
-    
-    </face>
-    
-   </basis>
 </basis>
-   function tagList ( price , width, height, xRatio, yRatio,iddd) {
-        for (i=0 ; i<(price.length) ; i++) {
-          
-    $(".rrr"+iddd).append('<div  data-id="' + price[i].usedforid + '"   class="info  tag-item tag' + price[i].id + 
-    '"  ><div class="cnt "> <div class="dot tag-item-image"><span></span> </div><div class="box"   data-id="' 
-    + price[i].usedforid + '"><div class="bdy"><button class="close"><i></i></button> <div class="load-product'
-        +price[i].usedforid +'"></div>  </div></div></div></div>');
-    
-    xCoordinates = price[i].xCoordinates/xRatio;
-yCoordinates = price[i].yCoordinates/yRatio;
-    //  alert(yCoordinates);
-     var iconWidth = parseInt($('.tag' + price[i].id).find('.tag-item-image').width());
-     var iconHeight = $('.tag' + price[i].id).find('.tag-item-image').height();
-      
-     var left =  xCoordinates - iconWidth  ;
-     var top =  yCoordinates ; 
-    //  alert(left);
-    //  alert(top);
-     $(".tag" + price[i].id).css({
-     "position": "absolute",
-     "left": left + "px",
-     "top": top + "px",
-     "z-index": "214748"
-     }); 
-    
-     }
-   
-    }
+<basis core="print" datamembername="db.listt">
+ <layout>
+        var settings=[@child]
+ </layout>
+    <face  >
+         {{
+           "id": "@id",
+            "xCoordinates": "@xCoordinates",
+            "yCoordinates": "@yCoordinates",
+            "mediaid": "@mediaid",
+            "usedforid": "@usedforid",
+             "link": "@link",
+            "description": "@description"
+         }},
+     </face>
+     <else-layout>
+         var settings='null'
+    </else-layout>
+ </basis>
 
-            // $('body').on('mouseover', '.tag-item', function () { 
-               
-            //     var width = $(".width-94").width() + 400 ;
-            //     var rt = ($(window).width() - ($(this).offset().left + $(this).outerWidth()));
-            //     if(rt < width){
-            //     var id=$(this).attr("data-id"); 
-               
-            //     $(this).css("z-index","214748361")
-            //     $(".load-product"+id).show();
-            //     $(this).children(".cnt").children(".box").addClass("active");
-            //     $(".load-product"+id).addClass("load-producty");
-            //     $(".load-product"+id).css({"right":"33px" , "left":"unset"});
-            //     $(".load-product"+id).load("/load-tagproject.bc?type=4&ownerid=[##db.projinfo.ownerid##]&id="+id);
-            //     }
-            //     else{
-            //     var id=$(this).attr("data-id"); 
-            //     $(this).css("z-index","214748361")
-            //     $(".load-product"+id).show();
-            //     $(this).children(".cnt").children(".box").addClass("active");
-            //     $(".load-product"+id).addClass("load-productx")
-            //     $(".load-product"+id).load("/load-tagproject.bc?type=4&ownerid=[##db.projinfo.ownerid##]&id="+id);
-            //     }
-            // });
-            //  $('body').on('mouseout', '.tag-item', function () {   
-            //     var id=$(this).attr("data-id"); 
-            //     $(".load-product"+id).hide();
-            //     $(this).children(".cnt").children(".box").removeClass("active");
-               
-            //         $(this).css("z-index","214748")
-            //     });
+<basis core="print" datamembername="rep.current">
+ <face>
+ var   iddd=@Table2ID;
+      tagList(settings,width, height, xRatio, yRatio,iddd);
+ </face>
+
+ </basis>
+</basis>
+function tagList(settings, width, height, xRatio, yRatio, iddd) {
+    console.log('tagg');
+    
+                for (i = 0; i < (settings.length); i++) {
+                    $(".rrr" + iddd).append(`
+                    
+                    <div class="Tag Tag-1 info  tag-item tag${settings[i].id}" data-id=${settings[i].usedforid }>
+                     <span class="Circle pulsating-circle">
+                        <span class="Circle-Inner">
+
+                        </span>
+                     </span>
+                             <div class="Pop-tag" data-id=${settings[i].usedforid }>
+                        <div class="pop">
+
+                            <div class="Box">
+                                <div class="IMG load-product${settings[i].usedforid }">
             
+                             </div>
+                             </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    `);
+                    xCoordinates =parseInt(settings[i].xCoordinates ) / xRatio;
+                    yCoordinates =parseInt(settings[i].yCoordinates )  / yRatio;
+                    var iconWidth = parseInt($('.tag' + settings[i].id).find('.tag-item').width());
+                    var iconHeight = $('.tag' + settings[i].id).find('.tag-item ').height();
+                    var left = xCoordinates ;
+                    var top = yCoordinates;
+                    $(".tag" + settings[i].id).css({
+                        "position": "absolute",
+                        "left": left + "px",
+                        "top": top + "px",
+                        "z-index": "214748"
+                    });
 
-    
-    
-        });
+                }
 
-
-
-                let text= document.querySelectorAll('.About-Container > .Left > .Bottom .Col .Text p')
-                text.forEach((t)=>{
-            if(t.innerHTML=='' || t.innerText==' '){
-                console.log(t.innerHTML);
-                t.style.display='none'
             }
-        })
+            let iss = false
+ $('.tag-item').on('click', function () {
+var width = $(".width-94").width() + 400;
+var rt = ($(window).width() - ($(this).offset().left + $(this).outerWidth()));
+if (rt < width) {
+    if(!iss){
+        var id = $(this).attr("data-id");
+
+$(this).css("z-index", "214748361")
+$(".load-product" + id).show();
+$(this).children('.Pop-tag').addClass("expand");
+$(".load-product" + id).addClass("load-producty");
+$(".load-product" + id).css({ "right": "33px", "left": "unset" });
+$(".load-product" + id).load("/loadtagPro.bc?type=4&ownerid=[##db.productinfo.ownerid##]&id=" + id);
+iss=true
+    }
+  else{
+    var id = $(this).attr("data-id");
+
+$(this).css("z-index", "214748361")
+$(".load-product" + id).show();
+$(this).children('.Pop-tag').iss=true
+$(".load-product" + id).removeClass("expand");
+$(".load-product" + id).css({ "right": "33px", "left": "unset" });
+$(".load-product" + id).load("/loadtagPro.bc?type=4&ownerid=[##db.productinfo.ownerid##]&id=" + id);
+iss=false
+  }
+   
+}
+else {
+    if(!iss){
+        var id = $(this).attr("data-id");
+
+$(this).css("z-index", "214748361")
+$(".load-product" + id).show();
+$(this).children('.Pop-tag').addClass("expand");
+$(".load-product" + id).addClass("load-producty");
+$(".load-product" + id).css({ "right": "33px", "left": "unset" });
+$(".load-product" + id).load("/loadtagPro.bc?type=4&ownerid=[##db.productinfo.ownerid##]&id=" + id);
+iss=true
+    }
+    else{
+        var id = $(this).attr("data-id");
+    $(this).css("z-index", "214748361")
+    $(".load-product" + id).show();
+    $(this).children('.Pop-tag').removeClass("expand");
+
+    $(".load-product" + id).addClass("load-product")
+    $(".load-product" + id).load("/loadtagPro.bc?type=4&ownerid=[##db.productinfo.ownerid##]&id=" + id);
+iss=false
+  }
+  
+
+}
+});
+// let items = document.querySelectorAll('.tag-item .Close')
+// items.forEach((el)=>{
+    
+    
+// el.addEventListener('click',(e)=>{
+//     console.log( e.currentTarget.parentElement.parentElement.classList);
+//     e.currentTarget.parentElement.parentElement.classList.remove('expand')
+// })
+// })
+// $('.tag-item .Close').on('click', function (e) {
+//     $($(this).parents()[1]).removeClass("expand");
+//     console.log($(this).parents()[1]);
+    
+    
+// // var id = $(this).attr("data-id");
+// // $(".load-product" + id).hide();
+
+// // $(this).css("z-index", "214748")
+// });
+// $('body').on('mouseout', '.tag-item', function () {
+// var id = $(this).attr("data-id");
+// $(".load-product" + id).hide();
+// $(this).children('.Pop-tag').removeClass("expand");
+// $(this).css("z-index", "214748")
+// });
+   })
+
+   let currents = document.querySelectorAll('.NewsBlogs-Container .Desc p')
+   currents.forEach((current)=>{
+            let result = current.innerText.split('/');
+            let resultt = result[0];
+  
+         if (current.innerText.includes('ریشه')){
+            let resultt = result[1];
+           current.innerHTML =resultt
+           console.log(result[1]);
+         }
+         else{
+            let resultt = result[0];
+            current.innerHTML =resultt
+         }
+
+   })
+
+
+
     </script>
 
 </body>

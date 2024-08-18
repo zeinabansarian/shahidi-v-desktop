@@ -158,6 +158,19 @@ main.Home .ProductCategories .Title-1 {
   flex-direction: row;
   justify-content: space-between;
 }
+main.Home .ProductCategories .Title-1 h2 span {
+  font-weight: 400;
+}
+main.Home .ProductCategories .Title-1 h2 span.color {
+  font-weight: 900;
+}
+main.Home .ProductCategories .Title-1 h2 span:not(.color) {
+  transform: translateY(3px);
+  -webkit-transform: translateY(3px);
+  -moz-transform: translateY(3px);
+  -ms-transform: translateY(3px);
+  -o-transform: translateY(3px);
+}
 main.Home .ProductCategories .Title-1 .ShowM {
   width: 50%;
   display: flex;
@@ -201,6 +214,12 @@ main.Home .Cataloge-Container {
 main.Home .Cataloge-Container .Title-1 {
   gap: 0;
   width: 87%;
+}
+main.Home .Cataloge-Container .Title-1 h2 span {
+  font-weight: 400;
+}
+main.Home .Cataloge-Container .Title-1 h2 span.color {
+  font-weight: 900;
 }
 main.Home .Cataloge-Container .CatalogeS {
   width: 100%;
@@ -249,6 +268,7 @@ main.Home .Cataloge-Container .Left .Box .Text p {
 main.Home .Product-Tags-C {
   width: 91.5%;
   height: 600px;
+  z-index: 1;
   display: grid;
   position: relative;
   margin: 5em auto;
@@ -615,8 +635,8 @@ main.Home .ProductCat-2 .Left .swiper-productCat2 .swiper-slide .Product-cat {
   justify-content: center;
   align-items: center;
 }
-main.Home .ProductCat-2 .Left .ProductCat-Slider .swiper-slide .IMG,
-main.Home .ProductCat-2 .Left .swiper-productCat2 .swiper-slide .IMG {
+main.Home .ProductCat-2 .Left .ProductCat-Slider .swiper-slide .Product-cat .IMG,
+main.Home .ProductCat-2 .Left .swiper-productCat2 .swiper-slide .Product-cat .IMG {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -625,8 +645,8 @@ main.Home .ProductCat-2 .Left .swiper-productCat2 .swiper-slide .IMG {
   overflow: hidden;
   position: relative;
 }
-main.Home .ProductCat-2 .Left .ProductCat-Slider .swiper-slide .IMG::before,
-main.Home .ProductCat-2 .Left .swiper-productCat2 .swiper-slide .IMG::before {
+main.Home .ProductCat-2 .Left .ProductCat-Slider .swiper-slide .Product-cat .IMG::before,
+main.Home .ProductCat-2 .Left .swiper-productCat2 .swiper-slide .Product-cat .IMG::before {
   position: relative;
   content: "";
   position: absolute;
@@ -637,12 +657,26 @@ main.Home .ProductCat-2 .Left .swiper-productCat2 .swiper-slide .IMG::before {
   background: #fff;
   z-index: -1;
 }
-main.Home .ProductCat-2 .Left .ProductCat-Slider .swiper-slide .IMG img,
-main.Home .ProductCat-2 .Left .swiper-productCat2 .swiper-slide .IMG img {
+main.Home .ProductCat-2 .Left .ProductCat-Slider .swiper-slide .Product-cat .IMG img,
+main.Home .ProductCat-2 .Left .swiper-productCat2 .swiper-slide .Product-cat .IMG img {
   width: 95%;
   height: 95%;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: all 0.5s ease;
+}
+main.Home .ProductCat-2 .Left .ProductCat-Slider .swiper-slide .Product-cat:hover img,
+main.Home .ProductCat-2 .Left .swiper-productCat2 .swiper-slide .Product-cat:hover img {
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
 }
 main.Home .ProductCat-2 .Left .ProductCat-Slider .swiper-slide .Title,
 main.Home .ProductCat-2 .Left .swiper-productCat2 .swiper-slide .Title {
@@ -703,6 +737,7 @@ main.Home .ProductCat-2 .Left .swiper-productCat2 .swiper-slide .Desc p {
 main.Home .ProductCat-2 .Right {
   width: 40%;
   position: relative;
+  transform: translateY(20px);
 }
 main.Home .ProductCat-2 .Right::before {
   content: "";
@@ -743,6 +778,12 @@ main.Home .ProductCat-2 .Right::after {
 main.Home .ProductCat-2 .Right .Title-1 {
   margin-right: auto;
   width: 80%;
+}
+main.Home .ProductCat-2 .Right .Title-1 h2 span {
+  font-weight: 400;
+}
+main.Home .ProductCat-2 .Right .Title-1 h2 span.color {
+  font-weight: 900;
 }
 main.Home .ProductCat-2 .Right .Text {
   margin-right: auto;
@@ -826,6 +867,7 @@ main.Home .NewsBlogs-Container .ShowMoreBTN-2 {
   -o-transition: all 0.5s ease;
   margin-top: auto;
   padding-left: 0;
+  padding: 1em 0;
   padding-right: 0;
 }
 main.Home .NewsBlogs-Container .ShowMoreBTN-2:hover::before {
@@ -959,15 +1001,15 @@ main.ProductCat .ProductCategories .Cat::before {
   background-color: transparent;
   border: 1px solid #949494;
   z-index: 1;
-  transform: rotate(52deg) translate(8%, -35%);
-  -webkit-transform: rotate(52deg) translate(8%, -35%);
-  -moz-transform: rotate(52deg) translate(8%, -35%);
-  -ms-transform: rotate(52deg) translate(8%, -35%);
-  -o-transform: rotate(52deg) translate(8%, -35%);
+  transform: rotate(52deg) translate(-17%, -25%);
   z-index: -1;
   opacity: 0.7;
   z-index: 10;
   pointer-events: none;
+  -webkit-transform: rotate(52deg) translate(-17%, -25%);
+  -moz-transform: rotate(52deg) translate(-17%, -25%);
+  -ms-transform: rotate(52deg) translate(-17%, -25%);
+  -o-transform: rotate(52deg) translate(-17%, -25%);
 }
 main.ProductCat .ProductCategories .Cat::after {
   content: "";
@@ -980,14 +1022,14 @@ main.ProductCat .ProductCategories .Cat::after {
   background-color: transparent;
   border: 1px solid #949494;
   z-index: 1;
-  transform: rotate(52deg) translate(8%, -13%);
+  transform: rotate(52deg) translate(-10%, -4%);
   z-index: -1;
   z-index: 10;
   opacity: 0.7;
-  -webkit-transform: rotate(52deg) translate(8%, -13%);
-  -moz-transform: rotate(52deg) translate(8%, -13%);
-  -ms-transform: rotate(52deg) translate(8%, -13%);
-  -o-transform: rotate(52deg) translate(8%, -13%);
+  -webkit-transform: rotate(52deg) translate(-10%, -4%);
+  -moz-transform: rotate(52deg) translate(-10%, -4%);
+  -ms-transform: rotate(52deg) translate(-10%, -4%);
+  -o-transform: rotate(52deg) translate(-10%, -4%);
 }
 main.ProductCat .Title-1 {
   width: 100%;
@@ -1165,11 +1207,12 @@ main.AboutUsC .AboutBannerC {
   grid-template-columns: repeat(2, 50%);
 }
 main.AboutUsC .AboutBannerC .Navigation {
-  width: 90%;
+  width: 93%;
   display: flex;
   justify-content: flex-start;
   margin-right: auto;
   height: 130px;
+  position: relative;
 }
 main.AboutUsC .AboutBannerC .Navigation .swiper-pagination {
   height: 100px;
@@ -1243,47 +1286,40 @@ main.AboutUsC .AboutBannerC .Left .Banner-Container {
   align-items: center;
   position: relative;
 }
-main.AboutUsC .AboutBannerC .Left .Banner-Container .swiper-Banners {
+main.AboutUsC .AboutBannerC .Left .Banner-Container .Banners {
   width: 100%;
   height: 100vh;
   display: flex;
   overflow: hidden;
+  position: relative;
 }
-main.AboutUsC .AboutBannerC .Left .Banner-Container .swiper-Banners .swiper-wrapper {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-}
-main.AboutUsC .AboutBannerC .Left .Banner-Container .swiper-Banners .swiper-slide {
-  width: 100%;
+main.AboutUsC .AboutBannerC .Left .Banner-Container .Banners .slide {
   height: 100%;
-  min-width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: absolute;
+  width: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  overflow: hidden;
+  transition: 1s ease-in-out;
+  transition-delay: 1s;
 }
-main.AboutUsC .AboutBannerC .Left .Banner-Container .swiper-Banners .swiper-slide > img {
-  min-height: 100vh;
-  height: inherit;
-  width: 0%;
-  opacity: 0;
-  transition: all 0.8s ease;
-  -webkit-transition: all 0.8s ease;
-  -moz-transition: all 0.8s ease;
-  -ms-transition: all 0.8s ease;
-  -o-transition: all 0.8s ease;
+main.AboutUsC .AboutBannerC .Left .Banner-Container .Banners .slide.show {
+  width: 50vw;
+  z-index: 22;
+  transition-delay: 0s;
 }
-main.AboutUsC .AboutBannerC .Left .Banner-Container .swiper-Banners .swiper-slide-active img {
-  opacity: 1;
-  width: 100%;
+main.AboutUsC .AboutBannerC .Left .Banner-Container .Banners .slide img {
+  width: 50vw;
+  height: 100vh;
 }
 main.AboutUsC .AboutBannerC .Left .OVBox {
   position: absolute;
   right: 0;
   bottom: 0;
-  z-index: 2;
+  z-index: 50;
   width: 400px;
-  height: 500px;
+  height: 73%;
   overflow: hidden;
   border-top-left-radius: 205px;
   border-top-right-radius: 205px;
@@ -1297,13 +1333,30 @@ main.AboutUsC .AboutBannerC .Left .OVBox {
   -ms-transform: translate(50%, -5%);
   -o-transform: translate(50%, -5%);
 }
+@media (min-width: 2000px) {
+  main.AboutUsC .AboutBannerC .Left .OVBox {
+    width: 650px;
+    border-top-left-radius: 407px;
+    border-top-right-radius: 407px;
+  }
+}
 main.AboutUsC .AboutBannerC .Left .OVBox .IMG {
   width: 384px;
-  height: 484px;
+  height: 97%;
   margin: 0 auto;
   overflow: hidden;
   border-top-left-radius: 194px;
   border-top-right-radius: 194px;
+}
+@media (min-width: 2000px) {
+  main.AboutUsC .AboutBannerC .Left .OVBox .IMG {
+    width: 93%;
+    height: 96%;
+    margin: 0 auto;
+    overflow: hidden;
+    border-top-left-radius: 368px;
+    border-top-right-radius: 373px;
+  }
 }
 main.AboutUsC .AboutBannerC .Left .OVBox img {
   width: 100%;
@@ -1313,20 +1366,89 @@ main.AboutUsC .AboutBannerC .Left .OVBox img {
 }
 main.AboutUsC .AboutBannerC .Right {
   width: 100%;
-  padding-top: 10em;
+  /* padding-top: 11em; */
   position: relative;
+  height: 100vh;
+  align-items: flex-end;
+  display: flex;
+}
+main.AboutUsC .AboutBannerC .Right .handler {
+  width: 50px;
+  position: absolute;
+  right: 0;
+  /* top: 50%; */
+  z-index: 23;
+  display: flex;
+  gap: 1em;
+  flex-direction: row;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   height: 100%;
 }
+main.AboutUsC .AboutBannerC .Right .handler span {
+  width: auto;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0.5em;
+  opacity: 0.5;
+  transition: all 0.5s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  font-family: IRANYekan !important;
+}
+main.AboutUsC .AboutBannerC .Right .handler span .num {
+  font-family: "iranyekanwebblackfanum";
+}
+main.AboutUsC .AboutBannerC .Right .handler span:hover {
+  cursor: pointer;
+}
+main.AboutUsC .AboutBannerC .Right .handler span .line {
+  order: 2;
+  display: flex;
+  width: 30px;
+  height: 1px;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  background-color: #949494;
+  position: relative;
+}
+main.AboutUsC .AboutBannerC .Right .handler span .num {
+  color: #000000;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 31.09px;
+}
+main.AboutUsC .AboutBannerC .Right .handler span.choosen {
+  opacity: 1;
+}
+main.AboutUsC .AboutBannerC .Right .handler span.choosen .line::before {
+  background-color: #000000;
+}
 main.AboutUsC .AboutBannerC .Right .ContentBox {
-  height: 74vh;
+  height: 75vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-end;
 }
 main.AboutUsC .AboutBannerC .Right .ContentBox .One {
-  width: 100%;
+  width: 75%;
+  height: 100%;
   display: flex;
   flex-direction: column;
+  margin-left: auto;
+}
+@media (1000px <= width <= 1200px) {
+  main.AboutUsC .AboutBannerC .Right .ContentBox .One {
+    width: 58%;
+  }
 }
 main.AboutUsC .AboutBannerC .Right .ShowMoreBTN-2 {
   width: -moz-fit-content;
@@ -1399,27 +1521,88 @@ main.AboutUsC .AboutBannerC .Right .ShowMoreBTN-2 a span {
 }
 main.AboutUsC .AboutBannerC .Right .Title-1 {
   margin-right: auto;
-  width: 80%;
+  width: 90%;
+  margin-left: unset;
 }
 main.AboutUsC .AboutBannerC .Right .Title-1 p {
   display: contents;
 }
-main.AboutUsC .AboutBannerC .Right .Title-1 h1 {
-  width: 80%;
-  margin-left: auto;
+main.AboutUsC .AboutBannerC .Right .Title-1 h1 > span {
+  width: 97%;
+}
+@media (1200px <= width <= 1300px) and (700px <= height <= 850px) {
+  main.AboutUsC .AboutBannerC .Right .Title-1 h1 > span {
+    width: 87%;
+  }
 }
 main.AboutUsC .AboutBannerC .Right .Text {
   margin-right: auto;
   width: 90%;
+  height: 100px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   padding-bottom: 0.8em;
   margin-top: 1.5em;
-  overflow: hidden;
+  /* Handle on hover */
+}
+main.AboutUsC .AboutBannerC .Right .Text .text-inner {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+}
+@media (1200px <= width <= 1300px) and (700px <= height <= 850px) {
+  main.AboutUsC .AboutBannerC .Right .Text .text-inner {
+    margin-left: auto;
+    width: 70%;
+  }
+}
+@media (1350px <= width <= 1450px) {
+  main.AboutUsC .AboutBannerC .Right .Text .text-inner {
+    width: 87%;
+  }
+}
+@media (1440px <= width <= 1640px) and (860px <= height <= 1000px) {
+  main.AboutUsC .AboutBannerC .Right .Text .text-inner {
+    width: 87%;
+  }
+}
+main.AboutUsC .AboutBannerC .Right .Text::-webkit-scrollbar {
+  width: 10px;
+}
+main.AboutUsC .AboutBannerC .Right .Text::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+main.AboutUsC .AboutBannerC .Right .Text::-webkit-scrollbar-thumb {
+  background: #888;
+}
+main.AboutUsC .AboutBannerC .Right .Text::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+main.AboutUsC .AboutBannerC .Right .Text.active .text-inner {
+  overflow-y: scroll;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+@media (1200px <= width <= 1300px) and (700px <= height <= 850px) {
+  main.AboutUsC .AboutBannerC .Right .Text.active .text-inner {
+    margin-left: auto;
+    width: 70%;
+  }
+}
+@media (1350px <= width <= 1450px) {
+  main.AboutUsC .AboutBannerC .Right .Text.active .text-inner {
+    width: 87%;
+  }
+}
+@media (1440px <= width <= 1640px) and (860px <= height <= 1000px) {
+  main.AboutUsC .AboutBannerC .Right .Text.active .text-inner {
+    width: 87%;
+  }
 }
 main.AboutUsC .AboutBannerC .Right .Text p {
-  width: 65%;
-  margin-left: auto;
   font-size: 16px;
   font-weight: 300;
   line-height: 27.64px;
@@ -1453,12 +1636,15 @@ main.AboutUsC .About-ContainerS2 .Right {
   justify-content: flex-end;
   align-items: flex-start;
 }
+main.AboutUsC .About-ContainerS2 .Right .Banner-Container {
+  height: 100%;
+}
 main.AboutUsC .About-ContainerS2 .Right .OVBox {
   transform: rotate(180deg) translateY(5%);
   position: relative;
   z-index: 5;
   width: 400px;
-  height: 500px;
+  height: 95%;
   overflow: hidden;
   border-top-left-radius: 205px;
   border-top-right-radius: 205px;
@@ -1471,13 +1657,31 @@ main.AboutUsC .About-ContainerS2 .Right .OVBox {
   -ms-transform: rotate(180deg) translateY(5%);
   -o-transform: rotate(180deg) translateY(5%);
 }
+@media (min-width: 2000px) {
+  main.AboutUsC .About-ContainerS2 .Right .OVBox {
+    width: 650px;
+    height: 77%;
+    border-top-left-radius: 407px;
+    border-top-right-radius: 407px;
+  }
+}
 main.AboutUsC .About-ContainerS2 .Right .OVBox .IMG {
   width: 384px;
-  height: 484px;
+  height: 97%;
   margin: 0 auto;
   overflow: hidden;
   border-top-left-radius: 194px;
   border-top-right-radius: 194px;
+}
+@media (min-width: 2000px) {
+  main.AboutUsC .About-ContainerS2 .Right .OVBox .IMG {
+    width: 93%;
+    height: 96%;
+    margin: 0 auto;
+    overflow: hidden;
+    border-top-left-radius: 368px;
+    border-top-right-radius: 373px;
+  }
 }
 main.AboutUsC .About-ContainerS2 .Right .OVBox img {
   width: 100%;
@@ -1595,6 +1799,7 @@ main.AboutUsC .About-ContainerS2 .ImgSlider .swiper-IMG .swiper-wrapper .swiper-
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 .Product > .IMG a {
   width: 100%;
@@ -1608,6 +1813,11 @@ main.AboutUsC .About-ContainerS2 .ImgSlider .swiper-IMG .swiper-wrapper .swiper-
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
 }
 .Product > .Box {
   width: 100%;
@@ -1641,6 +1851,18 @@ main.AboutUsC .About-ContainerS2 .ImgSlider .swiper-IMG .swiper-wrapper .swiper-
   line-height: 31.09px;
   color: #000000;
 }
+.Product:hover img {
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
+}
 
 .Blog {
   width: 100%;
@@ -1652,6 +1874,7 @@ main.AboutUsC .About-ContainerS2 .ImgSlider .swiper-IMG .swiper-wrapper .swiper-
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 .Blog .IMG a {
   width: 100%;
@@ -1663,6 +1886,23 @@ main.AboutUsC .About-ContainerS2 .ImgSlider .swiper-IMG .swiper-wrapper .swiper-
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+.Blog:hover img {
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
 }
 .Blog .Title {
   width: 100%;
@@ -1690,18 +1930,18 @@ main.AboutUsC .About-ContainerS2 .ImgSlider .swiper-IMG .swiper-wrapper .swiper-
   justify-content: flex-start;
   align-items: center;
 }
+.Blog .Desc p {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 20.73px;
+  color: #000000;
+}
 .Blog .Desc a {
   width: -moz-fit-content;
   width: fit-content;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-}
-.Blog .Desc a p {
-  font-size: 12px;
-  font-weight: 300;
-  line-height: 20.73px;
-  color: #000000;
 }
 
 .New {
@@ -1714,6 +1954,7 @@ main.AboutUsC .About-ContainerS2 .ImgSlider .swiper-IMG .swiper-wrapper .swiper-
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 .New .IMG a {
   width: 100%;
@@ -1725,6 +1966,23 @@ main.AboutUsC .About-ContainerS2 .ImgSlider .swiper-IMG .swiper-wrapper .swiper-
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+}
+.New:hover img {
+  transition: all 0.5s ease;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -o-transform: scale(1.1);
 }
 .New .Title {
   width: 100%;
@@ -1752,16 +2010,16 @@ main.AboutUsC .About-ContainerS2 .ImgSlider .swiper-IMG .swiper-wrapper .swiper-
   justify-content: flex-start;
   align-items: center;
 }
+.New .Desc p {
+  font-size: 12px;
+  font-weight: 300;
+  line-height: 20.73px;
+  color: #000000;
+}
 .New .Desc a {
   width: -moz-fit-content;
   width: fit-content;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-}
-.New .Desc a p {
-  font-size: 12px;
-  font-weight: 300;
-  line-height: 20.73px;
-  color: #000000;
 }/*# sourceMappingURL=f-style.css.map */

@@ -42,7 +42,7 @@ MenuItems.forEach(item=>{
                 Banner1.classList.remove('hide')
                 Banner2.classList.remove('hide')
                         
-            },1000)
+            },500)
           
         }
         event.currentTarget.classList.toggle('show')
